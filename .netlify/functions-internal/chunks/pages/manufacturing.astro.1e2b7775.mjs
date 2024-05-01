@@ -314,7 +314,7 @@ const $$Manufacturing = createComponent(async ($$result, $$props, $$slots) => {
        
 
         <section class="hidden lg:block mx-5 md:max-w-7xl md:mx-auto md:px-24 lg:px-0 lg:mt-40 md:mt-40 mt-10 astro-LOEZZAHA">
-            <div class="bg-[url('../../public/Images/join-hand.svg')] bg-cover bg-no-repeat bg-center md:bg-contain md:bg-right h-96 grid p-16 pt-24 items-center astro-LOEZZAHA">
+            <div class="bg-[url('../../public/Images/join-hand.png')] bg-cover bg-no-repeat bg-center md:bg-contain md:bg-right h-96 grid p-16 pt-24 items-center astro-LOEZZAHA">
                 <h2 class="w-10/12 text4xl leading-[2.75rem] text-white font-semibold astro-LOEZZAHA">
                     Join hands with Sanskar Technolab to handle your ERP
                     manufacturing implementation!
@@ -331,7 +331,7 @@ const $$Manufacturing = createComponent(async ($$result, $$props, $$slots) => {
 
         <section class="block lg:hidden mt-10 bg-[#3E96F4] pb-10 astro-LOEZZAHA">
         <div class="mx-5 astro-LOEZZAHA">
-            <img src="../../public/Images/cta-mobile.svg" class="astro-LOEZZAHA">
+            <img src="../../public/Images/cta-mobile.png" class="astro-LOEZZAHA">
             <h2 class="text-4xl leading-[2.75rem] text-white font-semibold astro-LOEZZAHA">
                         Join hands with Sanskar Technolab to handle your ERP
                         manufacturing implementation!
