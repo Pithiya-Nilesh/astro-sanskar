@@ -14,7 +14,7 @@ import contact_map from "../../public/Images/contact_map.svg";
 ---
 
 <Layout
-  title="Contact Us Page | Sanskar Technolab"
+  title="Contact Us | Sanskar Technolab"
   ,
   keyword=""
   ,
@@ -32,277 +32,34 @@ import contact_map from "../../public/Images/contact_map.svg";
             Get in Touch
           </h1>
           <div class="text-[#333333] grid gap-3 md:gap-3 lg:gap-5">
-            <div
-              class="input-field grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-3 lg:gap-5"
-            >
               <input
-                class="rounded-[3px] border border-[#D9D9D9] text-[#333333]"
+                class="rounded-[3px] border border-[#D9D9D9] text-[#333333] p-1"
                 type="text"
-                placeholder="First Name*"
-                name="first_name"
+                placeholder="Full Name*"
+                name="full_name"
               />
-              <input
-                class="rounded-[3px] border border-[#D9D9D9] text-[#333333]"
-                type="text"
-                placeholder="Last Name*"
-                name="last_name"
-              />
-            </div>
+            <!-- </div> -->
             <input
-              class="input-field rounded-[3px] border border-[#D9D9D9] text-[#333333]"
+              class="input-field rounded-[3px] border border-[#D9D9D9] text-[#333333] p-1"
               type="email"
               placeholder="Email*"
-              name="email"
+              name="emailaddress"
             />
-            <div
-              class="input-field grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-3 lg:gap-5"
-            >
-              <select
-                id="country"
-                class="rounded-[3px] pl-2 h-[2.5rem] border border-[#D9D9D9] text-[#333333]"
-                name="country"
-                style="height: 40px;"
-              >
-                <option value="">Select a country</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="Andorra">Andorra</option>
-                <option value="Angola">Angola</option>
-                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Armenia">Armenia</option>
-                <option value="Australia">Australia</option>
-                <option value="Austria">Austria</option>
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Bahamas">Bahamas</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Barbados">Barbados</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Belize">Belize</option>
-                <option value="Benin">Benin</option>
-                <option value="Bhutan">Bhutan</option>
-                <option value="Bolivia">Bolivia</option>
-                <option value="Bosnia and Herzegovina"
-                  >Bosnia and Herzegovina</option
-                >
-                <option value="Botswana">Botswana</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Brunei">Brunei</option>
-                <option value="Bulgaria">Bulgaria</option>
-                <option value="Burkina Faso">Burkina Faso</option>
-                <option value="Burundi">Burundi</option>
-                <option value="Cabo Verde">Cabo Verde</option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Central African Republic"
-                  >Central African Republic</option
-                >
-                <option value="Chad">Chad</option>
-                <option value="Chile">Chile</option>
-                <option value="China">China</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Comoros">Comoros</option>
-                <option value="Congo">Congo</option>
-                <option value="Costa Rica">Costa Rica</option>
-                <option value="Croatia">Croatia</option>
-                <option value="Cuba">Cuba</option>
-                <option value="Cyprus">Cyprus</option>
-                <option value="Czech Republic">Czech Republic</option>
-                <option value="Democratic Republic of the Congo"
-                  >Democratic Republic of the Congo</option
-                >
-                <option value="Denmark">Denmark</option>
-                <option value="Djibouti">Djibouti</option>
-                <option value="Dominica">Dominica</option>
-                <option value="Dominican Republic">Dominican Republic</option>
-                <option value="Ecuador">Ecuador</option>
-                <option value="Egypt">Egypt</option>
-                <option value="El Salvador">El Salvador</option>
-                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                <option value="Eritrea">Eritrea</option>
-                <option value="Estonia">Estonia</option>
-                <option value="Eswatini">Eswatini</option>
-                <option value="Ethiopia">Ethiopia</option>
-                <option value="Fiji">Fiji</option>
-                <option value="Finland">Finland</option>
-                <option value="France">France</option>
-                <option value="Gabon">Gabon</option>
-                <option value="Gambia">Gambia</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Germany">Germany</option>
-                <option value="Ghana">Ghana</option>
-                <option value="Greece">Greece</option>
-                <option value="Grenada">Grenada</option>
-                <option value="Guatemala">Guatemala</option>
-                <option value="Guinea">Guinea</option>
-                <option value="Guinea-Bissau">Guinea-Bissau</option>
-                <option value="Guyana">Guyana</option>
-                <option value="Haiti">Haiti</option>
-                <option value="Holy See">Holy See</option>
-                <option value="Honduras">Honduras</option>
-                <option value="Hungary">Hungary</option>
-                <option value="Iceland">Iceland</option>
-                <option value="India">India</option>
-                <option value="Indonesia">Indonesia</option>
-                <option value="Iran">Iran</option>
-                <option value="Iraq">Iraq</option>
-                <option value="Ireland">Ireland</option>
-                <option value="Israel">Israel</option>
-                <option value="Italy">Italy</option>
-                <option value="Jamaica">Jamaica</option>
-                <option value="Japan">Japan</option>
-                <option value="Jordan">Jordan</option>
-                <option value="Kazakhstan">Kazakhstan</option>
-                <option value="Kenya">Kenya</option>
-                <option value="Kiribati">Kiribati</option>
-                <option value="Kuwait">Kuwait</option>
-                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                <option value="Laos">Laos</option>
-                <option value="Latvia">Latvia</option>
-                <option value="Lebanon">Lebanon</option>
-                <option value="Lesotho">Lesotho</option>
-                <option value="Liberia">Liberia</option>
-                <option value="Libya">Libya</option>
-                <option value="Liechtenstein">Liechtenstein</option>
-                <option value="Lithuania">Lithuania</option>
-                <option value="Luxembourg">Luxembourg</option>
-                <option value="Madagascar">Madagascar</option>
-                <option value="Malawi">Malawi</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Maldives">Maldives</option>
-                <option value="Mali">Mali</option>
-                <option value="Malta">Malta</option>
-                <option value="Marshall Islands">Marshall Islands</option>
-                <option value="Mauritania">Mauritania</option>
-                <option value="Mauritius">Mauritius</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Micronesia">Micronesia</option>
-                <option value="Moldova">Moldova</option>
-                <option value="Monaco">Monaco</option>
-                <option value="Mongolia">Mongolia</option>
-                <option value="Montenegro">Montenegro</option>
-                <option value="Morocco">Morocco</option>
-                <option value="Mozambique">Mozambique</option>
-                <option value="Myanmar">Myanmar</option>
-                <option value="Namibia">Namibia</option>
-                <option value="Nauru">Nauru</option>
-                <option value="Nepal">Nepal</option>
-                <option value="Netherlands">Netherlands</option>
-                <option value="New Zealand">New Zealand</option>
-                <option value="Nicaragua">Nicaragua</option>
-                <option value="Niger">Niger</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="North Korea">North Korea</option>
-                <option value="North Macedonia">North Macedonia</option>
-                <option value="Norway">Norway</option>
-                <option value="Oman">Oman</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Palau">Palau</option>
-                <option value="Palestine">Palestine</option>
-                <option value="Panama">Panama</option>
-                <option value="Papua New Guinea">Papua New Guinea</option>
-                <option value="Paraguay">Paraguay</option>
-                <option value="Peru">Peru</option>
-                <option value="Philippines">Philippines</option>
-                <option value="Poland">Poland</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Qatar">Qatar</option>
-                <option value="Romania">Romania</option>
-                <option value="Russia">Russia</option>
-                <option value="Rwanda">Rwanda</option>
-                <option value="Saint Kitts and Nevis"
-                  >Saint Kitts and Nevis</option
-                >
-                <option value="Saint Lucia">Saint Lucia</option>
-                <option value="Saint Vincent and the Grenadines"
-                  >Saint Vincent and the Grenadines</option
-                >
-                <option value="Samoa">Samoa</option>
-                <option value="San Marino">San Marino</option>
-                <option value="Sao Tome and Principe"
-                  >Sao Tome and Principe</option
-                >
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="Senegal">Senegal</option>
-                <option value="Serbia">Serbia</option>
-                <option value="Seychelles">Seychelles</option>
-                <option value="Sierra Leone">Sierra Leone</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Slovakia">Slovakia</option>
-                <option value="Slovenia">Slovenia</option>
-                <option value="Solomon Islands">Solomon Islands</option>
-                <option value="Somalia">Somalia</option>
-                <option value="South Africa">South Africa</option>
-                <option value="South Korea">South Korea</option>
-                <option value="South Sudan">South Sudan</option>
-                <option value="Spain">Spain</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="Sudan">Sudan</option>
-                <option value="Suriname">Suriname</option>
-                <option value="Switzerland">Switzerland</option>
-                <option value="Syria">Syria</option>
-                <option value="Taiwan">Taiwan</option>
-                <option value="Tajikistan">Tajikistan</option>
-                <option value="Tanzania">Tanzania</option>
-                <option value="Thailand">Thailand</option>
-                <option value="Timor-Leste">Timor-Leste</option>
-                <option value="Togo">Togo</option>
-                <option value="Tonga">Tonga</option>
-                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                <option value="Tunisia">Tunisia</option>
-                <option value="Turkey">Turkey</option>
-                <option value="Turkmenistan">Turkmenistan</option>
-                <option value="Tuvalu">Tuvalu</option>
-                <option value="Uganda">Uganda</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="United Arab Emirates"
-                  >United Arab Emirates</option
-                >
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="United States">United States</option>
-                <option value="Uruguay">Uruguay</option>
-                <option value="Uzbekistan">Uzbekistan</option>
-                <option value="Vanuatu">Vanuatu</option>
-                <option value="Venezuela">Venezuela</option>
-                <option value="Vietnam">Vietnam</option>
-                <option value="Yemen">Yemen</option>
-                <option value="Zambia">Zambia</option>
-                <option value="Zimbabwe">Zimbabwe</option>
-              </select>
-              <!-- <input
-              class="input-field rounded-[3px] md:col-span-2 border border-[#D9D9D9] text-[#333333]"
+            <input
+              class="input-field w-full border border-[#D9D9D9] rounded-[3px] p-1"
               type="tel"
               name="phone"
-              id="telephoneCode"
-            /> -->
-
-              <div class="md:col-span-2 flex h-[2.5rem]">
-                <input
-                  class="w-16 border-[#D9D9D9] rounded-[3px] text-slate-500"
-                  type="tel"
-                  id="telephoneCode"
-                  name="code"
-                  readonly
-                />
-                <input
-                  class="w-full border-[#D9D9D9] rounded-[3px]"
-                  type="tel"
-                  name="phone"
-                  placeholder="Mobile Number"
-                />
-              </div>
-            </div>
+              placeholder="Mobile Number"
+            />
+              <!-- </div> -->
+            <!-- </div> -->
 
             <textarea
               name="message"
               rows="4"
               cols="50"
               placeholder="Message*"
-              class="input-field rounded-[3px] pl-3 pt-1 border border-[#D9D9D9] text-[#333333]"
+              class="input-field rounded-[3px] pl-1 pt-1 border border-[#D9D9D9] text-[#333333]"
             ></textarea>
             <div
               class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-3 lg:gap-5"
@@ -408,12 +165,6 @@ import contact_map from "../../public/Images/contact_map.svg";
         <hr class="my-5 margin-right" />
         <div class="flex flex-wrap justify-between">
           <div class="flex gap-2 md:gap-3 items-center">
-            <!-- <Image loading="eager" src={contact_phone} alt="phone" />
-            <p
-              class="text-xs md:text-sm lg:text-base text-[#31393C] font-semibold"
-            >
-              <a href="tel:+919909990875">(+91) 99099 90875</a>
-            </p> -->
           </div>
           <div class="flex margin-right gap-1 md:gap-3 lg:gap-5">
             <a href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd"
@@ -464,9 +215,6 @@ import contact_map from "../../public/Images/contact_map.svg";
               <a href="mailto:info@sanskartechnolab.com"
                 >info@sanskartechnolab.com</a
               >
-              <!-- <a href="mailto:sales@sanskartechnolab.com"
-                >sales@sanskartechnolab.com</a
-              > -->
             </p>
           </div>
 
@@ -704,31 +452,6 @@ import contact_map from "../../public/Images/contact_map.svg";
         margin-right: 9rem;
       }
     }
-
-    /* .banner-height{
-	height: h-[calc(100vh-10vh)];
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-
-@media (min-width: 1025px)and (max-width: 1023px){
-	.banner-height{
-	height: calc(100vh - 10vh);
-}
-}
-
-@media (min-width: 380px)and (max-width: 1023px) {
-	.banner-height{
-	height: calc(100vh - 10vh);
-}
-}
-
-@media (min-width: 1025px) {
-	.banner-height{
-	height: calc(100vh - 10vh);
-}
-} */
-
     .banner-height {
       height: screen;
       padding-top: 3rem;
@@ -741,212 +464,6 @@ import contact_map from "../../public/Images/contact_map.svg";
     }
   </style>
   <script>
-    const countrySelect = document.getElementById("country");
-    const telephoneCodeInput = document.getElementById("telephoneCode");
-
-    const countryTelephoneCodes = {
-      Afghanistan: "+93",
-      Albania: "+355",
-      Algeria: "+213",
-      Andorra: "+376",
-      Angola: "+244",
-      "Antigua and Barbuda": "+1",
-      Argentina: "+54",
-      Armenia: "+374",
-      Australia: "+61",
-      Austria: "+43",
-      Azerbaijan: "+994",
-      Bahamas: "+1",
-      Bahrain: "+973",
-      Bangladesh: "+880",
-      Barbados: "+1",
-      Belarus: "+375",
-      Belgium: "+32",
-      Belize: "+501",
-      Benin: "+229",
-      Bhutan: "+975",
-      Bolivia: "+591",
-      "Bosnia and Herzegovina": "+387",
-      Botswana: "+267",
-      Brazil: "+55",
-      Brunei: "+673",
-      Bulgaria: "+359",
-      "Burkina Faso": "+226",
-      Burundi: "+257",
-      "Cabo Verde": "+238",
-      Cambodia: "+855",
-      Cameroon: "+237",
-      Canada: "+1",
-      "Central African Republic": "+236",
-      Chad: "+235",
-      Chile: "+56",
-      China: "+86",
-      Colombia: "+57",
-      Comoros: "+269",
-      Congo: "+242",
-      "Costa Rica": "+506",
-      Croatia: "+385",
-      Cuba: "+53",
-      Cyprus: "+357",
-      "Czech Republic": "+420",
-      "Democratic Republic of the Congo": "+243",
-      Denmark: "+45",
-      Djibouti: "+253",
-      Dominica: "+1",
-      "Dominican Republic": "+1",
-      Ecuador: "+593",
-      Egypt: "+20",
-      "El Salvador": "+503",
-      "Equatorial Guinea": "+240",
-      Eritrea: "+291",
-      Estonia: "+372",
-      Eswatini: "+268",
-      Ethiopia: "+251",
-      Fiji: "+679",
-      Finland: "+358",
-      France: "+33",
-      Gabon: "+241",
-      Gambia: "+220",
-      Georgia: "+995",
-      Germany: "+49",
-      Ghana: "+233",
-      Greece: "+30",
-      Grenada: "+1",
-      Guatemala: "+502",
-      Guinea: "+224",
-      "Guinea-Bissau": "+245",
-      Guyana: "+592",
-      Haiti: "+509",
-      "Holy See": "+379",
-      Honduras: "+504",
-      Hungary: "+36",
-      Iceland: "+354",
-      India: "+91",
-      Indonesia: "+62",
-      Iran: "+98",
-      Iraq: "+964",
-      Ireland: "+353",
-      Israel: "+972",
-      Italy: "+39",
-      Jamaica: "+1",
-      Japan: "+81",
-      Jordan: "+962",
-      Kazakhstan: "+7",
-      Kenya: "+254",
-      Kiribati: "+686",
-      Kuwait: "+965",
-      Kyrgyzstan: "+996",
-      Laos: "+856",
-      Latvia: "+371",
-      Lebanon: "+961",
-      Lesotho: "+266",
-      Liberia: "+231",
-      Libya: "+218",
-      Liechtenstein: "+423",
-      Lithuania: "+370",
-      Luxembourg: "+352",
-      Madagascar: "+261",
-      Malawi: "+265",
-      Malaysia: "+60",
-      Maldives: "+960",
-      Mali: "+223",
-      Malta: "+356",
-      "Marshall Islands": "+692",
-      Mauritania: "+222",
-      Mauritius: "+230",
-      Mexico: "+52",
-      Micronesia: "+691",
-      Moldova: "+373",
-      Monaco: "+377",
-      Mongolia: "+976",
-      Montenegro: "+382",
-      Morocco: "+212",
-      Mozambique: "+258",
-      Myanmar: "+95",
-      Namibia: "+264",
-      Nauru: "+674",
-      Nepal: "+977",
-      Netherlands: "+31",
-      "New Zealand": "+64",
-      Nicaragua: "+505",
-      Niger: "+227",
-      Nigeria: "+234",
-      "North Korea": "+850",
-      "North Macedonia": "+389",
-      Norway: "+47",
-      Oman: "+968",
-      Pakistan: "+92",
-      Palau: "+680",
-      Palestine: "+970",
-      Panama: "+507",
-      "Papua New Guinea": "+675",
-      Paraguay: "+595",
-      Peru: "+51",
-      Philippines: "+63",
-      Poland: "+48",
-      Portugal: "+351",
-      Qatar: "+974",
-      Romania: "+40",
-      Russia: "+7",
-      Rwanda: "+250",
-      "Saint Kitts and Nevis": "+1",
-      "Saint Lucia": "+1",
-      "Saint Vincent and the Grenadines": "+1",
-      Samoa: "+685",
-      "San Marino": "+378",
-      "Sao Tome and Principe": "+239",
-      "Saudi Arabia": "+966",
-      Senegal: "+221",
-      Serbia: "+381",
-      Seychelles: "+248",
-      "Sierra Leone": "+232",
-      Singapore: "+65",
-      Slovakia: "+421",
-      Slovenia: "+386",
-      "Solomon Islands": "+677",
-      Somalia: "+252",
-      "South Africa": "+27",
-      "South Korea": "+82",
-      "South Sudan": "+211",
-      Spain: "+34",
-      "Sri Lanka": "+94",
-      Sudan: "+249",
-      Suriname: "+597",
-      Switzerland: "+41",
-      Syria: "+963",
-      Taiwan: "+886",
-      Tajikistan: "+992",
-      Tanzania: "+255",
-      Thailand: "+66",
-      "Timor-Leste": "+670",
-      Togo: "+228",
-      Tonga: "+676",
-      "Trinidad and Tobago": "+1",
-      Tunisia: "+216",
-      Turkey: "+90",
-      Turkmenistan: "+993",
-      Tuvalu: "+688",
-      Uganda: "+256",
-      Ukraine: "+380",
-      "United Arab Emirates": "+971",
-      "United Kingdom": "+44",
-      "United States": "+1",
-      Uruguay: "+598",
-      Uzbekistan: "+998",
-      Vanuatu: "+678",
-      Venezuela: "+58",
-      Vietnam: "+84",
-      Yemen: "+967",
-      Zambia: "+260",
-      Zimbabwe: "+263",
-    };
-
-    countrySelect.addEventListener("change", (event) => {
-      const selectedCountry = countrySelect.value;
-      const telephoneCode = countryTelephoneCodes[selectedCountry] || "";
-      telephoneCodeInput.value = telephoneCode;
-    });
-
     // add event listner to file
     var fileInput_e = document.getElementById("fileInput");
     fileInput_e.addEventListener("change", (event) => {
@@ -955,39 +472,44 @@ import contact_map from "../../public/Images/contact_map.svg";
 
     // add event listner to form
     var form = document.getElementById("contact_form");
-    form.addEventListener("submit", handleContactForm);
+    form.addEventListener("submit", handleContactFormContact);
 
-    // function blinkBorder(element) {
-    //     let isRed = false;
+    // Add event listener to email input for real-time validation
+    var emailInput = document.querySelector('input[name="emailaddress"]');
+    emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
-    //     const intervalId = setInterval(() => {
-    //         if (isRed) {
-    //             clearInterval(intervalId); // Stop the blinking after one cycle
-    //             element.style.backgroundColor = 'transparent'; // Set the final state
-    //         } else {
-    //             isRed = true;
-    //             element.style.backgroundColor = '#ffdddd'; // Set the blink color
-    //         }
-    //     }, 500);
-    // }
+    function validateEmailInput() {
+      const emailValue = emailInput.value.trim();
+      const errorMessageElement = emailInput.nextElementSibling;
 
-    //   // Function to stop blinking the border
-    //   function stopBlinkBorder(element) {
-    //     const intervalId = element.dataset.blinkIntervalId;
-    //     if (intervalId) {
-    //       clearInterval(intervalId);
-    //       element.dataset.blinkIntervalId = null;
-    //     }
-    //   }
+      if (emailValue === "") {
+        hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+        emailInput.style.borderColor = ""; // Reset border color
+        return;
+      }
+
+      if (!validateEmail(emailValue)) {
+        blinkBorder(emailInput);
+        displayErrorMessage(errorMessageElement, "Please enter a valid email address.");
+      } else {
+        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+        emailInput.style.borderColor = ""; // Reset border color
+      }
+    }
 
     const apiKey = import.meta.env.PUBLIC_ApiKey as string;
     const secretKey = import.meta.env.PUBLIC_SecretKey as string;
 
     function blinkBorder(element) {
-      let isRed = false;
-
-      element.style.borderColor = "red";
+      // If the border color is not red, set it to red
+      if (element.style.borderColor !== "red") {
+        element.style.borderColor = "red";
+      } else {
+        // If the border color is already red, reset it to its original state
+        element.style.borderColor = "";
+      }
     }
+
 
     function resetBorderColorOnFocus(inputElement) {
       inputElement.addEventListener("focus", () => {
@@ -996,278 +518,56 @@ import contact_map from "../../public/Images/contact_map.svg";
     }
 
     // send data in frappe
-    function handleContactForm(e) {
+    function handleContactFormContact(e) {
       e.preventDefault();
-      disableUserInteractions();
+      // disableUserInteractions();
 
       const recaptchaResponse = grecaptcha.getResponse();
       // If the reCAPTCHA is filled out, clear any previous error message
       clearRecaptchaError();
 
-      const firstNameInput = document.querySelector('input[name="first_name"]');
-      const lastNameInput = document.querySelector('input[name="last_name"]');
-      const emailInput = document.querySelector('input[name="email"]');
+      // const firstNameInput = document.querySelector('input[name="first_name"]');
+      const lastNameInput = document.querySelector('input[name="full_name"]');
+      const emailInput = document.querySelector('input[name="emailaddress"]');
       const messageInput = document.querySelector('textarea[name="message"]');
       const phoneInput = document.querySelector('input[name="phone"]');
 
-      const firstNameValue = firstNameInput.value.trim();
+      // const firstNameValue = firstNameInput.value.trim();
       const lastNameValue = lastNameInput.value.trim();
       const emailValue = emailInput.value.trim();
       const messageValue = messageInput.value.trim();
       const phoneValue = phoneInput.value.trim();
 
-      resetBorderColorOnFocus(firstNameInput);
+      // resetBorderColorOnFocus(firstNameInput);
       resetBorderColorOnFocus(lastNameInput);
       resetBorderColorOnFocus(emailInput);
       resetBorderColorOnFocus(messageInput);
       resetBorderColorOnFocus(phoneInput);
 
-      if (firstNameValue === "") {
-        blinkBorder(firstNameInput);
-      }
-
       if (lastNameValue === "") {
         blinkBorder(lastNameInput);
       }
 
-      if (emailValue === "") {
+      if (emailValue === "" || !validateEmail(emailValue)) {
         blinkBorder(emailInput);
+        displayErrorMessage(emailInput.nextElementSibling, "Please enter a valid email address.");
       }
+
+      // if (phoneValue === "") {
+      //   blinkBorder(phoneInput);
+      // }
 
       if (messageValue === "") {
         blinkBorder(messageInput);
       }
 
-      const selectedCountry = countrySelect.value;
-      const countryTelephoneCode = countryTelephoneCodes[selectedCountry] || "";
-
-      //       const phonePatterns = {
-      //         "+93": /^(?:\+93\s?)?[0-9]{8}$/, // Afghanistan
-      //         "+355": /^(?:\+355\s?)?[0-9]{8}$/, // Albania
-      //         "+213": /^(?:\+213\s?)?[0-9]{9}$/, // Algeria
-      //         "+376": /^(?:\+376\s?)?[0-9]{6}$/, // Andorra
-      //         "+244": /^(?:\+244\s?)?[0-9]{9}$"/, // Angola
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{7}$/,   // Antigua and Barbuda
-      //         "+54": /^(?:\+54\s?)?[0-9]{10}$/,  // Argentina
-      //         "+374": /^(?:\+374\s?)?[0-9]{8}$/, // Armenia
-      //         "+61": /^(?:\+61\s?)?[0-9]{9}$/,   // Australia
-      //         "+43": /^(?:\+43\s?)?[0-9]{10}$/,  // Austria
-      //         "+994": /^(?:\+994\s?)?[0-9]{9}$/, // Azerbaijan
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{10}$/, // Bahamas, Barbados
-      //         "+973": /^(?:\+973\s?)?[0-9]{7}$/, // Bahrain
-      //         "+880": /^(?:\+880\s?)?[0-9]{10}$/, // Bangladesh
-      //         "+375": /^(?:\+375\s?)?[0-9]{9}$/, // Belarus
-      //         "+32": /^(?:\+32\s?)?[0-9]{8}$/, // Belgium
-      //         "+501": /^(?:\+501\s?)?[0-9]{7}$/, // Belize
-      //         "+229": /^(?:\+229\s?)?[0-9]{8}$/, // Benin
-      //         "+975": /^\+975[0-9]{7}$/, // Bhutan
-      //         "+591": /^\+591[0-9]{7,8}$/, // Bolivia
-      //         "+387": /^\+387[0-9]{8}$/, // Bosnia and Herzegovina
-      //         "+267": /^\+267[0-9]{7}$/, // Botswana
-      //         "+55": /^\+55[0-9]{10,11}$/, // Brazil
-      //         "+673": /^\+673[0-9]{7}$/, // Brunei
-      //         "+359": /^\+359[0-9]{8}$/, // Bulgaria
-      //         "+226": /^\+226[0-9]{7}$/, // Burkina Faso
-      //         "+91": /^(?:\+91\s?)?[6789]\d{9}$/,  // India
-      //         "+93": /^(?:\+93\s?)?[0-9]{9}$/,    // Afghanistan
-      //         "+257": /^(?:\+257\s?)?[0-9]{7,8}$/, // Burundi
-      //         "+238": /^(?:\+238\s?)?[0-9]{7}$/,    // Cabo Verde
-      //         "+855": /^(?:\+855\s?)?[0-9]{8}$/,    // Cambodia
-      //         "+237": /^(?:\+237\s?)?[0-9]{8}$/,    // Cameroon
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{9}$/,     // Canada
-      //         "+236": /^(?:\+236\s?)?[0-9]{7}$/,    // Central African Republic
-      //         "+235": /^(?:\+235\s?)?[0-9]{7}$/,    // Chad
-      //         "+56": /^(?:\+56\s?)?[0-9]{8}$/,      // Chile
-      //         "+86": /^(?:\+86\s?)?[0-9]{11}$/,      // China
-      //         "+57": /^(?:\+57\s?)?[0-9]{9}$/, // Colombia
-      //         "+269": /^(?:\+269\s?)?[0-9]{7}$/, // Comoros
-      //         "+242": /^(?:\+242\s?)?[0-9]{8}$/, // Congo
-      //         "+506": /^(?:\+506\s?)?[0-9]{8}$/, // Costa Rica
-      //         "+385": /^(?:\+385\s?)?[0-9]{8}$/, // Croatia
-      //         "+53": /^(?:\+53\s?)?[0-9]{8}$/, // Cuba
-      //         "+357": /^(?:\+357\s?)?[0-9]{8}$/, // Cyprus
-      //         "+420": /^(?:\+420\s?)?[0-9]{9}$/,  // Czech Republic
-      //         "+243": /^(?:\+243\s?)?[0-9]{9}$/,  // Democratic Republic of the Congo
-      //         "+45": /^(?:\+45\s?)?[0-9]{8}$/, // Denmark
-      //         "+253": /^(?:\+253\s?)?[0-9]{7}$/,  // Djibouti
-      //         "+1": /^(?:\+1\s?)?[0-9]{7}$/, //Dominica
-      //         "+1": /^(?:\+1\s?)?[0-9]{10}$/, //Dominican Republic
-      //         "+593": /^(?:\+593\s?)?[0-9]{8}$/, // Ecuador
-      //         "+20": /^(?:\+20\s?)?[0-9]{9}$/, // Egypt
-      //         "+503": /^(?:\+503\s?)?[0-9]{7}$/, // El Salvador
-      //         "+240": /^(?:\+240\s?)?[0-9]{7}$/, // Equatorial Guinea
-      //         "+291": /^(?:\+291\s?)?[0-9]{7}$/, // Eritrea
-      //         "+372": /^(?:\+372\s?)?[0-9]{7}$/, // Estonia
-      //         "+268": /^(?:\+268\s?)?[0-9]{7}$/,  // Eswatini
-      //         "+251": /^(?:\+251\s?)?[0-9]{9}$/, // Ethiopia
-      //         "+679": /^(?:\+679\s?)?[0-9]{7}$/, // Fiji
-      //         "+358": /^(?:\+358\s?)?[0-9]{7,10}$/,  // Finland
-      //         "+33": /^(?:\+33\s?)?[1-9]\d{8}$/, // France
-      //         "+241": /^(?:\+241\s?)?[0-9]{6}$/, // Gabon
-      //         "+220": /^(?:\+220\s?)?[0-9]{6}$/, // Gambia
-      //         "+995": /^(?:\+995\s?)?[0-9]{9}$/, // Georgia
-      //         "+49": /^(?:\+49\s?)?[0-9]{10}$/, // Germany
-      //         "+233": /^(?:\+233\s?)?[0-9]{9}$/, // Ghana
-      //         "+30": /^(?:\+30\s?)?[1-9]\d{8}$/, // Greece
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{9}$/, // Grenada
-      //         "+502": /^(?:\+502\s?)?[0-9]{8}$/, // Guatemala
-      //         "+224": /^(?:\+224\s?)?[0-9]{7}$/, // Guinea
-      //         "+245": /^(?:\+245\s?)?[0-9]{7}$/, // Guinea-Bissau
-      //         "+592": /^(?:\+592\s?)?[0-9]{7}$/, // Guyana
-      //         "+509": /^(?:\+509\s?)?[0-9]{8}$/,  // Haiti
-      //         "+379": /^(?:\+379\s?)?[0-9]{8}$/,  // Holy See
-      //         "+504": /^(?:\+504\s?)?[0-9]{8}$/,  // Honduras
-      //         "+36": /^(?:\+36\s?)?[0-9]{8}$/,  // Hungary
-      //         "+354": /^(?:\+354\s?)?[0-9]{7}$/,  // Iceland
-      //         "+91": /^(?:\+91\s?)?[6789]\d{9}$/,  // India
-      //         "+62": /^(?:\+62\s?)?[2-9]\d{7,12}$/, // Indonesia
-      //         "+98": /^(?:\+98\s?)?[0-9]{9,10}$/,  // Iran
-      //         "+964": /^(?:\+964\s?)?[0-9]{8,10}$/, //Iraq
-      //         "+353": /^(?:\+353\s?)?[1-9]\d{6,9}$/, // Ireland
-      //         "+972": /^(?:\+972\s?)?[1-9]\d{7,8}$/, // Israel
-      //         "+39": /^(?:\+39\s?)?[0-9]\d{9}$/, // Italy
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{9}$/, // Jamaica
-      //         "+81": /^(?:\+81\s?)?[0-9]\d{9}$/, // Japan
-      //         "+962": /^(?:\+962\s?)?[1-9]\d{7,9}$/, // Jordan
-      //         "+7": /^(?:\+7\s?)?[1-9]\d{9}$/, // Kazakhstan
-      //         "+254": /^(?:\+254\s?)?[1-9]\d{8}$/, // Kenya
-      //         "+686": /^(?:\+686\s?)?[0-9]{5}$/, // Kiribati
-      //         "+965": /^(?:\+965\s?)?[0-9]{6}$/, // Kuwait
-      //         "+996": /^(?:\+996\s?)?[0-9]{9}$/, // Kyrgyzstan
-      //         "+856": /^(?:\+856\s?)?[0-9]{8}$/, // Laos
-      //         "+371": /^(?:\+371\s?)?[0-9]{8}$/, // Latvia
-      //         "+961": /^(?:\+961\s?)?[0-9]{7,8}$/, // Lebanon
-      //         "+266": /^(?:\+266\s?)?[0-9]{7}$/, // Lesotho
-      //         "+231": /^(?:\+231\s?)?[0-9]{7}$/, // Liberia
-      //         "+218": /^(?:\+218\s?)?[0-9]{9}$/, // Libya
-      //         "+423": /^(?:\+423\s?)?[0-9]{7}$/, // Liechtenstein
-      //         "+370": /^(?:\+370\s?)?[0-9]{8}$/, // Lithuania
-      //         "+352": /^(?:\+352\s?)?[0-9]{6}$/, // Luxembourg
-      //         "+261": /^(?:\+261\s?)?[0-9]{8}$/, // Madagascar
-      //         "+265": /^(?:\+265\s?)?[0-9]{7}$/, // Malawi
-      //         "+60": /^(?:\+60\s?)?[0-9]{9,10}$/, // Malaysia
-      //         "+960": /^(?:\+960\s?)?[0-9]{7}$/, // Maldives
-      //         "+223": /^(?:\+223\s?)?[0-9]{8}$/, // Mali
-      //         "+356": /^(?:\+356\s?)?[0-9]{7}$/, // Malta
-      //         "+692": /^(?:\+692\s?)?[0-9]{7}$/, // Marshall Islands
-      //         "+222": /^\+222[0-9]{7}$/, // Mauritania
-      //         "+230": /^\+230[0-9]{7}$/, // Mauritius
-      //         "+52": /^\+52[0-9]{10}$/, // Mexico
-      //         "+691": /^\+691[0-9]{7}$/, // Micronesia
-      //         "+373": /^\+373[0-9]{7}$/, // Moldova
-      //         "+377": /^\+377[0-9]{7}$/, // Monaco
-      //         "+976": /^\+976[0-9]{8}$/, // Mongolia
-      //         "+382": /^\+382[0-9]{7}$/, // Montenegro
-      //         "+212": /^\+212[0-9]{9}$/, // Morocco
-      //         "+258": /^(\+258)?[28]\d{7,8}$/, // Mozambique
-      //         "+95": /^(\+95)?[1-9]\d{8,9}$/, // Myanmar
-      //         "+264": /^(\+264)?[1-9]\d{7,8}$/, // Namibia
-      //         "+674": /^(\+674)?[1-9]\d{6}$/, // Nauru
-      //         "+977": /^(\+977)?[1-9]\d{9}$/, // Nepal
-      //         "+31": /^(\+31)?[1-9]\d{8}$/, // Netherlands
-      //         "+64": /^(\+64)?[2-9]\d{7,8}$/, // New Zealand
-      //         "+505": /^(\+505)?[2-9]\d{6}$/, // Nicaragua
-      //         "+227": /^(\+227)?[2-9]\d{6}$/, // Niger
-      //         "+234": /^(?:\+234\s?)?[0-9]{10}$/,     // Nigeria
-      //         "+850": /^(?:\+850\s?)?[0-9]{6}$/,       // North Korea
-      //         "+389": /^(?:\+389\s?)?[0-9]{7}$/,       // North Macedonia
-      //         "+47": /^(?:\+47\s?)?[0-9]{8}$/,         // Norway
-      //         "+968": /^(?:\+968\s?)?[0-9]{8}$/,       // Oman
-      //         "+92": /^(?:\+92\s?)?[0-9]{10}$/,        // Pakistan
-      //         "+680": /^(?:\+680\s?)?[0-9]{7}$/,       // Palau
-      //         "+970": /^(?:\+970\s?)?[0-9]{7,8}$/,     // Palestine
-      //         "+507": /^(?:\+507\s?)?[0-9]{7}$/,       // Panama
-      //         "+675": /^(?:\+675\s?)?[0-9]{7}$/,        // Papua New Guinea
-      //         "+595": /^(?:\+595\s?)?[0-9]{8,9}$/, // Paraguay
-      //         "+51": /^(?:\+51\s?)?[0-9]{8}$/, // Peru
-      //         "+63": /^(?:\+63\s?)?[0-9]{10}$/, // Philippines
-      //         "+48": /^(?:\+48\s?)?[0-9]{9}$/, // Poland
-      //         "+351": /^(?:\+351\s?)?[0-9]{9}$/, // Portugal
-      //         "+974": /^(?:\+974\s?)?[0-9]{7}$/, // Qatar
-      //         "+40": /^(?:\+40\s?)?[0-9]{9}$/, // Romania
-      //         "+7": /^(?:\+7\s?)?[0-9]{10}$/, // Russia
-      //         "+250": /^(\+250)?\d{9}$/, // Rwanda
-      //         "+1": /^(?:\+1\s?)?[0-9]{7}$/, //Saint Kitts and Nevis
-      //         "+1": /^\+1\s758\s[0-9]{7}$/, //Saint Lucia
-      //         "+1": /^(?:\+1\s?784|784)[0-9]{7}$/, //Saint Vincent and the Grenadines
-      //         "+685": /^(\+685)?\d{6}$/, // Samoa
-      //         "+378": /^(\+378)?\d{8}$/, // San Marino
-      //         "+239": /^(\+239)?\d{7}$/, // Sao Tome and Principe
-      //         "+966": /^(\+966)?\d{9}$/, // Saudi Arabia
-      //         "+221": /^(?:\+221\s?)?[0-9]{9}$/, // Senegal
-      //         "+381": /^(?:\+381\s?)?[0-9]{9}$/, // Serbia
-      //         "+248": /^(?:\+248\s?)?[0-9]{6}$/, // Seychelles
-      //         "+232": /^(?:\+232\s?)?[0-9]{8}$/, // Sierra Leone
-      //         "+65": /^(?:\+65\s?)?[0-9]{8}$/, // Singapore
-      //         "+421": /^(?:\+421\s?)?[0-9]{9}$/, // Slovakia
-      //         "+386": /^(?:\+386\s?)?[0-9]{7}$/, // Slovenia
-      //         "+677": /^(?:\+677\s?)?[0-9]{7}$/, // Solomon Islands
-      //         "+252": /^(?:\+252\s?)?[0-9]{7}$/, // Somalia
-      //         "+27": /^(?:\+27\s?)?[678]\d{9}$/, // South Africa
-      //         "+82": /^(?:\+82\s?)?[1-9]\d{8,9}$/, // South Korea
-      //         "+211": /^(?:\+211\s?)?[1-9]\d{8}$/, // South Sudan
-      //         "+34": /^(?:\+34\s?)?[679]\d{8}$/, // Spain
-      //         "+94": /^(?:\+94\s?)?[1-9]\d{8}$/, // Sri Lanka
-      //         "+249": /^(?:\+249\s?)?[12356789]\d{8}$/, // Sudan
-      //         "+597": /^(?:\+597\s?)?[2-9]\d{6}$/, // Suriname
-      //         "+41": /^(?:\+41\s?)?[1-9]\d{8}$/, // Switzerland
-      //         "+93": /^(?:\+93\s?)?[0-9]{9}$/, // Afghanistan
-      //         "+963": /^(?:\+963\s?)?[0-9]{9}$/, // Syria
-      //         "+886": /^(?:\+886\s?)?[0-9]{8,9}$/, // Taiwan
-      //         "+992": /^(?:\+992\s?)?[0-9]{9}$/, // Tajikistan
-      //         "+255": /^(?:\+255\s?)?[0-9]{9}$/, // Tanzania
-      //         "+66": /^(?:\+66\s?)?[0-9]{9,10}$/, // Thailand
-      //         "+670": /^(?:\+670\s?)?[0-9]{7}$/, // Timor-Leste
-      //         "+228": /^(?:\+228\s?)?[0-9]{7}$/, // Togo
-      //         "+676": /^(?:\+676\s?)?[0-9]{5}$`/, // Tonga
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{9}$/, // Trinidad and Tobago, United Kingdom
-      //         "+216": /^(?:\+216\s?)?[2-9]\d{7}$/, // Tunisia
-      //         "+90": /^(?:\+90\s?)?[2-9]\d{10}$/, // Turkey
-      //         "+993": /^(?:\+993\s?)?[0-9]{7,8}$/, // Turkmenistan
-      //         "+688": /^(?:\+688\s?)?[0-9]{5}$/, // Tuvalu
-      //         "+256": /^(?:\+256\s?)?[0-9]{9}$/, // Uganda
-      //         "+380": /^(?:\+380\s?)?[0-9]{9}$/, // Ukraine
-      //         "+971": /^(?:\+971\s?)?[0-9]{7,8}$/, // United Arab Emirates
-      //         "+44": /^(?:\+44\s?)?[0-9]{10,11}$/, // United Kingdom
-      //         "+1": /^(?:\+1\s?)?[2-9]\d{9}$/, // United States and Canada
-      //         "+598": /^(?:\+598\s?)?[2-9]\d{7}$/, // Uruguay
-      //         "+998": /^(?:\+998\s?)?[0-9]{9}$/, // Uzbekistan
-      //         "+678": /^(?:\+678\s?)?[0-9]{5}$/, // Vanuatu
-      //         "+58": /^(?:\+58\s?)?[0-9]{10}$/, // Venezuela
-      //         "+84": /^(?:\+84\s?)?[0-9]{8,9}$/, // Vietnam
-      //         "+967": /^(?:\+967\s?)?[0-9]{7}$/, // Yemen
-      //         "+260": /^(?:\+260\s?)?[0-9]{8}$/, // Zambia
-      //         "+263": /^(?:\+263\s?)?[0-9]{7,8}$/, // Zimbabwe
-      //       };
-
-      //       if (phoneValue.trim() === countryTelephoneCode) {
-
-      // } else {
-      //   const phonePattern = phonePatterns[countryTelephoneCode];
-
-      //   if (!phonePattern || !phonePattern.test(phoneValue)) {
-      //     blinkBorder(phoneInput);
-      //     enableUserInteractions();
-      //       return;
-      //   }
-      // }
-
-      if (!recaptchaResponse || recaptchaResponse.length === 1) {
-        showRecaptchaError();
-        enableUserInteractions();
-        return;
-      }
-
       if (
-        firstNameValue === "" ||
         lastNameValue === "" ||
         emailValue === "" ||
         messageValue === ""
       ) {
-        enableUserInteractions();
         return;
       }
-
       const fileInput = document.getElementById("fileInput");
       const file = fileInput.files[0];
       const urlParams = new URLSearchParams(window.location.search);
@@ -1283,14 +583,11 @@ import contact_map from "../../public/Images/contact_map.svg";
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
         formData.set("data", JSON.stringify(data));
-        var first_name = data.first_name;
-        var last_name = data.last_name;
-        var email = data.email;
-        var country = data.country;
+        var full_name = data.full_name;
+        var email = data.emailaddress;
         var phone = data.code + " " + data.phone;
         var message = data.message;
 
-        // console.log("sfg", pageValue)
 
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
@@ -1300,10 +597,8 @@ import contact_map from "../../public/Images/contact_map.svg";
             Authorization: `token ${apiKey}:${secretKey}`,
           },
           body: JSON.stringify({
-            first_name: first_name,
-            last_name: last_name,
-            email: email,
-            country: country,
+            full_name: full_name,
+            emailaddress: email,
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
@@ -1312,19 +607,15 @@ import contact_map from "../../public/Images/contact_map.svg";
           }),
         })
           .then((res) => {
-            console.log("asdfasd", res);
             if (res.status === 200) {
               // alert("You have been registered successfully.")
-              enableUserInteractions();
               window.location.href = "/thank-you";
             } else {
-              enableUserInteractions();
               alert("failed");
             }
           })
           .catch((error) => {
             console.log(error);
-            enableUserInteractions();
           });
 
         // return;
@@ -1343,14 +634,10 @@ import contact_map from "../../public/Images/contact_map.svg";
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
             formData.set("data", JSON.stringify(data));
-            var first_name = data.first_name;
-            var last_name = data.last_name;
-            var email = data.email;
-            var country = data.country;
-            var phone = data.code + " " + data.phone;
+            var full_name = data.full_name;
+            var email = data.emailaddress;
+            var phone = data.phone;
             var message = data.message;
-            //   var file = data.file;
-            // console.log(first_name, last_name, email, country, phone, message, file_url);
 
             fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
               method: "POST",
@@ -1360,10 +647,8 @@ import contact_map from "../../public/Images/contact_map.svg";
                 Authorization: `token ${apiKey}:${secretKey}`,
               },
               body: JSON.stringify({
-                first_name: first_name,
-                last_name: last_name,
-                email: email,
-                country: country,
+                full_name: full_name,
+                emailaddress: email,
                 phone: phone,
                 message: message,
                 document: file_url,
@@ -1374,26 +659,20 @@ import contact_map from "../../public/Images/contact_map.svg";
             })
               .then((res) => {
                 if (res.status === 200) {
-                  // alert("You have been registered successfully.")
-                  enableUserInteractions();
                   window.location.href = "/thank-you";
                 } else {
-                  enableUserInteractions();
                   alert("failed");
                 }
               })
               .catch((error) => {
-                enableUserInteractions();
                 console.log(error);
               });
           } else {
-            enableUserInteractions();
             alert("File upload failed. Please try again later.");
           }
         };
 
         xhr.onerror = function () {
-          enableUserInteractions();
           alert("An error occurred while uploading the file.");
         };
 
@@ -1405,306 +684,68 @@ import contact_map from "../../public/Images/contact_map.svg";
         e.preventDefault();
       }
     }
-    //        const firstNameInput = document.querySelector('input[name="first_name"]');
-    //         const lastNameInput = document.querySelector('input[name="last_name"]');
-    //         const emailInput = document.querySelector('input[name="email"]');
-    //         const messageInput = document.querySelector('input[name="message"]');
 
-    //         function stopBlinkingForNameInputs() {
-    //             stopBlinkBorder(firstNameInput);
-    //             stopBlinkBorder(lastNameInput);
-    //             stopBlinkBorder(emailInput);
-    //             stopBlinkBorder(messageInput);
-    //             firstNameInput.style.backgroundColor = '';
-    //             lastNameInput.style.backgroundColor = '';
-    //             emailInput.style.backgroundColor = '';
-    //             messageInput.style.backgroundColor = '';
-    //         }
+  // Validation function for email
+  function validateEmail(email) {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
 
-    //         firstNameInput.addEventListener('focus', stopBlinkingForNameInputs);
-    //         lastNameInput.addEventListener('focus', stopBlinkingForNameInputs);
-    //         emailInput.addEventListener('focus', stopBlinkingForNameInputs);
-    //         messageInput.addEventListener('focus', stopBlinkingForNameInputs);
+  function displayErrorMessage(errorMessageElement, message) {
+    if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+      // If error message doesn't exist, create and insert it
+      errorMessageElement = document.createElement("p");
+      errorMessageElement.textContent = message;
+      errorMessageElement.classList.add("error-message");
+      errorMessageElement.style.color = "red"; // Adjust the color
+      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
 
-    function showRecaptchaError() {
-      const recaptchaErrorElement = document.getElementById("recaptcha-error");
-      recaptchaErrorElement.style.display = "block"; // Display the error message
-
-      // Hide the error message after a specific duration (e.g., 5 seconds)
-      setTimeout(function () {
-        recaptchaErrorElement.style.display = "none";
-      }, 3000);
+      // Insert the error message after the input field
+      emailInput.parentNode.insertBefore(errorMessageElement, emailInput.nextSibling);
+    } else {
+      errorMessageElement.textContent = message; // Update existing error message
     }
+  }
 
-    function clearRecaptchaError() {
-      const recaptchaErrorElement = document.getElementById("recaptcha-error");
-      recaptchaErrorElement.style.display = "none"; // Hide the error message
+  function hideErrorMessage(errorMessageElement) {
+    if (errorMessageElement && errorMessageElement.classList.contains("error-message")) {
+      // If error message exists, remove it
+      errorMessageElement.remove();
     }
+  }
 
-    // validate file foramte in fileupload
-    function fileValidation() {
-      var fileInput = document.getElementById("fileInput");
+  function showRecaptchaError() {
+    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    recaptchaErrorElement.style.display = "block"; // Display the error message
 
-      var filePath = fileInput.value;
+    // Hide the error message after a specific duration (e.g., 5 seconds)
+    setTimeout(function () {
+      recaptchaErrorElement.style.display = "none";
+    }, 3000);
+  }
 
-      // Allowing file type
-      var allowedExtensions = /(\.jpg|\.pdf|\.png|\.docx|\.txt)$/i;
+  function clearRecaptchaError() {
+    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    recaptchaErrorElement.style.display = "none"; // Hide the error message
+  }
 
-      if (!allowedExtensions.exec(filePath)) {
-        alert("Invalid file type only allow .jpg | .pdf | .png | .docx | .txt");
-        fileInput.value = "";
-        return false;
-      }
+  // validate file foramte in fileupload
+  function fileValidation() {
+    var fileInput = document.getElementById("fileInput");
+
+    var filePath = fileInput.value;
+
+    // Allowing file type
+    var allowedExtensions = /(\.jpg|\.pdf|\.png|\.docx|\.txt)$/i;
+
+    if (!allowedExtensions.exec(filePath)) {
+      alert("Invalid file type only allow .jpg | .pdf | .png | .docx | .txt");
+      fileInput.value = "";
+      return false;
     }
-
-    // Create a mapping of country codes to country names
-    const countryMapping = {
-      AF: "Afghanistan",
-      AL: "Albania",
-      DZ: "Algeria",
-      AD: "Andorra",
-      AO: "Angola",
-      AG: "Antigua and Barbuda",
-      AR: "Argentina",
-      AM: "Armenia",
-      AU: "Australia",
-      AT: "Austria",
-      AZ: "Azerbaijan",
-      BS: "Bahamas",
-      BH: "Bahrain",
-      BD: "Bangladesh",
-      BB: "Barbados",
-      BY: "Belarus",
-      BE: "Belgium",
-      BZ: "Belize",
-      BJ: "Benin",
-      BT: "Bhutan",
-      BO: "Bolivia",
-      BA: "Bosnia and Herzegovina",
-      BW: "Botswana",
-      BR: "Brazil",
-      BN: "Brunei",
-      BG: "Bulgaria",
-      BF: "Burkina Faso",
-      BI: "Burundi",
-      CV: "Cabo Verde",
-      KH: "Cambodia",
-      CM: "Cameroon",
-      CA: "Canada",
-      CF: "Central African Republic",
-      TD: "Chad",
-      CL: "Chile",
-      CN: "China",
-      CO: "Colombia",
-      KM: "Comoros",
-      CG: "Congo",
-      CR: "Costa Rica",
-      HR: "Croatia",
-      CU: "Cuba",
-      CY: "Cyprus",
-      CZ: "Czech Republic",
-      CD: "Democratic Republic of the Congo",
-      DK: "Denmark",
-      DJ: "Djibouti",
-      DM: "Dominica",
-      DO: "Dominican Republic",
-      EC: "Ecuador",
-      EG: "Egypt",
-      SV: "El Salvador",
-      GQ: "Equatorial Guinea",
-      ER: "Eritrea",
-      EE: "Estonia",
-      SZ: "Eswatini",
-      ET: "Ethiopia",
-      FJ: "Fiji",
-      FI: "Finland",
-      FR: "France",
-      GA: "Gabon",
-      GM: "Gambia",
-      GE: "Georgia",
-      DE: "Germany",
-      GH: "Ghana",
-      GR: "Greece",
-      GD: "Grenada",
-      GT: "Guatemala",
-      GN: "Guinea",
-      GW: "Guinea-Bissau",
-      GY: "Guyana",
-      HT: "Haiti",
-      VA: "Holy See",
-      HN: "Honduras",
-      HU: "Hungary",
-      IS: "Iceland",
-      IN: "India",
-      ID: "Indonesia",
-      IR: "Iran",
-      IQ: "Iraq",
-      IE: "Ireland",
-      IL: "Israel",
-      IT: "Italy",
-      JM: "Jamaica",
-      JP: "Japan",
-      JO: "Jordan",
-      KZ: "Kazakhstan",
-      KE: "Kenya",
-      KI: "Kiribati",
-      KW: "Kuwait",
-      KG: "Kyrgyzstan",
-      LA: "Laos",
-      LV: "Latvia",
-      LB: "Lebanon",
-      LS: "Lesotho",
-      LR: "Liberia",
-      LY: "Libya",
-      LI: "Liechtenstein",
-      LT: "Lithuania",
-      LU: "Luxembourg",
-      MG: "Madagascar",
-      MW: "Malawi",
-      MY: "Malaysia",
-      MV: "Maldives",
-      ML: "Mali",
-      MT: "Malta",
-      MH: "Marshall Islands",
-      MR: "Mauritania",
-      MU: "Mauritius",
-      MX: "Mexico",
-      FM: "Micronesia",
-      MD: "Moldova",
-      MC: "Monaco",
-      MN: "Mongolia",
-      ME: "Montenegro",
-      MA: "Morocco",
-      MZ: "Mozambique",
-      MM: "Myanmar",
-      NA: "Namibia",
-      NR: "Nauru",
-      NP: "Nepal",
-      NL: "Netherlands",
-      NZ: "New Zealand",
-      NI: "Nicaragua",
-      NE: "Niger",
-      NG: "Nigeria",
-      KP: "North Korea",
-      MK: "North Macedonia",
-      NO: "Norway",
-      OM: "Oman",
-      PK: "Pakistan",
-      PW: "Palau",
-      PS: "Palestine",
-      PA: "Panama",
-      PG: "Papua New Guinea",
-      PY: "Paraguay",
-      PE: "Peru",
-      PH: "Philippines",
-      PL: "Poland",
-      PT: "Portugal",
-      QA: "Qatar",
-      RO: "Romania",
-      RU: "Russia",
-      RW: "Rwanda",
-      KN: "Saint Kitts and Nevis",
-      LC: "Saint Lucia",
-      VC: "Saint Vincent and the Grenadines",
-      WS: "Samoa",
-      SM: "San Marino",
-      ST: "Sao Tome and Principe",
-      SA: "Saudi Arabia",
-      SN: "Senegal",
-      RS: "Serbia",
-      SC: "Seychelles",
-      SL: "Sierra Leone",
-      SG: "Singapore",
-      SK: "Slovakia",
-      SI: "Slovenia",
-      SB: "Solomon Islands",
-      SO: "Somalia",
-      ZA: "South Africa",
-      KR: "South Korea",
-      SS: "South Sudan",
-      ES: "Spain",
-      LK: "Sri Lanka",
-      SD: "Sudan",
-      SR: "Suriname",
-      CH: "Switzerland",
-      SY: "Syria",
-      TW: "Taiwan",
-      TJ: "Tajikistan",
-      TZ: "Tanzania",
-      TH: "Thailand",
-      TL: "Timor-Leste",
-      TG: "Togo",
-      TO: "Tonga",
-      TT: "Trinidad and Tobago",
-      TN: "Tunisia",
-      TR: "Turkey",
-      TM: "Turkmenistan",
-      TV: "Tuvalu",
-      UG: "Uganda",
-      UA: "Ukraine",
-      AE: "United Arab Emirates",
-      GB: "United Kingdom",
-      US: "United States",
-      UY: "Uruguay",
-      UZ: "Uzbekistan",
-      VU: "Vanuatu",
-      VE: "Venezuela",
-      VN: "Vietnam",
-      YE: "Yemen",
-      ZM: "Zambia",
-      ZW: "Zimbabwe",
-    };
-
-    function updateTelephoneCode(selectedCountry) {
-      const telephoneCode = countryTelephoneCodes[selectedCountry] || "";
-      telephoneCodeInput.value = telephoneCode;
-    }
-
-    function getUserCountry() {
-      const apiKey = "219a209c7a5c67";
-      fetch(`https://ipinfo.io/json?token=${apiKey}`)
-        .then((response) => response.json())
-        .then((data) => {
-          const countryCode = data.country;
-          const countryName = countryMapping[countryCode] || "Unknown";
-
-          // Get the <select> element
-          var countrySelect = document.getElementById("country");
-
-          // Loop through the <option> elements and set the selected attribute on the matching option
-          for (var i = 0; i < countrySelect.options.length; i++) {
-            var option = countrySelect.options[i];
-            if (option.value === countryName) {
-              option.selected = true;
-              break; // Exit the loop once the match is found
-            }
-          }
-          updateTelephoneCode(countryName);
-        })
-        .catch((error) => {
-          console.error("Error fetching location:", error);
-        });
-    }
-
-    // Call the function to get the user's country and set it in the <select>
-    getUserCountry();
-
-    //Add an event listener to handle country selection changes
-    countrySelect.addEventListener("change", (event) => {
-      const selectedCountry = countrySelect.value;
-      updateTelephoneCode(selectedCountry);
-    });
-
-    // Helper function to disable user interactions
-    function disableUserInteractions() {
-      document.body.style.pointerEvents = "none";
-      document.body.style.opacity = "0.5";
-    }
-
-    // Helper function to re-enable user interactions
-    function enableUserInteractions() {
-      document.body.style.pointerEvents = "auto";
-      document.body.style.opacity = "1";
-    }
+  }
   </script>
 </Layout>
