@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles.css";
-import { Image, Picture } from "@astrojs/image/components"
+import { Image, Picture } from "@astrojs/image/components";
 
 import hire_erpnext_developer from "../../public/Images/hire_erpnext_developer.svg";
 import right_arrow from "../../public/Images/right-arrow.svg";
-import erp_partner from "../../public/Images/erp_partner.svg";
 import hire_customization from "../../public/Images/hire_customization.svg";
 import hire_implementation from "../../public/Images/hire_implementation.svg";
 import hire_integration from "../../public/Images/hire_integration.svg";
@@ -19,14 +18,6 @@ import hire_project from "../../public/Images/hire_project.svg";
 import hire_communication from "../../public/Images/hire_communication.svg";
 import hire_development from "../../public/Images/hire_development.svg";
 import hire_erpnext_migration from "../../public/Images/hire_erpnext_migration.svg";
-import front_end from "../../public/Images/front_end.svg";
-import python from "../../public/Images/python.svg";
-import frappe_logo from "../../public/Images/frappe_logo.svg"
-import django from "../../public/Images/django.svg"
-import flask from "../../public/Images/flask.svg"
-import github from "../../public/Images/github.svg"
-import database from "../../public/Images/database.svg"
-import cloud from "../../public/Images/cloud.svg"
 import hire_empower from "../../public/Images/hire_empower.svg";
 import down_arrow from "../../public/Images/down_arrow.svg";
 import up_arrow from "../../public/Images/up_arrow.svg";
@@ -76,85 +67,28 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </p>
 
           <div
-            class="py-2 md:py-2 mt-7 md:mt-10"
+            class="flex justify-between bg-[#3E96F4] rounded-lg py-2 px-4 md:px-4 md:py-2 w-[16rem] cursor-pointer mt-7 md:mt-10"
           >
+            <a
+              href="#schedule-interview"
+              class="text-[#FFFFFF] font-semibold text-base font-inter"
+              >Hire ERPNext Developer</a
+            >
             <Image
               loading="eager"
-              src={erp_partner}
-              alt="erp_partner"           
+              src={right_arrow}
+              alt="right_arrow"
+              width={6}
+              height={12}
             />
-          </div> 
+          </div>
         </div>
-        <!-- form start -->
-        <div id="schedule-interview" class="interview rounded-[20px] shadow-lg lg:ml-10">
-          <form id="hire_form">
-            <div class="2xl:py-6 2xl:px-8  lg:py-5 xl:py-5 lg:px-5">
-              <p
-                class="text-[#3E96F4] text-2xl md:text-3xl lg:text-3xl font-bold "
-              >
-                Schedule A Developer Interview
-              </p>
-    
-              <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold  lg:mt-2 2xl:mt-3"
-              >
-                We ensure you’re matched with the right talent <br class="hidden lg:block"> based on your
-                requirement.
-              </p>
-    
-              <div
-                class="grid grid-cols-1  2xl:mt-6 lg:mt-5"
-              >
-                <div>
-                  <input
-                    type="text"
-                    placeholder=" Name*"
-                    class="rounded w-full p-2 border-2 border-brown"
-                    name="name"
-                    required
-                  />
-                </div>
-    
-                <div class="lg:mt-3 2xl:mt-5 ">
-                  <input
-                    type="email"
-                    placeholder=" Email*"
-                    class="rounded w-full p-2 border-2 border-brown "
-                    name="email"
-                    required
-                  />
-                </div>
-    
-                <div class="lg:mt-3 2xl:mt-5">
-                  <input
-                    type="tel"
-                    placeholder=" Phone Number"
-                    class="rounded w-full p-2 border-2 border-brown"
-                    name="phone"
-                  />
-                </div>
-              </div>
-    
-              <div class="lg:mt-3 2xl:mt-5">
-                <textarea
-                  name="message"
-                  id=""
-                  rows="5"
-                  placeholder="Describe Your Requirements*"
-                  class="w-full rounded p-3 border-2 border-brown"
-                  required></textarea>
-              </div>
-    
-              <div class="mt-5 md:mt-7 lg:mt-3 2xl:mt-5">
-                <button
-                  class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
-                  >Schedule Interview</button
-                >
-              </div>
-            </div>
-          </form>
-        </div>
-        <!-- form end -->
+        <Image
+          loading="eager"
+          src={hire_erpnext_developer}
+          alt="hire_erpnext_developer"
+          class="mx-auto"
+        />
       </div>
     </div>
   </section>
@@ -184,85 +118,28 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </p>
 
           <div
-            class="py-2 md:py-2 mt-7 md:mt-7"
+            class="flex justify-between bg-[#3E96F4] rounded-lg py-2 px-4 md:px-4 md:py-2 w-[16rem] cursor-pointer mt-7 md:mt-10"
           >
-          <Image
-          loading="eager"
-          src={erp_partner}
-          alt="erp_partner"
-        />
+            <a
+              href="#schedule-interview"
+              class="text-[#FFFFFF] font-semibold text-base font-inter"
+              >Hire ERPNext Developer</a
+            >
+            <Image
+              loading="eager"
+              src={right_arrow}
+              alt="right_arrow"
+              width={6}
+              height={12}
+            />
           </div>
         </div>
-                  <!-- form start -->
-                  <div id="schedule-interview" class="interview rounded-[20px] shadow-lg md:px-10 md:mt-10 mt-8 px-5">
-                    <form id="hire_form">
-                      <div class="md:py-5 py-5">
-                        <p
-                          class="text-[#3E96F4] text-xl md:text-3xl  font-bold "
-                        >
-                          Schedule A Developer Interview
-                        </p>
-              
-                        <p
-                          class="text-[#31393C] text-sm md:text-base  font-semibold md:mt-2 mt-1"
-                        >
-                          We ensure you’re matched with the right talent <br class="hidden 2xl:block"> based on your
-                          requirement.
-                        </p>
-              
-                        <div
-                          class="grid grid-cols-1 md:mt-4 mt-3"
-                        >
-                          <div>
-                            <input
-                              type="text"
-                              placeholder=" Name*"
-                              class="rounded w-full p-2 border-2 border-brown"
-                              name="name"
-                              required
-                            />
-                          </div>
-              
-                          <div class="md:mt-4 mt-3 ">
-                            <input
-                              type="email"
-                              placeholder=" Email*"
-                              class="rounded w-full p-2 border-2 border-brown "
-                              name="email"
-                              required
-                            />
-                          </div>
-              
-                          <div class="md:mt-4 mt-3">
-                            <input
-                              type="tel"
-                              placeholder=" Phone Number"
-                              class="rounded w-full p-2 border-2 border-brown"
-                              name="phone"
-                            />
-                          </div>
-                        </div>
-              
-                        <div class="md:mt-4 mt-3">
-                          <textarea
-                            name="message"
-                            id=""
-                            rows="5"
-                            placeholder="Describe Your Requirements*"
-                            class="w-full rounded p-3 border-2 border-brown"
-                            required></textarea>
-                        </div>
-              
-                        <div class="md:mt-4 mt-3">
-                          <button
-                            class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
-                            >Schedule Interview</button
-                          >
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <!-- form end -->
+        <Image
+          loading="eager"
+          src={hire_erpnext_developer}
+          alt="hire_erpnext_developer"
+          class="mx-auto pt-10"
+        />
       </div>
     </div>
   </section>
@@ -310,11 +187,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="hire_customization"
               class=""
             />
+
             <p
               class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold mt-3 md:mt-5"
             >
               Customization and Development
             </p>
+
             <p
               class="text-[#31393C] text-xs md:text-sm lg:text-base mt-2 md:mt-3 lg:mt-2"
             >
@@ -337,11 +216,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="hire_implementation"
               class=""
             />
+
             <p
               class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold mt-3 md:mt-5"
             >
               Implementation and Deployment
             </p>
+
             <p
               class="text-[#31393C] text-xs md:text-sm lg:text-base mt-2 md:mt-3 lg:mt-2"
             >
@@ -361,11 +242,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="hire_integration"
               class=""
             />
+
             <p
               class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold mt-3 md:mt-5"
             >
               Integration
             </p>
+
             <p
               class="text-[#31393C] text-xs md:text-sm lg:text-base mt-2 md:mt-3 lg:mt-2"
             >
@@ -388,11 +271,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="hire_data_migration"
               class=""
             />
+
             <p
               class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold mt-3 md:mt-5"
             >
               Data Migration
             </p>
+
             <p
               class="text-[#31393C] text-xs md:text-sm lg:text-base mt-2 md:mt-3 lg:mt-2"
             >
@@ -430,6 +315,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               performance.
             </p>
           </div>
+
           <div class="Key_card p-3 md:p-5">
             <Image
               loading="eager"
@@ -437,6 +323,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="hire_upgrades"
               class=""
             />
+
             <p
               class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold mt-3 md:mt-5"
             >
@@ -1075,13 +962,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </h2>
 
       <div class="mt-10">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
               <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold lg:text-center"
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
               >
                 Frontend
               </p>
@@ -1091,14 +978,150 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-              <Image
-              loading="eager"
-              src={front_end}
-              alt="front_end"
-              class="w-full"
-            />
-                
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >HTML</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >CSS</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >SCSS / SASS</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Bootstrap</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Tailwind</button
+                >
               </div>
+
+              <hr />
+
+              <div class="flex">
+                <div
+                  class="w-[5.6rem] md:w-[6rem] lg:w-[9rem] border-r border-[#DDE6EE] p-3 md:p-5 lg:p-7"
+                >
+                  <p
+                    class="text-[#31393C] text-xs md:text-sm lg:text-base font-semibold"
+                  >
+                    JS
+                  </p>
+                </div>
+
+                <div
+                  class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
+                >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >DOM</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >JQuery</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >JSON</button
+                  >
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="flex">
+                <div
+                  class="w-[9rem] md:w-[7.3rem] lg:w-[9rem] border-r border-[#DDE6EE] p-3 md:p-5 lg:p-7"
+                >
+                  <p
+                    class="text-[#31393C] text-xs md:text-sm lg:text-base font-semibold"
+                  >
+                    Astro JS
+                  </p>
+                </div>
+
+                <div
+                  class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
+                >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Client Side</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >SSR Side</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Create Build and move to frappe</button
+                  >
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="flex">
+                <div
+                  class="w-[5.55rem] md:w-[6rem] lg:w-[9rem] border-r border-[#DDE6EE] p-3 md:p-5 lg:p-7"
+                >
+                  <p
+                    class="text-[#31393C] text-xs md:text-sm lg:text-base font-semibold"
+                  >
+                    React
+                  </p>
+                </div>
+
+                <div
+                  class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
+                >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >JSX</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Redux</button
+                  >
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="flex">
+                <div
+                  class="w-[8.8rem] md:w-[7rem] lg:w-[9rem] border-r border-[#DDE6EE] p-3 md:p-5 lg:p-7"
+                >
+                  <p
+                    class="text-[#31393C] text-xs md:text-sm lg:text-base font-semibold"
+                  >
+                    Vue
+                  </p>
+                </div>
+
+                <div
+                  class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
+                >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Vue CLI</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >SSR</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Client Rendring</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Other Libraries</button
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -1106,39 +1129,34 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
-              class="md:flex justify-center items-center md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
+              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
-            <Image
-            loading="eager"
-            src={python}
-            alt="python"
-            class=""
-          />
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                Python
+              </p>
             </div>
 
             <div class="md:basis-10/12">
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Basics</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Oops Concepts</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Libraries</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Basics</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Oops concepts</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Libraries</button
+                >
               </div>
             </div>
           </div>
@@ -1146,18 +1164,16 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
-            <Image
-            loading="eager"
-            src={frappe_logo}
-            alt="frappe_logo"
-            class="lg:ml-4 xl:ml-4 2xl:ml-7"
-            
-          />
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                Frappe
+              </p>
             </div>
 
             <div class="md:basis-10/12">
@@ -1173,39 +1189,36 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                 </div>
 
                 <div
-                  class="p-2 md:p-3 lg:p-3 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
+                  class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
                 >
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Export Customizations</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Fixtures</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Override the JS and Py methods</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Patches</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Realtime </span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                
-  
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Background Jobs</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Assets Management and bundling</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Export Customizations</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Fixtures</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Override the JS and Py methods</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Patches</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Realtime Application</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Background Jobs</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Assets Management and bundling</button
+                  >
                 </div>
               </div>
 
@@ -1214,11 +1227,11 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Local Site</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Local Site</button
+                >
               </div>
-              </div>  
 
               <hr class="md:w-[30rem] lg:w-full" />
 
@@ -1236,50 +1249,42 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                 <div
                   class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
                 >
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Naming</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Form Layout</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Permissions</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Types</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">DocStatus</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Fields Types</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Controller Methods</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Form and View Settings</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Web View</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                 
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Naming</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Form Layout</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Permissions</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Types</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >DocStatus</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Fields Types</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Controller Methods</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Form and View Settings</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Web View</button
+                  >
                 </div>
               </div>
 
@@ -1299,77 +1304,62 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                 <div
                   class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
                 >
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Realtime(socket.io)</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Background and Cron Jobs</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Document API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Database API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Jinja API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Path Resolver</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Page Renderer</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Utility Functions</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block  text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Responses</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block  text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Hooks</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block  text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Rest API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block  text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Search API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Dialog API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block  text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Query Builder</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                 
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Realtime(socket.io)</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Background and Cron Jobs</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Document API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Database API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Jinja API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Path Resolver</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Page Renderer</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Utility Functions</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Responses</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Hooks</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Rest API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Search API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Dialog API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Query Builder</button
+                  >
                 </div>
               </div>
 
@@ -1389,82 +1379,66 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                 <div
                   class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
                 >
-
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Developer API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Form Events</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Child Table Events</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Form API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Controls</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">List</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Page API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Tree</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Common Utilities</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Dialog API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Chart API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Scanner API</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Server Calls(AJAX)</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Logging</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Form Tour</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                 
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Developer API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Form Events</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Child Table Events</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Form API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Controls</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >List</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Page API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Tree</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Common Utilities</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Dialog API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Chart API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Scanner API</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Server Calls(AJAX)</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Logging</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Form Tour</button
+                  >
                 </div>
               </div>
 
@@ -1484,46 +1458,38 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                 <div
                   class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
                 >
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Desk</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Report Builder</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Query Report</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Script Report</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Print Format</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Client Script</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">Server Script</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-              
-                <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                  <span class="relative z-10">System Console</span>
-                  <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
-                 
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Desk</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Report Builder</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Query Report</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Script Report</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Print Format</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Client Script</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >Server Script</button
+                  >
+                  <button
+                    class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                    >System Console</button
+                  >
                 </div>
               </div>
             </div>
@@ -1532,54 +1498,46 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
-              class="md:flex justify-center items-center md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
+              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
-            <Image
-            loading="eager"
-            src={django}
-            alt="django"
-            
-          />
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                Django
+              </p>
             </div>
 
             <div class="md:basis-10/12">
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
               >
-
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Views and URL Routing</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Forms and ModelForms</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Templates and Static Files</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Database Models and Migrations</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">ORM and QuerySet</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">RESTful API</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Views and URL Routing</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Forms and ModelForms</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Templates and Static Files</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Database Models and Migrations</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >ORM and QuerySet</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >RESTful API</button
+                >
               </div>
             </div>
           </div>
@@ -1587,45 +1545,38 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
-              class="md:flex justify-center items-center md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
+              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
-            <Image
-            loading="eager"
-            src={flask}
-            alt="flask"
-            
-          />
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                Flask
+              </p>
             </div>
 
             <div class="md:basis-10/12">
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Routing and Views</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Database Integration </span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Forms and WTForms</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">RESTful API Development</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Routing and Views</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Database Integration</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Forms and WTForms</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >RESTful API Development</button
+                >
               </div>
             </div>
           </div>
@@ -1633,13 +1584,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
               <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold md:text-center "
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
               >
                 APIs
               </p>
@@ -1649,17 +1600,14 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Create new</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-
-              <div class="relative inline-block text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Integrate other system APIs</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-               
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Create new</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Integrate other system APIs</button
+                >
               </div>
             </div>
           </div>
@@ -1667,48 +1615,42 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
-              class="md:flex justify-center items-center md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
+              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
-            <Image
-            loading="eager"
-            src={github}
-            alt="github"
-            
-          />
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                GitHub
+              </p>
             </div>
 
             <div class="md:basis-10/12">
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
               >
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Webhooks</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Tracking changes</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Add, commit, push and pull</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Branching and merging strategies</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Handling merge conflicts</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-                
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Webhooks</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Tracking changes</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Add, commit, push and pull</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Branching and merging strategies</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Handling merge conflicts</button
+                >
               </div>
             </div>
           </div>
@@ -1716,13 +1658,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
               <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold md:text-center"
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
               >
                 Database
               </p>
@@ -1732,13 +1674,22 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-              <Image
-              loading="eager"
-              src={database}
-              alt="database"
-              
-            />
-               
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >MySQL / MariaDB</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >PostgreSQL</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >SQLite</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Oracle</button
+                >
               </div>
             </div>
           </div>
@@ -1746,57 +1697,68 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
-          <div class="md:flex">
-            <div
-              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
-            >
-            <p
-            class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold md:text-center"
-          >
-            Deployment
-          </p>
-            </div>
-
-            <div
-            class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
-            >
-            <div class="md:basis-10/12">
-              <Image
-              loading="eager"
-              src={cloud}
-              alt="cloud"
-              
-            />
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Packages</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Linux Server Management</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Domain Configuration</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
               <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold md:text-center"
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
+              >
+                Deployment
+              </p>
+            </div>
+
+            <div class="md:basis-10/12">
+              <div
+                class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
+              >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Packages</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Linux Server Management</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Domain Configuration</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >AWS Cloud</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Google Cloud Services</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Digital Ocean</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Docker</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Frappe Cloud</button
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
+          <div class="md:flex">
+            <div
+              class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
+            >
+              <p
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
               >
                 DataBase Migration
               </p>
@@ -1806,31 +1768,26 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-2 lg:space-x-2"
               >
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Local Site to Frappe Cloud Site</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Site Frappe Cloud To Local Site</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Oracle to MySQL / MariaDB</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">SqLite to MySQL / MariaDB</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">Other Database to MySQL / MariaDB</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-               
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Local Site to Frappe Cloud Site</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Site Frappe Cloud To Local Site</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Oracle to MySQL / MariaDB</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >SqLite to MySQL / MariaDB</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >Other Database to MySQL / MariaDB</button
+                >
               </div>
             </div>
           </div>
@@ -1838,13 +1795,13 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       </div>
 
       <div class="mt-5">
-        <div class="border border-[#DDE6EE] rounded-[20px]  shadow-blue">
+        <div class="border border-[#DDE6EE] rounded-[20px]">
           <div class="md:flex">
             <div
               class="md:basis-2/12 bg-[#F6FBFF] p-3 md:p-5 lg:p-7 rounded-t-[20px] md:rounded-tr-[0px] md:rounded-tl-[20px] md:rounded-bl-[20px] md:border-r border-[#DDE6EE] border-b md:border-b-0"
             >
               <p
-                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold md:text-center"
+                class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold"
               >
                 Version Upgrade
               </p>
@@ -1854,22 +1811,18 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               <div
                 class="p-2 md:p-3 lg:p-5 space-y-1 md:space-y-2 lg:space-y-0 lg:space-x-2"
               >
-
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">V12 to latest</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">V13 to latest</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-            
-              <div class="relative inline-block rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5 cursor-pointer">
-                <span class="relative z-10">V14 to latest</span>
-                <span class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              </div>
-              
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >V12 to latest</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >V13 to latest</button
+                >
+                <button
+                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
+                  >V14 to latest</button
+                >
               </div>
             </div>
           </div>
@@ -2221,7 +2174,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
   <!-- Hire Expert Developer for Comprehensive Services -->
 
   <!-- Schedule A Developer Interview Start -->
-  <!-- <section
+  <section
     class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
     id="schedule-interview"
   >
@@ -2285,7 +2238,12 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
 
           <div class="flex justify-center mt-5 md:mt-7 lg:mt-10">
-           
+            <!-- <a
+                        href=""
+                        class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
+                        >Schedule Interview</a
+                    > -->
+
             <button
               class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
               >Schedule Interview</button
@@ -2294,7 +2252,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
         </div>
       </form>
     </div>
-  </section> -->
+  </section>
   <!-- Schedule A Developer Interview End -->
 
   <!-- Frequently Asked Questions (FAQs) start -->
@@ -2614,23 +2572,24 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
             The approximate cost of hiring ERPNext developers is determined by
             skill set like
           </p>
-          <!-- flex xl:flex-row max-xl:flex-col gap-5 xl:gap-10 -->
-          <div class="flex lg:flex-row max-lg:flex-col gap-5 pt-5 px-5 ">
-            <div class="p-3 border-2 rounded-xl lg:max-w-[380px]">
+          <div class="flex lg:flex-row max-lg:flex-col gap-5 pt-5 px-5">
+            <div class="p-3 border-2 rounded-xl lg:max-w-[380px] bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
               <h2 class="text-[#3D96F5] font-semibold">ERPNext developer</h2>
               <p class="text-xs md:text-sm lg:text-base mt-2">
                 who can work independently in ERPNext and Frappe, write code
                 server script and print formats
               </p>
-            </div>
-            <div class="lg:max-w-[380px] p-3 border-2 rounded-xl">
-              <h2 class="text-[#3D96F5] font-semibold">Senior ERPNext developers</h2>
+            </div> 
+            <div class="lg:max-w-[380px] p-3 border-2 rounded-xl bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
+              <h2 class="text-[#3D96F5] font-semibold">
+                Senior ERPNext developers
+              </h2>
               <p class="text-xs md:text-sm lg:text-base">
                 who have all skill which of ERPNext Developer plus can work on
                 complex API and third party interactions
               </p>
-            </div>  
-            <div class="p-3 border-2 rounded-xl lg:max-w-[380px]" >
+            </div>
+            <div class="p-3 border-2 rounded-xl lg:max-w-[380px] bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
               <h2 class="text-[#3D96F5] font-semibold">Lead Developer</h2>
               <p class="text-xs md:text-sm lg:text-base">
                 who having all skill as Senior ERPNext developer plus can work
@@ -2657,27 +2616,27 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 6 ? 0: 6"
+          @click="accordion = accordion == 7 ? 0: 7"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             What engagement models do you offer for ERPNext development?
           </div>
           <Image
             loading="eager"
-            :class="accordion !== 6 ? 'block' : 'hidden'"
+            :class="accordion !== 7 ? 'block' : 'hidden'"
             src={down_arrow}
             alt="down-arrow"
           />
           <Image
             loading="eager"
-            :class="accordion === 6 ? 'block' : 'hidden'"
+            :class="accordion === 7 ? 'block' : 'hidden'"
             src={up_arrow}
             alt="up-arrow"
           />
         </div>
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 6 ? 'h-0' : 'border-t-2'"
+          :class="accordion !== 7 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5 font-semibold">
             We provide two engagement models
@@ -2755,7 +2714,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
+          @click="accordion = accordion == 8 ? 0: 8"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             Can I manage my ERPNext development team independently, and how do I
@@ -2763,20 +2722,20 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
           <Image
             loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
+            :class="accordion !== 8 ? 'block' : 'hidden'"
             src={down_arrow}
             alt="down-arrow"
           />
           <Image
             loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
+            :class="accordion === 8 ? 'block' : 'hidden'"
             src={up_arrow}
             alt="up-arrow"
           />
         </div>
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
+          :class="accordion !== 8 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
             Yes, you can independently manage your ERPNext development team.
@@ -2789,44 +2748,6 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </p>
         </div>
       </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            What expertise do your ERPNext developers possess?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            Our ERPNext developers possess a diverse range of expertise,
-            including but not limited to ERPNext customization, module
-            development, data migration, system integration, and performance
-            optimization. They are adept at utilizing technologies such as
-            Python, JavaScript, HTML/CSS, and Frappe framework to deliver
-            tailored solutions that meet our clients' specific business
-            requirements. Additionally, our developers stay updated with the
-            latest developments in ERPNext and related technologies to ensure
-            the highest quality of service.
-          </p>
-        </div>
-      </div>
 
       <div
         class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
@@ -2836,27 +2757,27 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
+          @click="accordion = accordion == 10 ? 0: 10"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             What expertise do your ERPNext developers possess?
           </div>
           <Image
             loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
+            :class="accordion !== 10 ? 'block' : 'hidden'"
             src={down_arrow}
             alt="down-arrow"
           />
           <Image
             loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
+            :class="accordion === 10 ? 'block' : 'hidden'"
             src={up_arrow}
             alt="up-arrow"
           />
         </div>
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
+          :class="accordion !== 10 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
             Our ERPNext developers possess a diverse range of expertise,
@@ -2874,7 +2795,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
+          @click="accordion = accordion == 11 ? 0: 11"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             How do you ensure confidentiality and data security in your ERPNext
@@ -2882,20 +2803,20 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
           <Image
             loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
+            :class="accordion !== 11 ? 'block' : 'hidden'"
             src={down_arrow}
             alt="down-arrow"
           />
           <Image
             loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
+            :class="accordion === 11 ? 'block' : 'hidden'"
             src={up_arrow}
             alt="up-arrow"
           />
         </div>
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
+          :class="accordion !== 11 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
             We ensure confidentiality and data security in our ERPNext
@@ -2908,7 +2829,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
+          @click="accordion = accordion == 12 ? 0: 12"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             Can you tailor ERPNext solutions to meet our specific business
@@ -2916,20 +2837,20 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
           <Image
             loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
+            :class="accordion !== 12 ? 'block' : 'hidden'"
             src={down_arrow}
             alt="down-arrow"
           />
           <Image
             loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
+            :class="accordion === 12 ? 'block' : 'hidden'"
             src={up_arrow}
             alt="up-arrow"
           />
         </div>
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
+          :class="accordion !== 12 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
             Yes, we specialize in tailoring ERPNext solutions to meet your
@@ -2968,12 +2889,8 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     box-shadow: 4px 4px 4px 0px rgba(62, 150, 244, 0.15);
   }
 
-  /* .interview {
-    background: linear-gradient(180deg, #184d85 0%, #31393c 100%);
-  } */
-
   .interview {
-    background-color: #E1F1FF;
+    background: linear-gradient(180deg, #184d85 0%, #31393c 100%);
   }
 
   .card_bg {
@@ -3054,9 +2971,6 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     margin-top: 45rem;
   }
 
-  .shadow-blue {
-        box-shadow: 0px 4px 6px -1px rgba(0, 0, 255, 0.1), 4px 0px 6px -1px rgba(0, 0, 255, 0.06);
-    }
   @media (max-width: 640px) {
     .section-bg-right-1::before {
       content: "";
