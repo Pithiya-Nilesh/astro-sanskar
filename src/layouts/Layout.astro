@@ -7,6 +7,7 @@ import favicon from "../../public/favicon-32x32.png";
 import CookieConsent from "../components/CookieConsent.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
 import Chatbot from "../components/chatbot.astro";
+import ContactPopup from "../components/ContactPopup.astro";
 export interface Props {
 	title: string;
 	keyword?: string;
@@ -90,6 +91,7 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 			<ScrollToTop />
 			<CookieConsent />
 			<Chatbot />
+			<ContactPopup />
 			<slot />
 			<!-- <script 
 				src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js" defer
@@ -138,4 +140,4 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 			<Footer />
 		</body>
 	</html>
-		
+			

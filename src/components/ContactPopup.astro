@@ -1,0 +1,368 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+import contact_us from "../../public/Images/contact_us.svg";
+import cancle from "../../public/Images/cancle.svg";
+import "../styles.css";
+---
+
+<!-- Button -->
+<button
+  class="z-10 fixed -rotate-90 flex right-[-53px] rounded-tr-lg rounded-tl-lg top-1/2 bg-[#31393C] text-white font-bold py-2 px-4"
+  id="contact-button"
+>
+  <span class="mr-2">
+    <Image src={contact_us} alt="contact-us" class="w-6 h-6 rotate-90" />
+  </span>
+  <span>Contact Us</span>
+</button>
+
+<!-- Modal -->
+<div
+  id="contact-modal"
+  class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-10"
+>
+  <div class="bg-white rounded-xl shadow-lg w-3/4 md:w-1/2 lg:w-1/3">
+    <!-- Get in Touch Form -->
+    <div class="">
+      <div
+        class="flex rounded-tl-xl rounded-tr-xl p-3 justify-between items-center bg-gradient-to-b from-[#FEFEFE] to-[#E8E8E8]"
+      >
+        <h2 class="text-xl font-bold text-[#31393C]">Get in Touch</h2>
+
+        <button
+          id="cancel-button"
+          class="flex items-center"
+          onclick="closeModal()"
+        >
+          <Image src={cancle} alt="cancel-icon" />
+        </button>
+      </div>
+      <form class="p-6" id="contactpop_form">
+        <!-- Name Field -->
+        <div class="mb-4">
+          <input
+            placeholder="Name *"
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
+          />
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-4">
+          <input
+            placeholder="Email *"
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
+          />
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="mb-4">
+          <input
+            placeholder="Phone Number"
+            type="tel"
+            id="phone"
+            name="phone"
+            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
+          />
+        </div>
+
+        <!-- Description Field -->
+        <div class="mb-4">
+          <textarea
+            placeholder="Describe Your Requirements *"
+            id="requirements"
+            name="requirements"
+            required
+            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
+            rows="4"></textarea>
+        </div>
+
+        <div class="flex flex-col 2xl:flex-row gap-4 justify-between">
+          <!-- "I'm not a robot" Checkbox -->
+          <div>
+            <p
+              class="g-recaptcha"
+              data-sitekey="6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"
+            >
+            </p>
+            <p
+              id="recaptcha-error"
+              class="input-file input-file text-xs -mt-2 lg:-mt-4"
+            >
+              Please complete the reCAPTCHA verification.
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <div>
+            <button
+              type="submit"
+              class="w-full 2xl:w-[200px] bg-blue-500 text-white font-bold py-3 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  #recaptcha-error {
+      color: red;
+      font-size: 14px; /* Adjust the font size to your preference */
+      display: none;
+    }
+
+  .g-recaptcha {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    margin-bottom: -1rem;
+  }
+  @media screen and (max-width: 280px) {
+    .g-recaptcha {
+      transform: scale(0.6);
+      -webkit-transform: scale(0.6);
+      margin-bottom: -2rem;
+      margin-right: -5rem;
+    }
+  }
+  @media (min-width: 281px) and (max-width: 375px) {
+    .g-recaptcha {
+      transform: scale(0.6);
+      -webkit-transform: scale(0.6);
+      margin-bottom: -2rem;
+      margin-right: -3rem;
+    }
+  }
+</style>
+
+<script>
+  let current_url; 
+  // Event handler function to log the current URL
+  function logCurrentUrl() {
+  // Get the current pathname and remove the leading '/'
+  current_url = window.location.pathname.slice(1);
+  console.log("Current URL:" + current_url);
+  }
+  
+  // Add event listener to the button
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactButton = document.getElementById("contact-button");
+    if (contactButton) {
+      contactButton.addEventListener("click", logCurrentUrl);
+    }
+  });
+
+  // Function to open the modal
+  document.querySelector("#contact-button").addEventListener("click", () => {
+    document.querySelector("#contact-modal").classList.remove("hidden");
+  });
+
+  // Function to close the modal
+  function closeModal() {
+    document.querySelector("#contact-modal").classList.add("hidden");
+  }
+
+  // Add event listener to the cancel button (the cancel image)
+  document
+    .querySelector("#cancel-button")
+    .addEventListener("click", closeModal);
+
+  // add event listner to form
+  var form = document.getElementById("contactpop_form");
+  form.addEventListener("submit", handleContactPopForm);
+
+  // Add event listener to email input for real-time validation
+  var emailInput = document.querySelector('input[id="email"]');
+  emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
+
+    function validateEmailInput() {
+      const emailValue = emailInput.value.trim();
+      const errorMessageElement = emailInput.nextElementSibling;
+
+      if (emailValue === "") {
+        hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+        emailInput.style.borderColor = ""; // Reset border color
+        return;
+      }
+
+      if (!validateEmail(emailValue)) {
+        blinkBorder(emailInput);
+        displayErrorMessage(errorMessageElement, "Please enter a valid email address.");
+      } else {
+        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+        emailInput.style.borderColor = ""; // Reset border color
+      }
+    }
+
+  const apiKey = import.meta.env.PUBLIC_ApiKey as string;
+  const secretKey = import.meta.env.PUBLIC_SecretKey as string;
+
+  function blinkBorder(element) {
+    let isRed = false;
+
+    element.style.borderColor = "red";
+  }
+
+  function resetBorderColorOnFocus(inputElement) {
+    inputElement.addEventListener("focus", () => {
+      inputElement.style.borderColor = ""; // Remove the border color (set it to null)
+    });
+  }
+
+  // send data in frappe
+  function handleContactPopForm(e) {
+    e.preventDefault();
+
+    const recaptchaResponse = grecaptcha.getResponse();
+    // If the reCAPTCHA is filled out, clear any previous error message
+    clearRecaptchaError();
+
+    const firstNameInput = document.querySelector('input[id="name"]');
+    const emailInput = document.querySelector('input[id="email"]');
+    const messageInput = document.querySelector(
+      'textarea[name="requirements"]'
+    );
+    const phoneInput = document.querySelector('input[id="phone"]');
+
+    const nameValue = firstNameInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const messageValue = messageInput.value.trim();
+    const phoneValue = phoneInput.value.trim();
+
+    resetBorderColorOnFocus(firstNameInput);
+    resetBorderColorOnFocus(emailInput);
+    resetBorderColorOnFocus(messageInput);
+    resetBorderColorOnFocus(phoneInput);
+    
+    if (nameValue === "") {
+      blinkBorder(firstNameInput);
+    }
+
+    if (emailValue === "" || !validateEmail(emailValue)) {
+        displayErrorMessage(emailInput.nextElementSibling, "Please enter a valid email address.");
+    }
+
+    if (messageValue === "") {
+      blinkBorder(messageInput);
+    }
+
+    if (!recaptchaResponse || recaptchaResponse.length === 1) {
+      showRecaptchaError();
+      return;
+    }
+
+    if (
+      nameValue === "" ||
+      emailValue === "" ||
+      messageValue === ""
+    ) {
+      return;
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the value of the 'page' parameter
+    const pageValue = urlParams.get("page");
+
+    const queryTypeValue = pageValue ? "Demo" : "General";
+    // alert('Please select a file to upload.');
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    formData.set("data", JSON.stringify(data));
+    var name = data.name;
+    var email = data.email;
+    var phone = data.phone;
+    var requirements = data.requirements;
+    fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+    method: "POST",
+    headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `token ${apiKey}:${secretKey}`,
+    },
+    body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        requirements: requirements,
+        enquiry_source: "Website Enquiry",
+        demo_for: current_url,
+        query_type: queryTypeValue,
+    }),
+    })
+    .then((res) => {
+        if (res.status === 200) {
+            window.location.href = "/thank-you";
+        } else {
+            alert("failed");
+
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+    // return;
+  }
+
+  // Validation function for email
+  function validateEmail(email) {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function displayErrorMessage(errorMessageElement, message) {
+    if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+      // If error message doesn't exist, create and insert it
+      errorMessageElement = document.createElement("p");
+      errorMessageElement.textContent = message;
+      errorMessageElement.classList.add("error-message");
+      errorMessageElement.style.color = "red"; // Adjust the color
+      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+      // Insert the error message after the input field
+      emailInput.parentNode.insertBefore(errorMessageElement, emailInput.nextSibling);
+    } else {
+      errorMessageElement.textContent = message; // Update existing error message
+    }
+  }
+
+  function hideErrorMessage(errorMessageElement) {
+    if (errorMessageElement && errorMessageElement.classList.contains("error-message")) {
+      // If error message exists, remove it
+      errorMessageElement.remove();
+    }
+  }
+
+  function showRecaptchaError() {
+    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    recaptchaErrorElement.style.display = "block"; // Display the error message
+
+    // Hide the error message after a specific duration (e.g., 5 seconds)
+    setTimeout(function () {
+      recaptchaErrorElement.style.display = "none";
+    }, 3000);
+  }
+
+  function clearRecaptchaError() {
+    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    recaptchaErrorElement.style.display = "none"; // Hide the error message
+  }
+
+</script>
