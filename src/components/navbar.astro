@@ -5,6 +5,12 @@ import logo from "../../public/Images/logo.svg";
 import down_arrow from "../../public/Images/down-arrow.svg";
 import right_arrow from "../../public/Images/right-arrow.svg";
 import products_product from "../../public/Images/products_product.svg";
+import frappe_certified_partner from "../../public/Images/frappe-certified-partner.svg";
+import Manufacturing_navbar from "../../public/Images/Manufacturing_navbar.svg";
+import Real_Estate from "../../public/Images/Real_Estate.svg";
+import Textile from "../../public/Images/Textile.svg";
+import Retail from "../../public/Images/Retail.svg";
+import Human_Resources from "../../public/Images/Human _Resources.svg";
 ---
 
 <nav class="border-b-2 py-5 md:py-5 px-5 md:px-0 bg-white">
@@ -352,12 +358,249 @@ import products_product from "../../public/Images/products_product.svg";
         <!-- </span> -->
         <!-- </li> -->
 
-        <li class="block xl:inline-block xl:mt-0 mr-8 pt-5 text-[#31393C]">
-          <a href="/why-choose-erpnext" class="text-sm md:text-base">
-            Why Choose ERPNext</a
-          >
+
+<!-- ERPNext start -->
+        <li class="block xl:hidden xl:mt-0 mr-8 text-[#31393C]">
+          <span class="group relative inline-block">
+            <span class="flex gap-2"
+              ><a href="/products" class="text-sm md:text-base">ERPNext</a
+              ><Image loading="eager" src={down_arrow} alt="Down Arrow" /></span
+            >
+            <ul
+              class="sub-menu lg:absolute z-10 hidden submenu-bg lg:top-[3.75rem] py-2 pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
+            >
+            <li class="open-submenu">
+              <span class="group relative inline-block">
+                <span class="flex"
+                  ><a
+                    href="#"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Overview</a
+                  ><Image
+                    loading="eager"
+                    src={down_arrow}
+                    alt="Down Arrow"
+                    class="-ml-3"
+                  /></span
+                >
+              </span>
+
+              <div class="hidden dropdown-content lg:ml-0">
+                <a
+                  href="/why-choose-erpnext"
+                  class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                  >Why Choose ERPNext</a
+                >
+                <a
+                  href="/erpnext-implementation-partner"
+                  class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                  >ERPNext Partner</a
+                >
+                <a
+                  href="https://frappe.io/api/method/frappe.utils.print_format.download_pdf?doctype=Certification&name=PARTCRTF00034&format=Partner%20Certificate&no_letterhead=0&letterhead=Blank&settings=%7B%7D&_lang=en#toolbar=0"
+                  target="_blank"
+                  class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                  > View Certificate</a>
+              </div>
+            </li>
+              <li class="open-submenu">
+                <span class="group relative inline-block">
+                  <span class="flex"
+                    ><a
+                      href="#"
+                      class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                      >Solutions</a
+                    ><Image
+                      loading="eager"
+                      src={down_arrow}
+                      alt="Down Arrow"
+                      class="-ml-3"
+                    /></span
+                  >
+                </span>
+
+                <div class="hidden dropdown-content lg:ml-0">
+                  <a
+                    href="/manufacturing"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Manufacturing</a
+                  >
+                  <a
+                    href="/real-estate-crm"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Real Estate</a
+                  >
+                  <a
+                    href="/textile"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Textile</a
+                  >
+                  <a
+                    href="/retail"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Retail</a
+                  >
+                  <a
+                    href="/hr-payroll"
+                    class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
+                    >Human Resources</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </span>
         </li>
-        <li class="block xl:inline-block xl:mt-0 mr-8 text-[#31393C]">
+
+        <!-- for xl & 2xl screen start -->
+        <li class="hidden xl:inline-block xl:mt-0 mr-8 pt-5 text-[#31393C]">
+          <span class="group relative inline-block">
+            <span class="flex gap-2"
+              ><a href="#" class="text-sm md:text-base"> ERPNext</a><Image
+                loading="eager"
+                src={down_arrow}
+                alt="Down Arrow"
+              />
+            </span>
+            <ul
+              class="sub-menu lg:absolute z-10 hidden submenu-bg lg:top-[3.75rem] py-0 pr-[0rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
+            >
+              <div class="flex">
+                <div class="bg-[#F7FBFE] py-2 w-[15rem]">
+                  <li class="">
+                    <a
+                      class="whitespace-pre block text-[#31393C] font-bold py-2 lg:px-5 px-5 text-sm md:text-base cursor-auto"
+                      href="/#">Overview</a
+                    >
+                    <div class="px-5">
+                      <div class="ml-8 md:ml-10 lg:ml-0">
+                        <div class="flex gap-x-2">
+                          <Image
+                            loading="eager"
+                            src={right_arrow}
+                            alt="right_arrow"
+                            class="ml-2"
+                          />
+                          <a
+                            href="/why-choose-erpnext"
+                            class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 text-sm md:text-base"
+                            >Why Choose ERPNext</a
+                          >
+                        </div>
+
+                        <div class="flex gap-x-2">
+                          <Image
+                            loading="eager"
+                            src={right_arrow}
+                            alt="right_arrow"
+                            class="ml-2"
+                          />
+                          <a
+                            href="/erpnext-implementation-partner"
+                            class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 text-sm md:text-base"
+                            >ERPNext Partner</a
+                          >
+                        </div>
+                      </div>
+                      <hr class="w-[200px] h-[2px] bg-[#BBCEDD] mt-[10px]" />
+                    </div>
+
+                    <div class="px-5 w-[300px]">
+                      <p class="text-xs text-[#4D5F66] mt-4 mb-2 font-semibold">
+                        Sanskar Technolab is an official ERPNext Frappe Partner
+                      </p>
+                      <Image
+                        loading="eager"
+                        src={frappe_certified_partner}
+                        alt="frappe_ceritified_partner"
+                        class="md:w-auto mt-4"
+                      />
+                      <a
+                        class="underline mt-3 underline-offset-1 text-sm text-[#31393C] font-normal"
+                        href="https://frappe.io/api/method/frappe.utils.print_format.download_pdf?doctype=Certification&name=PARTCRTF00034&format=Partner%20Certificate&no_letterhead=0&letterhead=Blank&settings=%7B%7D&_lang=en#toolbar=0"
+                        target="_blank"
+                      >
+                        View Certificate
+                      </a>
+                    </div>
+                  </li>
+                </div>
+
+                <div class="bg-[#FFFFFF] pr-[1.5rem] py-2 w-[350px]">
+                  <li class="">
+                    <span class="group relative inline-block">
+                      <span class="flex"
+                        ><a
+                          href="#"
+                          class="whitespace-pre block text-[#31393C] font-bold py-2 lg:px-5 px-5 text-sm md:text-base cursor-auto"
+                          >Solutions</a
+                        ></span
+                      >
+                    </span>
+
+                    <div class="ml-8 md:ml-10 lg:ml-0">
+                      <div class="ml-5">
+                        <a href="/manufacturing">
+                          <div class="p-2 flex gap-2 border rounded-xl">
+                            <Image
+                              loading="eager"
+                              src={Manufacturing_navbar}
+                              alt="right_arrow"
+                            />
+                            <p class="text-base font-normal">Manufacturing</p>
+                          </div>
+                        </a>
+                        <a href="/real-estate-crm">
+                          <div class="p-2 flex gap-2 border rounded-xl mt-2">
+                            <Image
+                              loading="eager"
+                              src={Real_Estate}
+                              alt="right_arrow"
+                            />
+                            <p class="text-base font-normal">Real Estate</p>
+                          </div>
+                        </a>
+                        <a href="/textile">
+                          <div class="p-2 flex gap-2 border rounded-xl mt-2">
+                            <Image
+                              loading="eager"
+                              src={Textile}
+                              alt="right_arrow"
+                            />
+                            <p class="text-base font-normal">Textile</p>
+                          </div>
+                        </a>
+
+                        <a href="/retail">
+                          <div class="p-2 flex gap-2 border rounded-xl mt-2">
+                            <Image
+                              loading="eager"
+                              src={Retail}
+                              alt="right_arrow"
+                            />
+                            <p class="text-base font-normal">Retail</p>
+                          </div>
+                        </a>
+
+                        <a href="/hr-payroll">
+                          <div class="p-2 flex gap-2 border rounded-xl mt-2">
+                            <Image
+                              loading="eager"
+                              src={Human_Resources}
+                              alt="right_arrow"
+                            />
+                            <p class="text-base font-normal">Human Resources</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </span>
+        </li>
+        <!-- for xl & 2xl screen end-->
+        <!-- <li class="block xl:inline-block xl:mt-0 mr-8 text-[#31393C]">
           <span class="group relative inline-block">
             <span class="flex gap-2"
               ><a href="#" class="text-sm md:text-base">Industries</a><Image
@@ -365,9 +608,9 @@ import products_product from "../../public/Images/products_product.svg";
                 src={down_arrow}
                 alt="Down Arrow"
               /></span
-            >
+            > -->
             <!-- <a href="#" class="text-sm md:text-base">Industries</a> -->
-            <ul
+            <!-- <ul
               class="sub-menu lg:absolute z-10 hidden submenu-bg lg:top-[3.75rem] py-2 pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
             >
               <li class="">
@@ -381,19 +624,19 @@ import products_product from "../../public/Images/products_product.svg";
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                   href="/textile">Textile</a
                 >
-              </li>
+              </li> -->
               <!-- <li class="">
                 <a
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                   href="#">Healthcare</a
                 >
               </li> -->
-              <li class="">
+              <!-- <li class="">
                 <a
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                   href="/retail">Retail</a
                 >
-              </li>
+              </li> -->
               <!-- <li class="">
                 <a
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
@@ -406,21 +649,21 @@ import products_product from "../../public/Images/products_product.svg";
                   href="#">Crowdfunding</a
                 >
               </li> -->
-              <li class="">
+              <!-- <li class="">
                 <a
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                   href="/hr-payroll">Human Resources</a
                 >
-              </li>
+              </li> -->
               <!-- <li class="">
                 <a
                   class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                   href="#">Ayurveda</a
                 >
               </li> -->
-            </ul>
+            <!-- </ul>
           </span>
-        </li>
+        </li> -->
 
         <!-- products start -->
         <li class="block xl:hidden xl:mt-0 mr-8 text-[#31393C]">
@@ -454,12 +697,12 @@ import products_product from "../../public/Images/products_product.svg";
                   >
                 </span>
 
-                <div class="hidden dropdown-content  lg:ml-0">
+                <div class="hidden dropdown-content lg:ml-0">
                   <a
                     href="/erpnext_whatsapp_integration"
                     class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
                     >ERPNext Whatsapp Integration</a
-                  > 
+                  >
                   <a
                     href="/erpnext_indiamart_integration_product"
                     class="whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-5 px-5 text-sm md:text-base"
@@ -735,114 +978,114 @@ import products_product from "../../public/Images/products_product.svg";
           class="hidden bg-[#3E96F4] xl:inline-block px-4 xl:px-6 py-1 xl:py-2 !leading-8 rounded-md text-white font-semibold font-inter mt-2"
         >
           <a href="/contact-us" class="text-sm md:text-base">Inquire Now</a>
-        </li> 
+        </li>
       </ul>
     </div>
   </div>
-</nav>
 
-<style>
-  nav {
-    font-family: Open Sans;
-  }
+  <style>
+    nav {
+      font-family: Open Sans;
+    }
 
-  .submenu-bg {
-    border: 1px solid #e4e4e4;
-    background: #f7fbfe;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  }
-
-  @media only screen and (max-width: 668px) {
     .submenu-bg {
-      border: none;
-      background: none;
-      box-shadow: none;
+      border: 1px solid #e4e4e4;
+      background: #f7fbfe;
+      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
     }
-  }
 
-  @media only screen and (max-width: 769px) {
-    .submenu-bg {
-      border: none;
-      background: none;
-      box-shadow: none;
-    }
-  }
-
-  @media only screen and (max-width: 1023px) {
-    .submenu-bg {
-      border: none;
-      background: none;
-      box-shadow: none;
-    }
-  }
-
-  @media (min-width: 1280px) and (max-width: 1550px) {
-    #menu ul li {
-      margin-right: 9px;
-    }
-    #menu li span span {
-      gap: 0.3rem;
-    }
-  }
-
-  .open-submenu:hover .dropdown-content {
-    display: block;
-  }
-</style>
-
-<script>
-  var show = true;
-  // Find all buttons with the `menu` class on the page.
-  const buttons = document.querySelectorAll("button.menu");
-  // Handle clicks on each button.
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // alert('Button was clicked!');
-      var menu = document.getElementById("menu");
-      menu.classList.toggle("!block");
-
-      var menu = document.getElementById("open-menu");
-      menu.classList.toggle("!hidden");
-
-      var menu = document.getElementById("close-menu");
-      menu.classList.toggle("!block");
-    });
-  });
-
-  //   const solutions = document.getElementById("solutions");
-  //   // Handle clicks on each button.
-  // //   solutions.forEach((button) => {
-  //     solutions.addEventListener("click", () => {
-  //       // alert('Button was clicked!');
-  //       var submenu = document.getElementById("solution_submenu");
-  //       submenu.classList.toggle("!block");
-  //     });
-  // //   });
-
-  // const div = document.querySelectorAll('div.block');
-  // div.forEach((div) => {
-  //   div.
-  // });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const mainMenuItems = document.querySelectorAll("#main-menu > li");
-
-    mainMenuItems.forEach(function (menuItem) {
-      const submenu = menuItem.querySelector(".sub-menu");
-      let hideTimeout;
-
-      if (submenu) {
-        menuItem.addEventListener("mouseenter", function () {
-          clearTimeout(hideTimeout);
-          submenu.style.display = "block";
-        });
-
-        menuItem.addEventListener("mouseleave", function () {
-          hideTimeout = setTimeout(function () {
-            submenu.style.display = "none";
-          }, 300);
-        });
+    @media only screen and (max-width: 668px) {
+      .submenu-bg {
+        border: none;
+        background: none;
+        box-shadow: none;
       }
+    }
+
+    @media only screen and (max-width: 769px) {
+      .submenu-bg {
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    @media only screen and (max-width: 1023px) {
+      .submenu-bg {
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    @media (min-width: 1280px) and (max-width: 1550px) {
+      #menu ul li {
+        margin-right: 9px;
+      }
+      #menu li span span {
+        gap: 0.3rem;
+      }
+    }
+
+    .open-submenu:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+
+  <script>
+    var show = true;
+    // Find all buttons with the `menu` class on the page.
+    const buttons = document.querySelectorAll("button.menu");
+    // Handle clicks on each button.
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // alert('Button was clicked!');
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("!block");
+
+        var menu = document.getElementById("open-menu");
+        menu.classList.toggle("!hidden");
+
+        var menu = document.getElementById("close-menu");
+        menu.classList.toggle("!block");
+      });
     });
-  });
-</script>
+
+    //   const solutions = document.getElementById("solutions");
+    //   // Handle clicks on each button.
+    // //   solutions.forEach((button) => {
+    //     solutions.addEventListener("click", () => {
+    //       // alert('Button was clicked!');
+    //       var submenu = document.getElementById("solution_submenu");
+    //       submenu.classList.toggle("!block");
+    //     });
+    // //   });
+
+    // const div = document.querySelectorAll('div.block');
+    // div.forEach((div) => {
+    //   div.
+    // });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const mainMenuItems = document.querySelectorAll("#main-menu > li");
+
+      mainMenuItems.forEach(function (menuItem) {
+        const submenu = menuItem.querySelector(".sub-menu");
+        let hideTimeout;
+
+        if (submenu) {
+          menuItem.addEventListener("mouseenter", function () {
+            clearTimeout(hideTimeout);
+            submenu.style.display = "block";
+          });
+
+          menuItem.addEventListener("mouseleave", function () {
+            hideTimeout = setTimeout(function () {
+              submenu.style.display = "none";
+            }, 300);
+          });
+        }
+      });
+    });
+  </script>
+</nav>
