@@ -5,20 +5,60 @@ import close from "../../public/Images/popup_close_btn.svg";
 import "../styles.css";
 ---
 
+<style>  
+  /* Adjusted layout for smaller screens */
+  @media (min-width: 767px) and (max-width: 834px) {
+    .flex-col-md {
+      flex-direction: column !important;
+    }
+    .justify-between-md {
+      justify-content: space-between !important;
+    }
+    .items-center-md {
+      align-items: center !important;
+    }
+    .pl-md {
+      padding-left: 4rem !important;
+    }
+    .pr-md {
+      padding-right: 3rem !important;
+    }
+    .py-md {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+    .text-center-md {
+      text-align: center !important;
+    }
+    .text-left-md {
+      text-align: left !important;
+    }
+    .whitespace-normal-md {
+      white-space: normal !important;
+    }
+    .whitespace-nowrap-md {
+      white-space: nowrap !important;
+    }
+  }
+</style>
+
+
 <div class="cookie-consent fixed bottom-0 left-0 w-full bg-[#31393C] bg-opacity-80 z-20" id="cookies-popup">
-  <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-3 md:py-1 text-white"> <!-- Adjusted layout -->
-    <p class="font-semibold text-xs md:text-sm text-center md:text-left mb-2 md:mb-0">This website uses cookies to ensure you get the best experience.</p> <!-- Adjusted text alignment and margin -->
-    <div class="flex flex-col md:flex-row items-center md:items-stretch space-y-2 md:space-y-0 md:space-x-4"> <!-- Adjusted layout -->
-      <a href="/privacy-policy" class="underline text-xs md:text-sm text-center md:text-left md:py-4" id="more_info">More information</a> <!-- Adjusted text alignment -->
+  <div class="flex flex-col flex-col-md md:flex-row justify-between justify-between-md items-center items-center-md pl-4 pl-md pr-3 pr-md py-3 md:py-1 py-md text-white"> <!-- Adjusted layout -->
+    <div class="md:w-auto md:flex md:items-center mb-2 md:mb-0"> <!-- Adjusted width for text container and centered alignment -->
+      <p class="font-semibold text-xs md:text-sm text-center text-left-md mb-0 mb-md-2 whitespace-normal whitespace-nowrap-md">This website uses cookies to ensure you get the best experience.</p> <!-- Adjusted text alignment and margin -->
+    </div>
+    <div class="flex flex-row items-center md:items-stretch md:space-y-0 space-x-3 md:space-x-5"> <!-- Adjusted layout -->
+      <a href="/privacy-policy" class="underline text-xs md:text-sm text-center md:text-left md:py-4" id="more_info">More Information</a> <!-- Adjusted text alignment -->
       <div class="md:py-2">
-        <button class="bg-[#3E96F4] rounded-lg text-white font-semibold text-xs md:text-sm px-3 md:px-4 py-1 md:py-2 h-auto lg:h-10" id="accept_button">Accept All cookies</button> <!-- Adjusted font size and padding -->
+        <button class="bg-[#3E96F4] rounded-lg text-white font-semibold text-xs md:text-sm px-3 md:px-4 py-1 md:py-2 h-auto" id="accept_button">Accept All Cookies</button> <!-- Adjusted font size and padding -->
       </div>
-        <button class="rounded-full p-2"  id="close">
-        <img src="../../public/Images/popup_close_btn.svg" alt="close" class="w-8 h-8 cursor-pointer lg:ml-7" />
+      <button class="rounded-full p-2" id="close">
+        <img src="../../public/Images/popup_close_btn.svg" alt="close" class="w-6 h-6 md:w-8 md:h-8 cursor-pointer" />
       </button>
     </div>
   </div>
-</div> 
+</div>
 
 <script>
   function acceptCookies() {
@@ -52,31 +92,31 @@ import "../styles.css";
     var customCSS = `
     @media (max-width: 280px){
       .custom-class {
-      margin-bottom:12rem;
+      margin-bottom:8rem !important;
       }
       }
 
       @media (min-width: 281px) and (max-width: 434px){
       .custom-class {
-      margin-bottom: 10.5rem;
+      margin-bottom: 8rem !important;
       }
       }
-
+ 
       @media (min-width: 435px) and (max-width: 767px) {
       .custom-class {
-      margin-bottom: 10.5rem;
+      margin-bottom: 8rem !important;
       }
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
       .custom-class {
-      margin-bottom: 5rem;
+      margin-bottom: 7rem !important;
       }
       }
 
       @media (min-width:1025px){
       .custom-class {
-      margin-bottom: 5rem; 
+      margin-bottom: 5rem !important; 
       }
       }
 `;
