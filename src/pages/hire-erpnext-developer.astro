@@ -111,7 +111,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                   <input
                     type="text"
                     placeholder=" Name*"
-                    class="rounded w-full p-2 border-2 border-brown"
+                    class="rounded w-full p-2 border border-[#D9D9D9]"
                     name="name"
                     required
                   />
@@ -121,7 +121,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                   <input
                     type="email"
                     placeholder=" Email*"
-                    class="rounded w-full p-2 border-2 border-brown "
+                    class="rounded w-full p-2 border border-[#D9D9D9] "
                     name="email"
                     required
                   />
@@ -131,7 +131,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                   <input
                     type="tel"
                     placeholder=" Phone Number"
-                    class="rounded w-full p-2 border-2 border-brown"
+                    class="rounded w-full p-2 border border-[#D9D9D9]"
                     name="phone"
                   />
                 </div>
@@ -143,7 +143,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                   id=""
                   rows="5"
                   placeholder="Describe Your Requirements*"
-                  class="w-full rounded p-3 border-2 border-brown"
+                  class="w-full rounded p-3 border border-[#D9D9D9]"
                   required></textarea>
               </div>
     
@@ -175,11 +175,11 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     >
       <div class="lg:flex">
         <div class="lg:basis-6/12 flex flex-col justify-center">
-          <h1
+          <div
             class="text-2xl md:text-[2rem] lg:text-[2.5rem] lg:leading-[3rem] text-[#4D4C4D] font-bold"
           >
             Hire ERPNext Developer
-          </h1>
+        </div>
           <p
             class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold leading-5 md:leading-6 mt-5 md:mt-7"
           >
@@ -194,7 +194,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           <div
             class="py-2 md:py-2 mt-7 md:mt-7"
           >
-           
+          
           <Image
           loading="eager"
           src={erp_partner}
@@ -227,7 +227,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                             <input
                               type="text"
                               placeholder=" Name*"
-                              class="rounded w-full p-2 border-2 border-brown"
+                              class="rounded w-full p-2 border border-[#D9D9D9]"
                               name="name"
                               required
                             />
@@ -237,7 +237,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                             <input
                               type="email"
                               placeholder=" Email*"
-                              class="rounded w-full p-2 border-2 border-brown "
+                              class="rounded w-full p-2 border border-[#D9D9D9] "
                               name="email"
                               required
                             />
@@ -247,7 +247,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                             <input
                               type="tel"
                               placeholder=" Phone Number"
-                              class="rounded w-full p-2 border-2 border-brown"
+                              class="rounded w-full p-2 border border-[#D9D9D9]"
                               name="phone"
                             />
                           </div>
@@ -259,7 +259,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                             id=""
                             rows="5"
                             placeholder="Describe Your Requirements*"
-                            class="w-full rounded p-3 border-2 border-brown"
+                            class="w-full rounded p-3 border border-[#D9D9D9]"
                             required></textarea>
                         </div>
               
@@ -2188,7 +2188,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
               alt="database"
               
             />
-               
+              
               </div>
             </div>
           </div>
@@ -2797,7 +2797,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
 
           <div class="flex justify-center mt-5 md:mt-7 lg:mt-10">
-           
+          
             <button
               class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
               >Schedule Interview</button
@@ -2809,653 +2809,617 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
   </section> -->
   <!-- Schedule A Developer Interview End -->
 
-  <!-- Frequently Asked Questions (FAQs) start -->
-  <section 
-    class="section-bg-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
+<!-- Frequently Asked Questions (FAQs) start -->
+<section
+  class="section-bg-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
+>
+  <div
+    x-data="{ accordion: 0 }"
+    class="grid gap-5 bg-[#EBF5FF] rounded-[20px] text-[#31393C] p-3 md:p-4 lg:p-5 shadow drop-shadow-sm"
   >
-    <div
-      x-data="{ accordion: 0 }"
-      class="grid gap-5 bg-[#EBF5FF] rounded-[20px] text-[#31393C] p-3 md:p-4 lg:p-5 shadow drop-shadow-sm"
+    <p
+      class="text-[1.25rem] md:text-[1.50rem] lg:text-[1.75rem] font-semibold ml-3 leading-9"
     >
-      <p
-        class="text-[1.25rem] md:text-[1.50rem] lg:text-[1.75rem] font-semibold ml-3 leading-9"
-      >
-        Frequently Asked Questions (FAQs)
-      </p>
+      Frequently Asked Questions (FAQs)
+    </p>
+    <div
+      class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
+    >
+      <h2>Services Offered</h2>
+    </div>
+
+    <div class="bg-white rounded-2xl">
       <div
-        class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 0 ? 1 : 0"
       >
-        <h2>Services Offered</h2>
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Do you offer assistance with incomplete or partial ERPNext
+          development projects?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion === 1 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion !== 1 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
       </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 0 ? 1 : 0"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Do you offer assistance with incomplete or partial ERPNext
-            development projects?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion === 1 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion !== 1 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 0 ? 'h-0' : 'border-t-2'"
-        >
-          <div class="w-full bg-white rounded-[10px] p-5" id="faq1_c">
-            <p class="text-xs md:text-sm lg:text-base">
-              Yes, we assist with incomplete projects. Our ERPNext developers
-              and  are highly qualified and experienced, they will understand
-              the process and begin from there.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 2 ? 0 : 2"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Can you assist with migrating from other ERP systems to ERPNext?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 2 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 2 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 2 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
-            Yes, we provide expert assistance with migrating from other ERP
-            systems to ERPNext. Whether you're want a using SAP, Oracle,
-            Netsuite, Odoo or another platform, we have the experience and
-            expertise to guide you through a smooth transition. Below is a list
-            of migration:
-          </p>
-
-          <div
-            class="text-xs md:text-sm lg:text-base pt-5 px-5 lg:flex lg:justify-between"
-          >
-            <div class="lg:w-[370px] xl:w-[480px] 2xl:w-[585px]">
-              <div
-                class="text-[#3D96F5] font-semibold p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg border"
-              >
-                <p>Sap to ERPNext migration</p>
-              </div>
-              <div
-                class="text-[#3D96F5] font-semibold p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2 border"
-              >
-                <p>Microsoft Dynamics 365 to ERPNext migration</p>
-              </div>
-              <div
-                class="text-[#3D96F5] font-semibold border p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
-              >
-                <p>Quickbooks to ERPNext migration</p>
-              </div>
-              <div
-                class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
-              >
-                <p>Frappe apps migration</p>
-              </div>
-            </div>
-
-            <div class="lg:w-[370px] xl:w-[480px] 2xl:w-[585px]">
-              <div
-                class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg max-lg:mt-2"
-              >
-                <p>Oracle Netsuite to ERPNext migration</p>
-              </div>
-              <div
-                class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
-              >
-                <p>Odoo to ERPNext migration</p>
-              </div>
-              <div
-                class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
-              >
-                <p>Tally to ERPNext migration</p>
-              </div>
-            </div>
-          </div>
-          <p class="text-xs md:text-sm lg:text-base px-5 pt-5">
-            Our migration process starts with a thorough assessment of your
-            current ERP setup, including data want and functionalities. We then
-            create a tailored migration plan to meet your specific needs and
-            minimize disruptions.
-          </p>
-          <p class="text-xs md:text-sm lg:text-base px-5 pt-5">
-            We handle data extraction, transformation, and loading into ERPNext,
-            ensuring data integrity throughout. Our team works closely with
-            yours to map existing functionalities and migrate customizations.
-            After migration, we provide comprehensive staff training and ongoing
-            support for a smooth transition
-          </p>
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            With our expertise and dedication to customer satisfaction, you can
-            trust us to handle your ERP migration project efficiently and
-            effectively.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 3 ? 0 : 3"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Can you assist with upgrading ERPNext to the latest version?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 3 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 3 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 3 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
-            Yes, we offer expert assistance with upgrading ERPNext to the latest
-            version, ensuring that your system stays up-to-date with the newest
-            features and improvements.
-          </p>
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
-            Our comprehensive migration support ensures a seamless transition to
-            ERPNext Version 15 from any earlier version, whether an erpnext 12
-            to 15 version upgrade, an erpnext  13 to 15 version upgrade, or an
-            erpnext 14 to 15 version upgrade. With this upgradation, you'll
-            experience enhanced user interfaces, performance improvements,
-            updated modules, advanced reporting capabilities, improved
-            customization options, and enhanced security features.
-          </p>
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
-            Version 15 also brings updates to core modules, streamlined
-            workflows, and an improved user experience, ensuring improved
-            performance, scalability, and stability to meet your evolving
-            business needs.
-          </p>
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            No matter which version of ERPNext you're currently using, our team
-            is dedicated to ensuring a smooth and hassle-free upgrade process,
-            allowing you to leverage the full potential of the latest ERPNext
-            features for your business.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 4 ? 0: 4"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            What ERPNext development services do you provide (e.g.,
-            customization, integration)?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 4 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 4 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 4 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            We provide all(360-degree services) the services related to the
-            ERPNext, from discovery of your requirement, new system design,
-            customisation, API integration, implementation to deployment. We
-            have a team of different skills like consulting, development, and
-            deployment.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 5 ? 0: 5"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Do you offer post-deployment( after Go-Live) support and maintenance
-            services for ERPNext projects?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 5 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 5 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            We offer a variety of support services tailored to your needs after
-            deployment. As a top ERPNext development company, we offer complete
-            support for our clients, it start with Service Level Agreement(SLA)
-            which includes Support scope(Functional support, Issue
-            investigation, Bug fix, Data fix, Upgrade support, Scaling support,
-            Print format, Priority phone support) Support Process, Creation of
-            Support Tickets, Support Hours, Support levels, Support resolution
-            times and Escalation matrix.
-          </p>
-        </div>
-      </div>
-
       <div
-        class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 0 ? 'h-0' : 'border-t-2'"
       >
-        <h2>Cost and Engagement</h2>
-      </div>
-
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 6 ? 0: 6"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            How much does it cost to hire ERPNext developers?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 6 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 6 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 6 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5 font-semibold">
-            The approximate cost of hiring ERPNext developers is determined by
-            skill set like
-          </p>
-          <div class="flex lg:flex-row max-lg:flex-col gap-5 pt-5 px-5 ">
-            <div class="p-3 border-2 rounded-xl lg:max-w-[380px]">
-              <h2 class="text-[#3D96F5] font-semibold">ERPNext developer</h2>
-              <p class="text-xs md:text-sm lg:text-base mt-2">
-                who can work independently in ERPNext and Frappe, write code
-                server script and print formats
-              </p>
-            </div>
-            <div class="lg:max-w-[380px] p-3 border-2 rounded-xl">
-              <h2 class="text-[#3D96F5] font-semibold">Senior ERPNext developers</h2>
-              <p class="text-xs md:text-sm lg:text-base">
-                who have all skill which of ERPNext Developer plus can work on
-                complex API and third party interactions
-              </p>
-            </div>  
-            <div class="p-3 border-2 rounded-xl lg:max-w-[380px]" >
-              <h2 class="text-[#3D96F5] font-semibold">Lead Developer</h2>
-              <p class="text-xs md:text-sm lg:text-base">
-                who having all skill as Senior ERPNext developer plus can work
-                on complex deployment environment and can help with server
-                architecture and DevOps
-              </p>
-            </div>
-          </div>
-          <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
-            At Sanskar, you get affordable services from experts in the field of
-            ERPNext development.
-          </p>
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            So the cost to hire an ERPNext developer may differ depending on the
-            developer's experience and your project requirements. You can
-            contact us at <b class="text-[#3D96F5]"
-              ><a href="mailto:info@sanskartechnolab.com"
-                >info@sanskartechnolab.com</a
-              ></b
-            > to discuss the detailed project needs and get a quote.
-          </p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 7 ? 0: 7"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            What engagement models do you offer for ERPNext development?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 7 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 7 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 7 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5 font-semibold">
-            We provide two engagement models
-          </p>
-          <h2 class="ps-5 text-[#3D96F5] font-bold">
-            01. Fixed Cost Engagement
-          </h2>
-          <p class="text-xs md:text-sm lg:text-base px-5">
-            This implementation approach offers the advantage of precise
-            estimates and a tailored solution to meet your specific
-            requirements. We begin by clearly defining the project budget and
-            scope of work. Our team provides a fixed-cost proposal, and the
-            project is executed with well-defined milestones. While this
-            approach ensures accuracy, it does involve a planning phase that may
-            require additional time before work can commence. Any modifications
-            or changes requested during development will necessitate new
-            proposals with associated time and cost estimates.
-          </p>
-          <div
-            class="text-xs md:text-sm lg:text-base p-5 flex xl:flex-row max-xl:flex-col gap-5 xl:gap-10"
-          >
-            <div class="xl:max-w-[590px]">
-              <p class="font-semibold">
-                Fixed Cost Development Phase 1: Working Prototype
-              </p>
-              <p>
-                In the initial phase, we focus on delivering a fully functional
-                prototype of the proposed system. This prototype is like a
-                simulator of the final system, so all users can check it and
-                give any feedback if any. so the final system is delivered based
-                on user feedback as per the user's expectation, user-friendly
-                navigation, and simplicity to ensure no gap remains in the final
-                delivery. This prototype allows for an in-depth exploration of
-                the system's capabilities and features. Subsequently, we can
-                provide precise quotations for the complete development,
-                ensuring that all stakeholders clearly understand the final
-                product.
-              </p>
-            </div>
-            <div class="xl:max-w-[590px]">
-              <p class="font-bold">
-                Fixed Cos Development Phase 2: Development
-              </p>
-              <p>
-                Following the successful completion of Phase 1, we gain a
-                comprehensive understanding of the proposed system, with all its
-                intricate details. Based on your delivery priorities, we
-                allocate the necessary development resources to ensure the
-                successful execution of the proposed system.
-              </p>
-            </div>
-          </div>
-          <div class="p-5">
-            <h2 class="text-[#3D96F5] font-semibold">
-              02. Dedicated ERPNext Developer(The Agile development model)
-            </h2>
-            <p class="text-xs md:text-sm lg:text-base">
-              This model brings flexibility, dynamic scope, and the ability to
-              initiate the project quickly. Our dedicated ERPNext Developer will
-              work exclusively for your project, functioning like an in-house
-              team member, ensuring that your tasks are completed with
-              precision.
-            </p>
-            <p class="text-xs md:text-sm lg:text-base pt-5">
-              The Agile development engagement model offers a flexible and
-              adaptable approach to project management, where you pay for the
-              amount of work completed. It provides the agility and resources
-              needed to meet your project goals in a timely and efficient
-              manner. This model is known for its excellent control over
-              development, support, and ongoing maintenance.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 8 ? 0: 8"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Can I manage my ERPNext development team independently, and how do I
-            communicate with developers?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 8 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 8 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 8 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            Yes, you can independently manage your ERPNext development team.
-            Communication with developers is facilitated through various
-            channels, including emails, instant messaging platforms like Skype,
-            video conferencing tools such as Google Meet, Zoom, and Microsoft
-            Teams, as well as regular status meetings. Sanskar Technolab using
-            ERPNext for project management providing all task update and
-            tracking.
-          </p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 9 ? 0: "
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            What expertise do your ERPNext developers possess?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 9 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 9 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 9 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            Our ERPNext developers possess a diverse range of expertise,
-            including but not limited to ERPNext customization, module
-            development, data migration, system integration, and performance
-            optimization. They are adept at utilizing technologies such as
-            Python, JavaScript, HTML/CSS, and Frappe framework to deliver
-            tailored solutions that meet our clients' specific business
-            requirements. Additionally, our developers stay updated with the
-            latest developments in ERPNext and related technologies to ensure
-            the highest quality of service.
-          </p>
-        </div>
-      </div>
-
-      <div
-        class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
-      >
-        <h2>Technical Expertise</h2>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 10 ? 0: 10"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            What expertise do your ERPNext developers possess?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 10 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 10 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 10 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            Our ERPNext developers possess a diverse range of expertise,
-            including but not limited to ERPNext customization, module
-            development, data migration, system integration, and performance
-            optimization. They are adept at utilizing technologies such as
-            Python, JavaScript, HTML/CSS, and Frappe framework to deliver
-            tailored solutions that meet our clients' specific business
-            requirements. Additionally, our developers stay updated with the
-            latest developments in ERPNext and related technologies to ensure
-            the highest quality of service.
-          </p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 11 ? 0: 11"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            How do you ensure confidentiality and data security in your ERPNext
-            development services?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 11 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 11 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 11 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            We ensure confidentiality and data security in our ERPNext
-            development services through strict NDAs, robust access controls,
-            encryption, security audits, adherence to best practices, and
-            compliance with industry standards. We implemented ISO 270001.
-          </p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 12 ? 0: 12"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Can you tailor ERPNext solutions to meet our specific business
-            needs?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 12 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 12 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 12 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            Yes, we specialize in tailoring ERPNext solutions to meet your
-            specific business needs. Our team works closely with you to
-            understand your unique requirements and customizes the ERPNext
-            platform accordingly. Whether it's customization of modules,
-            integration with existing systems, workflow automation, or any other
-            specific functionality, we ensure that the ERPNext solution aligns
-            perfectly with your business processes and objectives.
+        <div class="w-full bg-white rounded-[10px] p-5" id="faq1_c">
+          <p class="text-xs md:text-sm lg:text-base">
+            Yes, we assist with incomplete projects. Our ERPNext developers
+            and  are highly qualified and experienced, they will understand
+            the process and begin from there.
           </p>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Frequently Asked Questions (FAQs) End -->
+
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 2 ? 0 : 2"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Can you assist with migrating from other ERP systems to ERPNext?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 2 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 2 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 2 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
+          Yes, we provide expert assistance with migrating from other ERP
+          systems to ERPNext. Whether you're want a using SAP, Oracle,
+          Netsuite, Odoo or another platform, we have the experience and
+          expertise to guide you through a smooth transition. Below is a list
+          of migration:
+        </p>
+
+        <div
+          class="text-xs md:text-sm lg:text-base pt-5 px-5 lg:flex lg:justify-between"
+        >
+          <div class="lg:w-[370px] xl:w-[480px] 2xl:w-[585px]">
+            <div
+              class="text-[#3D96F5] font-semibold p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg border"
+            >
+              <p>Sap to ERPNext migration</p>
+            </div>
+            <div
+              class="text-[#3D96F5] font-semibold p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2 border"
+            >
+              <p>Microsoft Dynamics 365 to ERPNext migration</p>
+            </div>
+            <div
+              class="text-[#3D96F5] font-semibold border p-2 bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
+            >
+              <p>Quickbooks to ERPNext migration</p>
+            </div>
+            <div
+              class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
+            >
+              <p>Frappe apps migration</p>
+            </div>
+          </div>
+
+          <div class="lg:w-[370px] xl:w-[480px] 2xl:w-[585px]">
+            <div
+              class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg max-lg:mt-2"
+            >
+              <p>Oracle Netsuite to ERPNext migration</p>
+            </div>
+            <div
+              class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
+            >
+              <p>Odoo to ERPNext migration</p>
+            </div>
+            <div
+              class="text-[#3D96F5] font-semibold p-2 border bg-gradient-to-b from-[#DFEFFF] to-[#FFFFFF] rounded-lg mt-2"
+            >
+              <p>Tally to ERPNext migration</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs md:text-sm lg:text-base px-5 pt-5">
+          Our migration process starts with a thorough assessment of your
+          current ERP setup, including data want and functionalities. We then
+          create a tailored migration plan to meet your specific needs and
+          minimize disruptions.
+        </p>
+        <p class="text-xs md:text-sm lg:text-base px-5 pt-5">
+          We handle data extraction, transformation, and loading into ERPNext,
+          ensuring data integrity throughout. Our team works closely with
+          yours to map existing functionalities and migrate customizations.
+          After migration, we provide comprehensive staff training and ongoing
+          support for a smooth transition
+        </p>
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          With our expertise and dedication to customer satisfaction, you can
+          trust us to handle your ERP migration project efficiently and
+          effectively.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 3 ? 0 : 3"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Can you assist with upgrading ERPNext to the latest version?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 3 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 3 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 3 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
+          Yes, we offer expert assistance with upgrading ERPNext to the latest
+          version, ensuring that your system stays up-to-date with the newest
+          features and improvements.
+        </p>
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
+          Our comprehensive migration support ensures a seamless transition to
+          ERPNext Version 15 from any earlier version, whether an erpnext 12
+          to 15 version upgrade, an erpnext  13 to 15 version upgrade, or an
+          erpnext 14 to 15 version upgrade. With this upgradation, you'll
+          experience enhanced user interfaces, performance improvements,
+          updated modules, advanced reporting capabilities, improved
+          customization options, and enhanced security features.
+        </p>
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
+          Version 15 also brings updates to core modules, streamlined
+          workflows, and an improved user experience, ensuring improved
+          performance, scalability, and stability to meet your evolving
+          business needs.
+        </p>
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          No matter which version of ERPNext you're currently using, our team
+          is dedicated to ensuring a smooth and hassle-free upgrade process,
+          allowing you to leverage the full potential of the latest ERPNext
+          features for your business.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 4 ? 0: 4"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          What ERPNext development services do you provide (e.g.,
+          customization, integration)?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 4 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 4 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 4 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          We provide all(360-degree services) the services related to the
+          ERPNext, from discovery of your requirement, new system design,
+          customisation, API integration, implementation to deployment. We
+          have a team of different skills like consulting, development, and
+          deployment.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 5 ? 0: 5"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Do you offer post-deployment( after Go-Live) support and maintenance
+          services for ERPNext projects?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 5 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 5 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 5 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          We offer a variety of support services tailored to your needs after
+          deployment. As a top ERPNext development company, we offer complete
+          support for our clients, it start with Service Level Agreement(SLA)
+          which includes Support scope(Functional support, Issue
+          investigation, Bug fix, Data fix, Upgrade support, Scaling support,
+          Print format, Priority phone support) Support Process, Creation of
+          Support Tickets, Support Hours, Support levels, Support resolution
+          times and Escalation matrix.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
+    >
+      <h2>Cost and Engagement</h2>
+    </div>
+
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 6 ? 0: 6"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          How much does it cost to hire ERPNext developers?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 6 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 6 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 6 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5 font-semibold">
+          The approximate cost of hiring ERPNext developers is determined by
+          skill set like
+        </p>
+        <div class="flex lg:flex-row max-lg:flex-col gap-5 pt-5 px-5">
+          <div class="p-3 border-2 rounded-xl lg:max-w-[380px] bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
+            <h2 class="text-[#3D96F5] font-semibold">ERPNext developer</h2>
+            <p class="text-xs md:text-sm lg:text-base mt-2">
+              who can work independently in ERPNext and Frappe, write code
+              server script and print formats
+            </p>
+          </div> 
+          <div class="lg:max-w-[380px] p-3 border-2 rounded-xl bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
+            <h2 class="text-[#3D96F5] font-semibold">
+              Senior ERPNext developers
+            </h2>
+            <p class="text-xs md:text-sm lg:text-base">
+              who have all skill which of ERPNext Developer plus can work on
+              complex API and third party interactions
+            </p>
+          </div>
+          <div class="p-3 border-2 rounded-xl lg:max-w-[380px] bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF]">
+            <h2 class="text-[#3D96F5] font-semibold">Lead Developer</h2>
+            <p class="text-xs md:text-sm lg:text-base">
+              who having all skill as Senior ERPNext developer plus can work
+              on complex deployment environment and can help with server
+              architecture and DevOps
+            </p>
+          </div>
+        </div>
+        <p class="text-xs md:text-sm lg:text-base pt-5 px-5">
+          At Sanskar, you get affordable services from experts in the field of
+          ERPNext development.
+        </p>
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          So the cost to hire an ERPNext developer may differ depending on the
+          developer's experience and your project requirements. You can
+          contact us at <b class="text-[#3D96F5]"
+            ><a href="mailto:info@sanskartechnolab.com"
+              >info@sanskartechnolab.com</a
+            ></b
+          > to discuss the detailed project needs and get a quote.
+        </p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 7 ? 0: 7"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          What engagement models do you offer for ERPNext development?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 7 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 7 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 7 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5 font-semibold">
+          We provide two engagement models
+        </p>
+        <h2 class="ps-5 text-[#3D96F5] font-bold">
+          01. Fixed Cost Engagement
+        </h2>
+        <p class="text-xs md:text-sm lg:text-base px-5">
+          This implementation approach offers the advantage of precise
+          estimates and a tailored solution to meet your specific
+          requirements. We begin by clearly defining the project budget and
+          scope of work. Our team provides a fixed-cost proposal, and the
+          project is executed with well-defined milestones. While this
+          approach ensures accuracy, it does involve a planning phase that may
+          require additional time before work can commence. Any modifications
+          or changes requested during development will necessitate new
+          proposals with associated time and cost estimates.
+        </p>
+        <div
+          class="text-xs md:text-sm lg:text-base p-5 flex xl:flex-row max-xl:flex-col gap-5 xl:gap-10"
+        >
+          <div class="xl:max-w-[590px]">
+            <p class="font-semibold">
+              Fixed Cost Development Phase 1: Working Prototype
+            </p>
+            <p>
+              In the initial phase, we focus on delivering a fully functional
+              prototype of the proposed system. This prototype is like a
+              simulator of the final system, so all users can check it and
+              give any feedback if any. so the final system is delivered based
+              on user feedback as per the user's expectation, user-friendly
+              navigation, and simplicity to ensure no gap remains in the final
+              delivery. This prototype allows for an in-depth exploration of
+              the system's capabilities and features. Subsequently, we can
+              provide precise quotations for the complete development,
+              ensuring that all stakeholders clearly understand the final
+              product.
+            </p>
+          </div>
+          <div class="xl:max-w-[590px]">
+            <p class="font-bold">
+              Fixed Cos Development Phase 2: Development
+            </p>
+            <p>
+              Following the successful completion of Phase 1, we gain a
+              comprehensive understanding of the proposed system, with all its
+              intricate details. Based on your delivery priorities, we
+              allocate the necessary development resources to ensure the
+              successful execution of the proposed system.
+            </p>
+          </div>
+        </div>
+        <div class="p-5">
+          <h2 class="text-[#3D96F5] font-semibold">
+            02. Dedicated ERPNext Developer(The Agile development model)
+          </h2>
+          <p class="text-xs md:text-sm lg:text-base">
+            This model brings flexibility, dynamic scope, and the ability to
+            initiate the project quickly. Our dedicated ERPNext Developer will
+            work exclusively for your project, functioning like an in-house
+            team member, ensuring that your tasks are completed with
+            precision.
+          </p>
+          <p class="text-xs md:text-sm lg:text-base pt-5">
+            The Agile development engagement model offers a flexible and
+            adaptable approach to project management, where you pay for the
+            amount of work completed. It provides the agility and resources
+            needed to meet your project goals in a timely and efficient
+            manner. This model is known for its excellent control over
+            development, support, and ongoing maintenance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 8 ? 0: 8"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Can I manage my ERPNext development team independently, and how do I
+          communicate with developers?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 8 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 8 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 8 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          Yes, you can independently manage your ERPNext development team.
+          Communication with developers is facilitated through various
+          channels, including emails, instant messaging platforms like Skype,
+          video conferencing tools such as Google Meet, Zoom, and Microsoft
+          Teams, as well as regular status meetings. Sanskar Technolab using
+          ERPNext for project management providing all task update and
+          tracking.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-b from-[#BBDBFF] to-[#E8F3FF] text-black text-xl font-semibold rounded-lg p-2 border-2"
+    >
+      <h2>Technical Expertise</h2>
+    </div>
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 10 ? 0: 10"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          What expertise do your ERPNext developers possess?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 10 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 10 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 10 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          Our ERPNext developers possess a diverse range of expertise,
+          including but not limited to ERPNext customization, module
+          development, data migration, system integration, and performance
+          optimization. They are adept at utilizing technologies such as
+          Python, JavaScript, HTML/CSS, and Frappe framework to deliver
+          tailored solutions that meet our clients' specific business
+          requirements. Additionally, our developers stay updated with the
+          latest developments in ERPNext and related technologies to ensure
+          the highest quality of service.
+        </p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 11 ? 0: 11"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          How do you ensure confidentiality and data security in your ERPNext
+          development services?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 11 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 11 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 11 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          We ensure confidentiality and data security in our ERPNext
+          development services through strict NDAs, robust access controls,
+          encryption, security audits, adherence to best practices, and
+          compliance with industry standards. We implemented ISO 270001.
+        </p>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl">
+      <div
+        class="flex justify-between p-4 cursor-pointer"
+        @click="accordion = accordion == 12 ? 0: 12"
+      >
+        <div class="font-semibold text-sm md:text-sm lg:text-base">
+          Can you tailor ERPNext solutions to meet our specific business
+          needs?
+        </div>
+        <Image
+          loading="eager"
+          :class="accordion !== 12 ? 'block' : 'hidden'"
+          src={down_arrow}
+          alt="down-arrow"
+        />
+        <Image
+          loading="eager"
+          :class="accordion === 12 ? 'block' : 'hidden'"
+          src={up_arrow}
+          alt="up-arrow"
+        />
+      </div>
+      <div
+        class="overflow-hidden bg-white rounded-b-[10px]"
+        :class="accordion !== 12 ? 'h-0' : 'border-t-2'"
+      >
+        <p class="text-xs md:text-sm lg:text-base p-5">
+          Yes, we specialize in tailoring ERPNext solutions to meet your
+          specific business needs. Our team works closely with you to
+          understand your unique requirements and customizes the ERPNext
+          platform accordingly. Whether it's customization of modules,
+          integration with existing systems, workflow automation, or any other
+          specific functionality, we ensure that the ERPNext solution aligns
+          perfectly with your business processes and objectives.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Frequently Asked Questions (FAQs) End -->
 </Layout>
 
 <style>
