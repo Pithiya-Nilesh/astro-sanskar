@@ -597,8 +597,8 @@ import contact_map from "../../public/Images/contact_map.svg";
             Authorization: `token ${apiKey}:${secretKey}`,
           },
           body: JSON.stringify({
-            full_name: full_name,
-            emailaddress: email,
+            first_name: full_name,
+            email: email,
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
@@ -647,8 +647,8 @@ import contact_map from "../../public/Images/contact_map.svg";
                 Authorization: `token ${apiKey}:${secretKey}`,
               },
               body: JSON.stringify({
-                full_name: full_name,
-                emailaddress: email,
+                first_name: full_name,
+                email: email,
                 phone: phone,
                 message: message,
                 document: file_url,
