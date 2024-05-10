@@ -415,7 +415,10 @@ import Human_Resources from "../../public/Images/Human _Resources.svg";
                   </span>
                 </span>
 
-                <div class="hidden dropdown-content lg:ml-0" id="overview_menu">
+                <div
+                  class="ps-[10px] hidden dropdown-content lg:ml-0"
+                  id="overview_menu"
+                >
                   <a
                     href="/why-choose-erpnext"
                     class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
@@ -466,7 +469,7 @@ import Human_Resources from "../../public/Images/Human _Resources.svg";
                 </span>
 
                 <div
-                  class="hidden dropdown-content lg:ml-0"
+                  class="ps-[10px] hidden dropdown-content lg:ml-0"
                   id="solutions_menu"
                 >
                   <a
@@ -821,7 +824,7 @@ import Human_Resources from "../../public/Images/Human _Resources.svg";
                   </span>
 
                   <div
-                    class="hidden dropdown-content lg:ml-0"
+                    class="hidden dropdown-content lg:ml-0 ps-[10px]"
                     id="integration_menu"
                   >
                     <a
@@ -1274,28 +1277,56 @@ import Human_Resources from "../../public/Images/Human _Resources.svg";
       //   });
       // });
 
-      // Variable to keep track of the currently open menu
-      let currentOpenMenu = null;
+      // Variable to keep track of the currently open menu and its path in the DOM
+      let currentOpenMenu = {
+        menu: null,
+        arrow: null,
+        path: null,
+        text: null,
+        parent: null, // Track parent menu
+      };
 
       // Function to toggle the dropdown menu
       function toggleDropdownMenu(
         arrowElement,
         menuElement,
         pathElement,
-        textElement
+        textElement,
+        parentMenu = null
       ) {
-        // Check if the menu element is hidden
+        // Determine if the menu element is hidden
         const isMenuHidden = menuElement.classList.contains("hidden");
 
-        // If the current menu is not the newly selected menu and there is an open menu, close it
-        if (currentOpenMenu && currentOpenMenu.menu !== menuElement) {
-          currentOpenMenu.menu.classList.add("hidden");
-          currentOpenMenu.arrow.style.transform = "rotate(0deg)";
-          currentOpenMenu.path.setAttribute("stroke", "#B5CBE3");
-          currentOpenMenu.text.style.color = "#4D5F66";
+        // If there is an open menu and the current menu is not a child of it, close the open menu
+        if (currentOpenMenu.menu && currentOpenMenu.menu !== menuElement) {
+          // Check if the open menu is a parent of the current menu
+          let isParent = false;
+          let currentElement = menuElement;
+
+          while (currentElement) {
+            if (currentElement === currentOpenMenu.menu) {
+              isParent = true;
+              break;
+            }
+            currentElement = currentElement.parentElement;
+          }
+
+          if (!isParent) {
+            // Close the open menu
+            currentOpenMenu.menu.classList.add("hidden");
+            currentOpenMenu.arrow.style.transform = "rotate(0deg)";
+            currentOpenMenu.path.setAttribute("stroke", "#B5CBE3");
+            currentOpenMenu.text.style.color = "#4D5F66";
+
+            // Reset the current open menu
+            currentOpenMenu.menu = null;
+            currentOpenMenu.arrow = null;
+            currentOpenMenu.path = null;
+            currentOpenMenu.text = null;
+          }
         }
 
-        // If the menu was hidden, show it and change the arrow and text colors
+        // If the menu is hidden, show it and update the arrow and text styles
         if (isMenuHidden) {
           menuElement.classList.remove("hidden");
           arrowElement.style.transform = "rotate(180deg)";
@@ -1308,32 +1339,42 @@ import Human_Resources from "../../public/Images/Human _Resources.svg";
             arrow: arrowElement,
             path: pathElement,
             text: textElement,
+            parent: parentMenu, // Track parent menu
           };
         } else {
           // If the menu was visible, hide it and reset the arrow and text colors
-          arrowElement.style.transform = "rotate(360deg)";
+          arrowElement.style.transform = "rotate(0deg)";
           menuElement.classList.remove("group-hover:block");
           menuElement.classList.add("hidden");
           pathElement.setAttribute("stroke", "#B5CBE3");
           textElement.style.color = "#4D5F66";
 
-          // Clear the reference to the currently open menu
-          currentOpenMenu = null;
+          // Reset the current open menu
+          currentOpenMenu.menu = null;
+          currentOpenMenu.arrow = null;
+          currentOpenMenu.path = null;
+          currentOpenMenu.text = null;
+          currentOpenMenu.parent = null;
         }
       }
 
-      // function toggleDropdownMenu(arrowElement, menuElement,pathElement,Element) {
+      // function toggleDropdownMenu(
+      //   arrowElement,
+      //   menuElement,
+      //   pathElement,
+      //   textElement
+      // ) {
       //   if (menuElement.classList.contains("hidden")) {
       //     arrowElement.style.transform = "rotate(180deg)";
       //     pathElement.setAttribute("stroke", "#3E96F4");
       //     menuElement.classList.remove("hidden");
-      //     Element.style.color="#3E96F4";
+      //     textElement.style.color = "#3E96F4";
       //   } else {
       //     arrowElement.style.transform = "rotate(360deg)";
       //     menuElement.classList.remove("group-hover:block");
       //     menuElement.classList.add("hidden");
       //     pathElement.setAttribute("stroke", "#B5CBE3");
-      //     Element.style.color="#4D5F66";
+      //     textElement.style.color = "#4D5F66";
       //   }
       // }
 

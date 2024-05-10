@@ -117,7 +117,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                     type="email"
                     placeholder=" Email*"
                     class="rounded w-full p-2 border border-[#D9D9D9]"
-                    name="emailaddress"
+                    name="email"
                     required
                   />
                 </div>
@@ -127,14 +127,14 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                     type="tel"
                     placeholder=" Phone Number"
                     class="rounded w-full p-2 border border-[#D9D9D9]"
-                    name="phone"
+                    name="phone_no"
                   />
                 </div>
               </div>
 
               <div class="lg:mt-3 2xl:mt-5">
                 <textarea
-                  name="message"
+                  name="req_message"
                   id=""
                   rows="5"
                   placeholder="Describe Your Requirements*"
@@ -150,7 +150,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                         > -->
 
                 <button
-                  class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
+                  class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2" type="submit"
                   >Schedule Interview</button
                 >
               </div>
@@ -195,7 +195,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           id="schedule-interview"
           class="interview rounded-[20px] shadow-lg md:px-10 md:mt-10 mt-8 px-5"
         >
-          <form id="hire_form">
+          <form id="hire_small_form">
             <div class="md:py-5 py-5">
               <p class="text-[#3E96F4] text-xl md:text-3xl font-bold">
                 Schedule A Developer Interview
@@ -215,7 +215,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                     type="text"
                     placeholder=" Name*"
                     class="rounded w-full p-2 border border-[#D9D9D9]"
-                    name="name"
+                    name="full_name"
                     required
                   />
                 </div>
@@ -259,7 +259,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                                   > -->
 
                 <button
-                  class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
+                  class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2" type="submit"
                   >Schedule Interview</button
                 >
               </div>
@@ -1239,7 +1239,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
           </div>
         </div>
       </div>
-    </section>
+    
 
     <div class="mt-5">
       <div class="border border-[#DDE6EE] rounded-[20px] shadow-blue">
@@ -2389,26 +2389,6 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
                   class="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"
                 ></span>
               </div>
-              <!-- <button
-                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
-                  >Webhooks</button
-                >
-                <button
-                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
-                  >Tracking changes</button
-                >
-                <button
-                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
-                  >Add, commit, push and pull</button
-                >
-                <button
-                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
-                  >Branching and merging strategies</button
-                >
-                <button
-                  class="border border-[#C7D6E2] rounded-full text-[#31393C] text-xs md:text-sm lg:text-base py-2 px-5"
-                  >Handling merge conflicts</button
-                > -->
             </div>
           </div>
         </div>
@@ -2675,8 +2655,8 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
         </div>
       </div>
     </div>
-  </section>
-</Layout>
+    </section>
+</section>
 <!-- Technical Expertise of our ERPNext Developers End -->
 
 <!-- Hiring ERPNext Developers Made Simple in Three Steps start -->
@@ -3839,8 +3819,11 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     });
   });
 
-  var form = document.getElementById("hire_form");
-  form.addEventListener("submit", handleContactForm);
+  var hire_form = document.getElementById("hire_form");
+  hire_form.addEventListener("submit", handleContactForm); 
+
+  var small_form = document.getElementById("hire_small_form");
+  small_form.addEventListener("submit", handleSmallContactForm);
 
   // Add event listener to email input for real-time validation
   var emailInput = document.querySelector('input[name="emailaddress"]');
@@ -3868,6 +3851,68 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     }
   }
 
+  // Add event listener to email input for real-time validation for form with ID 'hire_form'
+  var hireFormEmailInput = document.querySelector('#hire_form input[name="email"]');
+  hireFormEmailInput.addEventListener("blur", validateHireFormEmailInput);
+
+  function validateHireFormEmailInput() {
+    const emailValue = hireFormEmailInput.value.trim();
+    const errorMessageElement = hireFormEmailInput.nextElementSibling;
+
+    if (emailValue === "") {
+      hidehireErrorMessage(errorMessageElement); // Hide error message if email is empty
+      hireFormEmailInput.style.borderColor = ""; // Reset border color
+      return;
+    }
+
+    if (!validateEmail(emailValue)) {
+      blinkBorder(hireFormEmailInput);
+      displayhireErrorMessage(
+        errorMessageElement,
+        "Please enter a valid email address."
+      );
+    } else {
+      hidehireErrorMessage(errorMessageElement); // Hide error message if email is valid
+      hireFormEmailInput.style.borderColor = ""; // Reset border color
+    }
+  }
+
+  // Function to display error message
+  function displayhireErrorMessage(errorMessageElement, message) {
+    if (
+      !errorMessageElement ||
+      !errorMessageElement.classList.contains("error-message")
+    ) {
+      // If error message doesn't exist, create and insert it
+      errorMessageElement = document.createElement("p");
+      errorMessageElement.textContent = message;
+      errorMessageElement.classList.add("error-message");
+      errorMessageElement.style.color = "red"; // Adjust the color
+      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+      // Insert the error message after the input field
+      hireFormEmailInput.parentNode.insertBefore(
+        errorMessageElement,
+        hireFormEmailInput.nextSibling
+      );
+    } else {
+      errorMessageElement.textContent = message; // Update existing error message
+    }
+  }
+
+  // Function to hide error message
+  function hidehireErrorMessage(errorMessageElement) {
+    if (
+      errorMessageElement &&
+      errorMessageElement.classList.contains("error-message")
+    ) {
+      // If error message exists, remove it
+      errorMessageElement.remove();
+    }
+  }
+
   const apiKey = import.meta.env.PUBLIC_ApiKey as string;
   const secretKey = import.meta.env.PUBLIC_SecretKey as string;
 
@@ -3890,10 +3935,85 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
   // send data in frappe
   function handleContactForm(e) {
     e.preventDefault();
-    disableUserInteractions();
+    const form = e.target; // Get the form that triggered the submission
+ 
+    const nameInput = form.querySelector('input[name="name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const messageInput = document.querySelector('textarea[name="req_message"]');
+    const phoneInput = document.querySelector('input[name="phone_no"]');
 
-    const nameInput = document.querySelector('input[name="name"]');
-    const emailInput = document.querySelector('input[name="emailaddress"]');
+    const nameValue = nameInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const messageValue = messageInput.value.trim();
+    const phoneValue = phoneInput.value.trim();
+
+    resetBorderColorOnFocus(nameInput);
+    resetBorderColorOnFocus(emailInput);
+    resetBorderColorOnFocus(messageInput);
+    resetBorderColorOnFocus(phoneInput);
+
+    if (nameValue === "") {
+      blinkBorder(nameInput);
+    }
+
+    if (emailValue === "") {
+      blinkBorder(emailInput);
+    }
+
+    if (messageValue === "") {
+      blinkBorder(messageInput);
+    }
+
+    if (nameValue === "" || emailValue === "" || messageValue === "") {
+      return;
+    }
+
+    // alert('Please select a file to upload.');
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    formData.set("data", JSON.stringify(data));
+    var name = data.name;
+    var email = data.email;
+    var phone = data.phone_no;
+    var message = data.req_message;
+
+    fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `token ${apiKey}:${secretKey}`,
+      },
+      body: JSON.stringify({
+        first_name: name,
+        email: email,
+        phone: phone,
+        message: message,
+        enquiry_source: "Website Enquiry",
+        query_type: "Developer Interview",
+      }),
+    })
+      .then((res) => {
+        console.log("asdfasd", res);
+        if (res.status === 200) {
+          // alert("You have been registered successfully.")
+          window.location.href = "/thank-you";
+        } else {
+          alert("failed");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  // send data in frappe for small screen form 
+  function handleSmallContactForm(e) {
+    e.preventDefault();
+    const form = e.target; // Get the form that triggered the submission
+
+    const nameInput = form.querySelector('input[name="full_name"]');
+    const emailInput = form.querySelector('input[name="emailaddress"]');
     const messageInput = document.querySelector('textarea[name="message"]');
     const phoneInput = document.querySelector('input[name="phone"]');
 
@@ -3920,7 +4040,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     }
 
     if (nameValue === "" || emailValue === "" || messageValue === "") {
-      enableUserInteractions();
+      // enableUserInteractions();
       return;
     }
 
@@ -3928,7 +4048,7 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     formData.set("data", JSON.stringify(data));
-    var name = data.name;
+    var name = data.full_name;
     var email = data.emailaddress;
     var phone = data.phone;
     var message = data.message;
@@ -3953,10 +4073,8 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
         console.log("asdfasd", res);
         if (res.status === 200) {
           // alert("You have been registered successfully.")
-          enableUserInteractions();
           window.location.href = "/thank-you";
         } else {
-          enableUserInteractions();
           alert("failed");
         }
       })
@@ -3964,18 +4082,6 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
         console.log(error);
         // enableUserInteractions();
       });
-
-    // Helper function to disable user interactions
-    function disableUserInteractions() {
-      document.body.style.pointerEvents = "none";
-      document.body.style.opacity = "0.5";
-    }
-
-    // Helper function to re-enable user interactions
-    function enableUserInteractions() {
-      document.body.style.pointerEvents = "auto";
-      document.body.style.opacity = "1";
-    }
   }
 
   // Validation function for email
@@ -4019,3 +4125,5 @@ import hire_sahil from "../../public/Images/hire_sahil.png";
     }
   }
 </script>
+
+</Layout>
