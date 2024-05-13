@@ -43,8 +43,8 @@ import "../styles.css";
           <input
             placeholder="Name *"
             type="text"
-            id="name"
-            name="name"
+            id="c_name"
+            name="c_name"
             required
             class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
           />
@@ -55,8 +55,8 @@ import "../styles.css";
           <input
             placeholder="Email *"
             type="email"
-            id="email"
-            name="email"
+            id="c_email"
+            name="c_email"
             required
             class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
           />
@@ -67,8 +67,8 @@ import "../styles.css";
           <input
             placeholder="Phone Number"
             type="tel"
-            id="phone"
-            name="phone"
+            id="c_phone"
+            name="c_phone"
             class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
           />
         </div>
@@ -77,8 +77,8 @@ import "../styles.css";
         <div class="mb-4">
           <textarea
             placeholder="Describe Your Requirements *"
-            id="requirements"
-            name="requirements"
+            id="c_requirements"
+            name="c_requirements"
             required
             class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300"
             rows="4"></textarea>
@@ -93,7 +93,7 @@ import "../styles.css";
             >
             </p>
             <p
-              id="recaptcha-error"
+              id="c_recaptcha-error"
               class="input-file input-file text-xs -mt-2 lg:-mt-4"
             >
               Please complete the reCAPTCHA verification.
@@ -117,7 +117,7 @@ import "../styles.css";
 
 
 <style>
-  #recaptcha-error {
+  #c_recaptcha-error {
       color: red;
       font-size: 14px; /* Adjust the font size to your preference */
       display: none;
@@ -192,7 +192,7 @@ import "../styles.css";
   form.addEventListener("submit", handleContactPopForm);
 
   // Add event listener to email input for real-time validation
-  var emailInput = document.querySelector('input[id="email"]');
+  var emailInput = document.querySelector('input[id="c_email"]');
   emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
     function validateEmailInput() {
@@ -237,12 +237,12 @@ import "../styles.css";
     // If the reCAPTCHA is filled out, clear any previous error message
     clearRecaptchaError();
 
-    const firstNameInput = document.querySelector('input[id="name"]');
-    const emailInput = document.querySelector('input[id="email"]');
+    const firstNameInput = document.querySelector('input[id="c_name"]');
+    const emailInput = document.querySelector('input[id="c_email"]');
     const messageInput = document.querySelector(
-      'textarea[name="requirements"]'
+      'textarea[name="c_requirements"]'
     );
-    const phoneInput = document.querySelector('input[id="phone"]');
+    const phoneInput = document.querySelector('input[id="c_phone"]');
 
     const nameValue = firstNameInput.value.trim();
     const emailValue = emailInput.value.trim();
@@ -358,7 +358,7 @@ import "../styles.css";
   }
 
   function showRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
     recaptchaErrorElement.style.display = "block"; // Display the error message
 
     // Hide the error message after a specific duration (e.g., 5 seconds)
@@ -368,7 +368,7 @@ import "../styles.css";
   }
 
   function clearRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
     recaptchaErrorElement.style.display = "none"; // Hide the error message
   }
 
