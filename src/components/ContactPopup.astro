@@ -88,7 +88,7 @@ import "../styles.css";
           <!-- "I'm not a robot" Checkbox -->
           <div class="2xl:w-[200px]">
             <p
-              class="g-recaptcha"
+              class="c-g-recaptcha"
               data-sitekey="6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"
             >
             </p>
@@ -123,7 +123,7 @@ import "../styles.css";
       display: none;
     }
 
-  .g-recaptcha {
+  .c-g-recaptcha {
     transform: scale(0.77);
     -webkit-transform: scale(0.77);
     transform-origin: 0 0;
@@ -131,7 +131,7 @@ import "../styles.css";
     margin-bottom: -1rem;
   }
   @media screen and (max-width: 280px) {
-    .g-recaptcha {
+    .c-g-recaptcha {
       transform: scale(0.6);
       -webkit-transform: scale(0.48);
       margin-bottom: -2rem;
@@ -139,7 +139,7 @@ import "../styles.css";
     }
   }
   @media (min-width: 281px) and (max-width: 375px) {
-    .g-recaptcha {
+    .c-g-recaptcha {
       transform: scale(0.6);
       -webkit-transform: scale(0.5);
       margin-bottom: -2rem;
@@ -266,10 +266,10 @@ import "../styles.css";
       blinkBorder(messageInput);
     }
 
-    if (!recaptchaResponse || recaptchaResponse.length === 1) {
-      showRecaptchaError();
-      return;
-    }
+    // if (!recaptchaResponse || recaptchaResponse.length === 1) {
+    //   showRecaptchaError();
+    //   return;
+    // }
 
     if (
       nameValue === "" ||
@@ -289,10 +289,10 @@ import "../styles.css";
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     formData.set("data", JSON.stringify(data));
-    var name = data.name;
-    var email = data.email;
-    var phone = data.phone;
-    var requirements = data.requirements;
+    var name = data.c_name;
+    var email = data.c_email;
+    var phone = data.c_phone;
+    var requirements = data.c_requirements;
     fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
     method: "POST",
     headers: {

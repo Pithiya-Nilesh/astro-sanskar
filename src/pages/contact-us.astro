@@ -610,12 +610,16 @@ import contact_map from "../../public/Images/contact_map.svg";
             if (res.status === 200) {
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
-            } else {
-              alert("failed");
+            } 
+            else {
+              alert("Failed to submit data. Please try after some time.");
+              console.log("failed to post form", res)
+              sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, res)
+
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.log("error", error);
           });
 
         // return;
@@ -661,7 +665,9 @@ import contact_map from "../../public/Images/contact_map.svg";
                 if (res.status === 200) {
                   window.location.href = "/thank-you";
                 } else {
-                  alert("failed");
+                  alert("Failed to submit data. Please try after some time.");
+                  console.log("failed to post form", res)
+                  sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, res)
                 }
               })
               .catch((error) => {
@@ -684,6 +690,7 @@ import contact_map from "../../public/Images/contact_map.svg";
         e.preventDefault();
       }
     }
+
 
   // Validation function for email
   function validateEmail(email) {
@@ -747,5 +754,11 @@ import contact_map from "../../public/Images/contact_map.svg";
       return false;
     }
   }
-  </script>
+
+
+function sendEmailNotification(full_name, email, phone, message, enquiry_source, demoForValue, queryTypeValue, response){
+   console.log("send")
+}
+
+</script>
 </Layout>
