@@ -86,9 +86,9 @@ import "../styles.css";
 
         <div class="flex flex-col 2xl:flex-row gap-4 justify-between">
           <!-- "I'm not a robot" Checkbox -->
-          <div class="2xl:w-[200px]">
+          <!-- <div class="2xl:w-[200px]">
             <p
-              class="c-g-recaptcha"
+              class="g-recaptcha"
               data-sitekey="6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"
             >
             </p>
@@ -98,7 +98,7 @@ import "../styles.css";
             >
               Please complete the reCAPTCHA verification.
             </p>
-          </div>
+          </div> -->
 
           <!-- Submit Button -->
           <div>
@@ -233,9 +233,9 @@ import "../styles.css";
   function handleContactPopForm(e) {
     e.preventDefault();
 
-    const recaptchaResponse = grecaptcha.getResponse();
+    // const recaptchaResponse = grecaptcha.getResponse();
     // If the reCAPTCHA is filled out, clear any previous error message
-    clearRecaptchaError();
+    // clearRecaptchaError();
 
     const firstNameInput = document.querySelector('input[id="c_name"]');
     const emailInput = document.querySelector('input[id="c_email"]');
@@ -293,12 +293,16 @@ import "../styles.css";
     var email = data.c_email;
     var phone = data.c_phone;
     var requirements = data.c_requirements;
+
+    getUserIPAddress().then(ipAddress => {
+    let { browserName, device } = detectBrowser();
+
     fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
     method: "POST",
     headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `token ${apiKey}:${secretKey}`,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `token ${apiKey}:${secretKey}`,
     },
     body: JSON.stringify({
       first_name: name,
@@ -308,19 +312,25 @@ import "../styles.css";
       enquiry_source: "Website Enquiry",
       demo_for: current_url,
       query_type: queryTypeValue,
+      ip: ipAddress,
+      browser_name: browserName,
+      device: device,
     }),
     })
     .then((res) => {
         if (res.status === 200) {
             window.location.href = "/thank-you";
         } else {
-            alert("failed");
-
+          console.log("failed to post form", res)
+          sendEmailNotification(name, email, phone, requirements, "Website Enquiry", current_url, queryTypeValue, ipAddress, browserName, device, res)
+          alert("Failed to submit data. Please try after some time.");
         }
     })
     .catch((error) => {
         console.log(error);
     });
+
+  })
 
     // return;
   }
@@ -403,6 +413,107 @@ import "../styles.css";
         cancelButton.addEventListener("click", closeModal);
       }
     });
+
+
+// get browser and device name
+function detectBrowser() {
+      const userAgent = navigator.userAgent;
+      var browserName = 'Unknown';
+
+      // Check for Chrome
+      if (userAgent.indexOf("Chrome") !== -1) {
+        browserName = "Google Chrome";
+      }
+      // Check for Firefox
+      else if (userAgent.indexOf("Firefox") !== -1) {
+        browserName = "Mozilla Firefox";
+      }
+      // Check for Safari
+      else if (userAgent.indexOf("Safari") !== -1) {
+        browserName = "Apple Safari";
+      }
+      // Check for Edge
+      else if (userAgent.indexOf("Edg") !== -1) {
+        browserName = "Microsoft Edge";
+      }
+      // Check for Internet Explorer
+      else if (
+        userAgent.indexOf("MSIE") !== -1 ||
+        userAgent.indexOf("Trident") !== -1
+      ) {
+        browserName = "Internet Explorer";
+      }
+
+      // Log the detected browser to the console
+    //   console.log(`Detected browser: ${browserName}`);
+
+      // Detect the device type based on screen size
+      const screenWidth = window.innerWidth;
+      var device = 'Unknown'
+      if (screenWidth <= 576) {
+        device = 'Mobile'
+      } else if (screenWidth <= 992) {
+        device = 'Tablet'
+      } else if (screenWidth <= 1200) {
+        device = 'Laptop'
+      } else {
+        device = 'Desktop'
+      }
+
+      return { browserName, device }
+    }
+
+// Function to get the user's IP address using ipify
+function getUserIPAddress() {
+  return fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => data.ip)
+      .catch(error => {
+          console.error('Error fetching IP address:', error);
+          return null; // Handle the error gracefully
+      });
+}
+
+
+function sendEmailNotification(full_name="", email="", phone="", message="", enquiry_source="", demoForValue="", queryTypeValue="", ip="", browser_name="", device="", response=""){ 
+  console.log("sending email notification...")
+  // return
+   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      // Authorization: `token ${apiKey}:${secretKey}`,
+    },
+    body: JSON.stringify({
+      full_name: full_name,
+      email: email,
+      phone: phone,
+      message: message,
+      enquiry_source: "Website Enquiry",
+      demoForValue: demoForValue,
+      queryTypeValue: queryTypeValue,
+      ip: ip,
+      browser_name: browser_name,
+      device: device,
+      response: response,
+      page_name: "Contact Us PopUp"
+    }),
+  })
+    .then((res) => {
+      if (res.status === 200) {
+        // alert("You have been registered successfully.")
+        console.log("email notification sent.")
+      } 
+      else {
+        console.log("failed to send email notification", res)
+        alert("We are unable to process your request. please send your requirements on info@sanskartechnolab.com")
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+}
 
     
 </script>

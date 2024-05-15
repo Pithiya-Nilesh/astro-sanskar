@@ -1308,7 +1308,18 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
                         
                         //   window.location.href="/thank-you"
                     } else {
-                        alert("Failed");
+                        console.log("failed to post form", res)
+                        sendEmailNotification(user_details[0].name, user_details[1].email, selected_technology[0], selected_module, questions_answer, "Website Enquiry", need_customization, ipAddress, browserName, device, res)
+                        .then(() => {
+                            // Email sent successfully
+                            alert("Failed to submit data. Please try after some time.");
+                        })
+                        .catch((error) => {
+                            // Display alert if sending email failed
+                            alert("Failed to submit data. Please try after some time.");
+                            console.error("Failed to send email:", error);
+                        });
+
                     }
                 }).catch((error) => {
                     console.log(error);
@@ -1435,7 +1446,7 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
             chat_icon.classList.remove("hidden");
             getUserIPAddress().then(ipAddress => {
             let { browserName, device } = detectBrowser();
-            if (ipAddress) {
+            // if (ipAddress) {
                 fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
                     method: 'POST',
                     headers: {
@@ -1482,15 +1493,25 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
                         
                         //   window.location.href="/thank-you"
                     } else {
-                        alert("Failed");
+                        console.log("failed to post form", res)
+                        sendEmailNotification(user_details[0].name, user_details[1].email, selected_technology[0], selected_module, questions_answer, "Website Enquiry", need_customization, ipAddress, browserName, device, res)
+                        .then(() => {
+                            // Email sent successfully
+                            alert("Failed to submit data. Please try after some time.");
+                        })
+                        .catch((error) => {
+                            // Display alert if sending email failed
+                            alert("Failed to submit data. Please try after some time.");
+                            console.error("Failed to send email:", error);
+                        });                
                     }
                 }).catch((error) => {
                     console.log(error);
                 });
-            } else {
+            // } else {
                 // Handle the case where IP retrieval failed
-                alert("Failed to retrieve IP address");
-            }
+                // alert("Failed to retrieve IP address");
+            // }
         });
 
 
@@ -1659,7 +1680,6 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
         start_auto_message()
     }
 
-
     chat_message.addEventListener("focus", remove_error_class);
 
     form.addEventListener("submit", send_message);
@@ -1675,6 +1695,45 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
     //     });
     // });
 
+function sendEmailNotification(full_name="", email="", selected_technology="", selected_module="", questions_answer="", enquiry_source, need_customization="", ipAddress="", browserName="", device="", response=""){ 
+  console.log("sending email notification...")
+  // return
+   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      // Authorization: `token ${apiKey}:${secretKey}`,
+    },
+    body: JSON.stringify({
+      full_name: full_name,
+      email: email,
+      selected_technology: selected_technology,
+      need_customization: need_customization,
+      selected_module: selected_module,
+      questions_answer: questions_answer,
+      enquiry_source: "Website Chat",
+      ip: ipAddress,
+      browser_name: browserName,
+      device: device,
+      response: response,
+      page_name: "Chatbot"
+    }),
+  })
+    .then((res) => {
+      if (res.status === 200) {
+        // alert("You have been registered successfully.")
+        console.log("email notification sent.")
+      } 
+      else {
+        console.log("failed to send email notification", res)
+        alert("We are unable to process your request. please send your requirements on info@sanskartechnolab.com")
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+}
   
 </script>
 

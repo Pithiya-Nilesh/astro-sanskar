@@ -585,42 +585,48 @@ import contact_map from "../../public/Images/contact_map.svg";
         formData.set("data", JSON.stringify(data));
         var full_name = data.full_name;
         var email = data.emailaddress;
-        var phone = data.code + " " + data.phone;
+        var phone = data.phone;
         var message = data.message;
 
+        getUserIPAddress().then(ipAddress => {
+            let { browserName, device } = detectBrowser();
 
-        fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            Authorization: `token ${apiKey}:${secretKey}`,
-          },
-          body: JSON.stringify({
-            first_name: full_name,
-            email: email,
-            phone: phone,
-            message: message,
-            enquiry_source: "Website Enquiry",
-            demo_for: demoForValue,
-            query_type: queryTypeValue,
-          }),
-        })
-          .then((res) => {
-            if (res.status === 200) {
-              // alert("You have been registered successfully.")
-              window.location.href = "/thank-you";
-            } 
-            else {
-              alert("Failed to submit data. Please try after some time.");
-              console.log("failed to post form", res)
-              sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, res)
-
-            }
+          fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              Authorization: `token ${apiKey}:${secretKey}`,
+            },
+            body: JSON.stringify({
+              first_name: full_name,
+              email: email,
+              phone: phone,
+              message: message,
+              enquiry_source: "Website Enquiry",
+              demo_for: demoForValue,
+              query_type: queryTypeValue,
+              ip: ipAddress,
+              browser_name: browserName,
+              device: device,
+            }),
           })
-          .catch((error) => {
-            console.log("error", error);
-          });
+            .then((res) => {
+              if (res.status === 200) {
+                // alert("You have been registered successfully.")
+                window.location.href = "/thank-you";
+              } 
+              else {
+                console.log("failed to post form", res)
+                sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, ipAddress, browserName, device, res)
+                alert("Failed to submit data. Please try after some time.");
+
+              }
+            })
+            .catch((error) => {
+              console.log("error", error);
+            });
+        })
 
         // return;
       } else {
@@ -643,6 +649,9 @@ import contact_map from "../../public/Images/contact_map.svg";
             var phone = data.phone;
             var message = data.message;
 
+            getUserIPAddress().then(ipAddress => {
+            let { browserName, device } = detectBrowser();
+
             fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
               method: "POST",
               headers: {
@@ -659,20 +668,26 @@ import contact_map from "../../public/Images/contact_map.svg";
                 enquiry_source: "Website Enquiry",
                 demo_for: demoForValue,
                 query_type: queryTypeValue,
+                ip: ipAddress,
+                browser_name: browserName,
+                device: device,
               }),
             })
               .then((res) => {
                 if (res.status === 200) {
                   window.location.href = "/thank-you";
                 } else {
-                  alert("Failed to submit data. Please try after some time.");
                   console.log("failed to post form", res)
-                  sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, res)
+                  sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, ipAddress, browserName, device, res)
+                  alert("Failed to submit data. Please try after some time.");
                 }
               })
               .catch((error) => {
                 console.log(error);
               });
+            })
+
+
           } else {
             alert("File upload failed. Please try again later.");
           }
@@ -756,8 +771,104 @@ import contact_map from "../../public/Images/contact_map.svg";
   }
 
 
-function sendEmailNotification(full_name, email, phone, message, enquiry_source, demoForValue, queryTypeValue, response){
-   console.log("send")
+// get browser and device name
+function detectBrowser() {
+      const userAgent = navigator.userAgent;
+      var browserName = 'Unknown';
+
+      // Check for Chrome
+      if (userAgent.indexOf("Chrome") !== -1) {
+        browserName = "Google Chrome";
+      }
+      // Check for Firefox
+      else if (userAgent.indexOf("Firefox") !== -1) {
+        browserName = "Mozilla Firefox";
+      }
+      // Check for Safari
+      else if (userAgent.indexOf("Safari") !== -1) {
+        browserName = "Apple Safari";
+      }
+      // Check for Edge
+      else if (userAgent.indexOf("Edg") !== -1) {
+        browserName = "Microsoft Edge";
+      }
+      // Check for Internet Explorer
+      else if (
+        userAgent.indexOf("MSIE") !== -1 ||
+        userAgent.indexOf("Trident") !== -1
+      ) {
+        browserName = "Internet Explorer";
+      }
+
+      // Log the detected browser to the console
+    //   console.log(`Detected browser: ${browserName}`);
+
+      // Detect the device type based on screen size
+      const screenWidth = window.innerWidth;
+      var device = 'Unknown'
+      if (screenWidth <= 576) {
+        device = 'Mobile'
+      } else if (screenWidth <= 992) {
+        device = 'Tablet'
+      } else if (screenWidth <= 1200) {
+        device = 'Laptop'
+      } else {
+        device = 'Desktop'
+      }
+
+      return { browserName, device }
+    }
+
+// Function to get the user's IP address using ipify
+function getUserIPAddress() {
+  return fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => data.ip)
+      .catch(error => {
+          console.error('Error fetching IP address:', error);
+          return null; // Handle the error gracefully
+      });
+}
+
+
+function sendEmailNotification(full_name="", email="", phone="", message="", enquiry_source="", demoForValue="", queryTypeValue="", ip="", browser_name="", device="", response=""){ 
+  console.log("sending email notification...")
+  // return
+   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      // Authorization: `token ${apiKey}:${secretKey}`,
+    },
+    body: JSON.stringify({
+      full_name: full_name,
+      email: email,
+      phone: phone,
+      message: message,
+      enquiry_source: "Website Enquiry",
+      demoForValue: demoForValue,
+      queryTypeValue: queryTypeValue,
+      ip: ip,
+      browser_name: browser_name,
+      device: device,
+      response: response,
+      page_name: "Contact Us"
+    }),
+  })
+    .then((res) => {
+      if (res.status === 200) {
+        // alert("You have been registered successfully.")
+        console.log("email notification sent.")
+      } 
+      else {
+        console.log("failed to send email notification", res)
+        alert("We are unable to process your request. please send your requirements on info@sanskartechnolab.com")
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
 }
 
 </script>
