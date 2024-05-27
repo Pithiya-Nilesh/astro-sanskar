@@ -3,17 +3,34 @@ import Layout from "../layouts/Layout.astro";
 import "../styles.css";
 import { Image, Picture } from "@astrojs/image/components";
 import thankyou_banner from "../../public/Images/thankyou_banner.svg";
+import sap_erpnext from "../../public/Images/SAP_ERPNEXT.svg";
+import migoo from "../../public/Images/Migoo_Mask.svg";
+import manpower from "../../public/Images/Manpower.svg";
+import oracle_erpnext from "../../public/Images/Oracle_to_ERPNext.svg";
+import export_svg from "../../public/Images/Export.svg";
+import gramdhaara from "../../public/Images/Gramdhaara.svg";
+import advantis_logo from "../../public/Images/advantis-quarts-logo.png";
+import efra from "../../public/Images/efra.svg";
+import vijay_mamra from "../../public/Images/vijay_mamra.svg";
+import nettyam from "../../public/Images/nettyam.svg";
+import jagdamba_logo from "../../public/Images/jagdamba_logo.svg";
+import urjaa_logo from "../../public/Images/urjaa_logo.svg";
+import khetan_logo from "../../public/Images/Khetan-group-logo.png";
+import migoo_logo from "../../public/Images/migoo-logo.png";
+import mera_pata from "../../public/Images/mera_pata.svg";
+import vsrf from "../../public/Images/vsrf.svg";
+import kirti_telnet_logo from "../../public/Images/kirti-telnet-logo.png";
 import left from "../../public/Images/left.svg";
 ---
 
 <Layout title="Sanskar Technolab | Thank You", keyword="", description="", canonical_href="https://sanskartechnolab.com/thank-you">
   <section class="banner-bg">  
   <div
-      class="banner-height grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 md:gap-2 lg:gap-5 items-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0"
+      class="banner-height flex lg:flex-row flex-col justify-center gap-5 lg:gap-10 items-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0  "
     >
-      <div class="order-2 lg:order-1 ">    
+      <div class="max-w-[800px]">    
         <h1
-          class="text-[1.75rem] md:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] text-[#31393C] font-semibold"
+          class="text-[1.75rem] md:text-[49px] !leading-[2.25rem] md:!leading-[3.5rem] text-[#31393C] font-semibold"
         >
         Thank you for filling out
         the form. <span class="text-[#3E96F4]">We are GLAD!</span>
@@ -24,7 +41,7 @@ import left from "../../public/Images/left.svg";
         Our team will review your query and reach out to you within 5 business days.
         </p>
         <div
-          class="mt-5 flex justify-start bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 lg:w-56 md:w-44 sm:w-auto"
+          class="mt-6 flex justify-start bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 lg:w-56 md:w-44 w-[180px]"
         >
         <Image loading="eager"  src={left} width={6} height={12} alt="left arrow " />
         <a href="/" class="text-white text-base font-semibold font-inter ml-5"
@@ -32,34 +49,1081 @@ import left from "../../public/Images/left.svg";
         >
         </div>
       </div>
-      
-        <Image loading="eager"  src={thankyou_banner} alt="Thank You Banner" class="banner-image w-full order-1 lg:order-2 mx-0 md:mx-5" />
+      <div  >
+        <Image loading="eager"  src={thankyou_banner} alt="Thank You Banner" class="banner-image lg:float-right lg:mx-0 mx-auto   " />
+      </div>
       
     </div>
+    </section>
+    <section class="client-journey mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0">
+      <div class="lg:mb-10 md:mb-6 mb-4">
+        <p class="text-[#3E96F4] lg:text-4xl md:text-3xl text-2xl font-semibold">Check out our Client Journey. </p>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-[26px] client_grid">
+        <div>
+          <Image loading="eager" src={sap_erpnext} alt="Sap ERPNext" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base">
+            Migrating From SAP To ERPNext
+          </p>
+        </div>
+        <div>
+          <Image loading="eager" src={migoo} alt="Migoo" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base">
+            Developed Most Complex ERPNEXT Portal for Construction Industry!
+          </p>
+        </div>
+        <div>
+          <Image loading="eager" src={manpower} alt="Manpower" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base">
+            Saving 45 ManPower hours daily with our ERPNext Implementation.
+          </p>
+        </div>
+        <div>
+          <Image loading="eager" src={oracle_erpnext} alt="Oracle to ERPNext" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base">
+            Migrated from a 20-year-old platform on Oracle to an All-New ERPNext platform
+          </p>
+        </div>
+        <div>
+          <Image loading="eager" src={export_svg} alt="Export Giant" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base ">
+            Universal Platform on ERPNext for Manufacturing & Export Giant.
+          </p>
+        </div>
+        <div>
+          <Image loading="eager" src={gramdhaara} alt="Gramdhaara" class="w-full h-auto client_img"/>
+          <p class=" bg-[#3E96F4] lg:p-5 p-3  rounded-b-xl text-white font-semibold md:min-h-[112px] min-h-[85px] text-sm  md:text-base">
+            Our Special Project: Tech Magic Behind GramDharaa Gaushala!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 mx-5 pb-14">
+      <div class="">
+        <p class="text-[#3E96F4] lg:text-4xl md:text-2xl text-xl font-semibold">Feedback from our client!</p>
+      </div>
+      <div class="grid gap-5 items-center mt-7 md:mt-5  lg:mx-0 max-2xl:hidden">
+        <div class="swiper-customer !overflow-hidden">
+          <div class="swiper-wrapper text-[#31393C] lg:!w-[34rem]">
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+              <div
+                class="  client_shadow   client_card_height "
+              >
+                <Image
+                  loading="eager"
+                  src={advantis_logo}
+                  alt="Advantis Quartz"
+                />	
+                <div class="lg:mt-6 mt-3 ">
+  
+                  <p class="text-xs md:text-sm lg:text-base">
+                    We Advantis Quartz LLP is a manufacturing unit of
+                    Artificial Stone at Udaipur Rajasthan. To run a
+                    manufacturing unit in smooth and efficient manner
+                    integration of all processes is must and for that we were
+                    looking for an application that address this issue. We
+                    needed a solution that would merge all departments from
+                    Finance to Manufacturing and which would integrate with
+                    Inventory, Sales, Purchase, and Warehouse etc. and in this
+                    sequence & with our considerable experience with numerous
+                    accounting software packages, ERPNext has found to be the
+                    most adaptable, flexible, user-friendly, efficient, and
+                    productive to meet our requirements.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    It is efficient and easily accessible, customisable for
+                    all our department and which meets our business
+                    requirement and processes. ERPNext was proposed to us as a
+                    customised ERP deliver on quality and time lines.
+                    </p>
+  
+                   
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      We were very pleased with the multiple features the ERP offers and Sanskar team made a key role in rapidly understanding our needs, identifying our business requirements and developing them in quick time. Their business understanding helped us streamline our processes and efficiently achieved our objectives. The team was dynamic and always ready to help.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      The Client-based customization has made our business much more efficient, it allows us to access our data at any time from any location. The reporting functionality gives us many options for very specific areas within our organization. We have implemented ERPNext all across the Organisation. The modules include Production, Purchases, Sales, Inventory Management and Financial Accounting.
+                    </p>
+                  
+            
+                  
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Lokesh Modi</p>
+                  <p>Accounts Head, Advantis Quartz</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-3 2xl:!w-[80rem]">
+              <div class="client_shadow client_card_height">
+                <Image loading="eager" src={efra} alt="EFRA INDUSTRIES LLP" />
+                <div class="mt-6">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    I would like to first highlight the difficulty faced during the implementation of ERPNext with customization to suit our product and process requirements.
+                  </p>
+                  <p class="text-xs md:text-sm lg:text-base mt-3">
+                    We started our implementation one year back with one of our consultants, but due to the lack of experience in ERPNext development, modules customization, and knowledge of product and process, they are not able to develop ERPNext and completely failed to implement it in our organization. Due to this, we were only able to use ERPNext for Purchase and Sale entry purposes; the rest of the things we were forced to do with Excel, and decided to migrate to different software or consultants.
+                  </p>
+            
+                  
+                  
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      During our search, we came to know about <b>Sanskar Techno Lab</b>, where we had an opportunity to work closely with ERPNext developers and consultants. We were able to fine-tune the modules to align perfectly with our workflows and business requirements. This level of customization not only improved user adoption but also optimized our processes, eliminating inefficiencies and redundant tasks. The ability to tailor ERPNext to our exact specifications has been invaluable in driving operational excellence and achieving our strategic objectives.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      The implementation process itself was seamless, thanks to the expertise and guidance provided by the <b>Sanskar Techno Lab</b> team. They meticulously understood our business requirements and tailored the system to suit our specific needs. From customization to integration, every step was executed with precision and professionalism.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+                      I personally want to thank all of the Sanskar Techno Lab team for the prompt response, extended support, and actively understanding and resolving our issues.
+                    </p>
+                  
+                  
+                  
+                  
+            
+                </div>
+                <div class="text-xs md:text-sm lg:text-base mt-6">
+                  <p class="font-semibold">Basant Kumar</p>
+                  <p>Production Manager, EFRA INDUSTRIES LLP</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+              <div
+                class="  client_shadow   client_card_height "
+              >
+                <Image
+                  loading="eager"
+                  src={vijay_mamra}
+                  alt="Vijay Mamra Pvt.Ltd"
+                />
+                <div class="mt-6">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    I am writing to share my thoughts and feedback regarding the recent ERPNext implementation that your team undertook.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    First and foremost, I want to express my appreciation for the effort and dedication demonstrated by your team throughout this process.
+  It's evident that a lot of hard work went into making this project a success, and I am grateful for your commitment to ensuring its smooth execution.
+                    <p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+                    I have observed several positive aspects of the ERPNext system:
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-1">
+                    The user interface of ERPNext is intuitive and easy to navigate.This has significantly reduced the learning curve for our team members, allowing them to quickly adapt to the new system.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-1 ">
+                    I appreciate the level of customization that was possible with ERPNext. Your team took the time to understand our specific business needs and tailored the system accordingly.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                    In conclusion,I want to express my gratitude to you and your team for your hard work and dedication throughout this ERPNext implementation. I am confident that with continued collaboration, we can address these issues and further optimize the system to meet our needs.
+                    </p>
+                </div>
+                <div class="text-xs md:text-sm lg:text-base mt-6">
+                  <p class="font-semibold">Vijay patel</p>
+                  <p>Director, Vijay Mamra Pvt.Ltd</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+              <div class=" 2xl:!w-[40rem] ">
+                <div
+                  class="  client_shadow   client_card_height "
+                >
+                  <Image
+                    loading="eager"
+                    src={nettyam}
+                    alt="nettyam"
+                  />
+                  <div class="mt-6">
+                    <p class="text-xs md:text-sm lg:text-base">
+                      Jay Gau Mata,
+                      </p>
+                      <p class="text-xs md:text-sm lg:text-base mt-3">
+                      Thanks for your quick support for providing us ERPNext's modules as per our needs. Completed modules provided from your team is buying, selling, manufacturing, CRM and POS. Currently we are entering our trial data, and also We are checking and working on the same. We will soon activate all modules to fulfill Ved Khillar Goshala admin purpose.
+                      <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                      Thanks again for your great gesture.
+                      </p>
+                      <p class="text-xs md:text-sm lg:text-base mt-3">
+                      Gomata's Blessings will always with you.
+                      </p>
+                    
+                  </div>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Nitesh Ojha</p>
+                    <p>
+                      Founder, Nettyam
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={jagdamba_logo}
+                    alt="jagdamba"
+                  />
+              
+                  <p class="text-xs md:text-sm lg:text-base mt-6">
+                    We are constantly draining our time and other
+                    valuable resources due to outdated systems for
+                    the management of our textile business
+                    operation. We have decided to reach out to
+                    Sanskar Technolab ad suggested us ERPNext
+                    platform to efficiently manage our business
+                    processes. And, if turned out to be great. We
+                    got an escape from the tedious process, while
+                    saving crucial manpower - resulting in lesser
+                    costs and improved efficiency.
+                  </p>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Uttambhai Agrawal</p>
+                    <p>Director, Shri Jagdamba Textile</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={urjaa_logo}
+                    alt="urjaa group"
+                  />
+                  
+                  <p class="text-xs md:text-sm lg:text-base mt-6">
+                    We reached out to Sanskar Technolab for
+                    end-to-end ERPNext implementation services, to
+                    streamline our lengthy processes within the
+                    cotton industry. Their team thoroughly
+                    understands our personalized requirements and
+                    implemented the various modules of ERPNext,
+                    which not only streamlined the manufacturing
+                    operations but also accounting and payroll. It
+                    is literally a game changer for our business and
+                    our staff is so much at relief.
+                  </p>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Praful Vastarpara</p>
+                    <p>Director, Urjaa Group</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={khetan_logo}
+                    alt="Khetan Group"
+                  /> 
+                  
+                 <div class="mt-6">
+                    <p class="text-xs md:text-sm lg:text-base">
+                      During the project execution the support you people provided is worth great appreciation. It gives us great comfort working with you all also our users found the intense very user friendly. 
+      
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      Last but not the least work experience with you all was too good and highly recommend able to others in our knowledge.
+      
+                    </p>
+                  </div>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Shyamal Mukherjee</p>
+                    <p>Manager, Khetan Udyog</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={migoo_logo}
+                    alt="Migoo"
+                  />
+                  
+                  <p class="text-xs md:text-sm lg:text-base mt-6">
+                    Being in the construction industry, I wanted to
+                    change the future of the construction industry
+                    with technology. So, reached out to Sanskar
+                    Technolab through one of my mutual friends.
+                    They have helped me to develop a one-of-a-kind
+                    platform for renting, buying, and selling
+                    high-duty construction equipment along with the
+                    features of CRM, insurance, etc. There is no
+                    such software in the industry, but Sanskar
+                    Technolab developed the best portal along with
+                    a mobile app <strong
+                      >at 60% lesser costs in just 4 months.</strong
+                    >
+                  </p>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Arjun pachani</p>
+                    <p>Founder, Migoo.in</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" 2xl:!w-[40rem]">
+  
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={kirti_telnet_logo}
+                    alt="Kirti Telnet"
+                  />
+                  
+                  <p class="text-xs md:text-sm lg:text-base mt-6">
+                    Kirti Telnet is a company in data communications
+                    & networking with a large team. We wanted to
+                    streamline the employee recruitment and training
+                    process and other requirements. To make it
+                    possible, Sanskar Technolab has helped us with
+                    customized HR & Payroll Implementation services
+                    such as employee data management, training,
+                    performance measurements, etc.
+                  </p>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Dhruvi Dadiya</p>
+                    <p>Kirtitelnet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={mera_pata}
+                    alt="mera_pata"
+                  />
+                  
+                  <p class="text-xs md:text-sm lg:text-base mt-6">
+                    I am Incredibly impressed with the services provided by sanskar team, particularly the expertise and dedication shown by Mr. Harsh and Mr. Karan. They played insturmental roles in developing a robust real estate CRM system for my consultancy business. Their Profound knowledge and unwavering support ensured a smooth operations, greatly enhancing our efficiency and productivity. i  highly recommend Sanskar for their exceptional IT solutions and commendable team.
+                  </p>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Ashish</p>
+                    <p>Founder, Mera Pata</p>
+                  </div>
+                </div>
+              </div>
+              <div class=" 2xl:!w-[40rem]">
+                <div
+                  class="  client_shadow   client_card_height"
+                >
+                  <Image
+                    loading="eager"
+                    src={vsrf}
+                    alt="vsrf"
+                  />
+                  <!-- <div
+                    class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                  >
+                    Kirti Telnet Pvt.Ltd
+                  </div> -->
+                  <div class="mt-6">
+  
+                    <p class="text-xs md:text-sm lg:text-base">
+                      Namaskar, 
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      Thank you Sri. Kirit Ji to give support & guide. Sri. Harsh & Teams brought very Blissful, Beautiful https://vsrf.org.in/ to this Earth. 
+          As a Shishya of Guru, we all explore the Gurumahima through all modern tools. 
+  
+                    <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                      Thank you so much to You and them. Guru gives more Powers to you for Spread Dharma and Sathyam. 
+  
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      Jai Vijaya Bhava
+                    </p>
+  
+  
+                  </div>
+                  <div class="text-xs md:text-sm lg:text-base mt-6">
+                    <p class="font-semibold">Vedaravishangar</p>
+                    <p>
+                      Founder and Managing Trustee, VSRF</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="grid gap-5 items-center mt-10 md:mt-5 lg:mt-20 lg:mx-0 2xl:hidden" >
+        <div class="swiper-customer !overflow-hidden">
+          <div class="swiper-wrapper text-[#31393C] lg:!w-[34rem]">
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+              <div
+                class="  client_shadow   client_card_height "
+              >
+                <Image
+                  loading="eager"
+                  src={advantis_logo}
+                  alt="Advantis Quartz"
+                />
+                <div class="lg:mt-6 mt-3 ">
+  
+                  <p class="text-xs md:text-sm lg:text-base">
+                    We Advantis Quartz LLP is a manufacturing unit of
+                    Artificial Stone at Udaipur Rajasthan. To run a
+                    manufacturing unit in smooth and efficient manner
+                    integration of all processes is must and for that we were
+                    looking for an application that address this issue. We
+                    needed a solution that would merge all departments from
+                    Finance to Manufacturing and which would integrate with
+                    Inventory, Sales, Purchase, and Warehouse etc. and in this
+                    sequence & with our considerable experience with numerous
+                    accounting software packages, ERPNext has found to be the
+                    most adaptable, flexible, user-friendly, efficient, and
+                    productive to meet our requirements.
+                    </p>
+    
+                    
+                    
+                    <div class="parent-class">
+                      <div class="more-content" style="display: none;">
+                      <p class="text-xs md:text-sm lg:text-base mt-3">
+                      It is efficient and easily accessible, customisable for
+                      all our department and which meets our business
+                      requirement and processes. ERPNext was proposed to us as a
+                      customised ERP deliver on quality and time lines.
+                      </p>
+                    <p class="text-xs md:text-sm lg:text-base md:mt-3 mt-2">
+                      We were very pleased with the multiple features the ERP offers and Sanskar team made a key role in rapidly understanding our needs, identifying our business requirements and developing them in quick time. Their business understanding helped us streamline our processes and efficiently achieved our objectives. The team was dynamic and always ready to help.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base md:mt-3 mt-2">
+                      The Client-based customization has made our business much more efficient, it allows us to access our data at any time from any location. The reporting functionality gives us many options for very specific areas within our organization. We have implemented ERPNext all across the Organisation. The modules include Production, Purchases, Sales, Inventory Management and Financial Accounting.
+                    </p>
+                  </div>					
+                  <button  class="read-more-btn text-xs md:text-sm lg:text-base md:mt-3 mt-2 font-semibold underline">Read More</button>
+                  </div>
+                  
+      
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Lokesh Modi</p>
+                  <p>Accounts Head, Advantis Quartz</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+              <div class="client_shadow client_card_height">
+                <Image loading="eager" src={efra} alt="EFRA INDUSTRIES LLP" />
+                <div class="lg:mt-6 mt-3 ">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    I would like to first highlight the difficulty faced during the implementation of ERPNext with customization to suit our product and process requirements.
+                  </p>
+                  <p class="text-xs md:text-sm lg:text-base mt-3">
+                    We started our implementation one year back with one of our consultants, but due to the lack of experience in ERPNext development, modules customization, and knowledge of product and process, they are not able to develop ERPNext and completely failed to implement it in our organization. Due to this, we were only able to use ERPNext for Purchase and Sale entry purposes; the rest of the things we were forced to do with Excel, and decided to migrate to different software or consultants.
+                  </p>
+            
+  
+                  <div class="parent-class">
+                  <div class="more-content" style="display: none;">
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      During our search, we came to know about <b>Sanskar Techno Lab</b>, where we had an opportunity to work closely with ERPNext developers and consultants. We were able to fine-tune the modules to align perfectly with our workflows and business requirements. This level of customization not only improved user adoption but also optimized our processes, eliminating inefficiencies and redundant tasks. The ability to tailor ERPNext to our exact specifications has been invaluable in driving operational excellence and achieving our strategic objectives.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                      The implementation process itself was seamless, thanks to the expertise and guidance provided by the <b>Sanskar Techno Lab</b> team. They meticulously understood our business requirements and tailored the system to suit our specific needs. From customization to integration, every step was executed with precision and professionalism.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+                      I personally want to thank all of the Sanskar Techno Lab team for the prompt response, extended support, and actively understanding and resolving our issues.
+                    </p>
+                  </div>
+                  
+                  <button class="read-more-btn text-xs md:text-sm lg:text-base mt-3 font-semibold underline">Read More</button>
+                </div>
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Basant Kumar</p>
+                  <p>Production Manager, EFRA INDUSTRIES LLP</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+              <div
+                class="  client_shadow   client_card_height "
+              >
+                <Image
+                  loading="eager"
+                  src={vijay_mamra}
+                  alt="Vijay Mamra Pvt.Ltd"
+                />
+                <div class="lg:mt-6 mt-3 ">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    I am writing to share my thoughts and feedback regarding the recent ERPNext implementation that your team undertook.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    First and foremost, I want to express my appreciation for the effort and dedication demonstrated by your team throughout this process.
+  It's evident that a lot of hard work went into making this project a success, and I am grateful for your commitment to ensuring its smooth execution.
+  
+                  <div class="parent-class">
+                    <div class="more-content" style="display: none;">
+                      <p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+                      I have observed several positive aspects of the ERPNext system:
+                      </p>
+                      <p class="text-xs md:text-sm lg:text-base mt-1">
+                        The user interface of ERPNext is intuitive and easy to navigate.This has significantly reduced the learning curve for our team members, allowing them to quickly adapt to the new system.
+                      </p>
+                      <p class="text-xs md:text-sm lg:text-base mt-1 ">
+                        I appreciate the level of customization that was possible with ERPNext. Your team took the time to understand our specific business needs and tailored the system accordingly.
+                      </p>
+                      <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                        In conclusion,I want to express my gratitude to you and your team for your hard work and dedication throughout this ERPNext implementation. I am confident that with continued collaboration, we can address these issues and further optimize the system to meet our needs.
+                      </p>
+                    </div>
+                  
+                    <button class="read-more-btn text-xs md:text-sm lg:text-base mt-3 font-semibold underline">Read More</button>
+                  </div>
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Vijay patel</p>
+                  <p>Director, Vijay Mamra Pvt.Ltd</p>
+                </div>
+              </div>
+            </div>
+            <div class="  swiper-slide p-3 2xl:!w-[40rem] ">
+              <div
+                class="  client_shadow   client_card_height "
+              >
+                <Image
+                  loading="eager"
+                  src={nettyam}
+                  alt="nettyam"
+                />
+                <div class="lg:mt-6 mt-3 ">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Jay Gau Mata,
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    Thanks for your quick support for providing us ERPNext's modules as per our needs. Completed modules provided from your team is buying, selling, manufacturing, CRM and POS. Currently we are entering our trial data, and also We are checking and working on the same. We will soon activate all modules to fulfill Ved Khillar Goshala admin purpose.
+                    <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                    Thanks again for your great gesture.
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    Gomata's Blessings will always with you.
+                    </p>
+                  
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Nitesh Ojha</p>
+                  <p>
+                    Founder, Nettyam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={jagdamba_logo}
+                  alt="jagdamba"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Jagdamba Textile
+                </div> -->
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  We are constantly draining our time and other
+                  valuable resources due to outdated systems for
+                  the management of our textile business
+                  operation. We have decided to reach out to
+                  Sanskar Technolab ad suggested us ERPNext
+                  platform to efficiently manage our business
+                  processes. And, if turned out to be great. We
+                  got an escape from the tedious process, while
+                  saving crucial manpower - resulting in lesser
+                  costs and improved efficiency.
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Uttambhai Agrawal</p>
+                  <p>Director, Shri Jagdamba Textile</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={urjaa_logo}
+                  alt="urjaa group"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Urjaa Group
+                </div> -->
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  We reached out to Sanskar Technolab for
+                  end-to-end ERPNext implementation services, to
+                  streamline our lengthy processes within the
+                  cotton industry. Their team thoroughly
+                  understands our personalized requirements and
+                  implemented the various modules of ERPNext,
+                  which not only streamlined the manufacturing
+                  operations but also accounting and payroll. It
+                  is literally a game changer for our business and
+                  our staff is so much at relief.
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Praful Vastarpara</p>
+                  <p>Director, Urjaa Group</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem] ">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={khetan_logo}
+                  alt="Khetan Group"
+                /> 
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Khetan Group
+                </div> -->
+               <div class="lg:mt-6 mt-3 ">
+                  <p class="text-xs md:text-sm lg:text-base">
+                    During the project execution the support you people provided is worth great appreciation. It gives us great comfort working with you all also our users found the intense very user friendly. 
+    
+                  </p>
+                  <p class="text-xs md:text-sm lg:text-base mt-3">
+                    Last but not the least work experience with you all was too good and highly recommend able to others in our knowledge.
+    
+                  </p>
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Shyamal Mukherjee</p>
+                  <p>Manager, Khetan Udyog</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={migoo_logo}
+                  alt="Migoo"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Migoo.in
+                </div> -->
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  Being in the construction industry, I wanted to
+                  change the future of the construction industry
+                  with technology. So, reached out to Sanskar
+                  Technolab through one of my mutual friends.
+                  They have helped me to develop a one-of-a-kind
+                  platform for renting, buying, and selling
+                  high-duty construction equipment along with the
+                  features of CRM, insurance, etc. There is no
+                  such software in the industry, but Sanskar
+                  Technolab developed the best portal along with
+                  a mobile app <strong
+                    >at 60% lesser costs in just 4 months.</strong
+                  >
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Arjun pachani</p>
+                  <p>Founder, Migoo.in</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={mignesh_logo}
+                  alt="Mignesh Global"
+                />
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  We are the supplier of so many different
+                  products such as Bitumen, Bitumen Emulsion, Base
+                  Oil, and Fuel Oil. To manage our huge client
+                  base and manage suppliers seamlessly, Sanskar
+                  technolab has helped us develop a feature-rich
+                  ERPNext portal, along with the website to
+                  streamline the supply chain operations and to
+                  market our products more effectively. Also,
+                  their team offered us great post-project support
+                  to handle bugs and support seamlessly.
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 " >
+                  <p class="font-semibold">Arjun Pachani</p>
+                  <p>Founder, Mignesh Global</p>
+                </div>
+              </div>
+            </div> -->
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={kirti_telnet_logo}
+                  alt="Kirti Telnet"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Kirti Telnet Pvt.Ltd
+                </div> -->
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  Kirti Telnet is a company in data communications
+                  & networking with a large team. We wanted to
+                  streamline the employee recruitment and training
+                  process and other requirements. To make it
+                  possible, Sanskar Technolab has helped us with
+                  customized HR & Payroll Implementation services
+                  such as employee data management, training,
+                  performance measurements, etc.
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Dhruvi Dadiya</p>
+                  <p>Kirtitelnet</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={mera_pata}
+                  alt="mera_pata"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Kirti Telnet Pvt.Ltd
+                </div> -->
+                <p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  I am Incredibly impressed with the services provided by sanskar team, particularly the expertise and dedication shown by Mr. Harsh and Mr. Karan. They played insturmental roles in developing a robust real estate CRM system for my consultancy business. Their Profound knowledge and unwavering support ensured a smooth operations, greatly enhancing our efficiency and productivity. i  highly recommend Sanskar for their exceptional IT solutions and commendable team.
+                </p>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Ashish</p>
+                  <p>Founder, Mera Pata</p>
+                </div>
+              </div>
+            </div>
+            <div class=" swiper-slide p-3 2xl:!w-[40rem]">
+              <div
+                class="  client_shadow   client_card_height"
+              >
+                <Image
+                  loading="eager"
+                  src={vsrf}
+                  alt="vsrf"
+                />
+                <!-- <div
+                  class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+                >
+                  Kirti Telnet Pvt.Ltd
+                </div> -->
+                <div class="lg:mt-6 mt-3 ">
+  
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Namaskar, 
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    Thank you Sri. Kirit Ji to give support & guide. Sri. Harsh & Teams brought very Blissful, Beautiful https://vsrf.org.in/ to this Earth. 
+  As a Shishya of Guru, we all explore the Gurumahima through all modern tools. 
+  
+                    <p class="text-xs md:text-sm lg:text-base mt-3 ">
+                    Thank you so much to You and them. Guru gives more Powers to you for Spread Dharma and Sathyam. 
+  
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base mt-3">
+                    Jai Vijaya Bhava
+                    </p>
+  
+  
+                </div>
+                <div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+                  <p class="font-semibold">Vedaravishangar</p>
+                  <p>
+                    Founder and Managing Trustee, VSRF</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flex justify-center gap-3 lg:mt-5">
+        <!-- <Image loading="eager"    src={previousbtn} alt="previousbtn" id="prev" />
+          <Image loading="eager"    src={nextbtn} alt="nextbtn" id="next" /> -->
+        <button
+          class="rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
+          id="prev"
+        >
+          <span class="sr-only">Previous Slide</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-5 w-5 rtl:rotate-180"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+  
+        <button
+          class="rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
+          id="next"
+        >
+          <span class="sr-only">Next Slide</span>
+          <svg
+            class="h-5 w-5 rtl:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"	
+              stroke-linejoin="round"
+              stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
     </section>
 </Layout>
 
 <style>
+@media (min-width: 500px) and (max-width: 1023px) {
+  .client_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* apply grid-column: 2 for screens between 400px and 1023px */
+  }
+}
+  /* .client_text {
+    font-size: 15px;
+    padding-top: 12px;
+    line-height: 16px;
+    min-height: 92px !important;
+    padding-bottom: 8px;
+  }
+} */
+
+@media (max-width : 499px) {
+  .client_img {
+    width : 100% !important;
+  }
+}
+
+.section-bg-center {
+		position: relative;
+	}
+
+	.section-bg-center::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 120rem;
+		background-image: radial-gradient(
+			rgba(62, 150, 244, 0.15),
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255, 0)
+		);
+		background-origin: border-box;
+		background-clip: padding-box, border-box;
+		z-index: -1;
+		margin-top: 12rem;
+	}
+
+	.client_shadow {
+		border-radius: 20px;
+		background: #fff;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
+	}
+
+
+
+
+	@media (min-width: 280px) and (max-width: 300px) {
+		.client_card_height {
+			min-height: 52rem;	
+			padding: 1rem;
+		}	
+	}	
+
+	@media (min-width: 301px) and (max-width: 350px) {
+		.client_card_height {
+			min-height: 50rem;	
+			padding: 1rem;
+		}	
+	}	
+
+
+	@media (min-width: 351px) and (max-width: 400px) {
+		.client_card_height {
+			min-height: 42rem;	
+			padding: 1rem;
+		}	
+	}	
+
+
+	@media (min-width: 401px) and (max-width: 640px) {
+		.client_card_height {
+			min-height: 35rem;
+			padding: 1rem;
+		}	
+	}
+
+	@media (min-width: 641px) {
+			.client_card_height {
+			min-height: 22rem;
+			padding: 1rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.client_card_height {
+			min-height: 26rem;
+			padding: 1rem;
+			}
+		}
+
+	@media (min-width: 1536px) {
+		.client_card_height {
+		min-height: 36rem;
+		padding: 1rem;
+		}
+	}
 
 .banner-image{
 	height: h-[calc(100vh-10vh)];
 	margin-bottom: 2rem;
 }
 
+.client-journey{
+  padding: 70px 0px;
+}
+
 @media (min-width: 321px){
 	.banner-image{
-	margin-bottom: 0rem;
-}
+	  margin-bottom: 0rem;
+  }
 }
   .banner-height{
-	height: h-[calc(100vh-10vh)];
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+  	height: h-[calc(100vh-10vh)];
+	  padding-top: 2rem;
+	  padding-bottom: 2rem;
 }
 
 @media (min-width: 321px){
 	.banner-height{
-	height: calc(100vh - 10vh);
-}
+	  min-height: calc(100vh - 76vh);
+  }
 }
 </style>
+<script>
+
+
+document.querySelectorAll('.read-more-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var moreContent = this.closest('.client_card_height').querySelector('.more-content');
+            var btnText = this;
+
+            if (!moreContent) {
+                console.error('No .more-content element found.');
+                return;
+            }
+
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                btnText.textContent = 'Read Less';
+            } else {
+                moreContent.style.display = 'none';
+                btnText.textContent = 'Read More';
+            }
+        });
+    });
+
+    function hideAllMoreContent() {
+        document.querySelectorAll('.more-content').forEach(function(content) {
+            content.style.display = 'none';
+        });
+        document.querySelectorAll('.read-more-btn').forEach(function(button) {
+            button.textContent = 'Read More';
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', hideAllMoreContent);
+    document.getElementById('next').addEventListener('click', hideAllMoreContent);
+
+
+  // external js
+	document.addEventListener("DOMContentLoaded", function () {
+		const swiper_c = new Swiper(".swiper-customer", {
+			loop: true,
+			slidesPerView: "auto",
+			spaceBetween: 0,
+			// autoplay: {
+			// 	delay: 2000,
+			// },
+			navigation: {
+				nextEl: "#next",
+				prevEl: "#prev",
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 1,
+					centeredSlides: true,
+				},
+				768: {
+					slidesPerView: 1,
+					centeredSlides: true,
+				},
+				1024: {
+					centeredSlides: false,
+					slidesPerView: 1,
+				},
+			},
+		});
+	});
+
+</script>

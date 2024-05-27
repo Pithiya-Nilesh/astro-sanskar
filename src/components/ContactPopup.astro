@@ -7,7 +7,7 @@ import "../styles.css";
 
 <!-- Button -->
 <button
-  class="z-10 fixed -rotate-90 flex right-[-63px] rounded-tr-lg rounded-tl-lg top-1/2 bg-[#31393C] text-white font-bold py-2 px-4"
+  class="z-10 fixed -rotate-90 flex right-[-66px] rounded-tr-lg rounded-tl-lg top-1/2 bg-[#31393C] text-white font-bold py-2 px-4"
   id="contact-button"
 >
   <span class="mr-2">
@@ -115,15 +115,14 @@ import "../styles.css";
   </div>
 </div>
 
-
 <style>
   #c_recaptcha-error {
-      color: red;
-      font-size: 14px; /* Adjust the font size to your preference */
-      display: none;
-    }
+    color: red;
+    font-size: 14px; /* Adjust the font size to your preference */
+    display: none;
+  }
 
-  .c-g-recaptcha {
+  .g-recaptcha {
     transform: scale(0.77);
     -webkit-transform: scale(0.77);
     transform-origin: 0 0;
@@ -131,7 +130,7 @@ import "../styles.css";
     margin-bottom: -1rem;
   }
   @media screen and (max-width: 280px) {
-    .c-g-recaptcha {
+    .g-recaptcha {
       transform: scale(0.6);
       -webkit-transform: scale(0.48);
       margin-bottom: -2rem;
@@ -139,7 +138,7 @@ import "../styles.css";
     }
   }
   @media (min-width: 281px) and (max-width: 375px) {
-    .c-g-recaptcha {
+    .g-recaptcha {
       transform: scale(0.6);
       -webkit-transform: scale(0.5);
       margin-bottom: -2rem;
@@ -149,14 +148,14 @@ import "../styles.css";
 </style>
 
 <script>
-  let current_url; 
+  let current_url;
   // Event handler function to log the current URL
   function logCurrentUrl() {
-  // Get the current pathname and remove the leading '/'
-  current_url = window.location.pathname.slice(1);
-  console.log("Current URL:" + current_url);
+    // Get the current pathname and remove the leading '/'
+    current_url = window.location.pathname.slice(1);
+    console.log("Current URL:" + current_url);
   }
-  
+
   // Add event listener to the button
   document.addEventListener("DOMContentLoaded", function () {
     const contactButton = document.getElementById("contact-button");
@@ -170,8 +169,8 @@ import "../styles.css";
     document.querySelector("#contact-modal").classList.remove("hidden");
   });
 
-   // Event handler to close the modal
-   function closeModal() {
+  // Event handler to close the modal
+  function closeModal() {
     // Hide the modal
     const modal = document.getElementById("contact-modal");
     if (modal) {
@@ -195,24 +194,27 @@ import "../styles.css";
   var emailInput = document.querySelector('input[id="c_email"]');
   emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
-    function validateEmailInput() {
-      const emailValue = emailInput.value.trim();
-      const errorMessageElement = emailInput.nextElementSibling;
+  function validateEmailInput() {
+    const emailValue = emailInput.value.trim();
+    const errorMessageElement = emailInput.nextElementSibling;
 
-      if (emailValue === "") {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-        emailInput.style.borderColor = ""; // Reset border color
-        return;
-      }
-
-      if (!validateEmail(emailValue)) {
-        blinkBorder(emailInput);
-        displayErrorMessage(errorMessageElement, "Please enter a valid email address.");
-      } else {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        emailInput.style.borderColor = ""; // Reset border color
-      }
+    if (emailValue === "") {
+      hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+      emailInput.style.borderColor = ""; // Reset border color
+      return;
     }
+
+    if (!validateEmail(emailValue)) {
+      blinkBorder(emailInput);
+      displayErrorMessage(
+        errorMessageElement,
+        "Please enter a valid email address."
+      );
+    } else {
+      hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+      emailInput.style.borderColor = ""; // Reset border color
+    }
+  }
 
   const apiKey = import.meta.env.PUBLIC_ApiKey as string;
   const secretKey = import.meta.env.PUBLIC_SecretKey as string;
@@ -233,9 +235,23 @@ import "../styles.css";
   function handleContactPopForm(e) {
     e.preventDefault();
 
-    // const recaptchaResponse = grecaptcha.getResponse();
-    // If the reCAPTCHA is filled out, clear any previous error message
-    // clearRecaptchaError();
+    // var response = grecaptcha.getResponse();
+    // console.log("response", response);
+    // if (response.length === 0) {
+    //   document.getElementById("c_recaptcha-error").style.display = "block";
+    //   return;
+    // } 
+    //   document.getElementById("c_recaptcha-error").style.display = "none";
+
+    //   const recaptchaResponse = grecaptcha.getResponse();
+    //   // If the reCAPTCHA is filled out, clear any previous error message
+    //   clearRecaptchaError();
+
+    //   function clearRecaptchaError() {
+    //   const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
+    //   recaptchaErrorElement.style.display = "none"; // Hide the error message
+    // }
+    
 
     const firstNameInput = document.querySelector('input[id="c_name"]');
     const emailInput = document.querySelector('input[id="c_email"]');
@@ -253,13 +269,16 @@ import "../styles.css";
     resetBorderColorOnFocus(emailInput);
     resetBorderColorOnFocus(messageInput);
     resetBorderColorOnFocus(phoneInput);
-    
+
     if (nameValue === "") {
       blinkBorder(firstNameInput);
     }
 
     if (emailValue === "" || !validateEmail(emailValue)) {
-        displayErrorMessage(emailInput.nextElementSibling, "Please enter a valid email address.");
+      displayErrorMessage(
+        emailInput.nextElementSibling,
+        "Please enter a valid email address."
+      );
     }
 
     if (messageValue === "") {
@@ -271,11 +290,7 @@ import "../styles.css";
     //   return;
     // }
 
-    if (
-      nameValue === "" ||
-      emailValue === "" ||
-      messageValue === ""
-    ) {
+    if (nameValue === "" || emailValue === "" || messageValue === "") {
       return;
     }
 
@@ -285,6 +300,7 @@ import "../styles.css";
     const pageValue = urlParams.get("page");
 
     const queryTypeValue = pageValue ? "Demo" : "General";
+    console.log("queryTypeValue-----------",queryTypeValue);
     // alert('Please select a file to upload.');
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
@@ -294,43 +310,53 @@ import "../styles.css";
     var phone = data.c_phone;
     var requirements = data.c_requirements;
 
-    getUserIPAddress().then(ipAddress => {
-    let { browserName, device } = detectBrowser();
+    getUserIPAddress().then((ipAddress) => {
+      let { browserName, device } = detectBrowser();
 
-    fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `token ${apiKey}:${secretKey}`,
-    },
-    body: JSON.stringify({
-      first_name: name,
-      email: email,
-      phone: phone,
-      message: requirements,
-      enquiry_source: "Website Enquiry",
-      demo_for: current_url,
-      query_type: queryTypeValue,
-      ip: ipAddress,
-      browser_name: browserName,
-      device: device,
-    }),
-    })
-    .then((res) => {
-        if (res.status === 200) {
+      fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: `token ${apiKey}:${secretKey}`,
+        },
+        body: JSON.stringify({
+          first_name: name,
+          email: email,
+          phone: phone,
+          message: requirements,
+          enquiry_source: "Website Enquiry",
+          demo_for: current_url,
+          query_type: queryTypeValue,
+          ip: ipAddress,
+          browser_name: browserName,
+          device: device,
+        }),
+      })
+        .then((res) => {
+          if (res.status === 200) {
             window.location.href = "/thank-you";
-        } else {
-          console.log("failed to post form", res)
-          sendEmailNotification(name, email, phone, requirements, "Website Enquiry", current_url, queryTypeValue, ipAddress, browserName, device, res)
-          alert("Failed to submit data. Please try after some time.");
-        }
-    })
-    .catch((error) => {
-        console.log(error);
+          } else {
+            console.log("failed to post form", res);
+            sendEmailNotification(
+              name,
+              email,
+              phone,
+              requirements,
+              "Website Enquiry",
+              queryTypeValue,
+              ipAddress,
+              browserName,
+              device,
+              res
+            );
+            alert("Failed to submit data. Please try after some time.");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     });
-
-  })
 
     // return;
   }
@@ -343,7 +369,10 @@ import "../styles.css";
   }
 
   function displayErrorMessage(errorMessageElement, message) {
-    if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+    if (
+      !errorMessageElement ||
+      !errorMessageElement.classList.contains("error-message")
+    ) {
       // If error message doesn't exist, create and insert it
       errorMessageElement = document.createElement("p");
       errorMessageElement.textContent = message;
@@ -354,33 +383,39 @@ import "../styles.css";
       errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
 
       // Insert the error message after the input field
-      emailInput.parentNode.insertBefore(errorMessageElement, emailInput.nextSibling);
+      emailInput.parentNode.insertBefore(
+        errorMessageElement,
+        emailInput.nextSibling
+      );
     } else {
       errorMessageElement.textContent = message; // Update existing error message
     }
   }
 
   function hideErrorMessage(errorMessageElement) {
-    if (errorMessageElement && errorMessageElement.classList.contains("error-message")) {
+    if (
+      errorMessageElement &&
+      errorMessageElement.classList.contains("error-message")
+    ) {
       // If error message exists, remove it
       errorMessageElement.remove();
     }
   }
 
-  function showRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
-    recaptchaErrorElement.style.display = "block"; // Display the error message
+  // function showRecaptchaError() {
+  //   const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
+  //   recaptchaErrorElement.style.display = "block"; // Display the error message
 
-    // Hide the error message after a specific duration (e.g., 5 seconds)
-    setTimeout(function () {
-      recaptchaErrorElement.style.display = "none";
-    }, 3000);
-  }
+  //   // Hide the error message after a specific duration (e.g., 5 seconds)
+  //   setTimeout(function () {
+  //     recaptchaErrorElement.style.display = "none";
+  //   }, 3000);
+  // }
 
-  function clearRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
-    recaptchaErrorElement.style.display = "none"; // Hide the error message
-  }
+  // function clearRecaptchaError() {
+  //   const recaptchaErrorElement = document.getElementById("c_recaptcha-error");
+  //   recaptchaErrorElement.style.display = "none"; // Hide the error message
+  // }
 
   // Event handler to open the modal
   function openModal() {
@@ -394,126 +429,136 @@ import "../styles.css";
     document.body.style.overflow = "hidden";
   }
 
-
-
   // Add event listener on DOMContentLoaded to ensure the document is ready
   document.addEventListener("DOMContentLoaded", function () {
-      // Add event listener to the Contact Us button
-      const contactButton = document.getElementById("contact-button");
-      if (contactButton) {
-        contactButton.addEventListener("click", function () {
-          logCurrentUrl();
-          openModal();
-        });
-      }
-
-      // Add event listener to the cancel button
-      const cancelButton = document.getElementById("cancel-button");
-      if (cancelButton) {
-        cancelButton.addEventListener("click", closeModal);
-      }
-    });
-
-
-// get browser and device name
-function detectBrowser() {
-      const userAgent = navigator.userAgent;
-      var browserName = 'Unknown';
-
-      // Check for Chrome
-      if (userAgent.indexOf("Chrome") !== -1) {
-        browserName = "Google Chrome";
-      }
-      // Check for Firefox
-      else if (userAgent.indexOf("Firefox") !== -1) {
-        browserName = "Mozilla Firefox";
-      }
-      // Check for Safari
-      else if (userAgent.indexOf("Safari") !== -1) {
-        browserName = "Apple Safari";
-      }
-      // Check for Edge
-      else if (userAgent.indexOf("Edg") !== -1) {
-        browserName = "Microsoft Edge";
-      }
-      // Check for Internet Explorer
-      else if (
-        userAgent.indexOf("MSIE") !== -1 ||
-        userAgent.indexOf("Trident") !== -1
-      ) {
-        browserName = "Internet Explorer";
-      }
-
-      // Log the detected browser to the console
-    //   console.log(`Detected browser: ${browserName}`);
-
-      // Detect the device type based on screen size
-      const screenWidth = window.innerWidth;
-      var device = 'Unknown'
-      if (screenWidth <= 576) {
-        device = 'Mobile'
-      } else if (screenWidth <= 992) {
-        device = 'Tablet'
-      } else if (screenWidth <= 1200) {
-        device = 'Laptop'
-      } else {
-        device = 'Desktop'
-      }
-
-      return { browserName, device }
+    // Add event listener to the Contact Us button
+    const contactButton = document.getElementById("contact-button");
+    if (contactButton) {
+      contactButton.addEventListener("click", function () {
+        logCurrentUrl();
+        openModal();
+      });
     }
 
-// Function to get the user's IP address using ipify
-function getUserIPAddress() {
-  return fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => data.ip)
-      .catch(error => {
-          console.error('Error fetching IP address:', error);
-          return null; // Handle the error gracefully
+    // Add event listener to the cancel button
+    const cancelButton = document.getElementById("cancel-button");
+    if (cancelButton) {
+      cancelButton.addEventListener("click", closeModal);
+    }
+  });
+
+  // get browser and device name
+  function detectBrowser() {
+    const userAgent = navigator.userAgent;
+    var browserName = "Unknown";
+
+    // Check for Chrome
+    if (userAgent.indexOf("Chrome") !== -1) {
+      browserName = "Google Chrome";
+    }
+    // Check for Firefox
+    else if (userAgent.indexOf("Firefox") !== -1) {
+      browserName = "Mozilla Firefox";
+    }
+    // Check for Safari
+    else if (userAgent.indexOf("Safari") !== -1) {
+      browserName = "Apple Safari";
+    }
+    // Check for Edge
+    else if (userAgent.indexOf("Edg") !== -1) {
+      browserName = "Microsoft Edge";
+    }
+    // Check for Internet Explorer
+    else if (
+      userAgent.indexOf("MSIE") !== -1 ||
+      userAgent.indexOf("Trident") !== -1
+    ) {
+      browserName = "Internet Explorer";
+    }
+
+    // Log the detected browser to the console
+    //   console.log(`Detected browser: ${browserName}`);
+
+    // Detect the device type based on screen size
+    const screenWidth = window.innerWidth;
+    var device = "Unknown";
+    if (screenWidth <= 576) {
+      device = "Mobile";
+    } else if (screenWidth <= 992) {
+      device = "Tablet";
+    } else if (screenWidth <= 1200) {
+      device = "Laptop";
+    } else {
+      device = "Desktop";
+    }
+
+    return { browserName, device };
+  }
+
+  // Function to get the user's IP address using ipify
+  function getUserIPAddress() {
+    return fetch("https://api.ipify.org?format=json")
+      .then((response) => response.json())
+      .then((data) => data.ip)
+      .catch((error) => {
+        console.error("Error fetching IP address:", error);
+        return null; // Handle the error gracefully
       });
-}
+  }
 
-
-function sendEmailNotification(full_name="", email="", phone="", message="", enquiry_source="", demoForValue="", queryTypeValue="", ip="", browser_name="", device="", response=""){ 
-  console.log("sending email notification...")
-  // return
-   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      // Authorization: `token ${apiKey}:${secretKey}`,
-    },
-    body: JSON.stringify({
-      full_name: full_name,
-      email: email,
-      phone: phone,
-      message: message,
-      enquiry_source: "Website Enquiry",
-      demoForValue: demoForValue,
-      queryTypeValue: queryTypeValue,
-      ip: ip,
-      browser_name: browser_name,
-      device: device,
-      response: response,
-      page_name: "Contact Us PopUp"
-    }),
-  })
-    .then((res) => {
-      if (res.status === 200) {
-        // alert("You have been registered successfully.")
-        console.log("email notification sent.")
-      } 
-      else {
-        console.log("failed to send email notification", res)
-        alert("We are unable to process your request. please send your requirements on info@sanskartechnolab.com")
+  function sendEmailNotification(
+    name = "",
+    email = "",
+    phone = "",
+    message = "",
+    enquiry_source = "",
+    demoForValue = "",
+    queryTypeValue = "",
+    ip = "",
+    browser_name = "",
+    device = "",
+    response = ""
+  ) {
+    console.log("sending email notification...");
+    // return
+    fetch(
+      "http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          // Authorization: `token ${apiKey}:${secretKey}`,
+        },
+        body: JSON.stringify({
+          full_name: name,
+          email: email,
+          phone: phone,
+          message: message,
+          enquiry_source: "Website Enquiry",
+          demoForValue: demoForValue,
+          queryTypeValue: queryTypeValue,
+          ip: ip,
+          browser_name: browser_name,
+          device: device,
+          response: response,
+          page_name: "Contact Us PopUp",
+        }),
       }
-    })
-    .catch((error) => {
-      console.log("error", error);
-    });
-}
-
-    
+    )
+      .then((res) => {
+        if (res.status === 200) {
+          // alert("You have been registered successfully.")
+          console.log("email notification sent.");
+        } else {
+          console.log("failed to send email notification", res);
+          alert(
+            "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
+          );
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
 </script>

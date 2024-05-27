@@ -7,6 +7,11 @@ import { Image, Picture } from "@astrojs/image/components";
 // import banner from "../../public/Images/banner.png";
 import banner from "../../public/Images/index_banner.svg";
 import right from "../../public/Images/right.svg";
+import realestate_slider from "../../public/Images/realestate_slider.svg";
+import whatsapp_slider from "../../public/Images/whatsapp_slider.svg";
+import Customer_Communication from "../../public/Images/Customer_Communication.svg";
+import erpnext_whatsapp from "../../public/Images/erpnext_whatsapp.svg";
+import banner_image from "../../public/Images/banner_image_erpnextmigration.svg";
 
 import FinancialAccounting from "../../public/Images/FinancialAccounting.svg";
 import OrderManagement from "../../public/Images/OrderManagement.svg";
@@ -92,8 +97,14 @@ import form_bg from "../../public/Images/form-bg.svg";
 
 import jagdamba_logo from "../../public/Images/jagdamba_logo.svg";
 import urjaa_logo from "../../public/Images/urjaa_logo.svg";
+import efra from "../../public/Images/efra.svg";
+import nettyam from "../../public/Images/nettyam.svg";
+import mera_pata from "../../public/Images/mera_pata.svg";
+import vsrf from "../../public/Images/vsrf.svg";
+import vijay_mamra from "../../public/Images/vijay_mamra.svg";
 import kirti_telnet_logo from "../../public/Images/kirti-telnet-logo.png";
 import advantis_logo from "../../public/Images/advantis-quarts-logo.png";
+import realestate_home_page from "../../public/Images/realestate_home_page.png";
 import khetan_logo from "../../public/Images/Khetan-group-logo.png";
 import mignesh_logo from "../../public/Images/mignesh-global-logo.png";
 import migoo_logo from "../../public/Images/migoo-logo.png";
@@ -112,271 +123,418 @@ import frappe_certified_partner from "../../public/Images/frappe-certified-partn
 
 
 <!-- Banner code with slider with next previous button -->
-<!-- <section
-class="hidden lg:flex section-bg h-[80vh] xl:h-[75vh] flex items-center banner-bg"
->
-	<div class="mx-5 lg:mx-28 xl:mx-24 2xl:mx-72 swiper_banner_button relative !overflow-hidden">
-	<div class="flex justify-between flex flex-wrap mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0">
-        
-        <button
-          class="swiper-button-prev-banner absolute z-10 left-0 top-1/2 transform -translate-y-1/2 pb rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-        >
-          <span class="sr-only">Previous Slide</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="lg:h-5 md:h-4 h-3 lg:w-5 md:w-4 w-3 rtl:rotate-180"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-          </svg>
-        </button>
 
-        <button
-          class="swiper-button-next-banner absolute z-10 right-0 top-1/2 transform -translate-y-1/2 nb rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-        >
-          <span class="sr-only">Next Slide</span>
-          <svg
-            class="lg:h-5 md:h-4 h-3 lg:w-5 md:w-4 w-3 rtl:rotate-180"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 5l7 7-7 7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"></path>
-          </svg>
-        </button>
-      </div>
-<div class="swiper-wrapper ">
-  <div class="swiper-slide">
-	<div
-		  class="flex flex-wrap items-center mx-5 md:max-w-7xl md:mx-auto md:px-14 2xl:px-20"
-	  >
-		  <div class="w-full md:w-6/12">
-			  <h1
-				  class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
-			  >
-			  The Leading ERPNext & ServiceNow Company!
-			  </h1>
-			  <p
-				  class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-6"
-			  >
-			  Sanskar Technolab can help you simplify your business
-			  operations by leveraging one-of-a-kind platforms!
-			  </p>
-			  <div
-				  class="mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-72 sm:w-auto"
-			  >
-				  <a
-					  href="/contact-us"
-					  class="text-white text-base font-semibold font-inter"
-					  >Book A Free Demo Now!</a
-				  >
-				  <Image
-					  loading="eager"
-					  src={right}
-					  width={6}
-					  height={12}
-					  alt="right arrow "
-				  />
-			  </div>
-		  </div>
-
-		  <Image
-			  loading="eager"
-			  src={banner}
-			  alt="banner"
-			  class="w-full md:w-6/12"
-		  />
-	  </div></div><div class="swiper-slide">
-	<div
-		  class="flex flex-wrap items-center mx-5 md:max-w-7xl md:mx-auto md:px-14 2xl:px-20"
-	  >
-		  <div class="w-full md:w-6/12">
-			  <h1
-				  class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
-			  >
-			  The Leading ERPNext & ServiceNow Company!
-			  </h1>
-			  <p
-				  class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-6"
-			  >
-			  Sanskar Technolab can help you simplify your business
-			  operations by leveraging one-of-a-kind platforms!
-			  </p>
-			  <div
-				  class="mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-72 sm:w-auto"
-			  >
-				  <a
-					  href="/contact-us"
-					  class="text-white text-base font-semibold font-inter"
-					  >Book A Free Demo Now!</a
-				  >
-				  <Image
-					  loading="eager"
-					  src={right}
-					  width={6}
-					  height={12}
-					  alt="right arrow "
-				  />
-			  </div>
-		  </div>
-
-		  <Image
-			  loading="eager"
-			  src={banner}
-			  alt="banner"
-			  class="w-full md:w-6/12"
-		  />
-	  </div>
-	</div>
-
-</section> 
-
+  <!--  screen above lg start-->
 <section
+class=" flex section-bg  min-h-[80vh]  items-center banner-bg"
+>
+	<div class="mx-5 swiper swiper_banner_button relative !overflow-hidden">
+		<!-- <div class="flex justify-between  flex-wrap mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0">			
+			<button
+			class="swiper-button-prev-banner absolute z-10 left-0 top-1/2 transform -translate-y-1/2 pb rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
+			>
+			<span class="sr-only">Previous Slide</span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="lg:h-5 md:h-4 h-3 lg:w-5 md:w-4 w-3 rtl:rotate-180"
+			>
+				<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+			</svg>
+			</button>
+
+			<button
+			class="swiper-button-next-banner absolute z-10 right-0 top-1/2 transform -translate-y-1/2 nb rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
+			>
+			<span class="sr-only">Next Slide</span>
+			<svg
+				class="lg:h-5 md:h-4 h-3 lg:w-5 md:w-4 w-3 rtl:rotate-180"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+				d="M9 5l7 7-7 7"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"></path>
+			</svg>
+			</button>
+		</div>  -->
+		<div class="swiper-wrapper flex items-center  ">
+			<div class="swiper-slide ">
+						<div
+							class="flex lg:flex-row flex-col gap-5 items-center md:max-w-7xl md:mx-auto p-5 sm:p-10 md:p-24 2xl:px-0 relative"
+						>
+							<div class="w-full lg:w-6/12">
+								
+								<h2
+									class="text-2xl md:text-3xl lg:text-[40px] lg:leading-[48px] text-[#31393C] font-bold"
+								>
+								The Leading ERPNext & ServiceNow Company!
+								</h2>
+								<p
+									class="text-[#31393C]  font-normal text-sm md:text-base lg:text-lg lg:mt-6 mt-3"
+								>
+								Sanskar Technolab can help you simplify your business
+								operations by leveraging one-of-a-kind platforms!
+								</p>
+								<Image
+								loading="eager"
+								src={frappe_certified_partner}
+								alt="frappe_ceritified_partner"
+								class="w-32  lg:mt-6 mt-3"
+								/>
+								
+								<a
+							class="cursor-pointer lg:mt-6 mt-3 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 max-w-[18rem] sm:w-auto"
+							
+							href="/contact-us?page=home"
+							>
+							<span class="text-white text-base font-semibold font-inter">Book A Free Demo Now!</span>
+							<Image
+								loading="eager"
+								src={right}
+								width={6}
+								height={12}
+								alt="right arrow"
+							/>
+							</a>
+
+								
+							</div>
+
+							<Image
+								loading="eager"
+								src={banner}
+								alt="banner"
+								class="w-full lg:w-6/12"
+							/>
+						</div>
+			</div>
+			<div class="swiper-slide ">
+					<div
+						class="flex lg:flex-row flex-col  gap-5 items-center md:max-w-7xl md:mx-auto p-5 sm:p-10 md:p-24 2xl:px-0 relative"
+					>
+					
+						<div class="w-full lg:w-6/12 ">
+							
+							<div class="max-w-[450px] flex flex-row bg-gradient-to-r from-[#C6E1FF] to-[rgba(198,225,255,0)] rounded-xl p-3 gap-2">
+										<Image
+											loading="eager"
+											src={realestate_slider}											
+											alt="realestate_slider"
+										/>
+									<div>
+										<p class="text-sm   md:text-base">Our Product</p>
+										<h4 class=" text-xl  md:text-2xl   lg:text-3xl font-semibold">Real Estate CRM</h4>
+									</div>					
+							</div>
+
+							<h2
+								class="text-2xl md:text-3xl lg:text-[40px] lg:leading-[48px] text-[#31393C] font-bold lg:mt-6 mt-3"
+							>
+							Transform Your Real Estate Business with a Cutting-edge CRM Solution.
+							</h2>
+							<p
+								class="text-[#31393C]  font-normal text-sm md:text-base lg:text-lg lg:mt-6 mt-3"
+							>
+							Unify Data, Tools, and Processes for Seamless Automation, Empowering Your Team to Drive Business Growth.
+							</p>
+						
+
+							<a
+							class="cursor-pointer lg:mt-6 mt-3 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 max-w-[11rem] sm:w-auto"
+							
+							href="/real-estate-crm"
+							>
+							<span class="text-white text-base font-semibold font-inter">View Product</span>
+							<Image
+								loading="eager"
+								src={right}
+								width={6}
+								height={12}
+								alt="right arrow"
+							/>
+							</a>
+						</div>
+
+						<Image
+							loading="eager"
+							src={realestate_home_page}
+							alt="realestate_home_page"
+							class="w-full lg:w-6/12"
+						/>
+					</div>
+			</div>
+			<div class="swiper-slide ">
+				<div
+				class="flex lg:flex-row flex-col gap-5 items-center md:max-w-7xl md:mx-auto p-5 sm:p-10 md:p-24 2xl:px-0 relative"
+			  >
+				<div class="w-full lg:w-6/12">
+					<div class="max-w-[450px] flex flex-row bg-gradient-to-r from-[#C6E1FF] to-[rgba(198,225,255,0)] p-3 gap-2 rounded-xl">
+							<Image
+								loading="eager"
+								src={whatsapp_slider}											
+								alt="whatsapp_slider "
+							/>
+						<div>
+							<h4 class=" text-xl  md:text-2xl   lg:text-3xl font-semibold">WhatsApp</h4>
+							<p class="text-sm   md:text-base">integration for ERPNEXT</p>
+						</div>					
+					</div>
+					<h2
+						class="lg:mt-6 mt-3 text-2xl md:text-3xl lg:text-[40px] lg:leading-[48px] text-[#31393C] font-bold"
+					>
+						Customer Communication Made Simpler!
+					</h2>
+					<p
+						class="text-[#31393C]  font-normal text-sm md:text-base lg:text-lg lg:mt-6 mt-3"
+					>
+						Connect with your customers like never before with our seamless WhatsApp integration for ERPNEXT.
+					</p>
+					<Image
+						loading="eager"
+						src={erpnext_whatsapp}
+						alt="erpnext_whatsapp"
+						class="lg:mt-6 mt-3 "
+					/>
+				
+							<a
+							class="cursor-pointer lg:mt-6 mt-3 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 max-w-[11rem] sm:w-auto"						
+							href="/erpnext_whatsapp_integration"							
+							>
+							<span class="text-white text-base font-semibold font-inter">View More</span>
+							<Image
+								loading="eager"
+								src={right}
+								width={6}
+								height={12}
+								alt="right arrow"
+							/>
+							</a>
+
+				</div>
+				
+				  <Image
+					loading="eager"
+					src={Customer_Communication}
+					alt="Customer_Communication"
+					class="w-full lg:w-6/12 h-[450px] "
+				  />
+				
+			  </div>
+			</div>
+			<div class="swiper-slide ">
+				<div
+				class="flex lg:flex-row flex-col gap-5 items-center md:max-w-7xl md:mx-auto p-5 sm:p-10 md:p-24 2xl:px-0 relative"
+			  >
+			 
+				  <div class="w-full lg:w-6/12">
+					  <div class="max-w-[450px]  bg-gradient-to-r from-[#C6E1FF] to-[rgba(198,225,255,0)] p-3 rounded-xl">	
+						  <p class="text-sm md:text-base">A Success Story!</p>
+					  </div>
+					  <h2
+						class="lg:mt-6 mt-3 text-2xl md:text-3xl lg:text-[40px] lg:leading-[48px] text-[#31393C] font-bold"
+					  >
+					  Migrating From SAP To ERPNext For Our Client
+					  </h2>
+					  <p
+						class=" text-[#31393C]  font-normal text-sm md:text-base lg:text-lg lg:mt-6 mt-3"
+					  >
+						Sanskar Technolab is the leading ERPNext partner, providing a diverse
+						range of services to our clients. This time, we have provided
+						end-to-end and seamless SAP to ERPNext migration services.
+					</p>
+					<a
+						class="cursor-pointer lg:mt-6 mt-3 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 max-w-[12rem] sm:w-auto"
+						
+						href="/sap-to-erpnext-migration"	
+						>
+						<span class="text-white text-base font-semibold font-inter">View Case Study</span>
+						<Image
+							loading="eager"
+							src={right}
+							width={6}
+							height={12}
+							alt="right arrow"
+						/>
+						</a>
+
+				  </div>
+				  
+
+
+				  <Image
+					loading="eager"
+					src={banner_image}
+					alt="sap_to_erpnext_migration"
+					class="w-full lg:w-6/12"
+				  />
+				  
+				</div>
+		  
+			</div>
+			
+			
+		</div>
+		<div class="swiper-pagination "></div>
+	</div>
+</section> 
+  <!-- screen above lg End-->
+
+
+<!--  screen below lg start-->
+<!-- <section
 class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 >
 <div class="mx-5 md:mx-28 swiper_banner_button relative !overflow-hidden">
-	<div class="flex justify-between flex flex-wrap mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0">
-		<button
-		class="swiper-button-prev-banner absolute z-10 left-0 top-1/2 transform -translate-y-1/2 pb rounded-full border border-[#3E96F4] p-2 md:p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-	  >
-		<span class="sr-only">Previous Slide</span>
-		<svg
-		  xmlns="http://www.w3.org/2000/svg"
-		  fill="none"
-		  viewBox="0 0 24 24"
-		  stroke-width="1.5"
-		  stroke="currentColor"
-		  class="h-3 md:h-4 lg:w-6 md:w-5 w-3 md:w-4 rtl:rotate-180"
+	<div class="flex justify-between  flex-wrap mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0">
+			<button
+			class="swiper-button-prev-banner absolute z-10 left-0 top-1/2 transform -translate-y-1/2 pb rounded-full border border-[#3E96F4] p-2 md:p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
 		>
-		  <path
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			d="M15.75 19.5L8.25 12l7.5-7.5"
-		  ></path>
-		</svg>
-	  </button>
+			<span class="sr-only">Previous Slide</span>
+			<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			class="h-3 md:h-4 lg:w-6 md:w-5 w-3 md:w-4 rtl:rotate-180"
+			>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M15.75 19.5L8.25 12l7.5-7.5"
+			></path>
+			</svg>
+		</button>
 	  
-	  <button
-		class="swiper-button-next-banner absolute z-10 right-0 top-1/2 transform -translate-y-1/2 nb rounded-full border border-[#3E96F4] p-2 md:p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-	  >
-		<span class="sr-only">Next Slide</span>
-		<svg
-		  class="h-3 md:h-4 lg:w-6 md:w-5 w-3 md:w-4 rtl:rotate-180"
-		  fill="none"
-		  stroke="currentColor"
-		  viewBox="0 0 24 24"
-		  xmlns="http://www.w3.org/2000/svg"
+		<button
+			class="swiper-button-next-banner absolute z-10 right-0 top-1/2 transform -translate-y-1/2 nb rounded-full border border-[#3E96F4] p-2 md:p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
 		>
-		  <path
-			d="M9 5l7 7-7 7"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="2"
-		  ></path>
-		</svg>
-	  </button>
-      </div>
-<div class="swiper-wrapper ">
-  <div class="swiper-slide">
-	<div
-		  class="flex flex-wrap items-center mx-10"
-	  >
-		  <div class="w-full lg:w-6/12">
-			  <div
-				  class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
-			  >
-			  The Leading ERPNext & ServiceNow Company!
-	</div>
-			  <p
-				  class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-3 md:mt-6"
-			  >
-			  Sanskar Technolab can help you simplify your business
-			  operations by leveraging one-of-a-kind platforms!
-			  </p>
-			  <div
-				  class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-72 sm:w-auto"
-			  >
-				  <a
-					  href="/contact-us"
-					  class="text-white text-base font-semibold font-inter"
-					  >Book A Free Demo Now!</a
-				  >
-				  <Image
-					  loading="eager"
-					  src={right}
-					  width={6}
-					  height={12}
-					  alt="right arrow "
-				  />
-			  </div>
-		  </div>
+			<span class="sr-only">Next Slide</span>
+			<svg
+			class="h-3 md:h-4 lg:w-6 md:w-5 w-3 md:w-4 rtl:rotate-180"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+			>
+			<path
+				d="M9 5l7 7-7 7"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+			></path>
+			</svg>
+		</button>
+    </div>
+	<div class="swiper-wrapper ">
+			<div class="swiper-slide">
+					<div
+						class="flex flex-wrap items-center mx-10"
+					>
+						<div class="w-full lg:w-6/12">
+							<h2
+								class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
+							>
+							The Leading ERPNext & ServiceNow Company!
+					</h2>
+							<p
+								class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-3 md:mt-6"
+							>
+							Sanskar Technolab can help you simplify your business
+							operations by leveraging one-of-a-kind platforms!
+							</p>
+							<div
+								class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-72 sm:w-auto"
+							>
+								<a
+									href="/contact-us"
+									class="text-white text-base font-semibold font-inter"
+									>Book A Free Demo Now!</a
+								>
+								<Image
+									loading="eager"
+									src={right}
+									width={6}
+									height={12}
+									alt="right arrow "
+								/>
+							</div>
+						</div>
 
-		  <Image
-			  loading="eager"
-			  src={banner}
-			  alt="banner"
-			  class="banner-image w-full"
-		  />
-	  </div></div><div class="swiper-slide">
-	<div
-		  class="flex flex-wrap items-center mx-10"
-	  >
-		  <div class="w-full lg:w-6/12">
-			  <div
-				  class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
-			  >
-			  The Leading ERPNext & ServiceNow Company!
-	</div>
-			  <p
-				  class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-3 md:mt-6"
-			  >
-			  Sanskar Technolab can help you simplify your business
-			  operations by leveraging one-of-a-kind platforms!
-			  </p>
-			  <div
-				  class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-72 sm:w-auto"
-			  >
-				  <a
-					  href="/contact-us"
-					  class="text-white text-base font-semibold font-inter"
-					  >Book A Free Demo Now!</a
-				  >
-				  <Image
-					  loading="eager"
-					  src={right}
-					  width={6}
-					  height={12}
-					  alt="right arrow "
-				  />
-			  </div>
-		  </div>
+						<Image
+							loading="eager"
+							src={banner}
+							alt="banner"
+							class="banner-image w-full"
+						/>
+					</div>
+			</div>
+			<div class="swiper-slide">
+					<div
+						class="flex flex-wrap items-center mx-10"
+					>
+						<div class="w-full lg:w-6/12">
+							<h2
+								class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
+							>
+							The Leading ERPNext & ServiceNow Company!
+					</h2>
+							<p
+								class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-3 md:mt-6"
+							>
+							Sanskar Technolab can help you simplify your business
+							operations by leveraging one-of-a-kind platforms!
+							</p>
+							<div
+								class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 md:w-[11rem] sm:w-auto"
+							>
+								<a
+									href="/contact-us"
+									class="text-white text-base font-semibold font-inter"
+									>Book A Free Demo Now!</a
+								>
+								<Image
+									loading="eager"
+									src={right}
+									width={6}
+									height={12}
+									alt="right arrow "
+								/>
+							</div>
+						</div>
 
-		  <Image
-			  loading="eager"
-			  src={banner}
-			  alt="banner"
-			  class="banner-image w-full"
-		  />
-	  </div>
+						<Image
+							loading="eager"
+							src={banner}
+							alt="banner"
+							class="banner-image w-full"
+						/>
+					</div>
+			</div>
 	</div>
-  </section>-->
+</div>
+  </section> -->
+
+  <!--  screen below lg End-->
+
 <!-- Banner code with slider with next previous button End Here -->
 
 
 
 <!-- Banner code with slider -->
-<section
+  <!--  screen above lg start-->
+<!-- <section
 class="hidden lg:flex section-bg h-[80vh] xl:h-[75vh] flex items-center banner-bg"
 >
 <div class="mx-5 md:max-w-7xl md:mx-auto 2xl:px-0 swiper_banner !overflow-hidden">
@@ -493,9 +651,11 @@ class="hidden lg:flex section-bg h-[80vh] xl:h-[75vh] flex items-center banner-b
 	  </div>
 	</div>
 
-</section>
+</section> -->
+  <!--  screen above lg End-->
 
-<section
+  <!--  screen above lg start-->
+<!-- <section
 class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 >
 <div class="swiper_banner !overflow-hidden">
@@ -505,12 +665,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 		  class="flex flex-wrap items-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0"
 	  >
 		  <div class="w-full lg:w-6/12">
-			<!-- <Image
-			loading="eager"
-			src={frappe_certified_partner}
-			alt="frappe_ceritified_partner"
-			class="w-32 mb-3 md:mb-5 md:w-auto"
-		  /> -->
+			
 			  <div
 				  class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
 			  >
@@ -596,7 +751,8 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 		  />
 	  </div>
 	</div>
-  </section>
+</section> -->
+  <!--  screen above lg End-->
   <!-- Banner code with slider End Here -->
 
 
@@ -720,10 +876,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 						>
 						<Image loading="eager"  
 							src={right}
-							width={6}
-							height={12}
-							alt="right arrow "
-						/>
+							width={6}lg:hidden
 					</div>
 				</div>
 				<Image loading="eager"  
@@ -764,6 +917,8 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 			/>
 		</div> -->
 
+
+	<!-- Offering 360-degree ServiceNow & ERPNext Development Solutions! start -->
 	<section
 		class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[3.125rem] lg:py-[6.25rem]"
 	>
@@ -1186,6 +1341,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 				</div>
 			</div> -->
 	</section>
+	<!-- Offering 360-degree ServiceNow & ERPNext Development Solutions! End -->
 
 	<!-- <section
 			class="md:max-w-7xl md:mx-auto md:px-24 flex flex-wrap md:items-center sm:text-left  py-[2rem] md:py-[2rem] lg:py-[4rem] mx-5"
@@ -1718,14 +1874,16 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 									<li>Stock replenishment</li>
 									<li>On-the-go customizations</li>
 								</ul>
-								<div
+
+								
+								<a
+								href="manufacturing"
 									class="mt-5 flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 w-36"
 								>
-									<a
-										href="manufacturing"
+									<span
+										
 										class="text-white font-semibold font-inter"
-										>Learn More</a
-									>
+										>Learn More</span>
 									<Image
 										loading="eager"
 										src={right}
@@ -1733,7 +1891,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 										height={12}
 										alt="right arrow "
 									/>
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -2846,12 +3004,12 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 			>
 			Can’t See Your Required Integration Tool Here?						
 			</div>
-			<div
+			<a
+					href="/contact-us?page=home"
 				class="flex justify-between bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-3 w-52"
 			>
-				<a
-					href="/contact-us?page=home"
-					class="text-white font-semibold font-inter">We can help!</a
+				<span
+					class="text-white font-semibold font-inter">We can help!</span
 				>
 				<Image
 					loading="eager"
@@ -2860,7 +3018,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 					height={12}
 					alt="right arrow "
 				/>
-			</div>
+			</a>
 		</div>
 	</section>
 
@@ -2880,13 +3038,13 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 				>
 				Regardless Of Your Industry, We Have Got You Covered.
 				</div>
-				<div
+				<a
+						href="/contact-us?page=home"
 					class="flex justify-between items-center bg-[#3E96F4] rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 lg:py-0 xl:w-72 sm:w-auto"
 				>
-					<a
-						href="/contact-us?page=home"
+					<span
 						class="text-white font-semibold font-inter"
-						>Schedule A Call Back Now!</a
+						>Schedule A Call Back Now!</span
 					>
 					<Image
 						loading="eager"
@@ -2895,7 +3053,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 						height={12}
 						alt="right arrow "
 					/>
-				</div>
+				</a>
 			</div>
 
 			<div
@@ -3334,7 +3492,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 									</p>
 									<p
 										class="text-[0.625rem] md:text-xs lg:text-sm"
-									>
+										>
 										Director, Osswal Infosystems Pvt. Ltd.
 									</p>
 								</div>
@@ -3342,25 +3500,550 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 						</div>
 					</div>
 				</div> -->
-
-		<div class="grid gap-5 items-center mt-10 md:mt-5 lg:mt-20 lg:mx-0">
+				
+		<div class="grid gap-5 items-center mt-10 md:mt-5 lg:mt-20 lg:mx-0 max-2xl:hidden">
 			<div class="swiper-customer !overflow-hidden">
 				<div class="swiper-wrapper text-[#31393C] lg:!w-[34rem]">
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] ">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height "
+						>
+							<Image
+								loading="eager"
+								src={advantis_logo}
+								alt="Advantis Quartz"
+							/>	
+							<div class="lg:mt-6 mt-3 ">
+
+								<p class="text-xs md:text-sm lg:text-base">
+									We Advantis Quartz LLP is a manufacturing unit of
+									Artificial Stone at Udaipur Rajasthan. To run a
+									manufacturing unit in smooth and efficient manner
+									integration of all processes is must and for that we were
+									looking for an application that address this issue. We
+									needed a solution that would merge all departments from
+									Finance to Manufacturing and which would integrate with
+									Inventory, Sales, Purchase, and Warehouse etc. and in this
+									sequence & with our considerable experience with numerous
+									accounting software packages, ERPNext has found to be the
+									most adaptable, flexible, user-friendly, efficient, and
+									productive to meet our requirements.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									It is efficient and easily accessible, customisable for
+									all our department and which meets our business
+									requirement and processes. ERPNext was proposed to us as a
+									customised ERP deliver on quality and time lines.
+								  </p>
+
+								 
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										We were very pleased with the multiple features the ERP offers and Sanskar team made a key role in rapidly understanding our needs, identifying our business requirements and developing them in quick time. Their business understanding helped us streamline our processes and efficiently achieved our objectives. The team was dynamic and always ready to help.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										The Client-based customization has made our business much more efficient, it allows us to access our data at any time from any location. The reporting functionality gives us many options for very specific areas within our organization. We have implemented ERPNext all across the Organisation. The modules include Production, Purchases, Sales, Inventory Management and Financial Accounting.
+									</p>
+								
+					
+								
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Lokesh Modi</p>
+								<p>Accounts Head, Advantis Quartz</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide p-3 2xl:!w-[80rem]">
+						<div class="client_shadow client_card_height">
+							<Image loading="eager" src={efra} alt="EFRA INDUSTRIES LLP" />
+							<div class="mt-6">
+								<p class="text-xs md:text-sm lg:text-base">
+									I would like to first highlight the difficulty faced during the implementation of ERPNext with customization to suit our product and process requirements.
+								</p>
+								<p class="text-xs md:text-sm lg:text-base mt-3">
+									We started our implementation one year back with one of our consultants, but due to the lack of experience in ERPNext development, modules customization, and knowledge of product and process, they are not able to develop ERPNext and completely failed to implement it in our organization. Due to this, we were only able to use ERPNext for Purchase and Sale entry purposes; the rest of the things we were forced to do with Excel, and decided to migrate to different software or consultants.
+								</p>
+					
+								
+								
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										During our search, we came to know about <b>Sanskar Techno Lab</b>, where we had an opportunity to work closely with ERPNext developers and consultants. We were able to fine-tune the modules to align perfectly with our workflows and business requirements. This level of customization not only improved user adoption but also optimized our processes, eliminating inefficiencies and redundant tasks. The ability to tailor ERPNext to our exact specifications has been invaluable in driving operational excellence and achieving our strategic objectives.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										The implementation process itself was seamless, thanks to the expertise and guidance provided by the <b>Sanskar Techno Lab</b> team. They meticulously understood our business requirements and tailored the system to suit our specific needs. From customization to integration, every step was executed with precision and professionalism.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+										I personally want to thank all of the Sanskar Techno Lab team for the prompt response, extended support, and actively understanding and resolving our issues.
+									</p>
+								
+								
+								
+								
+					
+							</div>
+							<div class="text-xs md:text-sm lg:text-base mt-6">
+								<p class="font-semibold">Basant Kumar</p>
+								<p>Production Manager, EFRA INDUSTRIES LLP</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+						<div
+							class="  client_shadow   client_card_height "
+						>
+							<Image
+								loading="eager"
+								src={vijay_mamra}
+								alt="Vijay Mamra Pvt.Ltd"
+							/>
+							<div class="mt-6">
+								<p class="text-xs md:text-sm lg:text-base">
+									I am writing to share my thoughts and feedback regarding the recent ERPNext implementation that your team undertook.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									First and foremost, I want to express my appreciation for the effort and dedication demonstrated by your team throughout this process.
+It's evident that a lot of hard work went into making this project a success, and I am grateful for your commitment to ensuring its smooth execution.
+								  <p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+									I have observed several positive aspects of the ERPNext system:
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-1">
+									The user interface of ERPNext is intuitive and easy to navigate.This has significantly reduced the learning curve for our team members, allowing them to quickly adapt to the new system.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-1 ">
+									I appreciate the level of customization that was possible with ERPNext. Your team took the time to understand our specific business needs and tailored the system accordingly.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3 ">
+									In conclusion,I want to express my gratitude to you and your team for your hard work and dedication throughout this ERPNext implementation. I am confident that with continued collaboration, we can address these issues and further optimize the system to meet our needs.
+								  </p>
+							</div>
+							<div class="text-xs md:text-sm lg:text-base mt-6">
+								<p class="font-semibold">Vijay patel</p>
+								<p>Director, Vijay Mamra Pvt.Ltd</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+						<div class=" 2xl:!w-[40rem] ">
+							<div
+								class="  client_shadow   client_card_height "
+							>
+								<Image
+									loading="eager"
+									src={nettyam}
+									alt="nettyam"
+								/>
+								<div class="mt-6">
+									<p class="text-xs md:text-sm lg:text-base">
+										Jay Gau Mata,
+									  </p>
+									  <p class="text-xs md:text-sm lg:text-base mt-3">
+										Thanks for your quick support for providing us ERPNext's modules as per our needs. Completed modules provided from your team is buying, selling, manufacturing, CRM and POS. Currently we are entering our trial data, and also We are checking and working on the same. We will soon activate all modules to fulfill Ved Khillar Goshala admin purpose.
+									  <p class="text-xs md:text-sm lg:text-base mt-3 ">
+										Thanks again for your great gesture.
+									  </p>
+									  <p class="text-xs md:text-sm lg:text-base mt-3">
+										Gomata's Blessings will always with you.
+									  </p>
+									
+								</div>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Nitesh Ojha</p>
+									<p>
+										Founder, Nettyam
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={jagdamba_logo}
+									alt="jagdamba"
+								/>
+						
+								<p class="text-xs md:text-sm lg:text-base mt-6">
+									We are constantly draining our time and other
+									valuable resources due to outdated systems for
+									the management of our textile business
+									operation. We have decided to reach out to
+									Sanskar Technolab ad suggested us ERPNext
+									platform to efficiently manage our business
+									processes. And, if turned out to be great. We
+									got an escape from the tedious process, while
+									saving crucial manpower - resulting in lesser
+									costs and improved efficiency.
+								</p>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Uttambhai Agrawal</p>
+									<p>Director, Shri Jagdamba Textile</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={urjaa_logo}
+									alt="urjaa group"
+								/>
+								
+								<p class="text-xs md:text-sm lg:text-base mt-6">
+									We reached out to Sanskar Technolab for
+									end-to-end ERPNext implementation services, to
+									streamline our lengthy processes within the
+									cotton industry. Their team thoroughly
+									understands our personalized requirements and
+									implemented the various modules of ERPNext,
+									which not only streamlined the manufacturing
+									operations but also accounting and payroll. It
+									is literally a game changer for our business and
+									our staff is so much at relief.
+								</p>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Praful Vastarpara</p>
+									<p>Director, Urjaa Group</p>
+								</div>
+							</div>
+						</div>
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={khetan_logo}
+									alt="Khetan Group"
+								/> 
+								
+							 <div class="mt-6">
+									<p class="text-xs md:text-sm lg:text-base">
+										During the project execution the support you people provided is worth great appreciation. It gives us great comfort working with you all also our users found the intense very user friendly. 
+		
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										Last but not the least work experience with you all was too good and highly recommend able to others in our knowledge.
+		
+									</p>
+								</div>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Shyamal Mukherjee</p>
+									<p>Manager, Khetan Udyog</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={migoo_logo}
+									alt="Migoo"
+								/>
+								
+								<p class="text-xs md:text-sm lg:text-base mt-6">
+									Being in the construction industry, I wanted to
+									change the future of the construction industry
+									with technology. So, reached out to Sanskar
+									Technolab through one of my mutual friends.
+									They have helped me to develop a one-of-a-kind
+									platform for renting, buying, and selling
+									high-duty construction equipment along with the
+									features of CRM, insurance, etc. There is no
+									such software in the industry, but Sanskar
+									Technolab developed the best portal along with
+									a mobile app <strong
+										>at 60% lesser costs in just 4 months.</strong
+									>
+								</p>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Arjun pachani</p>
+									<p>Founder, Migoo.in</p>
+								</div>
+							</div>
+						</div>
+						<div class=" 2xl:!w-[40rem]">
+
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={kirti_telnet_logo}
+									alt="Kirti Telnet"
+								/>
+								
+								<p class="text-xs md:text-sm lg:text-base mt-6">
+									Kirti Telnet is a company in data communications
+									& networking with a large team. We wanted to
+									streamline the employee recruitment and training
+									process and other requirements. To make it
+									possible, Sanskar Technolab has helped us with
+									customized HR & Payroll Implementation services
+									such as employee data management, training,
+									performance measurements, etc.
+								</p>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Dhruvi Dadiya</p>
+									<p>Kirtitelnet</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide p-3 2xl:!w-[80rem] flex gap-5">
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={mera_pata}
+									alt="mera_pata"
+								/>
+								
+								<p class="text-xs md:text-sm lg:text-base mt-6">
+									I am Incredibly impressed with the services provided by sanskar team, particularly the expertise and dedication shown by Mr. Harsh and Mr. Karan. They played insturmental roles in developing a robust real estate CRM system for my consultancy business. Their Profound knowledge and unwavering support ensured a smooth operations, greatly enhancing our efficiency and productivity. i  highly recommend Sanskar for their exceptional IT solutions and commendable team.
+								</p>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Ashish</p>
+									<p>Founder, Mera Pata</p>
+								</div>
+							</div>
+						</div>
+						<div class=" 2xl:!w-[40rem]">
+							<div
+								class="  client_shadow   client_card_height"
+							>
+								<Image
+									loading="eager"
+									src={vsrf}
+									alt="vsrf"
+								/>
+								<!-- <div
+									class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+								>
+									Kirti Telnet Pvt.Ltd
+								</div> -->
+								<div class="mt-6">
+
+									<p class="text-xs md:text-sm lg:text-base">
+										Namaskar, 
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										Thank you Sri. Kirit Ji to give support & guide. Sri. Harsh & Teams brought very Blissful, Beautiful https://vsrf.org.in/ to this Earth. 
+				As a Shishya of Guru, we all explore the Gurumahima through all modern tools. 
+
+									<p class="text-xs md:text-sm lg:text-base mt-3 ">
+										Thank you so much to You and them. Guru gives more Powers to you for Spread Dharma and Sathyam. 
+
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										Jai Vijaya Bhava
+									</p>
+
+
+								</div>
+								<div class="text-xs md:text-sm lg:text-base mt-6">
+									<p class="font-semibold">Vedaravishangar</p>
+									<p>
+										Founder and Managing Trustee, VSRF</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid gap-5 items-center mt-10 md:mt-5 lg:mt-20 lg:mx-0 2xl:hidden" >
+			<div class="swiper-customer !overflow-hidden">
+				<div class="swiper-wrapper text-[#31393C] lg:!w-[34rem]">
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+						<div
+							class="  client_shadow   client_card_height "
+						>
+							<Image
+								loading="eager"
+								src={advantis_logo}
+								alt="Advantis Quartz"
+							/>
+							<div class="lg:mt-6 mt-3 ">
+
+								<p class="text-xs md:text-sm lg:text-base">
+									We Advantis Quartz LLP is a manufacturing unit of
+									Artificial Stone at Udaipur Rajasthan. To run a
+									manufacturing unit in smooth and efficient manner
+									integration of all processes is must and for that we were
+									looking for an application that address this issue. We
+									needed a solution that would merge all departments from
+									Finance to Manufacturing and which would integrate with
+									Inventory, Sales, Purchase, and Warehouse etc. and in this
+									sequence & with our considerable experience with numerous
+									accounting software packages, ERPNext has found to be the
+									most adaptable, flexible, user-friendly, efficient, and
+									productive to meet our requirements.
+								  </p>
+	
+								  
+								  
+								  <div class="parent-class">
+									  <div class="more-content" style="display: none;">
+									  <p class="text-xs md:text-sm lg:text-base mt-3">
+										It is efficient and easily accessible, customisable for
+										all our department and which meets our business
+										requirement and processes. ERPNext was proposed to us as a
+										customised ERP deliver on quality and time lines.
+									  </p>
+									<p class="text-xs md:text-sm lg:text-base md:mt-3 mt-2">
+										We were very pleased with the multiple features the ERP offers and Sanskar team made a key role in rapidly understanding our needs, identifying our business requirements and developing them in quick time. Their business understanding helped us streamline our processes and efficiently achieved our objectives. The team was dynamic and always ready to help.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base md:mt-3 mt-2">
+										The Client-based customization has made our business much more efficient, it allows us to access our data at any time from any location. The reporting functionality gives us many options for very specific areas within our organization. We have implemented ERPNext all across the Organisation. The modules include Production, Purchases, Sales, Inventory Management and Financial Accounting.
+									</p>
+								</div>					
+								<button  class="read-more-btn text-xs md:text-sm lg:text-base md:mt-3 mt-2 font-semibold underline">Read More</button>
+								</div>
+								
+		
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Lokesh Modi</p>
+								<p>Accounts Head, Advantis Quartz</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+						<div class="client_shadow client_card_height">
+							<Image loading="eager" src={efra} alt="EFRA INDUSTRIES LLP" />
+							<div class="lg:mt-6 mt-3 ">
+								<p class="text-xs md:text-sm lg:text-base">
+									I would like to first highlight the difficulty faced during the implementation of ERPNext with customization to suit our product and process requirements.
+								</p>
+								<p class="text-xs md:text-sm lg:text-base mt-3">
+									We started our implementation one year back with one of our consultants, but due to the lack of experience in ERPNext development, modules customization, and knowledge of product and process, they are not able to develop ERPNext and completely failed to implement it in our organization. Due to this, we were only able to use ERPNext for Purchase and Sale entry purposes; the rest of the things we were forced to do with Excel, and decided to migrate to different software or consultants.
+								</p>
+					
+
+								<div class="parent-class">
+								<div class="more-content" style="display: none;">
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										During our search, we came to know about <b>Sanskar Techno Lab</b>, where we had an opportunity to work closely with ERPNext developers and consultants. We were able to fine-tune the modules to align perfectly with our workflows and business requirements. This level of customization not only improved user adoption but also optimized our processes, eliminating inefficiencies and redundant tasks. The ability to tailor ERPNext to our exact specifications has been invaluable in driving operational excellence and achieving our strategic objectives.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3">
+										The implementation process itself was seamless, thanks to the expertise and guidance provided by the <b>Sanskar Techno Lab</b> team. They meticulously understood our business requirements and tailored the system to suit our specific needs. From customization to integration, every step was executed with precision and professionalism.
+									</p>
+									<p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+										I personally want to thank all of the Sanskar Techno Lab team for the prompt response, extended support, and actively understanding and resolving our issues.
+									</p>
+								</div>
+								
+								<button class="read-more-btn text-xs md:text-sm lg:text-base mt-3 font-semibold underline">Read More</button>
+							</div>
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Basant Kumar</p>
+								<p>Production Manager, EFRA INDUSTRIES LLP</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[80rem] ">
+						<div
+							class="  client_shadow   client_card_height "
+						>
+							<Image
+								loading="eager"
+								src={vijay_mamra}
+								alt="Vijay Mamra Pvt.Ltd"
+							/>
+							<div class="lg:mt-6 mt-3 ">
+								<p class="text-xs md:text-sm lg:text-base">
+									I am writing to share my thoughts and feedback regarding the recent ERPNext implementation that your team undertook.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									First and foremost, I want to express my appreciation for the effort and dedication demonstrated by your team throughout this process.
+It's evident that a lot of hard work went into making this project a success, and I am grateful for your commitment to ensuring its smooth execution.
+
+								<div class="parent-class">
+									<div class="more-content" style="display: none;">
+										<p class="text-xs md:text-sm lg:text-base mt-3 font-semibold">
+										I have observed several positive aspects of the ERPNext system:
+										</p>
+										<p class="text-xs md:text-sm lg:text-base mt-1">
+											The user interface of ERPNext is intuitive and easy to navigate.This has significantly reduced the learning curve for our team members, allowing them to quickly adapt to the new system.
+										</p>
+										<p class="text-xs md:text-sm lg:text-base mt-1 ">
+											I appreciate the level of customization that was possible with ERPNext. Your team took the time to understand our specific business needs and tailored the system accordingly.
+										</p>
+										<p class="text-xs md:text-sm lg:text-base mt-3 ">
+											In conclusion,I want to express my gratitude to you and your team for your hard work and dedication throughout this ERPNext implementation. I am confident that with continued collaboration, we can address these issues and further optimize the system to meet our needs.
+										</p>
+									</div>
+								
+									<button class="read-more-btn text-xs md:text-sm lg:text-base mt-3 font-semibold underline">Read More</button>
+								</div>
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Vijay patel</p>
+								<p>Director, Vijay Mamra Pvt.Ltd</p>
+							</div>
+						</div>
+					</div>
+					<div class="  swiper-slide p-3 2xl:!w-[40rem] ">
+						<div
+							class="  client_shadow   client_card_height "
+						>
+							<Image
+								loading="eager"
+								src={nettyam}
+								alt="nettyam"
+							/>
+							<div class="lg:mt-6 mt-3 ">
+								<p class="text-xs md:text-sm lg:text-base">
+									Jay Gau Mata,
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									Thanks for your quick support for providing us ERPNext's modules as per our needs. Completed modules provided from your team is buying, selling, manufacturing, CRM and POS. Currently we are entering our trial data, and also We are checking and working on the same. We will soon activate all modules to fulfill Ved Khillar Goshala admin purpose.
+								  <p class="text-xs md:text-sm lg:text-base mt-3 ">
+									Thanks again for your great gesture.
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									Gomata's Blessings will always with you.
+								  </p>
+								
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Nitesh Ojha</p>
+								<p>
+									Founder, Nettyam
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
+						<div
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={jagdamba_logo}
 								alt="jagdamba"
 							/>
-							<div
+							<!-- <div
 								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
 							>
 								Jagdamba Textile
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
+							</div> -->
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								We are constantly draining our time and other
 								valuable resources due to outdated systems for
 								the management of our textile business
@@ -3372,28 +4055,27 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 								saving crucial manpower - resulting in lesser
 								costs and improved efficiency.
 							</p>
-							<div class="text-xs md:text-sm lg:text-base">
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								<p class="font-semibold">Uttambhai Agrawal</p>
 								<p>Director, Shri Jagdamba Textile</p>
 							</div>
 						</div>
 					</div>
-
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={urjaa_logo}
 								alt="urjaa group"
 							/>
-							<div
+							<!-- <div
 								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
 							>
 								Urjaa Group
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
+							</div> -->
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								We reached out to Sanskar Technolab for
 								end-to-end ERPNext implementation services, to
 								streamline our lengthy processes within the
@@ -3405,60 +4087,57 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 								is literally a game changer for our business and
 								our staff is so much at relief.
 							</p>
-							<div class="text-xs md:text-sm lg:text-base">
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								<p class="font-semibold">Praful Vastarpara</p>
 								<p>Director, Urjaa Group</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					<div class=" swiper-slide p-3 2xl:!w-[40rem] ">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={khetan_logo}
 								alt="Khetan Group"
-							/>
-							<div
+							/> 
+							<!-- <div
 								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
 							>
 								Khetan Group
+							</div> -->
+						 <div class="lg:mt-6 mt-3 ">
+								<p class="text-xs md:text-sm lg:text-base">
+									During the project execution the support you people provided is worth great appreciation. It gives us great comfort working with you all also our users found the intense very user friendly. 
+	
+								</p>
+								<p class="text-xs md:text-sm lg:text-base mt-3">
+									Last but not the least work experience with you all was too good and highly recommend able to others in our knowledge.
+	
+								</p>
 							</div>
-							<p class="text-xs md:text-sm lg:text-base">
-								We are a manufacturer of Stainless Steel Pipes,
-								Telescopic Channels, Tundish Board, and Quartz
-								Powder, with a team of over 500+ employees. And,
-								managing a team of hundreds of employees is not
-								an easy task. To simplify HR & Payroll
-								management, we connected with Sanskar Technolab
-								for HR & Payroll. And, they have implemented all
-								our required solutions such as bulk payments,
-								overtime calculations, automated payments,
-								employee management for leaves, seamless
-								employee expenses management, etc.
-							</p>
-							<div class="text-xs md:text-sm lg:text-base">
-								<p class="font-semibold">Santosh Khetan</p>
-								<p>CEO, Khetan Group</p>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Shyamal Mukherjee</p>
+								<p>Manager, Khetan Udyog</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={migoo_logo}
 								alt="Migoo"
 							/>
-							<div
+							<!-- <div
 								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
 							>
 								Migoo.in
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
+							</div> -->
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								Being in the construction industry, I wanted to
 								change the future of the construction industry
 								with technology. So, reached out to Sanskar
@@ -3473,27 +4152,22 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 									>at 60% lesser costs in just 4 months.</strong
 								>
 							</p>
-							<div class="text-xs md:text-sm lg:text-base">
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								<p class="font-semibold">Arjun pachani</p>
 								<p>Founder, Migoo.in</p>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					<!-- <div class=" swiper-slide p-3 2xl:!w-[40rem]">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={mignesh_logo}
 								alt="Mignesh Global"
 							/>
-							<div
-								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
-							>
-								Mignesh Global
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								We are the supplier of so many different
 								products such as Bitumen, Bitumen Emulsion, Base
 								Oil, and Fuel Oil. To manage our huge client
@@ -3505,60 +4179,27 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 								their team offered us great post-project support
 								to handle bugs and support seamlessly.
 							</p>
-							<div class="text-xs md:text-sm lg:text-base">
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 " >
 								<p class="font-semibold">Arjun Pachani</p>
 								<p>Founder, Mignesh Global</p>
 							</div>
 						</div>
-					</div>
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
+					</div> -->
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
 						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
-						>
-							<Image
-								loading="eager"
-								src={advantis_logo}
-								alt="Advantis Quartz"
-							/>
-							<div
-								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
-							>
-								Advantis Quartz
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
-								Advantis Quartz is a high-end flagship brand,
-								the manufacturer of raw materials for quarries
-								and its engineering. We reached out to the team
-								at Sanskar Technolab through their website.
-								They understand our requirements and prepared a
-								detailed sheet with every task and timeline to
-								implement the ERPNext for our business. They
-								helped us in implementing almost every ERPNext
-								module such as accounting, purchase, inventory,
-								manufacturing, sales, HR & Payroll, and asset
-								management.
-							</p>
-							<div class="text-xs md:text-sm lg:text-base">
-								<p class="font-semibold">Lokesh Modi</p>
-								<p>Accounts Head, Advantis Quartz</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide p-3 2xl:!w-[40rem]">
-						<div
-							class="grid flex-shrink-0 client_shadow w-full gap-2 client_card_height"
+							class="  client_shadow   client_card_height"
 						>
 							<Image
 								loading="eager"
 								src={kirti_telnet_logo}
 								alt="Kirti Telnet"
 							/>
-							<div
+							<!-- <div
 								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
 							>
 								Kirti Telnet Pvt.Ltd
-							</div>
-							<p class="text-xs md:text-sm lg:text-base">
+							</div> -->
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
 								Kirti Telnet is a company in data communications
 								& networking with a large team. We wanted to
 								streamline the employee recruitment and training
@@ -3568,16 +4209,79 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 								such as employee data management, training,
 								performance measurements, etc.
 							</p>
-							<div class="text-xs md:text-sm lg:text-base">
-								<p class="font-semibold"></p>
-								<p></p>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Dhruvi Dadiya</p>
+								<p>Kirtitelnet</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
+						<div
+							class="  client_shadow   client_card_height"
+						>
+							<Image
+								loading="eager"
+								src={mera_pata}
+								alt="mera_pata"
+							/>
+							<!-- <div
+								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+							>
+								Kirti Telnet Pvt.Ltd
+							</div> -->
+							<p class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								I am Incredibly impressed with the services provided by sanskar team, particularly the expertise and dedication shown by Mr. Harsh and Mr. Karan. They played insturmental roles in developing a robust real estate CRM system for my consultancy business. Their Profound knowledge and unwavering support ensured a smooth operations, greatly enhancing our efficiency and productivity. i  highly recommend Sanskar for their exceptional IT solutions and commendable team.
+							</p>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Ashish</p>
+								<p>Founder, Mera Pata</p>
+							</div>
+						</div>
+					</div>
+					<div class=" swiper-slide p-3 2xl:!w-[40rem]">
+						<div
+							class="  client_shadow   client_card_height"
+						>
+							<Image
+								loading="eager"
+								src={vsrf}
+								alt="vsrf"
+							/>
+							<!-- <div
+								class="text-base md:text-lg lg:text-xl lg:!leading-9 md:!leading-8 !leading-7 font-semibold"
+							>
+								Kirti Telnet Pvt.Ltd
+							</div> -->
+							<div class="lg:mt-6 mt-3 ">
+
+								<p class="text-xs md:text-sm lg:text-base">
+									Namaskar, 
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									Thank you Sri. Kirit Ji to give support & guide. Sri. Harsh & Teams brought very Blissful, Beautiful https://vsrf.org.in/ to this Earth. 
+As a Shishya of Guru, we all explore the Gurumahima through all modern tools. 
+
+								  <p class="text-xs md:text-sm lg:text-base mt-3 ">
+									Thank you so much to You and them. Guru gives more Powers to you for Spread Dharma and Sathyam. 
+
+								  </p>
+								  <p class="text-xs md:text-sm lg:text-base mt-3">
+									Jai Vijaya Bhava
+								  </p>
+
+
+							</div>
+							<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+								<p class="font-semibold">Vedaravishangar</p>
+								<p>
+									Founder and Managing Trustee, VSRF</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+			
 		<div class="flex justify-center gap-3 lg:mt-10">
 			<!-- <Image loading="eager"    src={previousbtn} alt="previousbtn" id="prev" />
 				<Image loading="eager"    src={nextbtn} alt="nextbtn" id="next" /> -->
@@ -3615,7 +4319,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 				>
 					<path
 						d="M9 5l7 7-7 7"
-						stroke-linecap="round"
+						stroke-linecap="round"	
 						stroke-linejoin="round"
 						stroke-width="2"></path>
 				</svg>
@@ -4440,24 +5144,60 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
 	}
 
-	.client_card_height {
-		height: 28rem;
-		padding: 1.75rem;
+
+
+	
+	@media (min-width: 280px) and (max-width: 300px) {
+		.client_card_height {
+			min-height: 52rem;	
+			padding: 1rem;
+		}	
+	}	
+
+	@media (min-width: 301px) and (max-width: 350px) {
+		.client_card_height {
+			min-height: 50rem;	
+			padding: 1rem;
+		}	
+	}	
+
+
+	@media (min-width: 351px) and (max-width: 400px) {
+		.client_card_height {
+			min-height: 42rem;	
+			padding: 1rem;
+		}	
+	}	
+
+
+	@media (min-width: 401px) and (max-width: 640px) {
+		.client_card_height {
+			min-height: 35rem;
+			padding: 1rem;
+		}	
 	}
 
-	@media (max-width: 374px) {
-		.client_card_height {
-			height: 30rem;
+	@media (min-width: 641px) {
+			.client_card_height {
+			min-height: 22rem;
 			padding: 1rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.client_card_height {
+			min-height: 26rem;
+			padding: 1rem;
+			}
+		}
+
+	@media (min-width: 1536px) {
+		.client_card_height {
+		min-height: 36rem;
+		padding: 1rem;
 		}
 	}
 
-	@media (min-width: 1024px) and (max-width: 1250px) {
-		.client_card_height {
-			height: 34rem;
-			padding: 1rem;
-		}
-	}
 
 	@media (max-width: 374px) {
 		.margin-bottom {
@@ -4469,6 +5209,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 			margin-bottom: -0.75rem;
 		}
 	}
+
 	@media (min-width: 640px) {
 		.margin-bottom {
 			margin-bottom: -0.5rem;
@@ -4571,6 +5312,56 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 	// 		menu.classList.toggle("!block");
 	// 	});
 	// });
+
+	// document.querySelectorAll('.read-more-btn').addEventListener('click', function() {
+    //     var moreContent = document.querySelector('.more-content');
+    //     var btnText = document.querySelector('.read-more-btn');
+
+    //     if (moreContent.style.display === 'none') {
+    //         moreContent.style.display = 'block';
+    //         btnText.textContent = 'Read Less';
+    //     } else {
+    //         moreContent.style.display = 'none';
+    //         btnText.textContent = 'Read More';
+    //     }
+    // });
+
+
+// ------------------------------------------------------------------------------------------------------------
+
+	document.querySelectorAll('.read-more-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var moreContent = this.closest('.client_card_height').querySelector('.more-content');
+            var btnText = this;
+
+            if (!moreContent) {
+                console.error('No .more-content element found.');
+                return;
+            }
+
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                btnText.textContent = 'Read Less';
+            } else {
+                moreContent.style.display = 'none';
+                btnText.textContent = 'Read More';
+            }
+        });
+    });
+
+    function hideAllMoreContent() {
+        document.querySelectorAll('.more-content').forEach(function(content) {
+            content.style.display = 'none';
+        });
+        document.querySelectorAll('.read-more-btn').forEach(function(button) {
+            button.textContent = 'Read More';
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', hideAllMoreContent);
+    document.getElementById('next').addEventListener('click', hideAllMoreContent);
+
+// ------------------------------------------------------------------------------------------------------------
 
 	// show erpnext content and hide other content when click on erpnext
 	function show_erpnext() {
@@ -5423,18 +6214,18 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 	document.addEventListener("DOMContentLoaded", function () {
 		const swiper_c = new Swiper(".swiper-customer", {
 			loop: true,
-			slidesPerView: 1,
+			slidesPerView: "auto",
 			spaceBetween: 0,
-			autoplay: {
-				delay: 3000,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// },
 			navigation: {
 				nextEl: "#next",
 				prevEl: "#prev",
 			},
 			breakpoints: {
 				640: {
-					slidesPerView: 1.5,
+					slidesPerView: 1,
 					centeredSlides: true,
 				},
 				768: {
@@ -5443,7 +6234,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 				},
 				1024: {
 					centeredSlides: false,
-					slidesPerView: 2,
+					slidesPerView: 1,
 				},
 			},
 		});
@@ -5469,7 +6260,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 	});
 	});	
 
-	/* // Banner code with slider with next previous button Javascript Start
+	 // Banner code with slider with next previous button Javascript Start
 	document.addEventListener("DOMContentLoaded", function () {
           const swiper_banner = new Swiper(".swiper_banner_button", {
             loop: true,
@@ -5479,10 +6270,14 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
               delay: 3000,
               disableOnInteraction: false,
             },
-            navigation: {
-              nextEl: ".swiper-button-next-banner", // Specify the next button
-              prevEl: ".swiper-button-prev-banner", // Specify the previous button
-            },
+            // navigation: {
+            //   nextEl: ".swiper-button-next-banner", // Specify the next button
+            //   prevEl: ".swiper-button-prev-banner", // Specify the previous button
+            // },
+			pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
             breakpoints: {
               centeredSlides: false,
               slidesPerView: 1,
@@ -5490,5 +6285,5 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
           });
         });
 	// Banner code with slider with next previous button Javascript End here
-	*/
+
 </script>

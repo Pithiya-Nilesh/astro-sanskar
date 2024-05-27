@@ -1247,21 +1247,130 @@ Here’s what our client has achieved! -->
 			Implementation Services!	
 		</h2>
 	</div>
-	<div class=" client_card_shadow rounded-xl max-w-[734px] p-7 lg:py-10 mx-auto mt-10 md:mt-14 lg:mt-20">
-	<Image
-		loading="eager"
-		src={advantis_logo}
-		alt="advantis-quarts-logo"
-		class="items-center"
-		/>
-	<p class=" text-base md:text-lg lg:text-xl font-bold mt-5">Advantis Quartz</p>
-	<p class=" text-xs md:text-sm lg:text-base mt-5">Advantis Quartz is a high-end flagship brand, the manufacture of raw materials for quarries and its engineering. We reached out the team at Sanskar Technolab through their website. They understand our requirements and prepared a detailed sheet with every task and timeline to implement the ERPNext for our business. They helped us in implementing almost every ERPNext module such as accounting, purchase, inventory, manufacturing, sales, Hr & payroll and asset management.</p>
-	<p class=" text-xs md:text-sm lg:text-base font-bold mt-5">Lokesh Modi</p>
-	<p class=" text-xs md:text-sm lg:text-base">Accounts Head, Advantis Quartz</p>
-</div>
+	<div class="swiper-slide p-3 2xl:!w-[80rem] mt-5 lg:mt-10">
+		<div
+			class="  client_shadow w-full  client_card_height "
+		>
+			<Image
+				loading="eager"
+				src={advantis_logo}
+				alt="Advantis Quartz"
+			/>
+			<div class="lg:mt-6 mt-3 ">
+
+				<p class="text-xs md:text-sm lg:text-base">
+					We Advantis Quartz LLP is a manufacturing unit of
+					Artificial Stone at Udaipur Rajasthan. To run a
+					manufacturing unit in smooth and efficient manner
+					integration of all processes is must and for that we were
+					looking for an application that address this issue. We
+					needed a solution that would merge all departments from
+					Finance to Manufacturing and which would integrate with
+					Inventory, Sales, Purchase, and Warehouse etc. and in this
+					sequence & with our considerable experience with numerous
+					accounting software packages, ERPNext has found to be the
+					most adaptable, flexible, user-friendly, efficient, and
+					productive to meet our requirements.
+				  </p>
+
+				  <div class="parent-class">
+					<div class="more-content" style="display: none;">
+					<p class="text-xs md:text-sm lg:text-base mt-3">
+					  It is efficient and easily accessible, customisable for
+					  all our department and which meets our business
+					  requirement and processes. ERPNext was proposed to us as a
+					  customised ERP deliver on quality and time lines.
+					</p>
+				  <p class="text-xs md:text-sm lg:text-base mt-3">
+					  We were very pleased with the multiple features the ERP offers and Sanskar team made a key role in rapidly understanding our needs, identifying our business requirements and developing them in quick time. Their business understanding helped us streamline our processes and efficiently achieved our objectives. The team was dynamic and always ready to help.
+				  </p>
+				  <p class="text-xs md:text-sm lg:text-base mt-3">
+					  The Client-based customization has made our business much more efficient, it allows us to access our data at any time from any location. The reporting functionality gives us many options for very specific areas within our organization. We have implemented ERPNext all across the Organisation. The modules include Production, Purchases, Sales, Inventory Management and Financial Accounting.
+				  </p>
+			  </div>					
+			  <button  class="read-more-btn text-xs md:text-sm lg:text-base mt-3 font-semibold underline">Read More</button>
+			  </div>
+				
+
+			</div>
+			<div class="text-xs md:text-sm lg:text-base lg:mt-6 mt-3 ">
+				<p class="font-semibold">Lokesh Modi</p>
+				<p>Accounts Head, Advantis Quartz</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
+
+
+@media (min-width: 280px) and (max-width: 300px) {
+		.client_card_height {
+			min-height: 38rem;	
+			padding: 1rem;
+		}	
+	}	
+
+	@media (min-width: 301px) and (max-width: 400px) {
+		.client_card_height {
+			min-height: 35rem;	
+			padding: 1rem;
+		}	
+	}	
+
+
+
+	@media (min-width: 401px) and (max-width: 640px) {
+		.client_card_height {
+			min-height: 30rem;
+			padding: 1rem;
+		}	
+	}
+
+
+
+	@media (min-width: 641px) {
+			.client_card_height {
+			min-height: 20rem;
+			padding: 1rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.client_card_height {
+			min-height: 22rem;
+			padding: 1rem;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.client_card_height {
+			min-height: 20rem;
+			padding: 1rem;
+			}
+		}
+
+		@media (min-width: 1280px) {
+			.client_card_height {
+			min-height: 22rem;
+			padding: 1rem;
+			}
+		}
+
+	@media (min-width: 1536px) {
+		.client_card_height {
+		min-height: 32rem;
+		padding: 1rem;
+		}
+	}
+
+
+
+.client_shadow {
+		border-radius: 20px;
+		background: #fff;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.07);
+	}
 
 .client_vision_border{
 	border-radius: 20px;
@@ -1287,10 +1396,10 @@ Here’s what our client has achieved! -->
     background: #fff;
     box-shadow: 0 0 20px #00000012;
 }
-.client_card_height {
+/* .client_card_height {
     height: 28rem;
     padding: 1.75rem;
-}
+} */
 /* .client_shadow {
     border-radius: 20px;
     background: #fff;
@@ -1376,6 +1485,22 @@ Here’s what our client has achieved! -->
 	[data-te-carousel-indicators] button[data-te-carousel-active] {
   		background-color: #3E96F4; 
 	}
+
+	.more-content {
+    display: none;
+}
+
+@media (min-width: 1536px) {
+    /* Above 2xl */
+    .more-content {
+        display: block !important;
+    }
+    .read-more-btn {
+        display: none !important;
+    }
+}
+
+
 </style>
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
@@ -1410,14 +1535,35 @@ Here’s what our client has achieved! -->
       },
     });
   });
+
+  document.querySelectorAll('.read-more-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var moreContent = this.closest('.client_card_height').querySelector('.more-content');
+            var btnText = this;
+
+            if (!moreContent) {
+                console.error('No .more-content element found.');
+                return;
+            }
+
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                btnText.textContent = 'Read Less';
+            } else {
+                moreContent.style.display = 'none';
+                btnText.textContent = 'Read More';
+            }
+        });
+    });
+
 	 document.addEventListener("DOMContentLoaded", function () {
                     const swiper_c = new Swiper(".swiper-customer", {
                     loop: true,
                     slidesPerView: 1,
                     spaceBetween: 0,
-                    autoplay: {
-                        delay: 3000,
-                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    // },
                     navigation: {
                         nextEl: "#next",
                         prevEl: "#prev",

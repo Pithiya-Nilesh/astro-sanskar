@@ -27,18 +27,21 @@ import contact_map from "../../public/Images/contact_map.svg";
       class="md:max-w-7xl md:mx-auto md:px-24 lg:px-4 w-full lg:w-10/12 xl:w-7/12 px-5"
     >
       <div class="bg-white w-full lg:w-7/12 form-padding lg:p-7">
-        <form id="contact_form" class="grid gap-3 md:gap-3 lg:gap-5">
+        <form
+          id="contact_form"
+          class="grid gap-3 md:gap-3 lg:gap-5"
+          
+        >
           <h1 class="text-[#3E96F4] text-2xl md:text-3xl lg:text-4xl">
             Get in Touch
           </h1>
           <div class="text-[#333333] grid gap-3 md:gap-3 lg:gap-5">
-              <input
-                class="rounded-[3px] border border-[#D9D9D9] text-[#333333] p-1"
-                type="text"
-                placeholder="Name *"
-                name="full_name"
-              />
-            <!-- </div> -->
+            <input
+              class="rounded-[3px] border border-[#D9D9D9] text-[#333333] p-1"
+              type="text"
+              placeholder="Name *"
+              name="full_name"
+            />
             <input
               class="input-field rounded-[3px] border border-[#D9D9D9] text-[#333333] p-1"
               type="email"
@@ -51,9 +54,6 @@ import contact_map from "../../public/Images/contact_map.svg";
               name="phone"
               placeholder="Phone Number"
             />
-              <!-- </div> -->
-            <!-- </div> -->
-
             <textarea
               name="message"
               rows="4"
@@ -64,8 +64,6 @@ import contact_map from "../../public/Images/contact_map.svg";
             <div
               class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-3 lg:gap-5"
             >
-              <!-- <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div> -->
-
               <input
                 class="input-file rounded-[4px] flex flex-wrap bg-[#F0F0F0]"
                 type="file"
@@ -89,7 +87,9 @@ import contact_map from "../../public/Images/contact_map.svg";
                 Please complete the reCAPTCHA verification.
               </p>
             </div>
+
             <button
+              type="submit"
               class="w-24 bg-[#3E96F4] rounded text-white md:text-sm text-xs lg:text-base font-semibold p-2 px-5"
             >
               SUBMIT
@@ -164,8 +164,7 @@ import contact_map from "../../public/Images/contact_map.svg";
         </div>
         <hr class="my-5 margin-right" />
         <div class="flex flex-wrap justify-between">
-          <div class="flex gap-2 md:gap-3 items-center">
-          </div>
+          <div class="flex gap-2 md:gap-3 items-center"></div>
           <div class="flex margin-right gap-1 md:gap-3 lg:gap-5">
             <a href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd"
               ><Image
@@ -464,6 +463,8 @@ import contact_map from "../../public/Images/contact_map.svg";
     }
   </style>
   <script>
+    
+
     // add event listner to file
     var fileInput_e = document.getElementById("fileInput");
     fileInput_e.addEventListener("change", (event) => {
@@ -490,7 +491,10 @@ import contact_map from "../../public/Images/contact_map.svg";
 
       if (!validateEmail(emailValue)) {
         blinkBorder(emailInput);
-        displayErrorMessage(errorMessageElement, "Please enter a valid email address.");
+        displayErrorMessage(
+          errorMessageElement,
+          "Please enter a valid email address."
+        );
       } else {
         hideErrorMessage(errorMessageElement); // Hide error message if email is valid
         emailInput.style.borderColor = ""; // Reset border color
@@ -510,7 +514,6 @@ import contact_map from "../../public/Images/contact_map.svg";
       }
     }
 
-
     function resetBorderColorOnFocus(inputElement) {
       inputElement.addEventListener("focus", () => {
         inputElement.style.borderColor = ""; // Remove the border color (set it to null)
@@ -520,11 +523,25 @@ import contact_map from "../../public/Images/contact_map.svg";
     // send data in frappe
     function handleContactFormContact(e) {
       e.preventDefault();
+
+      var response = grecaptcha.getResponse();
+      console.log("response",response);
+      if (response.length === 0) {
+        document.getElementById("recaptcha-error").style.display = "block";
+        return;
+      }
+      document.getElementById("recaptcha-error").style.display = "none";
+
       // disableUserInteractions();
 
       const recaptchaResponse = grecaptcha.getResponse();
       // If the reCAPTCHA is filled out, clear any previous error message
       clearRecaptchaError();
+
+      function clearRecaptchaError() {
+      const recaptchaErrorElement = document.getElementById("recaptcha-error");
+      recaptchaErrorElement.style.display = "none"; // Hide the error message
+    }
 
       // const firstNameInput = document.querySelector('input[name="first_name"]');
       const lastNameInput = document.querySelector('input[name="full_name"]');
@@ -550,7 +567,10 @@ import contact_map from "../../public/Images/contact_map.svg";
 
       if (emailValue === "" || !validateEmail(emailValue)) {
         blinkBorder(emailInput);
-        displayErrorMessage(emailInput.nextElementSibling, "Please enter a valid email address.");
+        displayErrorMessage(
+          emailInput.nextElementSibling,
+          "Please enter a valid email address."
+        );
       }
 
       // if (phoneValue === "") {
@@ -561,23 +581,20 @@ import contact_map from "../../public/Images/contact_map.svg";
         blinkBorder(messageInput);
       }
 
-      if (
-        lastNameValue === "" ||
-        emailValue === "" ||
-        messageValue === ""
-      ) {
+      if (lastNameValue === "" || emailValue === "" || messageValue === "") {
         return;
       }
       const fileInput = document.getElementById("fileInput");
       const file = fileInput.files[0];
       const urlParams = new URLSearchParams(window.location.search);
 
-      // Get the value of the 'page' parameter
-      const pageValue = urlParams.get("page");
+    //   // Get the value of the 'page' parameter
+    //   const pageValue = urlParams.get("page");
 
-      const demoForValue = pageValue || "";
+    //   const demoForValue = pageValue || "";
 
-      const queryTypeValue = pageValue ? "Demo" : "General";
+    //   const queryTypeValue = pageValue ? "Demo" : "General";
+    // console.log("queryTypeValue-----------",queryTypeValue);
       if (!file) {
         // alert('Please select a file to upload.');
         const formData = new FormData(e.target);
@@ -588,8 +605,8 @@ import contact_map from "../../public/Images/contact_map.svg";
         var phone = data.phone;
         var message = data.message;
 
-        getUserIPAddress().then(ipAddress => {
-            let { browserName, device } = detectBrowser();
+        getUserIPAddress().then((ipAddress) => {
+          let { browserName, device } = detectBrowser();
 
           fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
             method: "POST",
@@ -613,20 +630,31 @@ import contact_map from "../../public/Images/contact_map.svg";
           })
             .then((res) => {
               if (res.status === 200) {
+                console.log(res);
                 // alert("You have been registered successfully.")
                 window.location.href = "/thank-you";
-              } 
-              else {
-                console.log("failed to post form", res)
-                sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, ipAddress, browserName, device, res)
+              } else {
+                console.log("failed to post form", res);
+                sendEmailNotification(
+                  full_name,
+                  email,
+                  phone,
+                  message,
+                  "Website Enquiry",
+                  demoForValue,
+                  queryTypeValue,
+                  ipAddress,
+                  browserName,
+                  device,
+                  res
+                );
                 alert("Failed to submit data. Please try after some time.");
-
               }
             })
             .catch((error) => {
               console.log("error", error);
             });
-        })
+        });
 
         // return;
       } else {
@@ -649,45 +677,55 @@ import contact_map from "../../public/Images/contact_map.svg";
             var phone = data.phone;
             var message = data.message;
 
-            getUserIPAddress().then(ipAddress => {
-            let { browserName, device } = detectBrowser();
+            getUserIPAddress().then((ipAddress) => {
+              let { browserName, device } = detectBrowser();
 
-            fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
-              method: "POST",
-              headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                Authorization: `token ${apiKey}:${secretKey}`,
-              },
-              body: JSON.stringify({
-                first_name: full_name,
-                email: email,
-                phone: phone,
-                message: message,
-                document: file_url,
-                enquiry_source: "Website Enquiry",
-                demo_for: demoForValue,
-                query_type: queryTypeValue,
-                ip: ipAddress,
-                browser_name: browserName,
-                device: device,
-              }),
-            })
-              .then((res) => {
-                if (res.status === 200) {
-                  window.location.href = "/thank-you";
-                } else {
-                  console.log("failed to post form", res)
-                  sendEmailNotification(full_name, email, phone, message, "Website Enquiry", demoForValue, queryTypeValue, ipAddress, browserName, device, res)
-                  alert("Failed to submit data. Please try after some time.");
-                }
+              fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json",
+                  Authorization: `token ${apiKey}:${secretKey}`,
+                },
+                body: JSON.stringify({
+                  first_name: full_name,
+                  email: email,
+                  phone: phone,
+                  message: message,
+                  document: file_url,
+                  enquiry_source: "Website Enquiry",
+                  demo_for: demoForValue,
+                  query_type: queryTypeValue,
+                  ip: ipAddress,
+                  browser_name: browserName,
+                  device: device,
+                }),
               })
-              .catch((error) => {
-                console.log(error);
-              });
-            })
-
-
+                .then((res) => {
+                  if (res.status === 200) {
+                    window.location.href = "/thank-you";
+                  } else {
+                    console.log("failed to post form", res);
+                    sendEmailNotification(
+                      full_name,
+                      email,
+                      phone,
+                      message,
+                      "Website Enquiry",
+                      demoForValue,
+                      queryTypeValue,
+                      ipAddress,
+                      browserName,
+                      device,
+                      res
+                    );
+                    alert("Failed to submit data. Please try after some time.");
+                  }
+                })
+                .catch((error) => {
+                  console.log(error);
+                });
+            });
           } else {
             alert("File upload failed. Please try again later.");
           }
@@ -706,75 +744,82 @@ import contact_map from "../../public/Images/contact_map.svg";
       }
     }
 
-
-  // Validation function for email
-  function validateEmail(email) {
-    const re =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  }
-
-  function displayErrorMessage(errorMessageElement, message) {
-    if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
-      // If error message doesn't exist, create and insert it
-      errorMessageElement = document.createElement("p");
-      errorMessageElement.textContent = message;
-      errorMessageElement.classList.add("error-message");
-      errorMessageElement.style.color = "red"; // Adjust the color
-      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
-
-      // Insert the error message after the input field
-      emailInput.parentNode.insertBefore(errorMessageElement, emailInput.nextSibling);
-    } else {
-      errorMessageElement.textContent = message; // Update existing error message
+    // Validation function for email
+    function validateEmail(email) {
+      const re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
     }
-  }
 
-  function hideErrorMessage(errorMessageElement) {
-    if (errorMessageElement && errorMessageElement.classList.contains("error-message")) {
-      // If error message exists, remove it
-      errorMessageElement.remove();
+    function displayErrorMessage(errorMessageElement, message) {
+      if (
+        !errorMessageElement ||
+        !errorMessageElement.classList.contains("error-message")
+      ) {
+        // If error message doesn't exist, create and insert it
+        errorMessageElement = document.createElement("p");
+        errorMessageElement.textContent = message;
+        errorMessageElement.classList.add("error-message");
+        errorMessageElement.style.color = "red"; // Adjust the color
+        errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+        errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+        errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+        // Insert the error message after the input field
+        emailInput.parentNode.insertBefore(
+          errorMessageElement,
+          emailInput.nextSibling
+        );
+      } else {
+        errorMessageElement.textContent = message; // Update existing error message
+      }
     }
-  }
 
-  function showRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("recaptcha-error");
-    recaptchaErrorElement.style.display = "block"; // Display the error message
-
-    // Hide the error message after a specific duration (e.g., 5 seconds)
-    setTimeout(function () {
-      recaptchaErrorElement.style.display = "none";
-    }, 3000);
-  }
-
-  function clearRecaptchaError() {
-    const recaptchaErrorElement = document.getElementById("recaptcha-error");
-    recaptchaErrorElement.style.display = "none"; // Hide the error message
-  }
-
-  // validate file foramte in fileupload
-  function fileValidation() {
-    var fileInput = document.getElementById("fileInput");
-
-    var filePath = fileInput.value;
-
-    // Allowing file type
-    var allowedExtensions = /(\.jpg|\.pdf|\.png|\.docx|\.txt)$/i;
-
-    if (!allowedExtensions.exec(filePath)) {
-      alert("Invalid file type only allow .jpg | .pdf | .png | .docx | .txt");
-      fileInput.value = "";
-      return false;
+    function hideErrorMessage(errorMessageElement) {
+      if (
+        errorMessageElement &&
+        errorMessageElement.classList.contains("error-message")
+      ) {
+        // If error message exists, remove it
+        errorMessageElement.remove();
+      }
     }
-  }
 
+    function showRecaptchaError() {
+      const recaptchaErrorElement = document.getElementById("recaptcha-error");
+      recaptchaErrorElement.style.display = "block"; // Display the error message
 
-// get browser and device name
-function detectBrowser() {
+      // Hide the error message after a specific duration (e.g., 5 seconds)
+      setTimeout(function () {
+        recaptchaErrorElement.style.display = "none";
+      }, 3000);
+    }
+
+    // function clearRecaptchaError() {
+    //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    //   recaptchaErrorElement.style.display = "none"; // Hide the error message
+    // }
+
+    // validate file foramte in fileupload
+    function fileValidation() {
+      var fileInput = document.getElementById("fileInput");
+
+      var filePath = fileInput.value;
+
+      // Allowing file type
+      var allowedExtensions = /(\.jpg|\.pdf|\.png|\.docx|\.txt)$/i;
+
+      if (!allowedExtensions.exec(filePath)) {
+        alert("Invalid file type only allow .jpg | .pdf | .png | .docx | .txt");
+        fileInput.value = "";
+        return false;
+      }
+    }
+
+    // get browser and device name
+    function detectBrowser() {
       const userAgent = navigator.userAgent;
-      var browserName = 'Unknown';
+      var browserName = "Unknown";
 
       // Check for Chrome
       if (userAgent.indexOf("Chrome") !== -1) {
@@ -801,75 +846,89 @@ function detectBrowser() {
       }
 
       // Log the detected browser to the console
-    //   console.log(`Detected browser: ${browserName}`);
+      //   console.log(`Detected browser: ${browserName}`);
 
       // Detect the device type based on screen size
       const screenWidth = window.innerWidth;
-      var device = 'Unknown'
+      var device = "Unknown";
       if (screenWidth <= 576) {
-        device = 'Mobile'
+        device = "Mobile";
       } else if (screenWidth <= 992) {
-        device = 'Tablet'
+        device = "Tablet";
       } else if (screenWidth <= 1200) {
-        device = 'Laptop'
+        device = "Laptop";
       } else {
-        device = 'Desktop'
+        device = "Desktop";
       }
 
-      return { browserName, device }
+      return { browserName, device };
     }
 
-// Function to get the user's IP address using ipify
-function getUserIPAddress() {
-  return fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => data.ip)
-      .catch(error => {
-          console.error('Error fetching IP address:', error);
+    // Function to get the user's IP address using ipify
+    function getUserIPAddress() {
+      return fetch("https://api.ipify.org?format=json")
+        .then((response) => response.json())
+        .then((data) => data.ip)
+        .catch((error) => {
+          console.error("Error fetching IP address:", error);
           return null; // Handle the error gracefully
-      });
-}
+        });
+    }
 
-
-function sendEmailNotification(full_name="", email="", phone="", message="", enquiry_source="", demoForValue="", queryTypeValue="", ip="", browser_name="", device="", response=""){ 
-  console.log("sending email notification...")
-  // return
-   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      // Authorization: `token ${apiKey}:${secretKey}`,
-    },
-    body: JSON.stringify({
-      full_name: full_name,
-      email: email,
-      phone: phone,
-      message: message,
-      enquiry_source: "Website Enquiry",
-      demoForValue: demoForValue,
-      queryTypeValue: queryTypeValue,
-      ip: ip,
-      browser_name: browser_name,
-      device: device,
-      response: response,
-      page_name: "Contact Us"
-    }),
-  })
-    .then((res) => {
-      if (res.status === 200) {
-        // alert("You have been registered successfully.")
-        console.log("email notification sent.")
-      } 
-      else {
-        console.log("failed to send email notification", res)
-        alert("We are unable to process your request. please send your requirements on info@sanskartechnolab.com")
-      }
-    })
-    .catch((error) => {
-      console.log("error", error);
-    });
-}
-
-</script>
+    function sendEmailNotification(
+      full_name = "",
+      email = "",
+      phone = "",
+      message = "",
+      enquiry_source = "",
+      demoForValue = "",
+      queryTypeValue = "",
+      ip = "",
+      browser_name = "",
+      device = "",
+      response = ""
+    ) {
+      console.log("sending email notification...");
+      // return
+      fetch(
+        "http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            // Authorization: `token ${apiKey}:${secretKey}`,
+          },
+          body: JSON.stringify({
+            full_name: full_name,
+            email: email,
+            phone: phone,
+            message: message,
+            enquiry_source: "Website Enquiry",
+            demoForValue: demoForValue,
+            queryTypeValue: queryTypeValue,
+            ip: ip,
+            browser_name: browser_name,
+            device: device,
+            response: response,
+            page_name: "Contact Us",
+          }),
+        }
+      )
+        .then((res) => {
+          if (res.status === 200) {
+            // alert("You have been registered successfully.")
+            console.log("email notification sent.");
+          } else {
+            console.log("failed to send email notification", res);
+            alert(
+              "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
+            );
+          }
+        })
+        .catch((error) => {
+          console.log("error", error);
+        });
+    }
+  </script>
 </Layout>

@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 //import '../styles.css';
 import { Image, Picture } from "@astrojs/image/components";
-import about_banner from '../../public/Images/about-banner.png';
+import about_banner from '../../public/Images/about-banner.svg';
 import twelve from '../../public/Images/g_12.svg';
 import fifty from '../../public/Images/g_50.svg';
 import ten from '../../public/Images/g_10.svg';
@@ -79,22 +79,21 @@ keyword="ERPNext partner, ERPNext development, ERP software development, ERP con
 		</div>
 	</section>-->
 	<section
-		class="hidden lg:flex section-bg h-[80vh] lg:h-[90vh] xl:h-[75vh] flex items-center banner-bg "
+		class="hidden lg:flex section-bg h-[80vh] lg:h-[90vh] xl:h-[75vh]  items-center banner-bg "
 	>
 		<div
-			class="flex flex-wrap items-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 relative"
+			class="flex flex-row items-center mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 relative"
 		>
-		<Image
-        class="absolute top-5 right-0" 
-        loading="eager"
-        src={frappe_certified_partner}
-        alt="frappe_certified_partner"
-      />
-			<div class="w-full md:w-6/12">
+				<Image
+				class="absolute top-5 right-0" 
+				loading="eager"
+				src={frappe_certified_partner}
+				alt="frappe_certified_partner"/>
+			<div class="w-full md:w-1/2">
 				<h1
-					class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem] !leading-[2.25rem] md:!leading-[3.5rem] lg:leading-[4rem] text-[#31393C] font-extrabold"
+					class="text-[1.75rem] md:text-[2.25rem] lg:text-[3rem]  text-[#31393C] font-extrabold"
 				>
-				Efficient Workflows. Satisfied Customers. Productive Workforce - Defines Us! 
+				Efficient Workflows. Satisfied Customers. Productive Workforce - Defines Us! 	
 				<p
 					class="text-[#31393C] leading-7 font-normal text-sm md:text-base lg:text-lg mt-6"
 				>
@@ -106,7 +105,7 @@ keyword="ERPNext partner, ERPNext development, ERP software development, ERP con
 				loading="eager"
 				src={about_banner}
 				alt="about_banner"
-				class=" lg:pt-[6rem] xl:pt-[4rem] w-full md:w-6/12 lg:p-20 md:p-8"
+				class=" lg:pt-[6rem] xl:pt-[4rem] "
 			/>
 		</div>
 
@@ -116,7 +115,7 @@ keyword="ERPNext partner, ERPNext development, ERP software development, ERP con
 		class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg py-[2rem] "
 	>
 		<div
-			class="flex flex-wrap items-center mx-5 gap-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 relative"
+			class="flex flex-col lg:flex-row items-center mx-5 gap-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 relative"
 		>
 		
 			<div class="w-full lg:w-6/12 mt-0 md:mt-4">
@@ -314,11 +313,12 @@ keyword="ERPNext partner, ERPNext development, ERP software development, ERP con
                     							<div
 								class="text-white text-base font-semibold flex items-center gap-3 lg:-mt-20 xl:-mt-16 font-inter"
 							>
-							<div
+							<a
+							href="/contact-us?page=about"
 										class="flex justify-between bg-white rounded-lg lg:px-4 xl:px-5 py-2 w-56" >
-										<a href="/contact-us?page=about" class="text-[#3E96F4] font-semibold text-base font-inter">Book a free demo.</a>
+										<span  class="text-[#3E96F4] font-semibold text-base font-inter">Book a free demo.</span>
 										<Image loading="eager"  src={right_arrow} alt="Drive To Innovation" width={6} height={12} />
-									</div>
+									</a>
 							</div>
                 </div>
             </div>
@@ -336,11 +336,12 @@ keyword="ERPNext partner, ERPNext development, ERP software development, ERP con
                     	<div
 								class="text-white text-base font-semibold flex items-center gap-3 mt-3 md:mt-5 font-inter"
 							>
-							<div
+							<a
+							href="/contact-us?page=about"
 										class="flex justify-between bg-white rounded-lg px-4 py-2 w-56" >
-										<a href="/contact-us?page=about" class="text-[#3E96F4] font-semibold text-base font-inter">Book a free demo.</a>
+										<span  class="text-[#3E96F4] font-semibold text-base font-inter">Book a free demo.</span>
 										<Image loading="eager"  src={right_arrow} alt="Drive To Innovation" width={6} height={12} />
-									</div>
+									</a>
 							</div>
                 </div>
             </div>

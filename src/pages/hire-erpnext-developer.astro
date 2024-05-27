@@ -1532,7 +1532,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             </div>
 
             <div class="md:basis-10/12">
-              <div class="p-2 md:p-3 flex gap-2 flex-wrap xl:justify-between">
+              <div class="p-2 md:p-3 flex gap-2 lg:gap-5 2xl:gap-8 flex-wrap">
                 <Image
                   loading="eager"
                   src={html}
@@ -2851,7 +2851,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             </div>
 
             <div class="md:basis-10/12">
-              <div class="p-2 md:p-3 flex gap-2 flex-wrap xl:justify-between">
+              <div class="p-2 md:p-3 flex gap-2 lg:gap-5 2xl:gap-8 flex-wrap">
                 <Image
                   loading="eager"
                   src={mysql}
@@ -2902,7 +2902,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             </div>
 
             <div class="p-2 md:p-3 md:basis-10/12">
-              <div class="flex gap-2 flex-wrap xl:justify-between">
+              <div class="flex gap-2 lg:gap-5 2xl:gap-8 flex-wrap">
                 <Image
                   loading="eager"
                   src={frappe_cloud}
@@ -3152,7 +3152,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
   </section>
   <!-- Technical Expertise of our ERPNext Developers End -->
 
-  <!-- Hire Expert Developer for Comprehensive Services -->
+  <!-- Hire Expert Developer for Comprehensive Services start-->
   <section class="section-bg-right">
     <section
       class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
@@ -3335,10 +3335,9 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
       </div>
     </section>
   </section>
-
-  <!-- Hire Expert Developer for Comprehensive Services -->
+  <!-- Hire Expert Developer for Comprehensive Services end -->
+  
   <!-- best ERPNext Developer start -->
-
   <section
     class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
   >
@@ -3389,7 +3388,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]"
   >
     <div
-      class="flex gap-5 lg:gap-10 lg:flex-row flex-col-reverse items-center justify-between bg-gradient-to-l from-[#BBDBFF] to-[#c9d2dc17] py-5 px-5 md:py-7 md:px-7 lg:py-0 lg:px-0"
+      class="flex gap-5 lg:gap-10 lg:flex-row flex-col-reverse items-center justify-between bg-gradient-to-l from-[#BBDBFF] to-[#c9d2dc17] py-5 px-5 md:py-7 md:px-7  lg:px-0"
     >
       <div class="w-full text-center lg:w-[60%] lg:pl-[100px]">
         <h2
@@ -3435,7 +3434,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     <div
       class="interview rounded-[20px] bg-gradient-to-b from-[#184D85] to-[#31393C]"
     >
-      <form id="hire_form">
+      <form id="hire_schedule_form">
         <div class="py-5 px-7 md:py-7 md:px-10 lg:py-10 lg:px-16">
           <p
             class="text-[#FFFFFF] text-2xl md:text-3xl lg:text-4xl font-bold text-center"
@@ -3458,7 +3457,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
                 type="text"
                 placeholder="Your Name*"
                 class="rounded w-full p-1"
-                name="name"
+                name="hirename"
                 required
               />
             </div>
@@ -3468,7 +3467,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
                 type="email"
                 placeholder="Email *"
                 class="rounded w-full p-1"
-                name="email"
+                name="hireemail"
                 required
               />
             </div>
@@ -3478,14 +3477,14 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
                 type="tel"
                 placeholder="Phone Number"
                 class="rounded w-full p-1"
-                name="phone"
+                name="hirephone"
               />
             </div>
           </div>
 
           <div class="mt-5">
             <textarea
-              name="message"
+              name="hiremessage"
               id=""
               rows="5"
               placeholder="Describe Your Requirements*"
@@ -3495,6 +3494,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
 
           <div class="flex justify-center mt-5 md:mt-7 lg:mt-10">
             <button
+            type="submit"
               class="text-[#FFFFFF] bg-[#3E96F4] rounded font-semibold text-base font-inter px-5 py-2"
               >Schedule Interview</button
             >
@@ -4013,10 +4013,49 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
       <div class="bg-white rounded-2xl">
         <div
           class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 10 ? 0: 10"
+          @click="accordion = accordion == 9 ? 0: 9"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
             What expertise do your ERPNext developers possess?
+          </div>
+          <Image
+            loading="eager"
+            :class="accordion !== 9 ? 'block' : 'hidden'"
+            src={down_arrow}
+            alt="down-arrow"
+          />
+          <Image
+            loading="eager"
+            :class="accordion === 9 ? 'block' : 'hidden'"
+            src={up_arrow}
+            alt="up-arrow"
+          />
+        </div>
+        <div
+          class="overflow-hidden bg-white rounded-b-[10px]"
+          :class="accordion !== 9 ? 'h-0' : 'border-t-2'"
+        >
+          <p class="text-xs md:text-sm lg:text-base p-5">
+            Our ERPNext developers possess a diverse range of expertise,
+            including but not limited to ERPNext customization, module
+            development, data migration, system integration, and performance
+            optimization. They are adept at utilizing technologies such as
+            Python, JavaScript, HTML/CSS, and Frappe framework to deliver
+            tailored solutions that meet our clients' specific business
+            requirements. Additionally, our developers stay updated with the
+            latest developments in ERPNext and related technologies to ensure
+            the highest quality of service.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl">
+        <div
+          class="flex justify-between p-4 cursor-pointer"
+          @click="accordion = accordion == 10 ? 0: 10"
+        >
+          <div class="font-semibold text-sm md:text-sm lg:text-base">
+            How do you ensure confidentiality and data security in your ERPNext
+            development services?
           </div>
           <Image
             loading="eager"
@@ -4036,15 +4075,10 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           :class="accordion !== 10 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
-            Our ERPNext developers possess a diverse range of expertise,
-            including but not limited to ERPNext customization, module
-            development, data migration, system integration, and performance
-            optimization. They are adept at utilizing technologies such as
-            Python, JavaScript, HTML/CSS, and Frappe framework to deliver
-            tailored solutions that meet our clients' specific business
-            requirements. Additionally, our developers stay updated with the
-            latest developments in ERPNext and related technologies to ensure
-            the highest quality of service.
+            We ensure confidentiality and data security in our ERPNext
+            development services through strict NDAs, robust access controls,
+            encryption, security audits, adherence to best practices, and
+            compliance with industry standards. We implemented ISO 270001.
           </p>
         </div>
       </div>
@@ -4054,8 +4088,8 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           @click="accordion = accordion == 11 ? 0: 11"
         >
           <div class="font-semibold text-sm md:text-sm lg:text-base">
-            How do you ensure confidentiality and data security in your ERPNext
-            development services?
+            Can you tailor ERPNext solutions to meet our specific business
+            needs?
           </div>
           <Image
             loading="eager"
@@ -4073,40 +4107,6 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
         <div
           class="overflow-hidden bg-white rounded-b-[10px]"
           :class="accordion !== 11 ? 'h-0' : 'border-t-2'"
-        >
-          <p class="text-xs md:text-sm lg:text-base p-5">
-            We ensure confidentiality and data security in our ERPNext
-            development services through strict NDAs, robust access controls,
-            encryption, security audits, adherence to best practices, and
-            compliance with industry standards. We implemented ISO 270001.
-          </p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl">
-        <div
-          class="flex justify-between p-4 cursor-pointer"
-          @click="accordion = accordion == 12 ? 0: 12"
-        >
-          <div class="font-semibold text-sm md:text-sm lg:text-base">
-            Can you tailor ERPNext solutions to meet our specific business
-            needs?
-          </div>
-          <Image
-            loading="eager"
-            :class="accordion !== 12 ? 'block' : 'hidden'"
-            src={down_arrow}
-            alt="down-arrow"
-          />
-          <Image
-            loading="eager"
-            :class="accordion === 12 ? 'block' : 'hidden'"
-            src={up_arrow}
-            alt="up-arrow"
-          />
-        </div>
-        <div
-          class="overflow-hidden bg-white rounded-b-[10px]"
-          :class="accordion !== 12 ? 'h-0' : 'border-t-2'"
         >
           <p class="text-xs md:text-sm lg:text-base p-5">
             Yes, we specialize in tailoring ERPNext solutions to meet your
@@ -4253,6 +4253,15 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
   </style>
 
   <script>
+
+let current_url;
+  // Event handler function to log the current URL
+  function logCurrentUrl() {
+    // Get the current pathname and remove the leading '/'
+    current_url = window.location.pathname.slice(1);
+    console.log("Current URL:" + current_url);
+  }
+
     // Smooth scrolling function
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
@@ -4267,11 +4276,19 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     var hire_form = document.getElementById("hire_form");
     hire_form.addEventListener("submit", handleContactForm);
 
+    var hire_schedule_form = document.getElementById("hire_schedule_form");
+    hire_schedule_form.addEventListener("submit", handlehirescheduleform);
+
+
     var small_form = document.getElementById("hire_small_form");
     small_form.addEventListener("submit", handleSmallContactForm);
 
     // Add event listener to email input for real-time validation
     var emailInput = document.querySelector('input[name="emailaddress"]');
+    emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
+
+    // Add event listener to email input for real-time validation
+    var emailInput = document.querySelector('input[name="hireemail"]');
     emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
     function validateEmailInput() {
@@ -4454,6 +4471,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
+            demo_for: current_url,
             query_type: "Developer Interview",
             ip: ipAddress,
             browser_name: browserName,
@@ -4461,12 +4479,24 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           }),
         })
           .then((res) => {
-            console.log("asdfasd", res);
+            // console.log("asdfasd", res);
             if (res.status === 200) {
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
             } else {
-              alert("failed");
+              sendEmailNotification(
+              name,
+              email,
+              phone,
+              message,
+              "Website Enquiry",
+              current_url,
+              "Developer Interview",
+              ipAddress,
+              browserName,
+              device,
+              res
+            );
             }
           })
           .catch((error) => {
@@ -4474,6 +4504,116 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           });
       });
     }
+
+   // send data in frappe
+   function handlehirescheduleform(e) {
+      e.preventDefault();
+      const form = e.target; // Get the form that triggered the submission
+
+      const nameInput = form.querySelector('input[name="hirename"]');
+      const emailInput = form.querySelector('input[name="hireemail"]');
+      const messageInput = document.querySelector(
+        'textarea[name="hiremessage"]'
+      );
+      const phoneInput = document.querySelector('input[name="hirephone"]');
+
+      const nameValue = nameInput.value.trim();
+      const emailValue = emailInput.value.trim();
+      const messageValue = messageInput.value.trim();
+      const phoneValue = phoneInput.value.trim();
+
+      resetBorderColorOnFocus(nameInput);
+      resetBorderColorOnFocus(emailInput);
+      resetBorderColorOnFocus(messageInput);
+      resetBorderColorOnFocus(phoneInput);
+
+      if (nameValue === "") {
+        blinkBorder(nameInput);
+      }
+
+      if (emailValue === "") {
+        blinkBorder(emailInput);
+      }
+
+      if (messageValue === "") {
+        blinkBorder(messageInput);
+      }
+
+      if (nameValue === "" || emailValue === "" || messageValue === "") {
+        return;
+      }
+
+      // alert('Please select a file to upload.');
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+      formData.set("data", JSON.stringify(data));
+      var name = data.hirename;
+      var email = data.hireemail;
+      var phone = data.hirephone;
+      var message = data.hiremessage;
+
+      // Function to get the user's IP address using ipify
+      function getUserIPAddress() {
+        return fetch("https://api.ipify.org?format=json")
+          .then((response) => response.json())
+          .then((data) => data.ip)
+          .catch((error) => {
+            console.error("Error fetching IP address:", error);
+            return null; // Handle the error gracefully
+          });
+      }
+
+      getUserIPAddress().then((ipAddress) => {
+        let { browserName, device } = detectBrowser();
+        console.log("---------->>>", browserName, device, ipAddress);
+
+        fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `token ${apiKey}:${secretKey}`,
+          },
+          body: JSON.stringify({
+            first_name: name,
+            email: email,
+            phone: phone,
+            message: message,
+            enquiry_source: "Website Enquiry",
+            demo_for: current_url,
+            query_type: "Developer Interview",
+            ip: ipAddress,
+            browser_name: browserName,
+            device: device,
+          }),
+        })
+          .then((res) => {
+      
+            if (res.status === 200) {
+              // alert("You have been registered successfully.")
+              window.location.href = "/thank-you";
+            } else {
+              sendEmailNotification(
+              name,
+              email,
+              phone,
+              message,
+              "Website Enquiry",
+              current_url,
+              "Developer Interview",
+              ipAddress,
+              browserName,
+              device,
+              res
+            );
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
+    }
+
 
     // send data in frappe for small screen form
     function handleSmallContactForm(e) {
@@ -4512,6 +4652,12 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
         return;
       }
 
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Get the value of the 'page' parameter
+      const pageValue = urlParams.get("page");
+
+      const queryTypeValue = pageValue ? "Demo" : "General";
       // alert('Please select a file to upload.');
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
@@ -4534,7 +4680,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
 
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
-        console.log("---------->>>", browserName, device, ipAddress);
+        // console.log("---------->>>", browserName, device, ipAddress);
 
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
@@ -4548,11 +4694,12 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             email: email,
             phone: phone,
             message: message,
+            enquiry_source: "Website Enquiry",
+            demo_for: current_url,
+            query_type: "Developer Interview",
             ip: ipAddress,
             browser_name: browserName,
             device: device,
-            enquiry_source: "Website Enquiry",
-            query_type: "Developer Interview",
           }),
         })
           .then((res) => {
@@ -4561,7 +4708,20 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
             } else {
-              alert("failed");
+              sendEmailNotification(
+              name,
+              email,
+              phone,
+              message,
+              "Website Enquiry",
+              current_url,
+              "Developer Interview",
+              ipAddress,
+              browserName,
+              device,
+              res
+            );
+            alert("Failed to submit data. Please try after some time.");
             }
           })
           .catch((error) => {
@@ -4684,5 +4844,62 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
 
       return { browserName, device };
     }
+
+    function sendEmailNotification(
+    full_name = "",
+    email = "",
+    phone = "",
+    message = "",
+    enquiry_source = "",
+    demoForValue = "",
+    queryTypeValue = "",
+    ip = "",
+    browser_name = "",
+    device = "",
+    response = ""
+  ) {
+    console.log("sending email notification...");
+    // return
+    fetch(
+      "http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          // Authorization: `token ${apiKey}:${secretKey}`,
+        },
+        body: JSON.stringify({
+          full_name: full_name,
+          email: email,
+          phone: phone,
+          message: message,
+          enquiry_source: "Website Enquiry",
+          demoForValue: demoForValue,
+          queryTypeValue: queryTypeValue,
+          ip: ip,
+          browser_name: browser_name,
+          device: device,
+          response: response,
+          page_name: "Hire ERPNext Developer",
+        }),
+      }
+    )
+      .then((res) => {
+        if (res.status === 200) {
+          // alert("You have been registered successfully.")
+          console.log("email notification sent.");
+        } else {
+          console.log("failed to send email notification", res);
+          alert(
+            "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
+          );
+        }
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+
   </script>
 </Layout>
