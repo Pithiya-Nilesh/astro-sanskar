@@ -4502,6 +4502,7 @@ let current_url;
               device,
               res
             );
+            alert("Failed to submit data. Please try after some time.");
             }
           })
           .catch((error) => {
@@ -4611,6 +4612,7 @@ let current_url;
               device,
               res
             );
+            alert("Failed to submit data. Please try after some time.");
             }
           })
           .catch((error) => {
@@ -4866,7 +4868,7 @@ let current_url;
     console.log("sending email notification...");
     // return
     fetch(
-      "http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification",
+      "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
       {
         method: "POST",
         headers: {

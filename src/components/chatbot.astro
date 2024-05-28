@@ -1698,7 +1698,7 @@ class="fixed right-5 bottom-5 z-30 items-center cursor-pointer"
 function sendEmailNotification(full_name="", email="", selected_technology="", selected_module="", questions_answer="", enquiry_source, need_customization="", ipAddress="", browserName="", device="", response=""){ 
   console.log("sending email notification...")
   // return
-   fetch("http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification", {
+   fetch("https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification", {
     method: "POST",
     headers: {
       Accept: "application/json",

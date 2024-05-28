@@ -3838,6 +3838,7 @@ import Privacy_Security from "../../public/Images/Privacy_Security.svg";
               device,
               res
             );
+            alert("Failed to submit data. Please try after some time.");
             }
           })
           .catch((error) => {
@@ -3947,6 +3948,7 @@ import Privacy_Security from "../../public/Images/Privacy_Security.svg";
               device,
               res
             );
+            alert("Failed to submit data. Please try after some time.");
             }
           })
           .catch((error) => {
@@ -4045,7 +4047,7 @@ import Privacy_Security from "../../public/Images/Privacy_Security.svg";
     console.log("sending email notification...");
     // return
     fetch(
-      "http://sanskar.com:8000/api/method/astro_sanskar.api.send_form_failed_notification",
+      "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
       {
         method: "POST",
         headers: {
