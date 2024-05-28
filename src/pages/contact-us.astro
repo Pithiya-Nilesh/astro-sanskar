@@ -589,11 +589,11 @@ import contact_map from "../../public/Images/contact_map.svg";
       const urlParams = new URLSearchParams(window.location.search);
 
     //   // Get the value of the 'page' parameter
-    //   const pageValue = urlParams.get("page");
+    const pageValue = urlParams.get("page");
 
     const demoForValue = pageValue || "";
 
-    //   const queryTypeValue = pageValue ? "Demo" : "General";
+    const queryTypeValue = pageValue ? "Demo" : "General";
     // console.log("queryTypeValue-----------",queryTypeValue);
       if (!file) {
         // alert('Please select a file to upload.');
