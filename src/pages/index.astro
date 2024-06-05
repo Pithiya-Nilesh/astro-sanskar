@@ -950,40 +950,18 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 		<div
 			class="mt-10 flex flex-wrap gap-3 md:gap-5 lg:gap-7 justify-center"
 		>
-			<div
-				class="bg-[#3E96F4] rounded-t-lg text-white w-[12.5rem] h-[2.625rem] flex items-center justify-center"
-				id="erpnext1"
-			>
-				<button
-					class="text-base md:text-base lg:text-lg px-10 py-2 font-semibold"
-					id="erpnext"
-				>
+			<button
+				class="bg-[#3E96F4] text-base md:text-base lg:text-lg px-10 py-2 font-semibold rounded-t-lg text-white w-[12.5rem] h-[2.625rem] flex items-center justify-center"
+				id="erpnext_btn"
+			>				
 					ERPNext
-				</button>
-			</div>
-			<!-- <div class="" id="erpnext1">
-					<button class="text-[#31393C] text-base md:text-base lg:text-lg px-10 py-2 font-semibold" id="erpnext">
-						ERPNext
-					</button>
-				</div> -->
-
-			<!-- <div class="drop-shadow-lg shadow rounded-lg">
-							<button class="text-[#3E96F4] px-10 py-2 text-base md:text-base lg:text-lg font-semibold">
-								ServiceNow
-							</button>
-						</div>
-					 -->
-			<div
-				class="bg-[#EDFFEA] text-[#7F8B8F] rounded-t-lg w-[12.5rem] h-[2.625rem] flex items-center justify-center"
-				id="servicenow1"
-			>
-				<button
-					class="text-base md:text-base lg:text-lg px-10 py-2 font-semibold"
-					id="servicenow"
-				>
+			</button>
+			<button
+				class="bg-[#EDFFEA] text-base md:text-base lg:text-lg px-10 py-2 font-semibold text-[#7F8B8F] rounded-t-lg w-[12.5rem] h-[2.625rem] flex items-center justify-center"
+				id="servicenow_btn"
+			>		
 					ServiceNow
-				</button>
-			</div>
+			</button>
 		</div>
 
 		<div
@@ -5363,44 +5341,42 @@ As a Shishya of Guru, we all explore the Gurumahima through all modern tools.
 
 // ------------------------------------------------------------------------------------------------------------
 
-	// show erpnext content and hide other content when click on erpnext
 	function show_erpnext() {
-		document.getElementById("erpnext_c").classList.remove("hidden");
-		document.getElementById("servicenow_c").classList.remove("!block");
+		console.log("erpnext")
+    // Hide ServiceNow content and show ERPNext content
+    document.getElementById("servicenow_btn").classList.remove("bg-[#48CE31]", "text-white");
+    document.getElementById("servicenow_btn").classList.add("bg-[#EDFFEA]", "text-[#7F8B8F]");
+    
+    document.getElementById("erpnext_btn").classList.remove("bg-[#d8eafd]", "text-[#7F8B8F]");
+    document.getElementById("erpnext_btn").classList.add("bg-[#3E96F4]", "text-white");
 
-		document.getElementById("erpnext1").classList.add("text-white");
-		document
-			.getElementById("erpnext1")
-			.classList.remove("!bg-[#3E96F433]", "!text-[#7F8B8F]");
-		// document.getElementById("erpnext").classList.add();
+    // Show/hide corresponding content
+    document.getElementById("erpnext_c").classList.remove("hidden");
+    document.getElementById("servicenow_c").classList.add("hidden");
+}
 
-		document
-			.getElementById("servicenow1")
-			.classList.remove("!bg-[#48CE31]", "!text-white");
-		// document
-		// 	.getElementById("servicenow")
-		// 	.classList.remove("text-[#7F8B8F]");
-	}
-	const erpnext = document.getElementById("erpnext");
+function show_servicenow() {
+	console.log("service now")
+    // Hide ERPNext content and show ServiceNow content
+    document.getElementById("erpnext_btn").classList.remove("bg-[#3E96F4]", "text-white");
+    document.getElementById("erpnext_btn").classList.add("bg-[#d8eafd]", "text-[#7F8B8F]");
+
+    document.getElementById("servicenow_btn").classList.remove("bg-[#EDFFEA]", "text-[#7F8B8F]");
+    document.getElementById("servicenow_btn").classList.add("bg-[#48CE31]", "text-white");
+
+    // Show/hide corresponding content
+    document.getElementById("servicenow_c").classList.remove("hidden");
+    document.getElementById("erpnext_c").classList.add("hidden");
+}
+
+
+	const erpnext = document.getElementById("erpnext_btn");
 	erpnext.addEventListener("click", show_erpnext);
 
-	// show service now content and hide other content when click on service now
-	function show_servicenow() {
-		document.getElementById("servicenow_c").classList.add("!block");
-		document.getElementById("erpnext_c").classList.add("hidden");
-		document
-			.getElementById("servicenow1")
-			.classList.add("!bg-[#48CE31]", "!text-white");
-		// document.getElementById("servicenow").classList.add("text-[#3E96F4]");
-		document.getElementById("erpnext1").classList.remove("text-white");
-		document
-			.getElementById("erpnext1")
-			.classList.add("!bg-[#3E96F433]", "!text-[#7F8B8F]");
+    const servicenow = document.getElementById("servicenow_btn");
+    servicenow.addEventListener("click", show_servicenow);
 
-		// document.getElementById("erpnext").classList.add("opacity-100", "text-[#7F8B8F]");
-	}
-	const servicenow = document.getElementById("servicenow");
-	servicenow.addEventListener("click", show_servicenow);
+// ------------------------------------------------------------------------------------------------------------
 
 	// show manufacturing content and hide other content when click on manufacturing
 	// function show_manufaturing() {
