@@ -1904,11 +1904,11 @@ Product Development Outsourcing End-->
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
       formData.set("data", JSON.stringify(data));
-      var name = data.name;
-      var email = data.email;
-      var phone = data.phone_no;
-      var message = data.req_message;
-
+      var name = data.productname;
+      var email = data.productemail;
+      var phone = data.productphone;
+      var message = data.productmessage;
+  
       // Function to get the user's IP address using ipify
       function getUserIPAddress() {
         return fetch("https://api.ipify.org?format=json")
@@ -1948,7 +1948,7 @@ Product Development Outsourcing End-->
             console.log("------>res", res);
             if (res.status === 200) {
               // alert("You have been registered successfully.")
-              window.location.href = "/thank-you";
+              // window.location.href = "/thank-you";
             } else {
               sendEmailNotification(
                 name,
