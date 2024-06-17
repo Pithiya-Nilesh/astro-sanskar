@@ -9,6 +9,7 @@ import frappe_certified_partner from "../../public/Images/frappe-certified-partn
 import Manufacturing_navbar from "../../public/Images/Manufacturing_navbar.svg";
 import Real_Estate from "../../public/Images/Real_Estate.svg";
 import Textile from "../../public/Images/Textile.svg";
+import healthcare_icon from "../../public/Images/healthcare-icon.svg";
 import Retail from "../../public/Images/Retail.svg";
 import Human_Resources from "../../public/Images/Human _Resources.svg";
 import about from "../../public/Images/about.svg";
@@ -22,7 +23,7 @@ import company_profile from "../../public/Images/company_profile.png";
   >
     <a
       href="/"
-      class="w-4/12 md:w-auto grow flex items-center flex-shrink-0 text-white mr-6 hover:cursor-pointer"
+      class="w-4/12 md:w-auto grow flex items-center flex-shrink-0 text-white mr-2 sm:mr-6 hover:cursor-pointer"
     >
       <Image loading="eager" src={logo} alt="logo" />
 
@@ -304,7 +305,7 @@ import company_profile from "../../public/Images/company_profile.png";
 
     <div class="block xl:hidden w-auto flex-none">
       <button
-        class="flex flex-col justify-center items-center px-2 py-2 text-[9px] rounded hover:text-black hover:border-white menu"
+        class="flex flex-col justify-center items-center sm:px-2 py-2 text-[9px] rounded hover:text-black hover:border-white menu"
         id="open-menu"
       >
         <svg
@@ -502,6 +503,11 @@ import company_profile from "../../public/Images/company_profile.png";
                   class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
                   >Real Estate CRM</a
                 >
+                <a
+                href="/healthcare"
+                class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
+                >Health Care</a
+              >
                 </div>
               </li>
 
@@ -697,7 +703,7 @@ import company_profile from "../../public/Images/company_profile.png";
                               <Image
                                 loading="eager"
                                 src={Manufacturing_navbar}
-                                alt="right_arrow"
+                                alt="Manufacturing"
                               />
 
                               <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">Manufacturing</p>
@@ -709,7 +715,7 @@ import company_profile from "../../public/Images/company_profile.png";
                               <Image
                                 loading="eager"
                                 src={Textile}
-                                alt="right_arrow"
+                                alt="Textile"
                               />
                               <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">Textile</p>
                             </div>
@@ -720,7 +726,7 @@ import company_profile from "../../public/Images/company_profile.png";
                               <Image
                                 loading="eager"
                                 src={Retail}
-                                alt="right_arrow"
+                                alt="Retail"
                               />
                               <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">Retail</p>
                             </div>
@@ -731,7 +737,7 @@ import company_profile from "../../public/Images/company_profile.png";
                               <Image
                                 loading="eager"
                                 src={Human_Resources}
-                                alt="right_arrow"
+                                alt="Human Resources"
                               />
                               <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">
                                 Human Resources
@@ -743,9 +749,19 @@ import company_profile from "../../public/Images/company_profile.png";
                               <Image
                                 loading="eager"
                                 src={Real_Estate}
-                                alt="right_arrow"
+                                alt="Real Estate CRM"
                               />
                               <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">Real Estate CRM</p>
+                            </div>
+                          </a>  
+                          <a href="/healthcare">
+                            <div class="p-2 flex gap-2 border rounded-xl mt-2">
+                              <Image
+                                loading="eager"
+                                src={healthcare_icon}
+                                alt="Health Care"
+                              />
+                              <p class="text-sm md:text-base  hover:text-[#3E96F4] text-[#4D5F66]">Health Care</p>
                             </div>
                           </a>
                         </div>
