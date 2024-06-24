@@ -2093,74 +2093,74 @@ hideForMdStyle.textContent = `
 document.head.appendChild(hideForMdStyle);
 
 
-// Create a div element to hold the reCAPTCHA widget and error message
-const containerDiv = document.createElement("div");
+// // Create a div element to hold the reCAPTCHA widget and error message
+// const containerDiv = document.createElement("div");
 
-// Create the reCAPTCHA widget element
-const recaptchaElement = document.createElement("div");
-recaptchaElement.className = "g-recaptcha";
-recaptchaElement.setAttribute("data-sitekey", "6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"); // Replace with your reCAPTCHA site key
-// Define a function to adjust styles based on screen width
-function adjustRecaptchaStyles() {
-  if (window.innerWidth <= 280) {
-    recaptchaElement.style.transform = "scale(0.60)";
-    recaptchaElement.style.webkitTransform = "scale(0.60)";
-    recaptchaElement.style.transformOrigin = "0 0";
-    recaptchaElement.style.webkitTransformOrigin = "0 0";
-    recaptchaElement.style.marginBottom = "-1rem";
-  } else if (window.innerWidth >= 281 && window.innerWidth <= 360) {
-    recaptchaElement.style.transform = "scale(0.60)";
-    recaptchaElement.style.webkitTransform = "scale(0.60)";
-    recaptchaElement.style.transformOrigin = "0 0";
-    recaptchaElement.style.webkitTransformOrigin = "0 0";
-    recaptchaElement.style.marginBottom = "-1rem";
-  } else if (window.innerWidth >= 361 && window.innerWidth <= 375) {
-    recaptchaElement.style.transform = "scale(0.80)";
-    recaptchaElement.style.webkitTransform = "scale(0.80)";
-    recaptchaElement.style.transformOrigin = "0 0";
-    recaptchaElement.style.webkitTransformOrigin = "0 0";
-    recaptchaElement.style.marginBottom = "-1rem";
-  } else if (window.innerWidth >= 376 && window.innerWidth <= 1536) {
-    recaptchaElement.style.transform = "scale(0.60)";
-    recaptchaElement.style.webkitTransform = "scale(0.60)";
-    recaptchaElement.style.transformOrigin = "0 0";
-    recaptchaElement.style.webkitTransformOrigin = "0 0";
-    recaptchaElement.style.marginBottom = "-1rem";
-  }else {
-    recaptchaElement.style.transform = "scale(0.77)";
-    recaptchaElement.style.webkitTransform = "scale(0.77)";
-    recaptchaElement.style.transformOrigin = "0 0";
-    recaptchaElement.style.webkitTransformOrigin = "0 0";
-    recaptchaElement.style.marginBottom = "-1rem"; 
-  }
-}
+// // Create the reCAPTCHA widget element
+// const recaptchaElement = document.createElement("div");
+// recaptchaElement.className = "g-recaptcha";
+// recaptchaElement.setAttribute("data-sitekey", "6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"); // Replace with your reCAPTCHA site key
+// // Define a function to adjust styles based on screen width
+// function adjustRecaptchaStyles() {
+//   if (window.innerWidth <= 280) {
+//     recaptchaElement.style.transform = "scale(0.60)";
+//     recaptchaElement.style.webkitTransform = "scale(0.60)";
+//     recaptchaElement.style.transformOrigin = "0 0";
+//     recaptchaElement.style.webkitTransformOrigin = "0 0";
+//     recaptchaElement.style.marginBottom = "-1rem";
+//   } else if (window.innerWidth >= 281 && window.innerWidth <= 360) {
+//     recaptchaElement.style.transform = "scale(0.60)";
+//     recaptchaElement.style.webkitTransform = "scale(0.60)";
+//     recaptchaElement.style.transformOrigin = "0 0";
+//     recaptchaElement.style.webkitTransformOrigin = "0 0";
+//     recaptchaElement.style.marginBottom = "-1rem";
+//   } else if (window.innerWidth >= 361 && window.innerWidth <= 375) {
+//     recaptchaElement.style.transform = "scale(0.80)";
+//     recaptchaElement.style.webkitTransform = "scale(0.80)";
+//     recaptchaElement.style.transformOrigin = "0 0";
+//     recaptchaElement.style.webkitTransformOrigin = "0 0";
+//     recaptchaElement.style.marginBottom = "-1rem";
+//   } else if (window.innerWidth >= 376 && window.innerWidth <= 1536) {
+//     recaptchaElement.style.transform = "scale(0.60)";
+//     recaptchaElement.style.webkitTransform = "scale(0.60)";
+//     recaptchaElement.style.transformOrigin = "0 0";
+//     recaptchaElement.style.webkitTransformOrigin = "0 0";
+//     recaptchaElement.style.marginBottom = "-1rem";
+//   }else {
+//     recaptchaElement.style.transform = "scale(0.77)";
+//     recaptchaElement.style.webkitTransform = "scale(0.77)";
+//     recaptchaElement.style.transformOrigin = "0 0";
+//     recaptchaElement.style.webkitTransformOrigin = "0 0";
+//     recaptchaElement.style.marginBottom = "-1rem"; 
+//   }
+// }
 
-// Apply initial styles
-adjustRecaptchaStyles();
+// // Apply initial styles
+// adjustRecaptchaStyles();
 
-// Create the error message element
-const errorMessage = document.createElement("p");
-errorMessage.id = "recaptcha-error";
-errorMessage.className = "input-file text-xs -mt-8 2xl:-mt-4 mb-4 2xl:mb-0";
-errorMessage.textContent = "Please complete the reCAPTCHA verification.";
+// // Create the error message element
+// const errorMessage = document.createElement("p");
+// errorMessage.id = "recaptcha-error";
+// errorMessage.className = "input-file text-xs -mt-8 2xl:-mt-4 mb-4 2xl:mb-0";
+// errorMessage.textContent = "Please complete the reCAPTCHA verification.";
 
-// Apply CSS styles to the error message
-errorMessage.style.color = "red";
-errorMessage.style.fontSize = "14px"; // Adjust the font size to your preference
-errorMessage.style.display = "none";
+// // Apply CSS styles to the error message
+// errorMessage.style.color = "red";
+// errorMessage.style.fontSize = "14px"; // Adjust the font size to your preference
+// errorMessage.style.display = "none";
 
-// Append the reCAPTCHA widget and error message to the container div
-containerDiv.appendChild(recaptchaElement);
-containerDiv.appendChild(errorMessage);
+// // Append the reCAPTCHA widget and error message to the container div
+// containerDiv.appendChild(recaptchaElement);
+// containerDiv.appendChild(errorMessage);
 
-// Initialize the reCAPTCHA widget
-grecaptcha.render(recaptchaElement, {
-    sitekey: "6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54", // Replace with your reCAPTCHA site key
-    size: "normal", // You can change the size as needed
-});
+// // Initialize the reCAPTCHA widget
+// grecaptcha.render(recaptchaElement, {
+//     sitekey: "6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54", // Replace with your reCAPTCHA site key
+//     size: "normal", // You can change the size as needed
+// });
 
 // Append the container div to your form (assuming "div" is your form element)
-div.appendChild(containerDiv);
+// div.appendChild(containerDiv);
 
 
           // Create the submit button for job application form
@@ -2416,9 +2416,9 @@ div.appendChild(containerDiv);
       e.preventDefault();
       disableUserInteractions()
 
-      const recaptchaResponse = grecaptcha.getResponse();
-      // If the reCAPTCHA is filled out, clear any previous error message
-    clearRecaptchaError();
+    //   const recaptchaResponse = grecaptcha.getResponse();
+    //   // If the reCAPTCHA is filled out, clear any previous error message
+    // clearRecaptchaError();
 
       const fullNameInput = document.querySelector('input[name="name"]');
       const emailInput = document.querySelector('input[name="email"]');
@@ -2469,11 +2469,11 @@ if (phoneNameValue === "") {
       if (fileNameValue === "") {
         blinkBorder(selectedFileInput);
       }
-      if (!recaptchaResponse || recaptchaResponse.length === 1) {
-        showRecaptchaError();
-        enableUserInteractions();
-        return;
-      }
+      // if (!recaptchaResponse || recaptchaResponse.length === 1) {
+      //   showRecaptchaError();
+      //   enableUserInteractions();
+      //   return;
+      // }
       if (
         fullNameValue === "" ||
         emailNameValue === "" ||
@@ -2612,21 +2612,21 @@ if (phoneNameValue === "") {
     //new over =========================================== new over ===========================
     
   });
-  function showRecaptchaError() {
-  const recaptchaErrorElement = document.getElementById("recaptcha-error");
-  recaptchaErrorElement.style.display = "block"; // Display the error message
+//   function showRecaptchaError() {
+//   const recaptchaErrorElement = document.getElementById("recaptcha-error");
+//   recaptchaErrorElement.style.display = "block"; // Display the error message
 
-  // Hide the error message after a specific duration (e.g., 5 seconds)
-  setTimeout(function () {
-    recaptchaErrorElement.style.display = "none";
-  }, 3000);
-}
+//   // Hide the error message after a specific duration (e.g., 5 seconds)
+//   setTimeout(function () {
+//     recaptchaErrorElement.style.display = "none";
+//   }, 3000);
+// }
 
 
-    function clearRecaptchaError() {
-      const recaptchaErrorElement = document.getElementById("recaptcha-error");
-      recaptchaErrorElement.style.display = "none"; // Hide the error message
-    }
+    // function clearRecaptchaError() {
+    //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    //   recaptchaErrorElement.style.display = "none"; // Hide the error message
+    // }
 
   // Helper function to disable user interactions
 function disableUserInteractions() {

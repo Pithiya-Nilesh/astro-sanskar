@@ -74,7 +74,7 @@ import contact_map from "../../public/Images/contact_map.svg";
             <p class="text-xs -mt-3">
               Allow Formats (.jpg |.pdf |.png |.docx |.txt)
             </p>
-            <div>
+            <!-- <div>
               <p
                 class="g-recaptcha"
                 data-sitekey="6LcaYFkoAAAAALjdnrEgCky1D169PguZyJtPRC54"
@@ -86,7 +86,7 @@ import contact_map from "../../public/Images/contact_map.svg";
               >
                 Please complete the reCAPTCHA verification.
               </p>
-            </div>
+            </div> -->
 
             <button
               type="submit"
@@ -524,24 +524,24 @@ import contact_map from "../../public/Images/contact_map.svg";
     function handleContactFormContact(e) {
       e.preventDefault();
 
-      var response = grecaptcha.getResponse();
-      console.log("response",response);
-      if (response.length === 0) {
-        document.getElementById("recaptcha-error").style.display = "block";
-        return;
-      }
-      document.getElementById("recaptcha-error").style.display = "none";
+    //   var response = grecaptcha.getResponse();
+    //   console.log("response",response);
+    //   if (response.length === 0) {
+    //     document.getElementById("recaptcha-error").style.display = "block";
+    //     return;
+    //   }
+    //   document.getElementById("recaptcha-error").style.display = "none";
 
-      // disableUserInteractions();
+    //   // disableUserInteractions();
 
-      const recaptchaResponse = grecaptcha.getResponse();
-      // If the reCAPTCHA is filled out, clear any previous error message
-      clearRecaptchaError();
+    //   const recaptchaResponse = grecaptcha.getResponse();
+    //   // If the reCAPTCHA is filled out, clear any previous error message
+    //   clearRecaptchaError();
 
-      function clearRecaptchaError() {
-      const recaptchaErrorElement = document.getElementById("recaptcha-error");
-      recaptchaErrorElement.style.display = "none"; // Hide the error message
-    }
+    //   function clearRecaptchaError() {
+    //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    //   recaptchaErrorElement.style.display = "none"; // Hide the error message
+    // }
 
       // const firstNameInput = document.querySelector('input[name="first_name"]');
       const lastNameInput = document.querySelector('input[name="full_name"]');
@@ -785,15 +785,15 @@ import contact_map from "../../public/Images/contact_map.svg";
       }
     }
 
-    function showRecaptchaError() {
-      const recaptchaErrorElement = document.getElementById("recaptcha-error");
-      recaptchaErrorElement.style.display = "block"; // Display the error message
+    // function showRecaptchaError() {
+    //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
+    //   recaptchaErrorElement.style.display = "block"; // Display the error message
 
-      // Hide the error message after a specific duration (e.g., 5 seconds)
-      setTimeout(function () {
-        recaptchaErrorElement.style.display = "none";
-      }, 3000);
-    }
+    //   // Hide the error message after a specific duration (e.g., 5 seconds)
+    //   setTimeout(function () {
+    //     recaptchaErrorElement.style.display = "none";
+    //   }, 3000);
+    // }
 
     // function clearRecaptchaError() {
     //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
