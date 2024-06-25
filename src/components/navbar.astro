@@ -23,7 +23,7 @@ import company_profile from "../../public/Images/company_profile.png";
   >
     <a
       href="/"
-      class="w-4/12 md:w-auto grow flex items-center flex-shrink-0 text-white mr-2 sm:mr-6 hover:cursor-pointer"
+      class="  md:w-auto grow flex items-center flex-shrink-0 text-white mr-2 sm:mr-6 xl:mr-0 hover:cursor-pointer"
     >
       <Image loading="eager" src={logo} alt="logo" />
 
@@ -661,7 +661,7 @@ import company_profile from "../../public/Images/company_profile.png";
 
                       <div class="px-5 w-[300px]">
                         <p
-                          class="text-xs text-[#4D5F66] mt-4 mb-2 font-semibold"
+                          class="text-sm text-[#4D5F66] mt-4 mb-2 font-semibold"
                         >
                           Sanskar Technolab is an official ERPNext Frappe
                           Partner
@@ -921,7 +921,7 @@ import company_profile from "../../public/Images/company_profile.png";
                   >Product Engineering</a
                 >
 
-                <!-- <svg
+                <svg
                   id="products_down"
                   width="15"
                   height="9"
@@ -936,7 +936,7 @@ import company_profile from "../../public/Images/company_profile.png";
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"></path>
-                </svg> -->
+                </svg>
               </span>
               <!-- <ul
                 class="max-xl:ml-3 z-10 hidden lg:top-[3.75rem] py-2 lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
@@ -1014,7 +1014,7 @@ import company_profile from "../../public/Images/company_profile.png";
             <span class="group relative inline-block">
               <span class="flex gap-2 items-center"
                 ><a href="/product-engineering" class="text-sm md:text-base">Product Engineering</a>
-                <!-- <svg
+                <svg
                   width="15"
                   height="9"
                   viewBox="0 0 15 9"
@@ -1027,7 +1027,7 @@ import company_profile from "../../public/Images/company_profile.png";
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"></path>
-                </svg> -->
+                </svg>
               </span>
             </li>
               <!-- <ul
@@ -1358,7 +1358,12 @@ import company_profile from "../../public/Images/company_profile.png";
                       href="/assets/astro_sanskar/PDF/SanskarTechnolabProfile.pdf"
                       target="_blank">Company Profile </a
                     >
-                    <Image class="pt-2 " loading="eager" src={company_profile} alt="logo" />
+                    <a
+                   
+                    href="/assets/astro_sanskar/PDF/SanskarTechnolabProfile.pdf"
+                    target="_blank"> <Image class="pt-2 " loading="eager" src={company_profile} alt="logo" /> </a
+                  >
+                   
                   
                 </div> 
               </div>
@@ -1414,7 +1419,7 @@ import company_profile from "../../public/Images/company_profile.png";
 
       @media (min-width: 1280px) and (max-width: 1550px) {
         #menu ul li {
-          margin-right: 9px;
+          margin-right: 12px;
         }
         #menu li span span {
           gap: 0.3rem;

@@ -6,8 +6,8 @@ import Footer from "../components/footer.astro";
 import favicon from "../../public/favicon-32x32.png";
 import CookieConsent from "../components/CookieConsent.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
-import Chatbot from "../components/chatbot.astro";
 import ContactPopup from "../components/ContactPopup.astro";
+import Chatbot from "../components/chatbot.astro";
 export interface Props {
 	title: string;
 	keyword?: string;
@@ -56,37 +56,35 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 		
 		<title>{title}</title>
 		
-		<!-- <link
+		<link
 		href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
 		rel="stylesheet"
-		/>  -->
-		<link href="/assets/astro_sanskar/flowbite.css" rel="stylesheet">
+		/> 
+		<!-- <link href="/assets/astro_sanskar/flowbite.css" rel="stylesheet"> -->
 
-		<!-- <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" /> -->
-		<link href="/assets/astro_sanskar/slider_style.css" rel="stylesheet">
+		<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+		<!-- <link href="/assets/astro_sanskar/slider_style.css" rel="stylesheet"> -->
 		
 		<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 		
 		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet" /> -->
 		
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
-		<link href="/assets/astro_sanskar/tiny-slider.css" rel="stylesheet">
+		<!-- <link href="/assets/astro_sanskar/tiny-slider.css" rel="stylesheet"> -->
 
-		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" /> -->
-		<link href="/assets/astro_sanskar/tw-element.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+		<!-- <link href="/assets/astro_sanskar/tw-element.css" rel="stylesheet"> -->
 
 
 		<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWGDJ9VQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<header  class="sticky top-0 z-50">
+		<header>
 			<Navbar />
 		</header>
 		<main>
@@ -98,20 +96,20 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 			<!-- <script 
 				src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js" defer
 				></script> -->
-				<!-- <script
+				<script
 				src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-				defer></script> -->
+				defer></script>
 
-				<script src="/assets/astro_sanskar/alpine.js" defer></script>
+				<!-- <script src="/assets/astro_sanskar/alpine.js" defer></script> -->
 
 				<!-- <script src="../../node_modules/flowbite/dist/flowbite.min.js" defer></script> -->
 				
-				<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
+				<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 				
-				<!-- <script
-				src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js" defer></script> -->
+				<script
+				src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js" defer></script>
 
-				<script src="/assets/astro_sanskar/tw-element.js" defer></script>
+				<!-- <script src="/assets/astro_sanskar/tw-element.js" defer></script> -->
 				
 				<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js" defer></script> -->
 				
@@ -130,8 +128,6 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 					rel="stylesheet"
 				/>
 
-				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
 				<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script> -->
 
 				<script src="/assets/astro_sanskar/slider_script.js" defer></script>
@@ -144,4 +140,4 @@ const { title, keyword='', description='', canonical_href=''} = Astro.props;
 			<Footer />
 		</body>
 	</html>
-			
+		
