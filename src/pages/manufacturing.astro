@@ -588,7 +588,47 @@ import shop_floor_control from "../../public/Images/Shop-Floor-Control.png";
                                 </p>
                             </div>
                         </div>
-
+                        
+                        <div class="swiper-slide p-3">
+                            <div
+                                class="grid flex-shrink-0 p-5 let-shadow w-full md:w-64 2xl:w-72 h-64 2xl:h-72"
+                            >
+                                <Image loading="eager" 
+                                    class="justify-self-end"
+                                    src={process}
+                                    alt="process"
+                                />
+                                <p
+                                    class="text-[#31393C] text-[4rem] leading-[4.75rem] font-bold"
+                                >
+                                    23%
+                                </p>
+                                <p class="text-[#31393C] font-semibold">
+                                    Faster Processes through automation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-3">
+                            <div
+                                class="grid flex-shrink-0 p-5 rounded-[10px] let-shadow w-full md:w-64 2xl:w-72 h-64 2xl:h-72"
+                            >
+                                <Image loading="eager" 
+                                    class="justify-self-end"
+                                    src={reduction}
+                                    alt="reduction"
+                                />
+                                <p
+                                    class="text-[#31393C] text-[4rem] leading-[4.75rem] font-bold"
+                                >
+                                    40%
+                                </p>
+                                <p class="text-[#31393C] font-semibold">
+                                    Reduction in Inventory Costs with
+                                    real-time visibility and optimized stock
+                                    levels.
+                                </p>
+                            </div>
+                        </div>
                         <div class="swiper-slide p-3">
                             <div
                                 class="grid flex-shrink-0 p-4 rounded-[10px] let-shadow w-full md:w-64 2xl:w-72 h-64 2xl:h-72"
@@ -631,46 +671,6 @@ import shop_floor_control from "../../public/Images/Shop-Floor-Control.png";
                                 </p>
                             </div>
                         </div>
-                        <!-- <div class="swiper-slide p-3">
-                            <div
-                                class="grid flex-shrink-0 p-5 let-shadow w-full md:w-64 2xl:w-72 h-64 2xl:h-72"
-                            >
-                                <Image loading="eager" 
-                                    class="justify-self-end"
-                                    src={process}
-                                    alt="process"
-                                />
-                                <p
-                                    class="text-[#31393C] text-[4rem] leading-[4.75rem] font-bold"
-                                >
-                                    23%
-                                </p>
-                                <p class="text-[#31393C] font-semibold">
-                                    Faster Processes through automation.
-                                </p>
-                            </div>
-                        </div> -->
-                        <!-- <div class="swiper-slide p-3">
-                            <div
-                                class="grid flex-shrink-0 p-5 rounded-[10px] let-shadow w-full md:w-64 2xl:w-72 h-64 2xl:h-72"
-                            >
-                                <Image loading="eager" 
-                                    class="-mb-5 justify-self-end"
-                                    src={improvment}
-                                    alt="improvment"
-                                />
-                                <p
-                                    class="text-[#31393C] text-[4rem] leading-[4.75rem] font-bold"
-                                >
-                                    30%
-                                </p>
-                                <p class="text-[#31393C] font-semibold">
-                                    Improvement in on-time delivery through
-                                    effective production planning and
-                                    scheduling.
-                                </p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -4048,9 +4048,9 @@ import shop_floor_control from "../../public/Images/Shop-Floor-Control.png";
                             loop: true,
                             slidesPerView: 1,
                             spaceBetween: 0,
-                            // autoplay: {
-                            //     delay: 3000,
-                            // },
+                            autoplay: {
+                                 delay: 3000,
+                            },
                             navigation: {
                                 nextEl: ".next-button",
                                 prevEl: ".prev-button",
@@ -4074,23 +4074,23 @@ import shop_floor_control from "../../public/Images/Shop-Floor-Control.png";
                             //     // },
                             // },
                             breakpoints: {
-              640: {
-                slidesPerView: 1.5,
-                centeredSlides: true,
-              },
-			   768: {
-                centeredSlides: false,
-                slidesPerView: 2,
-              },
-              1024: {
-                centeredSlides: false,
-                slidesPerView: 3,
-              },
-              1280: {
-                centeredSlides: false,
-                slidesPerView: 4,
-              },
-            },
+                                640: {
+                                    slidesPerView: 1.5,
+                                    centeredSlides: true,
+                                },
+                                768: {
+                                    centeredSlides: false,
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    centeredSlides: false,
+                                    slidesPerView: 3,
+                                },
+                                1280: {
+                                    centeredSlides: false,
+                                    slidesPerView: 4,
+                                },
+                            },
                         });
                     });
 
