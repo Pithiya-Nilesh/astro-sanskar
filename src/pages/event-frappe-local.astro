@@ -6,6 +6,7 @@ import { Image, Picture } from "@astrojs/image/components";
 
 
 import right_arrow from "../../public/Images/right-arrow.svg";
+import facebook_icon_event from "../../public/Images/facebook_icon_event.svg";
 import caledar from "../../public/Images/caledar.svg";
 import Rushabh_Mehta from "../../public/Images/Rushabh_Mehta.svg";
 import Parth_Garachh from "../../public/Images/Parth_Garachh.svg";
@@ -28,6 +29,9 @@ import Frappe_Local_2024 from "../../public/Images/Frappe_Local_2024.png";
 import Republic_Day_Celebration from "../../public/Images/Republic_Day_Celebration.png";
 import Welcome_Rushabh_Mehta from "../../public/Images/Welcome_Rushabh_Mehta.png";
 import Frappe_Local_Ahemdabad_2024 from "../../public/Images/Frappe_Local_Ahemdabad_2024.png";
+import Ashish_sanskar_team from "../../public/Images/Ashish_sanskar_team.png";
+import foram_harsh_sahil_vijay from "../../public/Images/foram_harsh_sahil_vijay.png";
+import parth_Faraz from "../../public/Images/parth_Faraz.png";
 import Explore_now from "../../public/Images/Explore_now.svg";
 import Frappeverse_2024 from "../../public/Images/Frappeverse_2024.png";
 import Ananad_Resubh from "../../public/Images/Ananad_Resubh.png";
@@ -58,7 +62,8 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
           <p
             class="mt-3 md:mt-5 text-[#3E96F4] text-sm md:text-base font-semibold"
           >
-            Events <span class="text-[#99A8B5]">/</span>
+          <a href="/events">Events  <span class="text-[#99A8B5]">/</span></a>
+            
           </p>
           <h1
             class="text-[1.75rem] md:text-[3rem] leading-9 md:leading-[3.5rem] text-[#31393C] font-bold"
@@ -251,139 +256,49 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
     </div>
   </div>
 
-  <div class=" rounded-[1.75rem] max-sm:hidden overflow-x-scroll sm:mx-5 md:mx-10 lg:mx-20 mt-5 lg:mt-10  gap-10 scroll-container" id="horizontalScrollContainer">
-    <div class=" flex gap-5">
-      <Image loading="eager" src={Rushabh_Mehta_Slider} alt="Rushabh Mehta" />
-      <div class="flex flex-col gap-5 items-center">
-        <Image loading="eager" src={Faraz_Khatri_Slider} alt="Faraz Khatri" class=" max-w-none"  />
-        <Image loading="eager" src={Parth_Parikh_Slider} alt="Parth Parikh" class=" max-w-none"   />
-      </div>
-  
-  
-  
-      <div class="flex flex-row gap-5 items-center">
-        <Image loading="eager" src={Kamal_Patel} alt="Kamal Patel" class=" max-w-none"   />
-        <Image loading="eager" src={Ananad_Resubh} alt="Ananad Resubh" class=" max-w-none"   />
-      </div>
-  
-      <div class="flex flex-col gap-5 items-center">
-        <Image loading="eager" src={Ashish_Gargi_slider} alt="Exciting Day" class=" max-w-none"   />
-        <Image loading="eager" src={Sanskar_Team} alt="Exciting Day"  class=" max-w-none"  />
-      </div>
+
+  <div class="flex items-center  mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 mt-4 lg:mt-6">
+    <div class="  swiper swiper_banner_button  " >
       
-  
-      <div class="flex flex-row gap-5 items-center">
-        <Image loading="eager" src={Arjun_Pachani_Slider} alt="Exciting Day" class=" max-w-none"   />
-        <Image loading="eager" src={Ananad_Thakker} alt="Exciting Day" class=" max-w-none"   />
-      </div>
-
-      <div class="flex flex-col gap-5 items-center">
-        <Image loading="eager" src={Sahil_Patel} alt="Exciting Day"  class=" max-w-none"   />
-        <Image loading="eager" src={Vijay_patel_Slider} alt="Exciting Day" class=" max-w-none"   />
-        
-      </div>
-
-      <div class="flex flex-col gap-5 items-center">
-        <Image loading="eager" src={Harsh_Sanchaniya} alt="Exciting Day" class=" max-w-none"   />
-        <Image loading="eager" src={Foram_Shah} alt="Exciting Day" class=" max-w-none"   />
-      </div>
-    </div>
-
-
-  </div>
- 
-
-  <div class="sm:hidden mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]">
-    <div class="grid gap-5 justify-items-center  " >
-      <div class="swiper-customer !overflow-hidden">
-        <div class="swiper-wrapper text-[#31393C] ">
-          <div class=" swiper-slide  ">
-            <Image loading="eager" src={Rushabh_Mehta_Slider} alt="Rushabh Mehta" class="mx-auto slider rounded-[1.75rem]"  />
+      <div class="swiper-wrapper text-[#31393C] flex items-center ">
+          <div class="swiper-slide">
+            <Image loading="eager" src={Rushabh_Mehta_Slider} alt="Rushabh Mehta"  />
           </div>
-  
-
-          <div class="flex flex-col gap-5 items-center swiper-slide">
-            <Image loading="eager" src={Faraz_Khatri_Slider} alt="Faraz Khatri" class="h-1/2"   />
-            <Image loading="eager" src={Parth_Parikh_Slider} alt="Parth Parikh"  class="h-1/2"   />
+    
+         <div class=" swiper-slide">
+            <Image loading="eager" src={parth_Faraz} alt="Exciting Day"    />
+          
           </div>
-            <div class=" swiper-slide">  
-              <Image loading="eager" src={Kamal_Patel} alt="Kamal Patel" class="mx-auto slider rounded-[1.75rem] "     />
-            </div>
-       
+    
+         <div class=" swiper-slide">
+            <Image loading="eager" src={Kamal_Patel} alt="Exciting Day" class=" object-cover "   />
           
-            <div class=" swiper-slide">          
-              <Image loading="eager" src={Ananad_Resubh} alt="Ananad Resubh"  class="mx-auto slider rounded-[1.75rem]"  />
-            </div>
+          </div>
+         <div class=" swiper-slide">
+            <Image loading="eager" src={Ananad_Resubh} alt="Exciting Day"    />
           
-        
-            <div class="flex flex-col gap-5 items-center swiper-slide ">
-              <Image loading="eager" src={Ashish_Gargi_slider} alt="Exciting Day" class="h-1/2"   />
-              <Image loading="eager" src={Sanskar_Team} alt="Exciting Day"  class="h-1/2"    />
-            </div>
-  
-            <div class="flex flex-col gap-5 items-center swiper-slide">          
-              <Image loading="eager" src={Arjun_Pachani_Slider} alt="Exciting Day"  class="slider rounded-[1.75rem]"   />
-            </div>
-            
-            <div class=" swiper-slide">
-              
-               <Image loading="eager" src={Ananad_Thakker} alt="Exciting Day" class="mx-auto slider rounded-[1.75rem]"    />
-            </div>
-  
-            <div class="grid grid-cols-2 gap-5  justify-items-center swiper-slide"  >
-               <Image loading="eager" src={Sahil_Patel} alt="Exciting Day"     />
-              <Image loading="eager" src={Vijay_patel_Slider} alt="Exciting Day"    />
-              <Image loading="eager" src={Harsh_Sanchaniya} alt="Exciting Day"    />
-              <Image loading="eager" src={Foram_Shah} alt="Exciting Day"    />
-              
-            </div>
-  
-            
-         
-        </div>
+          </div>
+          
+          <div class=" swiper-slide">
+            <Image loading="eager" src={Ashish_sanskar_team} alt="Exciting Day"    />
+          
+          </div>
+    
+          <div class=" swiper-slide">
+            <Image loading="eager" src={Arjun_Pachani_Slider} alt="Exciting Day"    />
+          
+          </div>
+          <div class=" swiper-slide">
+            <Image loading="eager" src={Ananad_Thakker} alt="Exciting Day"    />
+          
+          </div>
+          
+          <div class=" swiper-slide">
+            <Image loading="eager" src={foram_harsh_sahil_vijay} alt="Exciting Day"    />
+          
+          </div>
       </div>
-    </div>
-  
-    <div class="flex justify-center gap-3 mt-4">
-      <button
-        class="rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-        id="prev"
-      >
-        <span class="sr-only">Previous Slide</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="h-5 w-5 rtl:rotate-180"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"></path>
-        </svg>
-      </button>
-  
-      <button
-        class="rounded-full border border-[#3E96F4] p-3 text-[#3E96F4] hover:bg-[#3E96F4] hover:text-white"
-        id="next"
-      >
-        <span class="sr-only">Next Slide</span>
-        <svg
-          class="h-5 w-5 rtl:rotate-180"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9 5l7 7-7 7"
-            stroke-linecap="round"	
-            stroke-linejoin="round"
-            stroke-width="2"></path>
-        </svg>
-      </button>
+      <div class="swiper-pagination " ></div>
     </div>
   </div>
 
@@ -396,24 +311,24 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
         <h4 class="font-semibold text-sm md:text-base lg:text-lg">
            Testimonials:
         </h4>
-        <div class="flex flex-col sm:flex-row mt-4 lg:mt-6 gap-7">
-            <div class=" rounded-xl mb-shadow p-7">
-                <p class="text-sm md:text-base">The insights shared by the Frappe team were truly enlightening. It was great to see so many industry experts come together.</p>
+        <div class="flex flex-col  sm:flex-row mt-4 lg:mt-6 gap-7">
+            <div class=" rounded-xl mb-shadow p-7 w-full lg:w-1/2">
+                <p class="text-sm md:text-base sm:h-[100px] md:h-[144px] lg:h-[120px] xl:h-[96px] 2xl:h-[120px]">The insights shared by the Frappe team were truly enlightening. It was great to see so many industry experts come together.</p>
                 <div class="flex flex-col pt-5 lg:pt-10">
-                    <h5 class="font-semibold text-sm md:text-base">Sahil Patel</h5>
+                    <h5 class="font-semibold text-sm md:text-base">Sahil Patel</h5> 
                     <p class="mt-2 text-sm">ERPNext Consultant</p>
                 </div>
             </div>
 
-            <div class=" rounded-xl mb-shadow p-7">
-                <p class="text-sm md:text-base">I attended the Frappe event in
-                  Ahmedabad and met Rushabh Mehta.
-                  It was well-organized with valuable
+            <div class=" rounded-xl mb-shadow p-7 w-full lg:w-1/2">
+                <p class="text-sm md:text-base">
+                  I attended the Frappe event in Ahmedabad and met Rushabh Mehta. It was well-organized with valuable
                   sessions. Thanks to Sanskar
-                  Technolab and the team!</p>
-                <div class="flex flex-col pt-5 lg:pt-10">
-                    <h5 class="font-semibold text-sm md:text-base">Sahil Patel</h5>
-                    <p class="mt-2 text-sm">ERPNext Consultant</p>
+                  Technolab and the team!
+                </p>
+                <div class="flex flex-col pt-5 lg:pt-10 ">
+                    <h5 class="font-semibold text-sm md:text-base">Nilesh Pithiya</h5>
+                    <p class="mt-2 text-sm">Frappe Developer</p>
                 </div>
             </div>
         </div>
@@ -448,17 +363,16 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
 
     <div class="flex flex-col sm:flex-row mt-4 lg:mt-6 gap-7 text-[#31393C]">
       <div class=" flex flex-row gap-3">
-
-          <a class="text-sm md:text-base underline" href="#"
-          > <Image src={twitter_event} alt="Twitter" /></a>
+          <a class="text-sm md:text-base underline"  href="https://www.facebook.com/SanskarTechnolab/" target="_blank"
+          > <Image src={facebook_icon_event} alt="facebook" /></a>
         
-          <a class="text-sm md:text-base underline" href="#">Follow us on Twitter</a>
+          <a class="text-sm md:text-base underline"  href="https://www.facebook.com/SanskarTechnolab/" target="_blank">Follow us on FaceBook</a>
       </div>
 
       <div class="flex flex-row gap-3">
          
-          <a class="text-sm md:text-base underline" href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd"> <Image src={linkedin_event} alt="LinkedIn"></Image></a>    
-          <a class="text-sm md:text-base underline" href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd">Connect with us on LinkedIn</a>          
+          <a target="_blank" target="_blank" class="text-sm md:text-base underline" href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd"> <Image src={linkedin_event} alt="LinkedIn"></Image></a>    
+          <a target="_blank"  class="text-sm md:text-base underline" href="https://in.linkedin.com/company/sanskar-technolab-pvt-ltd">Connect with us on LinkedIn</a>          
       </div>
   </div>
     
@@ -524,51 +438,7 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
           </a>
         </div>
       </div>
- 
-      <div class="border shadow-lg h-full event-card all completed">
-        <div class="relative">
-          <Image
-            loading="eager"
-            src={Frappe_Local_2024}
-            alt="Frappe Local - Ahmedabad 2024!"
-            class="w-full"
-          />
-          <button
-            class="p-2 bg-[#3E96F4] text-white text-xs md:text-sm lg:text-base font-semibold rounded-lg absolute bottom-[16px] left-[16px]"
-          >
-            Completed
-          </button>
-          <div
-            class="p-2 lg:min-w-[60px] text-[#31393C] xl:min-w-[84px] bg-white text-[#331393C] text-center flex flex-col text-xs md:text-sm lg:text-base font-semibold rounded-lg absolute bottom-[16px] right-[16px]"
-          >
-            <span class="text-lg md:text-xl lg:text-2xl font-bold">6</span>
-            <span class="text-sm font-semibold">JULY</span>
-            <span class="text-sm font-semibold">2024</span>
-          </div>
-        </div>
- 
-        <div class="p-5 text-[#31393C]">
-          <div class="xl:min-h-[140px] lg:min-h-[200px] md:min-h-[160px] 2xl:min-h-[120px]">
-            <h3 class="font-semibold text-base md:text-lg lg:text-xl mb-2">
-              Frappe Local - Ahmedabad 2024!
-            </h3>
-            <p class="text-sm md:text-sm lg:text-base">
-              We at Sanskar Technolab Pvt. Ltd. are thrilled to have hosted the
-              Frappe Local event in Ahmedabad this year.  
-            </p>
-          </div>
-          <a
-            href="/event-frappe-local"
-            class="flex justify-between rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 border-[1px] border-[#B7BAB2] max-w-[160px] mt-5"
-          >
-            <span class="text-[#3E96F4] font-semibold font-inter"
-              >Explore Now</span
-            >
-            <Image loading="eager" src={Explore_now} alt="right arrow" />
-          </a>
-        </div>
-      </div>
- 
+
       <div class="border shadow-lg h-full event-card all completed">
         <div class="relative">
           <Image
@@ -611,6 +481,51 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
           </a>
         </div>
       </div>
+ 
+      <div class="border shadow-lg h-full event-card all completed">
+        <div class="relative">
+          <Image
+            loading="eager"
+            src={Republic_Day_Celebration}
+            alt="Republic Day Celebration"
+            class="w-full"
+          />
+          <button
+            class="p-2 bg-[#3E96F4] text-white text-xs md:text-sm lg:text-base font-semibold rounded-lg absolute bottom-[16px] left-[16px]"
+          >
+            Completed
+          </button>
+
+          <div
+            class="p-2 text-[#31393C] lg:min-w-[60px] xl:min-w-[84px] bg-white text-[#331393C] text-center flex flex-col text-xs md:text-sm lg:text-base font-semibold rounded-lg absolute bottom-[16px] right-[16px]"
+          >
+            <span class="text-lg md:text-xl lg:text-2xl font-bold">25</span>
+            <span class="text-sm font-semibold">JAN</span>
+            <span class="text-sm font-semibold">2024</span>
+          </div>
+        </div>
+
+        <div class="p-5 text-[#31393C]">
+          <div class="xl:min-h-[140px] lg:min-h-[200px] md:min-h-[160px] 2xl:min-h-[120px]">
+            <h3 class="font-semibold text-base md:text-lg lg:text-xl mb-2">
+              Republic Day Celebration
+            </h3>
+            <p class="text-sm md:text-sm lg:text-base">
+              We  have hosted a Republic Day Celebration at Sanskar Technolab, where we were honored to welcome the incredible ERPNext team!
+            </p>
+          </div>
+          <a
+            href="/event-republic-day"
+            class="flex justify-between rounded-lg px-3 md:px-3 lg:px-5 py-2 md:py-2 border-[1px] border-[#B7BAB2] max-w-[160px] mt-5"
+          >
+            <span class="text-[#3E96F4] font-semibold font-inter"
+              >Explore Now</span
+            >
+            <Image loading="eager" src={Explore_now} alt="right arrow" />
+          </a>
+        </div>
+      </div>
+     
       
     </div>
  </div>
@@ -619,47 +534,32 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
 </Layout>
 
 <script>
-  const horizontalScrollContainer = document.getElementById('horizontalScrollContainer');
-          let lastScrollTop = 0;
-
-          window.addEventListener('scroll', () => {
-              const scrollTop = window.scrollY;
-
-              if (scrollTop > lastScrollTop) {
-                  // Scrolling down
-                  horizontalScrollContainer.scrollLeft += 30;
-              } else {
-                  // Scrolling up
-                  horizontalScrollContainer.scrollLeft -= 30;
-              }
-              lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-          });
 
 
-        document.addEventListener("DOMContentLoaded", function () {
-          const swiper_c = new Swiper(".swiper-customer", {
-            loop: true,
+        	 // Banner code with slider with next previous button Javascript Start
+	document.addEventListener("DOMContentLoaded", function () {
+          const swiper_banner = new Swiper(".swiper_banner_button", {
             slidesPerView: "auto",
-            spaceBetween: 0,
-            // autoplay: {
-            //   delay: 5000,
-            // },
-            navigation: {
-              nextEl: "#next",
-              prevEl: "#prev",
+            spaceBetween: 32,
+            loop:true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
             },
-            breakpoints: {
-              640: {
-                slidesPerView: 1,
-                centeredSlides: true,
-              },
-              768: {
-                slidesPerView: 1,
-                centeredSlides: true,
-              },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
             },
+                  breakpoints: {
+                    centeredSlides: false,
+                    slidesPerView: "auto",
+                  },
           });
-        });
+        });  
+
+           
+
+        
 </script>
 <style>
     @media (max-width: 360px) {
@@ -673,23 +573,14 @@ import Sanskar_Team from "../../public/Images/Sanskar_Team.png";
       box-shadow: 0px 0px 5px 5px #0000001c;
     }
 
-    .scroll-container::-webkit-scrollbar {
-            display: none;
-        }
-
-    @media (min-width: 360px) and (max-width: 639px) {
-      .slider {
-        height: 472px;
-        object-fit: contain;
-        
-      }
-    }
-
-    @media (min-width: 280px) and (max-width: 359px) {
-      .slider {
-        height: 350px;
-        object-fit: contain;
-      }
-    }
       
+    .swiper_banner_button .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto !important;
+    }
 </style>
