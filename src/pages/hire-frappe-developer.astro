@@ -25,7 +25,7 @@ import Project_Details_Sharing from "../../public/Images/Project_Details_Sharing
 import Assess_Shortlist_Candidate from "../../public/Images/Assess_Shortlist_Candidate.svg";
 import Interview_Candidate from "../../public/Images/Interview_Candidate.svg";
 import Onboarding_Manage from "../../public/Images/Onboarding_Manage.svg";
-import frappe_developer_service from "../../public/Images/frappe_developer_service.png";
+import frappe_developer_service from "../../public/Images/frappe_developer_service.webp";
 import python from "../../public/Images/python.svg";
 import frappe_logo from "../../public/Images/frappe_logo.svg";
 import github from "../../public/Images/github.svg";
@@ -50,7 +50,7 @@ import docker from "../../public/Images/docker.svg";
 import frappe_cloud from "../../public/Images/frappe_cloud.svg";
 import google_cloud from "../../public/Images/google_cloud.svg";
 import sanskar_developer from "../../public/Images/sanskar_developer.svg";
-import Sanskar_Guarantee_bigger from "../../public/Images/Sanskar_Guarantee_bigger.png";
+import Sanskar_Guarantee_bigger from "../../public/Images/Sanskar_Guarantee_bigger.webp";
 import Sanskar_Guarantee_small from "../../public/Images/Sanskar_Guarantee_small.svg";
 import best_erpnext_developer from "../../public/Images/best_erpnext_developer.svg";
 import Certified_Developer from "../../public/Images/Certified_Developer.svg";
@@ -142,7 +142,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         <!-- form  start -->
         <div
           id="schedule-interview"
-          class="interview rounded-[20px] shadow-lg lg:ml-10"
+          class="bg-[#e1f1ff] rounded-[20px] shadow-lg lg:ml-10 lg:h-[525px] xl:h-auto"
         >
           <form id="frappe_hire_form">
             <div class="2xl:py-6 2xl:px-8 py-5 xl:py-5 px-5">
@@ -2719,7 +2719,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     id="schedule-interview"
   >
     <div
-      class="interview rounded-[20px] bg-gradient-to-b from-[#184D85] to-[#31393C]"
+      class=" bg-[#e1f1ff] rounded-[20px] bg-gradient-to-b from-[#184D85] to-[#31393C]"
     >
       <form id="frappe_hire_schedule_form">
         <div class="py-5 px-7 md:py-7 md:px-10 lg:py-10 lg:px-16">
@@ -3401,26 +3401,6 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
   <!-- Frequently Asked Questions (FAQs) End -->
 
   <style>
-    .Key_card {
-      border-radius: 10px;
-      border: 2px solid #fff;
-      background: linear-gradient(135deg, #ecf5ff 0%, #fff 100%);
-      box-shadow: 4px 4px 4px 0px rgba(62, 150, 244, 0.15);
-    }
-
-    /* @media screen and (min-width: 915px) and (max-width: 1025px) {
-      #schedule-interview {
-        padding-bottom: 70px;
-      }
-    } */
-
-    .skills_card {
-      border-radius: 10px;
-      border: 2px solid #fff;
-      background: linear-gradient(135deg, #fff7e5 0%, #fff 100%);
-      box-shadow: 4px 4px 4px 0px rgba(62, 150, 244, 0.15);
-    }
-
     @media screen and (min-width: 320px) and (max-width: 640px) {
       .hiring {
         display: grid;
@@ -3428,43 +3408,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       }
     }
 
-    /* .interview {
-    background: linear-gradient(180deg, #184d85 0%, #31393c 100%);
-  } */
-
-    .interview {
-      background-color: #e1f1ff;
-    }
-
-    .card_bg {
-      background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(190, 212, 255, 0.5) 50%,
-        rgba(255, 255, 255, 1) 100%
-      );
-    }
-
-    .section-bg-left_shadow {
-      position: relative;
-    }
-
-    .section-bg-left_shadow::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100rem;
-      background-image: radial-gradient(
-        ellipse at left,
-        rgba(62, 150, 244, 0.1),
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0)
-      );
-      z-index: -1;
-      margin-top: 0rem;
-    }
+ 
 
     .section-bg-right::before {
       content: "";
@@ -3534,11 +3478,6 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         z-index: -1;
       }
     }
-
-    .image-container {
-      position: relative;
-    }
-
     .fixed-image {
       position: -webkit-sticky; 
       position: sticky;
@@ -3548,12 +3487,14 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
   </style>
 
   <script>
-    let current_url;
-    // Get the current pathname and remove the leading '/'
-    current_url = window.location.pathname.slice(1);
-    console.log("Current URL:" + current_url);
 
+//     const urlParams = new URLSearchParams(window.location.search);
 
+// // Get the value of the 'page' parameter
+// const pageValue = urlParams.get("page");
+// const demoForValue = pageValue || "";
+
+// const queryTypeValue = pageValue ? "Demo" : "General";
 
      // Smooth scrolling function
      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -3566,6 +3507,8 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       });
     });
 
+
+
        var frappe_hire_form = document.getElementById("frappe_hire_form");
        frappe_hire_form.addEventListener("submit", handleContactForm);
 
@@ -3574,22 +3517,58 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     frappe_hire_schedule_form.addEventListener("submit", handlehirescheduleform);
 
 
-       // Add event listener to email input for real-time validation
-       var emailInput = document.querySelector('input[name="email"]');
-    emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
+       
+      //   Function to add event listeners to all email and name input fields
+    function addEventListeners() {
+      // Select all email input fields and add event listener for validation
+      var emailInputs = document.querySelectorAll('input[name="email"], input[name="hireemail"]');
+      emailInputs.forEach(function (input) {
+        input.addEventListener("blur", validateEmailInput);
+      });
 
-       // Add event listener to email input for real-time validation
-       var emailInput = document.querySelector('input[name="hireemail"]');
-    emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
+      // Select all name input fields and add event listener for validation
+      var nameInputs = document.querySelectorAll('input[name="name"], input[name="hirename"]');
+      nameInputs.forEach(function (input) {
+        input.addEventListener("blur", validateNameInput);
+      });
+    }
 
+    // Validate name input function
+    function validateNameInput(event) {
+      var nameInput = event.target;
+      console.log("nameInput----",nameInput);
+      var nameValue = nameInput.value.trim();
+      var errorMessageElement = nameInput.nextElementSibling;
 
-    function validateEmailInput() {
-      const emailValue = emailInput.value.trim();
-      const errorMessageElement = emailInput.nextElementSibling;
+      if (nameValue === "") {
+        hideErrorMessage(errorMessageElement);
+        nameInput.style.borderColor = "";
+        return;
+      }
+
+      if (!validateName(nameValue)) {
+        blinkBorder(nameInput);
+        displayErrorMessage(
+          errorMessageElement,
+          "Please enter a valid name.",
+          nameInput
+        );
+      } else {
+        hideErrorMessage(errorMessageElement);
+        nameInput.style.borderColor = "";
+      }
+    }
+
+    // Validate email input function
+    function validateEmailInput(event) {
+      var emailInput = event.target;
+      console.log("emailInput----",emailInput);
+      var emailValue = emailInput.value.trim();
+      var errorMessageElement = emailInput.nextElementSibling;
 
       if (emailValue === "") {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-        emailInput.style.borderColor = ""; // Reset border color
+        hideErrorMessage(errorMessageElement);
+        emailInput.style.borderColor = "";
         return;
       }
 
@@ -3597,14 +3576,15 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         blinkBorder(emailInput);
         displayErrorMessage(
           errorMessageElement,
-          "Please enter a valid email address."
+          "Please enter a valid email address.",
+          emailInput
         );
       } else {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        emailInput.style.borderColor = ""; // Reset border color
+        hideErrorMessage(errorMessageElement);
+        emailInput.style.borderColor = "";
       }
     }
-
+  addEventListeners();
     // Add event listener to email input for real-time validation for form with ID 'frappe_hire_form'
     var hireFormEmailInput = document.querySelector(
       '#frappe_hire_form input[name="email"]'
@@ -3630,6 +3610,17 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       } else {
         hidehireErrorMessage(errorMessageElement); // Hide error message if email is valid
         hireFormEmailInput.style.borderColor = ""; // Reset border color
+      }
+    }
+
+
+    function hideErrorMessage(errorMessageElement) {
+      if (
+        errorMessageElement &&
+        errorMessageElement.classList.contains("error-message")
+      ) {
+        // If error message exists, remove it
+        errorMessageElement.remove();
       }
     }
 
@@ -3677,11 +3668,16 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     }
 
 
-    function displayErrorMessage(errorMessageElement, message) {
-      if (
-        !errorMessageElement ||
-        !errorMessageElement.classList.contains("error-message")
-      ) {
+    function validateName(name){
+      const re =
+       /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?![^\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,]*[\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,])\S+(?: \S+){0,2}$/;
+
+      return re.test(String(name).toLowerCase());
+    }
+
+
+    function displayErrorMessage(errorMessageElement, message,inputField) {
+      if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
         // If error message doesn't exist, create and insert it
         errorMessageElement = document.createElement("p");
         errorMessageElement.textContent = message;
@@ -3692,22 +3688,12 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
 
         // Insert the error message after the input field
-        emailInput.parentNode.insertBefore(
+        inputField.parentNode.insertBefore(
           errorMessageElement,
-          emailInput.nextSibling
+          inputField.nextSibling
         );
       } else {
         errorMessageElement.textContent = message; // Update existing error message
-      }
-    }
-
-    function hideErrorMessage(errorMessageElement) {
-      if (
-        errorMessageElement &&
-        errorMessageElement.classList.contains("error-message")
-      ) {
-        // If error message exists, remove it
-        errorMessageElement.remove();
       }
     }
 
@@ -3788,6 +3774,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       var message = data.req_message;
 
       // Function to get the user's IP address using ipify
+      
       function getUserIPAddress() {
         return fetch("https://api.ipify.org?format=json")
           .then((response) => response.json())
@@ -3797,11 +3784,11 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
             return null; // Handle the error gracefully
           });
       }
-
+      
+      
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
-        console.log("---------->>>", browserName, device, ipAddress);
-
+      if(validateEmail(emailValue) && validateName(nameValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
           headers: {
@@ -3819,7 +3806,8 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
             ip: ipAddress,
             browser_name: browserName,
             device: device,
-            demo_for: current_url,
+            // demo_for: demoForValue,
+            website_page_name: "Hire Frappe Developer"
           }),
         })
           .then((res) => {
@@ -3834,11 +3822,12 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
               phone,
               message,
               "Website Enquiry",
-              current_url,
               "Developer Interview",
               ipAddress,
               browserName,
               device,
+              // demoForValue,
+              "Hire Frappe Developer",
               res
             );
             alert("Failed to submit data. Please try after some time.");
@@ -3847,6 +3836,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           .catch((error) => {
             console.log(error);
           });
+        }
       });
     }
 
@@ -3911,7 +3901,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
         console.log("---------->>>", browserName, device, ipAddress);
-
+        if(validateEmail(emailValue) && validateName(nameValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
           headers: {
@@ -3925,11 +3915,12 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
-            demo_for: current_url,
+            // demo_for: demoForValue,
             query_type: "Developer Interview",
             ip: ipAddress,
             browser_name: browserName,
             device: device,
+            website_page_name: "Hire Frappe Developer"
           }),
         })
           .then((res) => {
@@ -3944,11 +3935,12 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
               phone,
               message,
               "Website Enquiry",
-              current_url,
+              // demoForValue,
               "Developer Interview",
               ipAddress,
               browserName,
               device,
+              "Hire Frappe Developer",
               res
             );
             alert("Failed to submit data. Please try after some time.");
@@ -3957,6 +3949,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           .catch((error) => {
             console.log(error);
           });
+        }
       });
     }
 
@@ -4040,7 +4033,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     phone = "",
     message = "",
     enquiry_source = "",
-    demoForValue = "",
+    // demoForValue = "",
     queryTypeValue = "",
     ip = "",
     browser_name = "",
@@ -4064,7 +4057,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           phone: phone,
           message: message,
           enquiry_source: "Website Enquiry",
-          demoForValue: demoForValue,
+          // demoForValue: demoForValue,
           queryTypeValue: queryTypeValue,
           ip: ip,
           browser_name: browser_name,

@@ -149,21 +149,28 @@ import "../styles.css";
 </style>
 
 <script>
-  let current_url;
-  // Event handler function to log the current URL
-  function logCurrentUrl() {
-    // Get the current pathname and remove the leading '/'
-    current_url = window.location.pathname.slice(1);
-    console.log("Current URL:" + current_url);
-  }
+  // let current_url;
+  // // Event handler function to log the current URL
+  // function logCurrentUrl() {
+  //   // Get the current pathname and remove the leading '/'
+  //   current_url = window.location.pathname.slice(1);
+  //   console.log("Current URL:" + current_url);
+  // }
 
+  const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of the 'page' parameter
+const pageValue = urlParams.get("page");
+const demoForValue = pageValue || "";
+
+const queryTypeValue = pageValue ? "Demo" : "General";
   // Add event listener to the button
-  document.addEventListener("DOMContentLoaded", function () {
-    const contactButton = document.getElementById("contact-button");
-    if (contactButton) {
-      contactButton.addEventListener("click", logCurrentUrl);
-    }
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const contactButton = document.getElementById("contact-button");
+  //   if (contactButton) {
+  //     contactButton.addEventListener("click", logCurrentUrl);
+  //   }
+  // });
 
   // Function to open the modal
   document.querySelector("#contact-button").addEventListener("click", () => {
@@ -195,27 +202,63 @@ import "../styles.css";
   var emailInput = document.querySelector('input[id="c_email"]');
   emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
+
   function validateEmailInput() {
-    const emailValue = emailInput.value.trim();
-    const errorMessageElement = emailInput.nextElementSibling;
+     
+     const emailValue = emailInput.value.trim();
+     
+     const errorMessageElement = emailInput.nextElementSibling;
+     
 
-    if (emailValue === "") {
-      hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-      emailInput.style.borderColor = ""; // Reset border color
-      return;
-    }
+     if (emailValue === "") {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+       emailInput.style.borderColor = ""; // Reset border color
+       return;
+     }
 
-    if (!validateEmail(emailValue)) {
-      blinkBorder(emailInput);
-      displayErrorMessage(
-        errorMessageElement,
-        "Please enter a valid email address."
-      );
-    } else {
-      hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-      emailInput.style.borderColor = ""; // Reset border color
-    }
-  }
+     if (!validateEmail(emailValue)) {
+       blinkBorder(emailInput);
+       displayErrorMessage(
+           errorMessageElement,
+           "Please enter a valid email address.",
+           emailInput
+         );
+     } else {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+       emailInput.style.borderColor = ""; // Reset border color
+     }
+   }
+
+  // Add event listener to email input for real-time validation
+  var nameInput = document.querySelector('input[id="c_name"]');
+  nameInput.addEventListener("blur", validateNameInput); // Changed event to "blur"
+
+  function validateNameInput() {
+     
+     const nameValue = nameInput.value.trim();
+     
+     const errorMessageElement = nameInput.nextElementSibling;
+     
+
+     if (nameValue === "") {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+       nameInput.style.borderColor = ""; // Reset border color
+       return;
+     }
+
+     if (!validateName(nameValue)) {
+       blinkBorder(nameInput);
+       displayErrorMessage(
+           errorMessageElement,
+           "Please enter a valid name.",
+           nameInput
+         );
+     } else {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+       nameInput.style.borderColor = ""; // Reset border color
+     }
+   }
+
 
   const apiKey = import.meta.env.PUBLIC_ApiKey as string;
   const secretKey = import.meta.env.PUBLIC_SecretKey as string;
@@ -278,7 +321,8 @@ import "../styles.css";
     if (emailValue === "" || !validateEmail(emailValue)) {
       displayErrorMessage(
         emailInput.nextElementSibling,
-        "Please enter a valid email address."
+        "Please enter a valid email address.",
+        emailInput
       );
     }
 
@@ -307,13 +351,14 @@ import "../styles.css";
     const data = Object.fromEntries(formData.entries());
     formData.set("data", JSON.stringify(data));
     var name = data.c_name;
-    var email = data.c_email;
+    var email = data.c_email;     
     var phone = data.c_phone;
     var requirements = data.c_requirements;
 
     getUserIPAddress().then((ipAddress) => {
       let { browserName, device } = detectBrowser();
 
+      if(validateEmail(emailValue) && validateName(nameValue)){
       fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
         method: "POST",
         headers: {
@@ -327,11 +372,12 @@ import "../styles.css";
           phone: phone,
           message: requirements,
           enquiry_source: "Website Enquiry",
-          demo_for: current_url,
+          demo_for: demoForValue,
           query_type: queryTypeValue,
           ip: ipAddress,
           browser_name: browserName,
           device: device,
+          website_page_name: "Contact Pop Up",
         }),
       })
         .then((res) => {
@@ -345,10 +391,12 @@ import "../styles.css";
               phone,
               requirements,
               "Website Enquiry",
+              demoForValue,
               queryTypeValue,
               ipAddress,
               browserName,
               device,
+              "Contact Pop Up",
               res
             );
             alert("Failed to submit data. Please try after some time.");
@@ -357,6 +405,7 @@ import "../styles.css";
         .catch((error) => {
           console.log(error);
         });
+      }
     });
 
     // return;
@@ -369,29 +418,33 @@ import "../styles.css";
     return re.test(String(email).toLowerCase());
   }
 
-  function displayErrorMessage(errorMessageElement, message) {
-    if (
-      !errorMessageElement ||
-      !errorMessageElement.classList.contains("error-message")
-    ) {
-      // If error message doesn't exist, create and insert it
-      errorMessageElement = document.createElement("p");
-      errorMessageElement.textContent = message;
-      errorMessageElement.classList.add("error-message");
-      errorMessageElement.style.color = "red"; // Adjust the color
-      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+  function validateName(name){
+      const re =
+       /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?![^\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,]*[\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,])\S+(?: \S+){0,2}$/;
 
-      // Insert the error message after the input field
-      emailInput.parentNode.insertBefore(
-        errorMessageElement,
-        emailInput.nextSibling
-      );
-    } else {
-      errorMessageElement.textContent = message; // Update existing error message
+      return re.test(String(name).toLowerCase());
     }
+
+    function displayErrorMessage(errorMessageElement, message, inputField) {
+  if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+    // If error message doesn't exist, create and insert it
+    errorMessageElement = document.createElement("p");
+    errorMessageElement.textContent = message;
+    errorMessageElement.classList.add("error-message");
+    errorMessageElement.style.color = "red"; // Adjust the color
+    errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+    errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+    errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+    // Insert the error message after the input field
+    inputField.parentNode.insertBefore(
+      errorMessageElement,
+      inputField.nextSibling
+    );
+  } else {
+    errorMessageElement.textContent = message; // Update existing error message
   }
+}
 
   function hideErrorMessage(errorMessageElement) {
     if (

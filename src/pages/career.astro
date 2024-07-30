@@ -23,7 +23,7 @@ import previousbtn from "../../public/Images/previousbtn.svg";
 import nextbtn from "../../public/Images/nextbtn.svg";
 import customer from "../../public/Images/customer.svg";
 import dhruvi_kaneriya from "../../public/Images/Dhruvi-Kaneriya.jpg";
-import ekta_jesani from "../../public/Images/Ekta-Jesani.jpg";
+// import ekta_jesani from "../../public/Images/Ekta-Jesani.jpg";
 import foram_shah from "../../public/Images/Foram-Shah.jpg";
 import harsh_sanchaniya from "../../public/Images/Harsh-Sanchaniya.jpg";
 import jay_bhatt from "../../public/Images/Jay-Bhatt.jpg";
@@ -39,9 +39,9 @@ import close from "../../public/Images/popup_close_btn.svg";
 <Layout
   title="Career | Sanskar Technolab"
   ,
-  keyword="erp implementation partner, erpnext implementation, erp implementation companies, ERPNext software development company, Hire ERPNext developers, ERPNext development services, Erpnext solution company, ServiceNow company, ServiceNow implementation partner, Servicenow implementation services, Servicenow implementation solutions"
+  keyword="erp implementation partner, erpnext implementation, erp implementation companies, ERPNext software development company, Hire ERPNext developers, ERPNext development services, Erpnext solution company"
   ,
-  description="Accelerate your career with Sanskar technolab and join the team of amazing individuals at the leading ServiceNow & ERPNext software development company."
+  description="Accelerate your career with Sanskar technolab and join the team of amazing individuals at the leading ERPNext software development company."
   ,
   canonical_href="https://sanskartechnolab.com/career"
 >
@@ -211,7 +211,7 @@ import close from "../../public/Images/popup_close_btn.svg";
         <p
           class="text-xs md:text-sm lg:text-base mt-5 lg:mx-40 md:mx-20 mx-auto"
         >
-        Sanskar Technolab is the leading ServiceNow & ERPNext implementation partner, with a growing team of over 50+ professional managers, developers, designers, consultants, marketers, and writers.
+        Sanskar Technolab is the leading ERPNext implementation partner, with a growing team of over 50+ professional managers, developers, designers, consultants, marketers, and writers.
         </p>
         <div
           class="text-lg md:text-xl lg:text-2xl font-semibold mt-8 md:mt-10 lg:mt-10 text-[#3E96F4]"
@@ -873,8 +873,7 @@ import close from "../../public/Images/popup_close_btn.svg";
               />
               <div class="text-[#31393C] mt-3 md:mt-0">
                 <p class="text-xs md:text-sm lg:text-base pr-5">
-                  "I have been working at Sanskar Technolab as a ServiceNow
-                  developer, and the management is very supportive and truly
+                  "I have been working at Sanskar Technolab as a ERPNext Consultant, and the management is very supportive and truly
                   cares about their employees' well-being. The company culture
                   is fantastic, and there is a great sense of teamwork among the
                   staff."
@@ -885,7 +884,7 @@ import close from "../../public/Images/popup_close_btn.svg";
                   Harsh Sanchaniya
                 </p>
                 <p class="text-[0.625rem] md:text-xs lg:text-sm">
-                  ServiceNow developer
+                  ERPNext Consultant
                 </p>
               </div>
             </div>
@@ -958,7 +957,7 @@ import close from "../../public/Images/popup_close_btn.svg";
           </div>
         </div>
 
-        <div class="p-4 c_slide">
+        <!-- <div class="p-4 c_slide">
           <div
             class="happy-customer-shadow bg-[#ffffff] md:p-6 lg:p-8 lg:mx-10 xl:mx-40 p-5 rounded-[20px] employee_card_height"
           >
@@ -988,7 +987,7 @@ import close from "../../public/Images/popup_close_btn.svg";
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="p-4 c_slide">
           <div
@@ -1814,8 +1813,7 @@ import close from "../../public/Images/popup_close_btn.svg";
           // Process the JSON data here
           const jobDetail = data.data;
 
-          // console.log("asdf", jobDetail)
-
+          
           // Create a div element
 
           const overlayDiv = document.createElement("div");
@@ -1989,24 +1987,44 @@ import close from "../../public/Images/popup_close_btn.svg";
           // Create the input fields for job application form
           const inputFieldNames = ["Name", "Email", "Phone"];
           inputFieldNames.forEach((fieldName) => {
-            const inputField = document.createElement("input");
-            inputField.className = "rounded-[3px] md:h-10 lg:h-auto";
-            inputField.type = "text";
-            inputField.placeholder = fieldName + "*";
-            inputField.name = fieldName.toLowerCase().replace(/\s+/g, "_");
-            div.appendChild(inputField);
-            const style = document.createElement("style");
-            style.textContent = `
-              @media (max-width: 390px) {
-                input[name="${inputField.name}"] {
-                  font-size: 14px;
-                  padding: 5px;
-                }
-              }
-            `;
+              // Wrapper div for input and error message
+              const wrapperDiv = document.createElement("div");
+              wrapperDiv.className = "input-wrapper flex flex-col";
 
-            document.head.appendChild(style);
-          });
+              // Input field
+              const inputField = document.createElement("input");
+              inputField.className = "rounded-[3px] md:h-10 lg:h-auto";
+              inputField.type = "text";
+              inputField.placeholder = fieldName + "*";
+              inputField.name = fieldName.toLowerCase().replace(/\s+/g, "_");
+
+              // Add blur event listener for validation
+              inputField.addEventListener("blur", (e) => {
+                if (fieldName === "Name") {
+                  validateNameInput(e);
+                } else if (fieldName === "Email") {
+                  validateEmailInput(e);
+                }
+              });
+
+              // Append input field to wrapper
+              wrapperDiv.appendChild(inputField);
+
+              // Append wrapper to main grid container
+              div.appendChild(wrapperDiv);
+
+              // Style for smaller screen adjustments
+              const style = document.createElement("style");
+              style.textContent = `
+                @media (max-width: 390px) {
+                  input[name="${inputField.name}"] {
+                    font-size: 14px;
+                    padding: 5px;
+                  }
+                }
+              `;
+              document.head.appendChild(style);
+            });
 
           // const resume_file_parent = document.createElement("div");
           // resume_file_parent.className = "md:flex lg:grid flex-wrap";
@@ -2321,40 +2339,57 @@ document.head.appendChild(hideForMdStyle);
     //   }
     // }
 
-    // let current_url;
-    //   // Event handler function to log the current URL
-    //   function logCurrentUrl() {
-    //     // Get the current pathname and remove the leading '/'
-    //     current_url = window.location.pathname.slice(1);
-    //     console.log("Current URL:" + current_url);
-    //   }
+    
+      
 
-        // Add event listener to email input for real-time validation
-      var emailInput = document.querySelector('input[name="email"]');
-      console.log(emailInput);
-      emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
-
-      function validateEmailInput() {
+          function validateEmailInput(event) {
+        const emailInput = event.target;
         const emailValue = emailInput.value.trim();
         const errorMessageElement = emailInput.nextElementSibling;
 
         if (emailValue === "") {
-          hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-          emailInput.style.borderColor = ""; // Reset border color
+          hideErrorMessage(errorMessageElement);
+          emailInput.style.borderColor = "";
           return;
         }
 
-      if (!validateEmail(emailValue)) {
-        blinkBorder(emailInput);
-        displayErrorMessage(
-          errorMessageElement,
-          "Please enter a valid email address."
-        );
-      } else {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        emailInput.style.borderColor = ""; // Reset border color
+        if (!validateEmail(emailValue)) {
+          blinkBorder(emailInput);
+          displayErrorMessage(
+            errorMessageElement,
+            "Please enter a valid email address.",
+            emailInput
+          );
+        } else {
+          hideErrorMessage(errorMessageElement);
+          emailInput.style.borderColor = "";
+        }
       }
-    }
+
+      function validateNameInput(event) {
+        const nameInput = event.target;
+        const nameValue = nameInput.value.trim();
+        const errorMessageElement = nameInput.nextElementSibling;
+
+        if (nameValue === "") {
+          hideErrorMessage(errorMessageElement);
+          nameInput.style.borderColor = "";
+          return;
+        }
+
+        if (!validateName(nameValue)) {
+          blinkBorder(nameInput);
+          displayErrorMessage(
+            errorMessageElement,
+            "Please enter a valid name.",
+            nameInput
+          );
+        } else {
+          hideErrorMessage(errorMessageElement);
+          nameInput.style.borderColor = "";
+        }
+      }
+
 
     // Validation function for email
     function validateEmail(email) {
@@ -2363,29 +2398,31 @@ document.head.appendChild(hideForMdStyle);
     return re.test(String(email).toLowerCase());
   }
 
-  function displayErrorMessage(errorMessageElement, message) {
-    if (
-      !errorMessageElement ||
-      !errorMessageElement.classList.contains("error-message")
-    ) {
-      // If error message doesn't exist, create and insert it
-      errorMessageElement = document.createElement("p");
-      errorMessageElement.textContent = message;
-      errorMessageElement.classList.add("error-message");
-      errorMessageElement.style.color = "red"; // Adjust the color
-      errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-      errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-      errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+  function validateName(name){
+      const re =
+       /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?![^\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,]*[\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,])\S+(?: \S+){0,2}$/;
 
-      // Insert the error message after the input field
-      emailInput.parentNode.insertBefore(
-        errorMessageElement,
-        emailInput.nextSibling
-      );
-    } else {
-      errorMessageElement.textContent = message; // Update existing error message
+      return re.test(String(name).toLowerCase());
     }
+
+    function displayErrorMessage(errorMessageElement, message, inputField) {
+  if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+    // If error message doesn't exist, create and insert it
+    errorMessageElement = document.createElement("p");
+    errorMessageElement.textContent = message;
+    errorMessageElement.classList.add("error-message");
+    errorMessageElement.style.color = "red"; // Adjust the color
+    errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+    errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+    errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+    // Insert the error message after the input field
+   // Insert the error message after the input field
+   inputField.insertAdjacentElement('afterend', errorMessageElement);
+  } else {
+    errorMessageElement.textContent = message; // Update existing error message
   }
+}
 
   function hideErrorMessage(errorMessageElement) {
     if (
@@ -2539,6 +2576,7 @@ if (phoneNameValue === "") {
           getUserIPAddress().then((ipAddress) => {
           let { browserName, device } = detectBrowser();
 
+          if(validateEmail(emailNameValue) && validateName(fullNameValue)){
           fetch("https://sanskar.frappe.cloud/api/resource/Job Applicant", {
             method: "POST",
             headers: {
@@ -2552,12 +2590,13 @@ if (phoneNameValue === "") {
               phone_number: phone,
               // current_location: city,
               resume_attachment: file_url,
-              source: "Website Listing",
+              source: "Website Enquiry",
               demo_for: demoForValue,
+              query_type: queryTypeValue,
               ip: ipAddress,
               browser_name: browserName,
               device: device,
-              query_type: queryTypeValue,
+              // website_page_name:"Career"
 
               }),
           })
@@ -2579,6 +2618,7 @@ if (phoneNameValue === "") {
                   ipAddress,
                   browserName,
                   device,
+                  // "Career",
                   res
                 );
                 alert("failed");
@@ -2588,6 +2628,7 @@ if (phoneNameValue === "") {
               enableUserInteractions()
               console.log(error);
             });
+          }
           });
         } else {
           //alert('File upload failed. Please try again later.');

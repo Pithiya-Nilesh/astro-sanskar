@@ -1690,24 +1690,59 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
     emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
     function validateEmailInput() {
-      const emailValue = emailInput.value.trim();
-      const errorMessageElement = emailInput.nextElementSibling;
+     
+     const emailValue = emailInput.value.trim();
+     
+     const errorMessageElement = emailInput.nextElementSibling;
+     
 
-      if (emailValue === "") {
+     if (emailValue === "") {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+       emailInput.style.borderColor = ""; // Reset border color
+       return;
+     }
+
+     if (!validateEmail(emailValue)) {
+       blinkBorder(emailInput);
+       displayErrorMessage(
+           errorMessageElement,
+           "Please enter a valid email address.",
+           emailInput
+         );
+     } else {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+       emailInput.style.borderColor = ""; // Reset border color
+     }
+   }
+
+
+   var nameInput = document.querySelector('input[name="healthcarename"]');
+    nameInput.addEventListener("blur", validateNameInput);
+
+
+    function validateNameInput() {
+     
+      const nameValue = nameInput.value.trim();
+      
+      const errorMessageElement = nameInput.nextElementSibling;
+      
+
+      if (nameValue === "") {
         hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-        emailInput.style.borderColor = ""; // Reset border color
+        nameInput.style.borderColor = ""; // Reset border color
         return;
       }
 
-      if (!validateEmail(emailValue)) {
-        blinkBorder(emailInput);
+      if (!validateName(nameValue)) {
+        blinkBorder(nameInput);
         displayErrorMessage(
-          errorMessageElement,
-          "Please enter a valid email address."
-        );
+            errorMessageElement,
+            "Please enter a valid name.",
+            nameInput
+          );
       } else {
         hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        emailInput.style.borderColor = ""; // Reset border color
+        nameInput.style.borderColor = ""; // Reset border color
       }
     }
 
@@ -1718,29 +1753,34 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
       return re.test(String(email).toLowerCase());
     }
 
-    function displayErrorMessage(errorMessageElement, message) {
-      if (
-        !errorMessageElement ||
-        !errorMessageElement.classList.contains("error-message")
-      ) {
-        // If error message doesn't exist, create and insert it
-        errorMessageElement = document.createElement("p");
-        errorMessageElement.textContent = message;
-        errorMessageElement.classList.add("error-message");
-        errorMessageElement.style.color = "red"; // Adjust the color
-        errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-        errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-        errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
 
-        // Insert the error message after the input field
-        emailInput.parentNode.insertBefore(
-          errorMessageElement,
-          emailInput.nextSibling
-        );
-      } else {
-        errorMessageElement.textContent = message; // Update existing error message
-      }
+    function validateName(name){
+      const re =
+       /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?![^\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,]*[\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,])\S+(?: \S+){0,2}$/;
+
+      return re.test(String(name).toLowerCase());
     }
+
+    function displayErrorMessage(errorMessageElement, message, inputField) {
+  if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+    // If error message doesn't exist, create and insert it
+    errorMessageElement = document.createElement("p");
+    errorMessageElement.textContent = message;
+    errorMessageElement.classList.add("error-message");
+    errorMessageElement.style.color = "red"; // Adjust the color
+    errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+    errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+    errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+    // Insert the error message after the input field
+    inputField.parentNode.insertBefore(
+      errorMessageElement,
+      inputField.nextSibling
+    );
+  } else {
+    errorMessageElement.textContent = message; // Update existing error message
+  }
+}
 
     function hideErrorMessage(errorMessageElement) {
       if (
@@ -1813,10 +1853,14 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
 
       const urlParams = new URLSearchParams(window.location.search);
 
-      // Get the value of the 'page' parameter
       const pageValue = urlParams.get("page");
 
+
+      const demoForValue = pageValue || "";
+
+
       const queryTypeValue = pageValue ? "Demo" : "General";
+
 
       // alert('Please select a file to upload.');
       const formData = new FormData(e.target);
@@ -1842,6 +1886,7 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
 
+        if(validateEmail(emailValue) && validateName(nameValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
           headers: {
@@ -1855,11 +1900,12 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
-            query_type: "Developer Interview",
+            query_type: "Demo",
+            demo_for: "Health Care",
             ip: ipAddress,
             browser_name: browserName,
             device: device,
-            demo_for: current_url,
+            website_page_name: "Health Care",
           }),
         })
           .then((res) => {
@@ -1872,11 +1918,12 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
                 phone,
                 message,
                 "Website Enquiry",
-                current_url,
-                "Developer Interview",
+                "Demo",
+                "health care",
                 ipAddress,
                 browserName,
                 device,
+                "Health care",
                 res
               );
               alert("Failed to submit data. Please try after some time.");
@@ -1885,6 +1932,7 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
           .catch((error) => {
             console.log(error);
           });
+        }
       });
     }
 
@@ -1967,8 +2015,8 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
       phone = "",
       message = "",
       enquiry_source = "",
-      demoForValue = "",
       queryTypeValue = "",
+      demoForValue = "",
       ip = "",
       browser_name = "",
       device = "",
@@ -1991,13 +2039,13 @@ import therapy_and_rehabilitation_support from "../../public/Images/therapy_and_
             phone: phone,
             message: message,
             enquiry_source: "Website Enquiry",
-            demoForValue: demoForValue,
             queryTypeValue: queryTypeValue,
+            demoForValue: demoForValue,
             ip: ip,
             browser_name: browser_name,
             device: device,
             response: response,
-            page_name: "Hire Frappe Developer",
+            page_name: "Health Care ",
           }),
         }
       )

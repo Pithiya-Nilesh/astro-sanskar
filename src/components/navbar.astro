@@ -512,6 +512,53 @@ import company_profile from "../../public/Images/company_profile.png";
                 </div>
               </li>
 
+              <li class="max-xl:border-l-2 border-[#B5CBE3]">
+               
+                <span class="group relative">
+                  <span
+                    class="flex max-xl:justify-between sm:gap-2 items-center"
+                    ><a
+                      href="#"
+                      id="app"
+                      class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
+                      >App</a
+                    >
+
+                    <svg
+                      id="app_down"
+                      width="15"
+                      height="9"
+                      viewBox="0 0 15 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="-ml-3"
+                    >
+                      <path
+                        id="app_down_path"
+                        d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
+                        stroke="#B5CBE3"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </span>
+              
+
+                <div
+                  class="hidden dropdown-content lg:ml-0 ps-[10px]"
+                  id="app_menu"
+                >
+                <a
+                href="/crm_follow_up_app_for_erpnext"
+                class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
+                >Sales Follow up app for ERPNext</a>
+                  
+                 
+                </div>
+              </li>
+
+
             
                 <li class="max-xl:border-l-2 border-[#B5CBE3]">
                
@@ -544,7 +591,7 @@ import company_profile from "../../public/Images/company_profile.png";
                       </svg>
                     </span>
                   </span>
-
+                 
                   <div
                     class="hidden dropdown-content lg:ml-0 ps-[10px]"
                     id="integration_menu"
@@ -569,8 +616,10 @@ import company_profile from "../../public/Images/company_profile.png";
                       class="block text-[#4D5F66] hover:text-[#3E96F4] py-2 px-2 text-sm md:text-base"
                       >ChatGPT Integration</a
                     >
+                   
                   </div>
                 </li>
+               
 
             </ul>
           </span>
@@ -771,7 +820,32 @@ import company_profile from "../../public/Images/company_profile.png";
                   </div>
                   
                   <div class="bg-[#FFFFFF] pr-[2.75rem] py-3">
+
+                  
+
                     <li class="">
+                      <span class="group relative inline-block">
+                        <span class="flex"
+                          ><a
+                            href="#"
+                            class="block text-[#31393C] font-bold py-2 xl:px-5 px-2 text-sm md:text-base cursor-auto"
+                            >App</a
+                          ></span
+                        >
+
+                      </span>
+                      <div class="flex gap-x-3">
+                        <Image
+                          loading="eager"
+                          src={right_arrow}
+                          alt="right_arrow"
+                          class="ml-5"
+                        />
+                        <a
+                        href="/crm_follow_up_app_for_erpnext"
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 lg:px-0 px-5 text-sm md:text-base"
+                        >Sales Follow up app for ERPNext</a>
+                      </div>
                       <span class="group relative inline-block">
                         <span class="flex"
                           ><a
@@ -838,6 +912,7 @@ import company_profile from "../../public/Images/company_profile.png";
                             >ChatGPT Integration</a
                           >
                         </div>
+                    
                       </div>
                     </li>
                   </div>
@@ -1647,6 +1722,12 @@ import company_profile from "../../public/Images/company_profile.png";
           menu: "integration_menu",
           path: "integration_down_path",
           element: "integration",
+        },
+        {
+          arrow: "app_down",
+          menu: "app_menu",
+          path: "app_down_path",
+          element: "app",
         },
       ];
 
