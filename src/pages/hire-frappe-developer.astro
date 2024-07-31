@@ -3536,7 +3536,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     // Validate name input function
     function validateNameInput(event) {
       var nameInput = event.target;
-      console.log("nameInput----",nameInput);
+
       var nameValue = nameInput.value.trim();
       var errorMessageElement = nameInput.nextElementSibling;
 
@@ -3562,7 +3562,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     // Validate email input function
     function validateEmailInput(event) {
       var emailInput = event.target;
-      console.log("emailInput----",emailInput);
+     
       var emailValue = emailInput.value.trim();
       var errorMessageElement = emailInput.nextElementSibling;
 
@@ -3811,7 +3811,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           }),
         })
           .then((res) => {
-            console.log("------>res", res);
+      
             if (res.status === 200) {
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
@@ -3834,7 +3834,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
           });
         }
       });
@@ -3900,7 +3900,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
 
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
-        console.log("---------->>>", browserName, device, ipAddress);
+     
         if(validateEmail(emailValue) && validateName(nameValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
@@ -3924,7 +3924,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           }),
         })
           .then((res) => {
-            console.log("asdfasd", res);
+          
             if (res.status === 200) {
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
@@ -3947,19 +3947,14 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
           });
         }
       });
     }
 
-    get_ip()
-      .then((ipAddress) => {
-        console.log("Received IP Address:", ipAddress);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    
+  
 
     function get_ip() {
       // Return a Promise that resolves with the IP address
@@ -3968,7 +3963,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           .then((response) => response.json())
           .then((data) => {
             const ipAddress = data.ip;
-            // console.log("Public IP Address:", ipAddress);
+            
             resolve(ipAddress); // Resolve the Promise with the IP address
           })
           .catch((error) => {
@@ -3977,7 +3972,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
           });
       });
     }
-
+    get_ip()
 
       // get browser and device name
       function detectBrowser() {
@@ -4008,8 +4003,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         browserName = "Internet Explorer";
       }
 
-      // Log the detected browser to the console
-      //   console.log(`Detected browser: ${browserName}`);
+     
 
       // Detect the device type based on screen size
       const screenWidth = window.innerWidth;
@@ -4040,8 +4034,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     device = "",
     response = ""
   ) {
-    console.log("sending email notification...");
-    // return
+  
     fetch(
       "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
       {
@@ -4069,17 +4062,17 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
     )
       .then((res) => {
         if (res.status === 200) {
-          // alert("You have been registered successfully.")
-          console.log("email notification sent.");
+          alert("email notification sent.")
+          
         } else {
-          console.log("failed to send email notification", res);
+          
           alert(
             "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
           );
         }
       })
       .catch((error) => {
-        console.log("error", error);
+        console.error("error", error);
       });
   }
 

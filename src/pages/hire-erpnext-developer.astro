@@ -4250,7 +4250,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
   // Validate name input function
   function validateNameInput(event) {
       var nameInput = event.target;
-      console.log("nameInput----",nameInput);
+    
       var nameValue = nameInput.value.trim();
       var errorMessageElement = nameInput.nextElementSibling;
 
@@ -4276,7 +4276,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     // Validate email input function
     function validateEmailInput(event) {
       var emailInput = event.target;
-      console.log("emailInput----",emailInput);
+
       var emailValue = emailInput.value.trim();
       var errorMessageElement = emailInput.nextElementSibling;
 
@@ -4300,69 +4300,9 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     }
   addEventListeners();
 
-    // Add event listener to email input for real-time validation for form with ID 'hire_form'
-    // var hireFormEmailInput = document.querySelector(
-    //   '#hire_form input[name="email"]'
-    // );
-    // hireFormEmailInput.addEventListener("blur", validateHireFormEmailInput);
+    
 
-    function validateHireFormEmailInput() {
-      const emailValue = hireFormEmailInput.value.trim();
-      const errorMessageElement = hireFormEmailInput.nextElementSibling;
-
-      if (emailValue === "") {
-        hidehireErrorMessage(errorMessageElement); // Hide error message if email is empty
-        hireFormEmailInput.style.borderColor = ""; // Reset border color
-        return;
-      }
-
-      if (!validateEmail(emailValue)) {
-        blinkBorder(hireFormEmailInput);
-        displayhireErrorMessage(
-          errorMessageElement,
-          "Please enter a valid email address."
-        );
-      } else {
-        hidehireErrorMessage(errorMessageElement); // Hide error message if email is valid
-        hireFormEmailInput.style.borderColor = ""; // Reset border color
-      }
-    }
-
-    // Function to display error message
-    function displayhireErrorMessage(errorMessageElement, message) {
-      if (
-        !errorMessageElement ||
-        !errorMessageElement.classList.contains("error-message")
-      ) {
-        // If error message doesn't exist, create and insert it
-        errorMessageElement = document.createElement("p");
-        errorMessageElement.textContent = message;
-        errorMessageElement.classList.add("error-message");
-        errorMessageElement.style.color = "red"; // Adjust the color
-        errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-        errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-        errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
-
-        // Insert the error message after the input field
-        hireFormEmailInput.parentNode.insertBefore(
-          errorMessageElement,
-          hireFormEmailInput.nextSibling
-        );
-      } else {
-        errorMessageElement.textContent = message; // Update existing error message
-      }
-    }
-
-    // Function to hide error message
-    function hidehireErrorMessage(errorMessageElement) {
-      if (
-        errorMessageElement &&
-        errorMessageElement.classList.contains("error-message")
-      ) {
-        // If error message exists, remove it
-        errorMessageElement.remove();
-      }
-    }
+   
 
     const apiKey = import.meta.env.PUBLIC_ApiKey as string;
     const secretKey = import.meta.env.PUBLIC_SecretKey as string;
@@ -4382,118 +4322,6 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
         inputElement.style.borderColor = ""; // Remove the border color (set it to null)
       });
     }
-
-    // send data in frappe
-    // function handleContactForm(e) {
-    //   e.preventDefault();
-    //   const form = e.target; // Get the form that triggered the submission
-
-    //   const nameInput = form.querySelector('input[name="name"]');
-    //   const emailInput = form.querySelector('input[name="email"]');
-    //   const messageInput = document.querySelector(
-    //     'textarea[name="req_message"]'
-    //   );
-    //   const phoneInput = document.querySelector('input[name="phone_no"]');
-
-    //   const nameValue = nameInput.value.trim();
-    //   const emailValue = emailInput.value.trim();
-    //   const messageValue = messageInput.value.trim();
-    //   const phoneValue = phoneInput.value.trim();
-
-    //   resetBorderColorOnFocus(nameInput);
-    //   resetBorderColorOnFocus(emailInput);
-    //   resetBorderColorOnFocus(messageInput);
-    //   resetBorderColorOnFocus(phoneInput);
-
-    //   if (nameValue === "") {
-    //     blinkBorder(nameInput);
-    //   }
-
-    //   if (emailValue === "") {
-    //     blinkBorder(emailInput);
-    //   }
-
-    //   if (messageValue === "") {
-    //     blinkBorder(messageInput);
-    //   }
-
-    //   if (nameValue === "" || emailValue === "" || messageValue === "") {
-    //     return;
-    //   }
-
-    //   // alert('Please select a file to upload.');
-    //   const formData = new FormData(e.target);
-    //   const data = Object.fromEntries(formData.entries());
-    //   formData.set("data", JSON.stringify(data));
-    //   var name = data.name;
-    //   var email = data.email;
-    //   var phone = data.phone_no;
-    //   var message = data.req_message;
-
-    //   // Function to get the user's IP address using ipify
-    //   function getUserIPAddress() {
-    //     return fetch("https://api.ipify.org?format=json")
-    //       .then((response) => response.json())
-    //       .then((data) => data.ip)
-    //       .catch((error) => {
-    //         console.error("Error fetching IP address:", error);
-    //         return null; // Handle the error gracefully
-    //       });
-    //   }
-
-    //   getUserIPAddress().then((ipAddress) => {
-    //     let { browserName, device } = detectBrowser();
-     
-
-    //     fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
-    //       method: "POST",
-    //       headers: {
-    //         Accept: "application/json",
-    //         "Content-Type": "application/json",
-    //         Authorization: `token ${apiKey}:${secretKey}`,
-    //       },
-    //       body: JSON.stringify({
-    //         first_name: name,
-    //         email: email,
-    //         phone: phone,
-    //         message: message,
-    //         enquiry_source: "Website Enquiry",
-    //         // demo_for: demoForValue,
-    //         query_type: "Developer Interview",
-    //         ip: ipAddress,
-    //         browser_name: browserName,
-    //         device: device,
-    //         website_page_name: "Hire ERPNext Developer",
-    //       }),
-    //     })
-    //       .then((res) => {
-           
-    //         if (res.status === 200) {
-    //           // alert("You have been registered successfully.")
-    //           window.location.href = "/thank-you";
-    //         } else {
-    //           sendEmailNotification(
-    //           name,
-    //           email,
-    //           phone,
-    //           message,
-    //           "Website Enquiry",
-    //           // demoForValue,
-    //           "Developer Interview",
-    //           ipAddress,
-    //           browserName,
-    //           device,
-    //           "Hire ERPNext Developer",
-    //           res
-    //         );
-    //         alert("Failed to submit data. Please try after some time.");
-    //         }
-    //       })
-    //       .catch((error) => {
-    //         console.log(error);
-    //       });
-    //   });
-    // }
 
    // send data in frappe
    function handlehirescheduleform(e) {
@@ -4562,7 +4390,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
-            Authorization: `token ${apiKey}:${secretKey}`,
+            // Authorization: `token ${apiKey}:${secretKey}`,
           },
           body: JSON.stringify({
             first_name: name,
@@ -4602,7 +4430,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
           });
         }
       });
@@ -4721,7 +4549,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
             }
           })
           .catch((error) => {
-           
+           console.error(error)
           });
         }
       });
@@ -4771,13 +4599,8 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
       }
     }
 
-    get_ip()
-      .then((ipAddress) => {
     
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+      
 
     function get_ip() {
       // Return a Promise that resolves with the IP address
@@ -4795,6 +4618,8 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
           });
       });
     }
+
+    get_ip()
 
     // get browser and device name
     function detectBrowser() {
@@ -4855,8 +4680,7 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     device = "",
     response = ""
   ) {
-  
-    // return
+
     fetch(
       "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
       {
@@ -4884,17 +4708,15 @@ import best_erpnext_developer from "../../public/Images/best_erpnext_developer.s
     )
       .then((res) => {
         if (res.status === 200) {
-          // alert("You have been registered successfully.")
-         
+          alert("email notification sent.")
         } else {
-       
           alert(
             "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
           );
         }
       })
       .catch((error) => {
-       
+        console.error(error);
       });
   }
 

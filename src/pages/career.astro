@@ -1412,6 +1412,10 @@ import close from "../../public/Images/popup_close_btn.svg";
   var scrollButton = document.getElementById("scrollButton");
   var section2 = document.getElementById("job");
 
+  var apiKey = import.meta.env.PUBLIC_ApiKey as string;
+  var secretKey = import.meta.env.PUBLIC_SecretKey as string;
+     
+
   // Get the current URL
   const currentURL = window.location.href;
 
@@ -2340,7 +2344,7 @@ document.head.appendChild(hideForMdStyle);
     // }
 
     
-      
+   
 
           function validateEmailInput(event) {
         const emailInput = event.target;
@@ -2451,7 +2455,7 @@ document.head.appendChild(hideForMdStyle);
       // console.log("job opening name", jobOpening.name)
 
       e.preventDefault();
-      disableUserInteractions()
+      // disableUserInteractions()
 
     //   const recaptchaResponse = grecaptcha.getResponse();
     //   // If the reCAPTCHA is filled out, clear any previous error message
@@ -2500,7 +2504,7 @@ if (phoneNameValue === "") {
   blinkBorder(phoneInput);
 } else if (!indianPhoneNumberPattern.test(phoneNameValue)) {
   blinkBorder(phoneInput);
-        enableUserInteractions();
+        // enableUserInteractions();
         return;
 }
       if (fileNameValue === "") {
@@ -2517,7 +2521,7 @@ if (phoneNameValue === "") {
         phoneNameValue === "" ||
         fileNameValue === ""
       ) {
-        enableUserInteractions()
+        // enableUserInteractions()
         return;
       }
       // if (cityNameValue === '') {
@@ -2540,13 +2544,14 @@ if (phoneNameValue === "") {
       // stopBlinkForInputs([fullNameInput, emailInput,phoneInput,fileInput]);
       // });
 
-      const urlParams = new URLSearchParams(window.location.search);
+      // const urlParams = new URLSearchParams(window.location.search);
 
-      // Get the value of the 'page' parameter
-      const pageValue = urlParams.get("page");
-      const demoForValue = pageValue || "";
+      // // Get the value of the 'page' parameter
+      // const pageValue = urlParams.get("page");
+      // const demoForValue = pageValue || "";
 
-      const queryTypeValue = pageValue ? "Demo" : "General";
+      // const queryTypeValue = pageValue ? "Demo" : "General";
+
 
       const fileInput = document.getElementById("fileInput");
       const file = fileInput.files[0];
@@ -2556,7 +2561,8 @@ if (phoneNameValue === "") {
       xhr.open("POST", url, true);
       xhr.setRequestHeader("Accept", "application/json");
       // xhr.setRequestHeader('Content-Type', 'application/json')
-
+      
+   
       // Set up event listeners for XHR
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -2565,23 +2571,29 @@ if (phoneNameValue === "") {
           const formData = new FormData(e.target);
           const data = Object.fromEntries(formData.entries());
           formData.set("data", JSON.stringify(data));
-          var fullname = data.fullname;
+          // console.log("data----",data);
+          var fullname = data.name;
           var email = data.email;
           var phone = data.phone;
 
           // var city = data.city;
 
           // console.log("data real", data)
-          // console.log("data", fullname, email, phone, file_url)
-          getUserIPAddress().then((ipAddress) => {
-          let { browserName, device } = detectBrowser();
+          // console.log("data", fullname, email, phone, file_url,jobOpening.name)
+          // getUserIPAddress().then((ipAddress) => {
+          // let { browserName, device } = detectBrowser();
 
+
+    
+
+          // console.log("jobOpening.name---",jobOpening.name);
           if(validateEmail(emailNameValue) && validateName(fullNameValue)){
           fetch("https://sanskar.frappe.cloud/api/resource/Job Applicant", {
             method: "POST",
             headers: {
               Accept: "application/json",
               "Content-Type": "application/json",
+              Authorization: `token ${apiKey}:${secretKey}`,
             },
             body: JSON.stringify({
               job_title: jobOpening.name,
@@ -2590,34 +2602,35 @@ if (phoneNameValue === "") {
               phone_number: phone,
               // current_location: city,
               resume_attachment: file_url,
-              source: "Website Enquiry",
-              demo_for: demoForValue,
-              query_type: queryTypeValue,
-              ip: ipAddress,
-              browser_name: browserName,
-              device: device,
+              source: "Website Listing",
+              // demo_for: demoForValue,
+              // query_type: queryTypeValue,
+              // ip: ipAddress,
+              // browser_name: browserName,
+              // device: device,
               // website_page_name:"Career"
 
               }),
           })
             .then((res) => {
+             
               if (res.status === 200) {
                 // alert("You have been registered successfully.")
-                enableUserInteractions()
+                // enableUserInteractions()
                 window.location.href = "/thank-you";
               } else {
-                enableUserInteractions()
+                // enableUserInteractions()
                 sendEmailNotification(
                 jobOpening.name,
                   fullname,
                   email,
                   phone,
-                  "Website Enquiry",
-                  demoForValue,
-                  queryTypeValue,
-                  ipAddress,
-                  browserName,
-                  device,
+                  "Website Listing",
+                  // demoForValue,
+                  // queryTypeValue,
+                  // ipAddress,
+                  // browserName,
+                  // device,
                   // "Career",
                   res
                 );
@@ -2625,20 +2638,20 @@ if (phoneNameValue === "") {
               }
             })
             .catch((error) => {
-              enableUserInteractions()
-              console.log(error);
+              // enableUserInteractions()
+              console.error(error);
             });
           }
-          });
+          // });
         } else {
           //alert('File upload failed. Please try again later.');
-          enableUserInteractions()
+          // enableUserInteractions()
           blinkBorder(fileInput);
         }
       };
 
       xhr.onerror = function () {
-        enableUserInteractions()
+        // enableUserInteractions()
         alert("An error occurred while uploading the file.");
       };
 
@@ -2653,93 +2666,7 @@ if (phoneNameValue === "") {
     //new over =========================================== new over ===========================
     
   });
-//   function showRecaptchaError() {
-//   const recaptchaErrorElement = document.getElementById("recaptcha-error");
-//   recaptchaErrorElement.style.display = "block"; // Display the error message
 
-//   // Hide the error message after a specific duration (e.g., 5 seconds)
-//   setTimeout(function () {
-//     recaptchaErrorElement.style.display = "none";
-//   }, 3000);
-// }
-
-
-    // function clearRecaptchaError() {
-    //   const recaptchaErrorElement = document.getElementById("recaptcha-error");
-    //   recaptchaErrorElement.style.display = "none"; // Hide the error message
-    // }
-
-  // Helper function to disable user interactions
-function disableUserInteractions() {
-  document.body.style.pointerEvents = 'none';
-  document.body.style.opacity = '0.5';
-}
-
-// Helper function to re-enable user interactions
-function enableUserInteractions() {
-  document.body.style.pointerEvents = 'auto';
-  document.body.style.opacity = '1';
-}
-
-
-  // get browser and device name
-  function detectBrowser() {
-    const userAgent = navigator.userAgent;
-    var browserName = "Unknown";
-
-    // Check for Chrome
-    if (userAgent.indexOf("Chrome") !== -1) {
-      browserName = "Google Chrome";
-    }
-    // Check for Firefox
-    else if (userAgent.indexOf("Firefox") !== -1) {
-      browserName = "Mozilla Firefox";
-    }
-    // Check for Safari
-    else if (userAgent.indexOf("Safari") !== -1) {
-      browserName = "Apple Safari";
-    }
-    // Check for Edge
-    else if (userAgent.indexOf("Edg") !== -1) {
-      browserName = "Microsoft Edge";
-    }
-    // Check for Internet Explorer
-    else if (
-      userAgent.indexOf("MSIE") !== -1 ||
-      userAgent.indexOf("Trident") !== -1
-    ) {
-      browserName = "Internet Explorer";
-    }
-
-    // Log the detected browser to the console
-    //   console.log(`Detected browser: ${browserName}`);
-
-    // Detect the device type based on screen size
-    const screenWidth = window.innerWidth;
-    var device = "Unknown";
-    if (screenWidth <= 576) {
-      device = "Mobile";
-    } else if (screenWidth <= 992) {
-      device = "Tablet";
-    } else if (screenWidth <= 1200) {
-      device = "Laptop";
-    } else {
-      device = "Desktop";
-    }
-
-    return { browserName, device };
-  }
-
-  // Function to get the user's IP address using ipify
-  function getUserIPAddress() {
-    return fetch("https://api.ipify.org?format=json")
-      .then((response) => response.json())
-      .then((data) => data.ip)
-      .catch((error) => {
-        console.error("Error fetching IP address:", error);
-        return null; // Handle the error gracefully
-      });
-  }
 
 
 function sendEmailNotification(
@@ -2749,14 +2676,14 @@ function sendEmailNotification(
     phone = "",
     message = "",
     enquiry_source = "",
-    demoForValue = "",
-    queryTypeValue = "",
-    ip = "",
-    browser_name = "",
-    device = "",
+    // demoForValue = "",
+    // queryTypeValue = "",
+    // ip = "",
+    // browser_name = "",
+    // device = "",
     response = ""
   ) {
-    console.log("sending email notification...");
+    // console.log("sending email notification...");
     // return
     fetch(
       "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
@@ -2773,12 +2700,12 @@ function sendEmailNotification(
           email: email,
           phone: phone,
           message: message,
-          enquiry_source: "Website Enquiry",
-          demoForValue: demoForValue,
-          queryTypeValue: queryTypeValue,
-          ip: ip,
-          browser_name: browser_name,
-          device: device,
+          enquiry_source: "Website Listing",
+          // demoForValue: demoForValue,
+          // queryTypeValue: queryTypeValue,
+          // ip: ip,
+          // browser_name: browser_name,
+          // device: device,
           response: response,
           page_name: "Contact Us PopUp",
         }),
@@ -2786,17 +2713,17 @@ function sendEmailNotification(
     )
       .then((res) => {
         if (res.status === 200) {
-          // alert("You have been registered successfully.")
-          console.log("email notification sent.");
+          alert("email notification sent.")
+          // console.log("email notification sent.");
         } else {
-          console.log("failed to send email notification", res);
+          // console.log("failed to send email notification", res);
           alert(
             "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
           );
         }
       })
       .catch((error) => {
-        console.log("error", error);
+        console.error("error", error);
       });
   }
  

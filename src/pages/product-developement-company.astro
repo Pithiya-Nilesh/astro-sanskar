@@ -1947,10 +1947,10 @@ const queryTypeValue = pageValue ? "Demo" : "General";
 
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
-        console.log("---------->>>", browserName, device, ipAddress);
+        
 
         if(validateEmail(emailValue) && validateName(nameValue)){
-        fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
+        fetch("https://sanskar.frappe.cloud/api/resource / En quiry", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -1972,7 +1972,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
           }),
         })
           .then((res) => {
-            console.log("------>res", res);
+           
             if (res.status === 200) {
               // alert("You have been registered successfully.")
               window.location.href = "/thank-you";
@@ -1995,19 +1995,19 @@ const queryTypeValue = pageValue ? "Demo" : "General";
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
           });
         }
       });
     }
 
-    get_ip()
-      .then((ipAddress) => {
-        console.log("Received IP Address:", ipAddress);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    // get_ip()
+    //   .then((ipAddress) => {
+    //     console.log("Received IP Address:", ipAddress);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
 
     function get_ip() {
       // Return a Promise that resolves with the IP address
@@ -2016,7 +2016,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
           .then((response) => response.json())
           .then((data) => {
             const ipAddress = data.ip;
-            // console.log("Public IP Address:", ipAddress);
+          
             resolve(ipAddress); // Resolve the Promise with the IP address
           })
           .catch((error) => {
@@ -2026,6 +2026,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
       });
     }
 
+    get_ip()
     // get browser and device name
     function detectBrowser() {
       const userAgent = navigator.userAgent;
@@ -2055,8 +2056,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
         browserName = "Internet Explorer";
       }
 
-      // Log the detected browser to the console
-      //   console.log(`Detected browser: ${browserName}`);
+      
 
       // Detect the device type based on screen size
       const screenWidth = window.innerWidth;
@@ -2087,8 +2087,6 @@ const queryTypeValue = pageValue ? "Demo" : "General";
       device = "",
       response = ""
     ) {
-      console.log("sending email notification...");
-      // return
       fetch(
         "https://sanskartechnolab.com/api/method/astro_sanskar.api.send_form_failed_notification",
         {
@@ -2116,22 +2114,22 @@ const queryTypeValue = pageValue ? "Demo" : "General";
       )
         .then((res) => {
           if (res.status === 200) {
-            // alert("You have been registered successfully.")
-            console.log("email notification sent.");
+            alert("email notification sent.")
+            // console.log("email notification sent.");
           } else {
-            console.log("failed to send email notification", res);
+            // console.log("failed to send email notification", res);
             alert(
               "We are unable to process your request. please send your requirements on info@sanskartechnolab.com"
             );
           }
         })
         .catch((error) => {
-          console.log("error", error);
+          console.error("error", error);
         });
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      console.log("object");
+     
       const swiper = new Swiper(".swiper-container", {
         loop: true,
         slidesPerView: 1,
