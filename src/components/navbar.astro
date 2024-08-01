@@ -622,7 +622,9 @@ import company_profile from "../../public/Images/company_profile.png";
                
 
             </ul>
+            
           </span>
+        </li>
 
           <!-- for xl & 2xl screen start -->
           <li
@@ -1225,15 +1227,15 @@ import company_profile from "../../public/Images/company_profile.png";
           >
         </li> -->
          <!-- Hire Team Start -->
+
+
+         <!-- hire team mobile -->
          <li
-         class="block xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+         class="block xl:hidden xl:mt-0 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
        >
          <span class="group relative">
-           <span class="flex sm:gap-2 max-xl:justify-between items-center"
-             ><a href="#" class="text-sm md:text-base" id="hireteam"
-               >Hire Team</a
-             >
-
+           <span class="flex justify-between"
+             ><a href="#" class="text-sm md:text-base"  id="hireteam">Hire Team</a>
              <svg
                id="hire_team_down"
                width="15"
@@ -1251,10 +1253,63 @@ import company_profile from "../../public/Images/company_profile.png";
                  stroke-linejoin="round"></path>
              </svg>
            </span>
+           <ul
+             class= " xl:max-xl:ml-3 z-10 hidden lg:top-[3.75rem] py-2 xl:pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
+             id="hire_team_menu"
+           >
+           
+              
+
+               <li class="max-xl:border-l-2 border-[#B5CBE3]">
+                <a
+                  class="block xl:whitespace-pre text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                  href="/hire-erpnext-developer">Hire ERPNext Developer</a
+                >
+              </li>
+              <li class="max-xl:border-l-2 border-[#B5CBE3]">
+                <a
+                  class="block xl:whitespace-pre text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                  href="/hire-frappe-developer">Hire Frappe Developer</a
+                >
+              </li>
+           </ul>
+           
+         </span>
+       </li>
+
+
+
+         <!-- hire xl and 2xl -->
+         <li
+         class="hidden xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+       >
+         <span class="group relative">
+           <span class="flex sm:gap-2 max-xl:justify-between items-center"
+             ><a href="#" class="text-sm md:text-base"
+               >Hire Team</a
+             >
+
+             <svg
+               
+               width="15"
+               height="9"
+               viewBox="0 0 15 9"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+             >
+               <path
+                
+                 d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
+                 stroke="#B5CBE3"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"></path>
+             </svg>
+           </span>
            <!-- <a href="#" class="text-sm md:text-base">Company</a> -->
            <ul
              class="sub-menu max-xl:ml-3 xl:absolute z-10 hidden submenu-bg lg:top-[3.75rem] py-2 pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
-             id="hire_team_menu"
+             
            >
 
              <li class="max-xl:border-l-2 border-[#B5CBE3]">
@@ -1274,17 +1329,102 @@ import company_profile from "../../public/Images/company_profile.png";
        </li>
        <!-- Hire Team End -->
 
+
+
+
+<!-- case study for  mobile screen -->
+       <li
+       class="block xl:hidden xl:mt-0 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+     >
+       <span class="group relative">
+         <span class="flex justify-between"
+           ><a href="#" class="text-sm md:text-base" id="casestudy">Case Study</a>
+           <svg
+             id="case_study_down"
+             width="15"
+             height="9"
+             viewBox="0 0 15 9"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+           >
+             <path
+               id="case_study_down_path"
+               d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
+               stroke="#B5CBE3"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"></path>
+           </svg>
+         </span>
+         <ul
+           class= " xl:max-xl:ml-3 z-10 hidden lg:top-[3.75rem] py-2 xl:pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
+           id="case_study_menu"
+         >
+         
+            
+
+         <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/construction-equipment-as-a-service"
+            >Construction Equipment-as-a-Service</a
+          >
+        </li>
+        <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/garment-manufacturing-erp"
+            >Garment Manufacturing </a
+          >
+        </li>
+        <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/sap-to-erpnext-migration">SAP To ERPNext Migration</a
+          >
+        </li>
+        <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/oracle-to-erpnext-migration"
+            >Oracle To ERPNext Migration</a
+          >
+        </li>
+        <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/ayurveda-manufacturing-erp">Ayurveda Manufacturing</a
+          >
+        </li>
+        <li class="max-xl:border-l-2 border-[#B5CBE3]">
+          <a
+            class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+            href="/quartz-manufacturing-erp"
+            >Quartz Manufactures And Exporters</a
+          >
+        </li>
+         </ul>
+         
+       </span>
+     </li>
+
+
+
+
+
+
+       <!-- case study xl and 2xl mobile screen -->
           <li
-            class="block xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+            class="hidden xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
           >
             <span class="group relative">
               <span class="flex max-xl:justify-between sm:gap-2 items-center"
-                ><a href="#" class="text-sm md:text-base" id="casestudy"
+                ><a href="#" class="text-sm md:text-base" 
                   >Case Study</a
                 >
 
                 <svg
-                  id="case_study_down"
+                  
                   width="15"
                   height="9"
                   viewBox="0 0 15 9"
@@ -1292,7 +1432,7 @@ import company_profile from "../../public/Images/company_profile.png";
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    id="case_study_down_path"
+                    
                     d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
                     stroke="#B5CBE3"
                     stroke-width="2"
@@ -1303,7 +1443,7 @@ import company_profile from "../../public/Images/company_profile.png";
 
               <ul
                 class="sub-menu max-xl:ml-3 xl:absolute z-10 hidden submenu-bg lg:top-[3.75rem] py-2 pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
-                id="case_study_menu"
+                
               >
                 <li class="max-xl:border-l-2 border-[#B5CBE3]">
                   <a
@@ -1355,18 +1495,133 @@ import company_profile from "../../public/Images/company_profile.png";
                     class="block  lg:inline-block lg:mt-0 mr-8 text-[#31393C]"
                 >
                     <a href="/about" class="text-sm md:text-base"> Company</a>
+
+
+
+                    
                 </li> -->
+
+
+                <!-- Company small screen -->
+                <li
+                class="block xl:hidden xl:mt-0 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+              >
+                <span class="group relative">
+                  <span class="flex justify-between"
+                    ><a href="#" class="text-sm md:text-base" id="company">Company</a>
+                    <svg
+                      id="company_down"
+                      width="15"
+                      height="9"
+                      viewBox="0 0 15 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        id="company_down_path"
+                        d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
+                        stroke="#B5CBE3"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                  <ul
+                    class= " xl:max-xl:ml-3 z-10 hidden lg:top-[3.75rem] py-2 xl:pr-[2.75rem] lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
+                    id="company_menu"
+                  >
+                  
+                     
+         
+                  <li class="max-xl:border-l-2 border-[#B5CBE3] xl:hidden">
+                    <a
+                      class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                      href="/about">About</a
+                    >
+                  </li>
+                 <li class="max-xl:border-l-2 border-[#B5CBE3] xl:hidden">
+                    <a
+                      class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                      href="/events">Events</a
+                    >
+                  </li>
+                  <li class="max-xl:border-l-2 border-[#B5CBE3] xl:hidden">
+                    <a
+                      class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                      href="/career">Career</a
+                    >
+                    </li>
+                    <li class="max-xl:border-l-2 border-[#B5CBE3] xl:hidden">
+                      <a
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2 xl:px-5 px-2 text-sm md:text-base"
+                        href="/assets/astro_sanskar/PDF/SanskarTechnolabProfile.pdf"
+                        target="_blank"
+                        >Company Profile </a
+                      >
+                    </li>
+                    
+      
+                <div class="flex lg:flex-col  max-xl:hidden">
+                  <div class="bg-[#FFFFFF] max-xl:border-l-2 border-[#B5CBE3] open-submenu w-[200px] p-4 ">
+                    <a class="flex xl:flex-row gap-2 " href="/about">
+                      <Image loading="eager" src={about} alt="logo" />
+                      <p
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2  text-sm md:text-base"
+                        >About</p
+                      >
+                    </a>  
+                    <a class="flex xl:flex-row gap-2 " href="/events">
+                      <Image loading="eager" src={events_icons} alt="events icons" />
+                      <p
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2  text-sm md:text-base"
+                        >Events</p
+                      >
+                    </a>  
+                    <a href="/career"  class="flex xl:flex-row gap-2">
+                      <Image loading="eager" src={career} alt="logo" />
+                      <p
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4] py-2  text-sm md:text-base"
+                        >Career</p
+                      >
+                    </a>
+                  </div>
+  
+                  <div class="bg-[#F7FBFE] max-xl:border-l-2 border-[#B5CBE3] open-submenu flex xl:flex-col w-[200px] p-4">
+                   
+                      <a
+                        class="xl:whitespace-pre block text-[#4D5F66] hover:text-[#3E96F4]   text-sm md:text-base"
+                        href="/assets/astro_sanskar/PDF/SanskarTechnolabProfile.pdf"
+                        target="_blank">Company Profile </a
+                      >
+                      <a
+                     
+                      href="/assets/astro_sanskar/PDF/SanskarTechnolabProfile.pdf"
+                      target="_blank"> <Image class="pt-2 " loading="eager" src={company_profile} alt="logo" /> </a
+                    >
+                     
+                    
+                  </div> 
+                </div>
+  
+                  </ul>
+                  
+                </span>
+              </li>
+         
+
+
+
           <li
-            class="block xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
+            class="hidden xl:inline-block xl:mt-0 xl:mr-8 text-[#31393C] max-xl:pt-7 max-xl:pr-2"
           >
             <span class="group relative ">
               <span class="flex max-xl:justify-between sm:gap-2 items-center"
-                ><a href="#" class="text-sm md:text-base" id="company"
+                ><a href="#" class="text-sm md:text-base" 
                   >Company</a
                 >
 
                 <svg
-                  id="company_down"
+                  
                   width="15"
                   height="9"
                   viewBox="0 0 15 9"
@@ -1374,7 +1629,7 @@ import company_profile from "../../public/Images/company_profile.png";
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    id="company_down_path"
+                    
                     d="M13.9668 1.93408L7.9406 8.00051L1.96948 2.24745"
                     stroke="#B5CBE3"
                     stroke-width="2"
@@ -1385,7 +1640,7 @@ import company_profile from "../../public/Images/company_profile.png";
               <!-- <a href="#" class="text-sm md:text-base">Company</a> -->
               <ul
                 class=" sub-menu max-xl:ml-3 xl:absolute z-10 hidden submenu-bg lg:top-[3.75rem] max-lg:py-2  lg:-left-[1.5rem] left-[5rem] top-[0.75rem] group-hover:block overflow-x-hidden"
-                id="company_menu"
+                
               >
                <li class="max-xl:border-l-2 border-[#B5CBE3] xl:hidden">
                   <a
@@ -1601,6 +1856,7 @@ import company_profile from "../../public/Images/company_profile.png";
 
         // If there is an open menu and the current menu is not a child of it, close the open menu
         if (currentOpenMenu.menu && currentOpenMenu.menu !== menuElement) {
+         
           // Check if the open menu is a parent of the current menu
           let isParent = false;
           let currentElement = menuElement;
@@ -1660,25 +1916,7 @@ import company_profile from "../../public/Images/company_profile.png";
         }
       }
 
-      // function toggleDropdownMenu(
-      //   arrowElement,
-      //   menuElement,
-      //   pathElement,
-      //   textElement
-      // ) {
-      //   if (menuElement.classList.contains("hidden")) {
-      //     arrowElement.style.transform = "rotate(180deg)";
-      //     pathElement.setAttribute("stroke", "#3E96F4");
-      //     menuElement.classList.remove("hidden");
-      //     textElement.style.color = "#3E96F4";
-      //   } else {
-      //     arrowElement.style.transform = "rotate(360deg)";
-      //     menuElement.classList.remove("group-hover:block");
-      //     menuElement.classList.add("hidden");
-      //     pathElement.setAttribute("stroke", "#B5CBE3");
-      //     textElement.style.color = "#4D5F66";
-      //   }
-      // }
+  
 
       let dropdowns = [
         {
@@ -1735,6 +1973,7 @@ import company_profile from "../../public/Images/company_profile.png";
       dropdowns.forEach(({ arrow, menu, path, element }) => {
         // Get the necessary elements
         const arrowElement = document.getElementById(arrow);
+        
         const menuElement = document.getElementById(menu);
         const pathElement = document.getElementById(path);
         const textElement = document.getElementById(element);

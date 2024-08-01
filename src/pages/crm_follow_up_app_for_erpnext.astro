@@ -73,7 +73,7 @@ import Inner_Vector from "../../public/Images/Inner_Vector.svg";
   </section>
 
   
-  <div class="w-full toggle-menu fixed  top-0  z-[999] bg-[#92C9FF] md:hidden text-[#31393C]"  id="tablecontentmenu">
+  <div class="w-full toggle-menu fixed  top-24   bg-[#92C9FF] md:hidden text-[#31393C]"  id="tablecontentmenu">
     <p class="text-center font-semibold p-5">Table of Contents</p>
       <ul id="mobile-menu" class="menu-hidden text-center">
         <li class="border-t-2 border-b-2 p-2"><a href="#introduction">Introduction</a></li>
@@ -84,26 +84,24 @@ import Inner_Vector from "../../public/Images/Inner_Vector.svg";
         <li class="border-b-2 p-2"><a href="#support">Support</a></li>
         <li class="p-2"><a href="#faq">FAQ</a></li>
     </ul>
-  
-    
 </div>
 
   <!-- Table of Contents Start -->
   <section
     class="grid grid-cols-12 md:max-w-7xl md:mx-auto  px-5 sm:px-12 md:px-24 py-[2rem] md:py-[2rem] lg:py-[4rem] w-full gap-5 lg:gap-10" id="tablecontent"
   >
-    <div  class=" self-start sticky top-0 md:col-span-3  js-toc toc overflow-x-auto max-md:hidden"  >
+    <div  class=" self-start sticky top-24 md:col-span-3  js-toc toc overflow-x-auto max-md:hidden"  >
       <h2 class="text-[#31393C] text-sm md:text-base lg:text-lg font-semibold border-b-2 px-5 py-2 " >
         Table of Contents
       </h2>
-      <a class="flex gap-2 items-center border-b-2 border-dotted	 px-5 py-2 button " href="#keyfeatures" id="keyFeaturesLink">
+      <a class="flex gap-2 items-center border-b-2 border-dotted	 px-5 py-2 button " href="#keyfeatures">
        
       <svg width="10" height="11"  viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"  id="vectorImage">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9C6.933 9 8.5 7.433 8.5 5.5C8.5 3.567 6.933 2 5 2C3.067 2 1.5 3.567 1.5 5.5C1.5 7.433 3.067 9 5 9ZM5 10.5C7.76142 10.5 10 8.26142 10 5.5C10 2.73858 7.76142 0.5 5 0.5C2.23858 0.5 0 2.73858 0 5.5C0 8.26142 2.23858 10.5 5 10.5Z" fill="#727578"/>
         <path d="M7 5.5L4 7.23205V3.76794L7 5.5Z" fill="#727578"/>
         </svg>
       
-        <h2 class="text-[#31393C] text-sm  font-semibold  "  id="keyFeaturesText">
+        <h2 class="text-[#31393C] text-sm  font-semibold  " >
           Key Features
         </h2>
       </a>
@@ -1065,22 +1063,28 @@ import Inner_Vector from "../../public/Images/Inner_Vector.svg";
       <form class="p-6" id="support_form">
         <!-- Name Field -->
         <div class="mb-4 flex flex-col lg:flex-row gap-5">
-          <input
-            placeholder="Name *"
-            type="text"
-            id="support_name"
-            name="support_name"
-            required
-            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300 "
-          />
-          <input
-            placeholder="Email *"
-            type="email"
-            id="support_email"
-            name="support_email"
-            required
-            class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300 "
-          />
+          <div class="w-full lg:w-1/2">
+
+            <input
+              placeholder="Name *"
+              type="text"
+              id="support_name"
+              name="support_name"
+              required
+              class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300 "
+            />
+          </div>
+          <div class="w-full lg:w-1/2">
+
+            <input
+              placeholder="Email *"
+              type="email"
+              id="support_email"
+              name="support_email"
+              required
+              class="mt-1 p-2 w-full border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300 "
+            />
+          </div>
         </div>
 
     
@@ -1549,20 +1553,20 @@ ready(() => {
 
   TableOfContents.init()
 });
-// -------------------------------------------------------------------------------------------------
 
 
-    // Smooth scrolling function
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+// Smooth scrolling function
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
-
+        
         document.querySelector(this.getAttribute("href")).scrollIntoView({
           behavior: "smooth",
         });
       });
     });
-
+    
+    // -------------------------------------------------------------------------------------------------
     var talk_form = document.getElementById("support_form");
     talk_form.addEventListener("submit", handleContactForm);
 
@@ -1571,26 +1575,62 @@ ready(() => {
     emailInput.addEventListener("blur", validateEmailInput); // Changed event to "blur"
 
     function validateEmailInput() {
-      const emailValue = emailInput.value.trim();
-      const errorMessageElement = emailInput.nextElementSibling;
+     
+     const emailValue = emailInput.value.trim();
+     
+     const errorMessageElement = emailInput.nextElementSibling;
+     
 
-      if (emailValue === "") {
+     if (emailValue === "") {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+       emailInput.style.borderColor = ""; // Reset border color
+       return;
+     }
+
+     if (!validateEmail(emailValue)) {
+       blinkBorder(emailInput);
+       displayErrorMessage(
+           errorMessageElement,
+           "Please enter a valid email address.",
+           emailInput
+         );
+     } else {
+       hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+       emailInput.style.borderColor = ""; // Reset border color
+     }
+   }
+
+   var nameInput = document.querySelector('input[name="support_name"]');
+    nameInput.addEventListener("blur", validateNameInput);
+
+
+    function validateNameInput() {
+     
+      const nameValue = nameInput.value.trim();
+      
+      const errorMessageElement = nameInput.nextElementSibling;
+      
+
+      if (nameValue === "") {
         hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-        emailInput.style.borderColor = ""; // Reset border color
+        nameInput.style.borderColor = ""; // Reset border color
         return;
       }
 
-      if (!validateEmail(emailValue)) {
-        blinkBorder(emailInput);
+      if (!validateName(nameValue)) {
+        blinkBorder(nameInput);
         displayErrorMessage(
-          errorMessageElement,
-          "Please enter a valid email address."
-        );
+            errorMessageElement,
+            "Please enter a valid name.",
+            nameInput
+          );
       } else {
         hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        emailInput.style.borderColor = ""; // Reset border color
+        nameInput.style.borderColor = ""; // Reset border color
       }
     }
+
+
 
     // Validation function for email
     function validateEmail(email) {
@@ -1599,29 +1639,34 @@ ready(() => {
       return re.test(String(email).toLowerCase());
     }
 
-    function displayErrorMessage(errorMessageElement, message) {
-      if (
-        !errorMessageElement ||
-        !errorMessageElement.classList.contains("error-message")
-      ) {
-        // If error message doesn't exist, create and insert it
-        errorMessageElement = document.createElement("p");
-        errorMessageElement.textContent = message;
-        errorMessageElement.classList.add("error-message");
-        errorMessageElement.style.color = "red"; // Adjust the color
-        errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
-        errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
-        errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+    function validateName(name){
+      const re =
+       /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?![^\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,]*[\d~`?!^*¨ˆ;@=$%{}\[\]|\\\/<>#“.,])\S+(?: \S+){0,2}$/;
 
-        // Insert the error message after the input field
-        emailInput.parentNode.insertBefore(
-          errorMessageElement,
-          emailInput.nextSibling
-        );
-      } else {
-        errorMessageElement.textContent = message; // Update existing error message
-      }
+      return re.test(String(name).toLowerCase());
     }
+
+    function displayErrorMessage(errorMessageElement, message, inputField) {
+  if (!errorMessageElement || !errorMessageElement.classList.contains("error-message")) {
+    // If error message doesn't exist, create and insert it
+    errorMessageElement = document.createElement("p");
+    errorMessageElement.textContent = message;
+    errorMessageElement.classList.add("error-message");
+    errorMessageElement.style.color = "red"; // Adjust the color
+    errorMessageElement.style.fontSize = "0.8rem"; // Adjust the font size
+    errorMessageElement.style.marginTop = "0.2rem"; // Adjust the margin-top
+    errorMessageElement.style.marginBottom = "0"; // Remove bottom margin
+
+    // Insert the error message after the input field
+    inputField.parentNode.insertBefore(
+      errorMessageElement,
+      inputField.nextSibling
+    );
+  } else {
+    errorMessageElement.textContent = message; // Update existing error message
+  }
+}
+
 
     function hideErrorMessage(errorMessageElement) {
       if (
@@ -1723,8 +1768,8 @@ ready(() => {
       // getUserIPAddress().then((ipAddress) => {
       //   let { browserName, device } = detectBrowser();
       
-
-        fetch("https://sanskar.frappe.cloud/api/resource/Issue", {
+      if(validateEmail(emailValue) && validateName(nameValue)){
+        fetch("http://192.168.2.126:8000/api/resource/Issue", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -1762,16 +1807,16 @@ ready(() => {
           .catch((error) => {
             console.log(error);
           });
+        }
       // });
     }
 
-    get_ip()
-      .then((ipAddress) => {
-        console.log("Received IP Address:", ipAddress);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    // .then((ipAddress) => {
+      //   console.log("Received IP Address:", ipAddress);
+      // })
+      // .catch((error) => {
+      //   console.error("Error:", error);
+      // });
 
     function get_ip() {
       // Return a Promise that resolves with the IP address
@@ -1787,9 +1832,10 @@ ready(() => {
             console.error("Error fetching IP address:", error);
             reject(error); // Reject the Promise with the error
           });
-      });
-    }
-
+        });
+      }
+      
+      get_ip()
     
     function detectBrowser() {
       const userAgent = navigator.userAgent;
@@ -1927,7 +1973,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var targetElement = document.querySelector(target);
       
       window.scrollTo({
-        top: targetElement.offsetTop - 75, // Adjusted to include 100px offset
+        top: targetElement.offsetTop - 115, // Adjusted to include 100px offset
         behavior: 'smooth'
       });
 
