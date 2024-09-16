@@ -13,6 +13,13 @@ import Customer_Communication from "../../public/Images/Customer_Communication.s
 import erpnext_whatsapp from "../../public/Images/erpnext_whatsapp.svg";
 import banner_image from "../../public/Images/banner_image_erpnextmigration.svg";
 import frappeverse_event from "../../public/Images/frappeverse_event.webp";
+import frappeverse_logo from "../../public/Images/frappeverse_logo.svg";
+import line from "../../public/Images/line.svg";
+import right_arrow from "../../public/Images/right-arrow.svg";
+
+
+
+
 
 import FinancialAccounting from "../../public/Images/FinancialAccounting.svg";
 import OrderManagement from "../../public/Images/OrderManagement.svg";
@@ -393,7 +400,60 @@ class=" flex section-bg  min-h-[80vh]  items-center banner-bg"
 		</div>
 		<div class="swiper-pagination " ></div>
 	</div>
+
+	
 </section> 
+<!-- frappe verse start -->
+		<div class="bg-[#0b0f27] p-4 md:p-6 text-white">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+				<!-- Image Section -->
+				<div>
+				<Image
+					loading="eager"
+					src={frappeverse_logo}
+					alt="frappeverse_logo"/>
+					
+				</div>
+
+				<!-- Text Section -->
+				<div class="flex flex-col items-center md:items-start space-y-4 text-center md:text-left">
+					<h2 class="text-lg md:text-xl lg:text-2xl font-bold text-[#3E96F4]">Visit Sanskar Technolab at</h2>
+				
+					<!-- Inline Text Section -->
+					<div class="flex lg:space-x-12 md:space-x-5 space-x-5 text-sm md:text-base lg:text-lg">
+						<p>Booth No. <span class="font-bold"><br>26</span></p>
+						<Image
+					loading="eager"
+					src={line}
+					alt="line"/>
+						<p><span class="font-bold">03-04 <br></span>October</p>
+						<Image
+						loading="eager"
+						src={line}
+						alt="line"/>
+						
+						<p><span class="font-bold">Nehru Centre,</span><br>Mumbai</p>
+						
+					</div>
+				
+					<!-- Button Section -->
+					<a href="/frappeverse-2024" class="inline-flex items-center border-[1px] border-[#3E96F4] text-white px-4 py-2 rounded-lg text-sm">
+						Join Us
+						<Image
+						  loading="eager"
+						  src={right_arrow}
+						
+						  alt="right_arrow"
+						  class="ml-3"
+						/>
+					  </a>
+					  
+				</div>
+				
+			</div>
+		</div>
+<!-- frappe verse end -->
+
   <!-- screen above lg End-->
 
 
@@ -923,6 +983,7 @@ class="section-bg banner-height flex items-center md:flex lg:hidden banner-bg"
 			/>
 		</div> -->
 
+	
 
 	<!-- An ERPNext consulting firm with expertise in enterprise resource planning software start -->
 	<section
