@@ -24,6 +24,21 @@ import whatsapp_getting_started from "../../public/Images/whatsapp_getting_start
 import whatsapp_getting_started_2 from "../../public/Images/whatsapp_getting_started_2.svg";
 import whatsapp_token from "../../public/Images/whatsapp_token.png";
 import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
+import bulk_message from "../../public/Images/bulk_message.svg";
+import single_message from "../../public/Images/single_message.png";
+import w_templates from "../../public/Images/w_templates.svg";
+import whatsapp_logo from "../../public/Images/whatsapp_logo.svg";
+import whatsapp_interakt_logo from "../../public/Images/whatsapp_interakt_logo.svg";
+import right from "../../public/Images/right.svg";
+import wati from "../../public/Images/wati.svg";
+import interakt from "../../public/Images/interakt.svg";
+
+
+
+
+
+
+
 ---
 
 <Layout
@@ -112,7 +127,7 @@ import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
   >
     <div class="text-left sm:text-center md:text-center lg:text-center">
       <h2 class="text-2xl md:text-3xl lg:text-4xl text-[#3E96F4] font-bold">
-        Don't take our word;
+        Don't take our word;<br>
         let's look at the recent statistics!
       </h2>
     </div>
@@ -171,6 +186,116 @@ import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
     </div>
   </section>
   <!-- recent statistics! end  -->
+
+
+  <!-- erpnext whatsapp integration start -->
+  <section
+  class="mx-5 md:max-w-7xl md:mx-auto md:px-24 2xl:px-0 py-[2rem] md:py-[2rem] lg:py-[4rem]">
+  <div class="bg-blue-50 py-10 px-6 rounded-3xl">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#3E96F4] mb-4">ERPNext WhatsApp Integration</h2>
+      <p class="text-gray-700 mb-8 lg:text-lg md:text-base text-sm">
+        Elevate your ERPNext experience with our comprehensive WhatsApp integration, supporting both WATI and Interakt. This solution empowers businesses to automate communications, send notifications, and manage customer interactions directly from ERPNext.
+      </p>
+  
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- WATI Integration Card -->
+        <div class="flex items-start p-4">
+          <!-- Left side: Image -->
+          <div class="flex-shrink-0 mr-4">
+            <Image
+              loading="eager"
+              src={whatsapp_logo}
+              alt="whatsapp_logo"
+              class="w-12 h-12"
+            />
+          </div>
+        
+          <!-- Right side: Content -->
+          <div>
+            <h3 class="text-lg font-bold text-[#3E96F4] text-left mb-3">WATI Integration</h3>
+            <Image
+            loading="eager"
+            src={wati}
+            alt="wati"
+            
+          />
+            <p class="text-gray-600 mb-4  text-left mt-3 lg:text-lg md:text-base text-sm">
+              Leverage our WATI integration to utilize pre-made or custom templates, streamline automated messaging, and efficiently manage customer interactions.
+            </p>
+            <div
+					class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-2 md:px-3 lg:px-3 py-2 md:py-2 lg:py-2 md:w-60 sm:w-auto"
+				>
+					<a
+						href="/whatsapp_wati_integration"
+						class="text-white md:text-base text-xs font-semibold font-inter"
+						>Explore WATI integration</a
+					>
+					<Image
+						loading="eager"
+						src={right}
+						width={6}
+						height={12}
+						alt="right arrow "
+            class="mr-2"
+					/>
+				</div>
+          </div>
+        </div>
+        
+        
+  
+        <!-- Interakt Integration Card -->
+        <div class="flex items-start p-4">
+          <!-- Left side: Image -->
+          <div class="flex-shrink-0 mr-4">
+            <Image
+              loading="eager"
+              src={whatsapp_interakt_logo}
+              alt="whatsapp_interakt_logo"
+              class="w-12 h-12"
+            />
+          </div>
+        
+          <!-- Right side: Content -->
+          <div>
+            <h3 class="text-lg font-bold text-[#3E96F4] text-left mb-3">Interakt Integration</h3>
+            <Image
+            loading="eager"
+            src={interakt}
+            alt="interakt"
+            
+          />
+            <p class="text-gray-600 mb-4  text-left mt-3 lg:text-lg md:text-base text-sm">
+              Seamlessly connect ERPNext with Interakt to unlock advanced WhatsApp messaging features, including template management and customer engagement tools.
+            </p>
+            <div
+					class="mt-4 md:mt-7 flex justify-between bg-[#3E96F4] rounded-lg px-2 md:px-3 lg:px-3 py-2 md:py-2 lg:py-2 md:w-72 sm:w-auto"
+				>
+					<a
+						href="/whatsapp_interakt_integration"
+						class="text-white md:text-base text-xs font-semibold font-inter"
+						>Discover Interakt integration</a
+					>
+					<Image
+						loading="eager"
+						src={right}
+						width={6}
+						height={12}
+						alt="right arrow "
+            class="mr-2"
+					/>
+				</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  </section>
+  <!-- erpnext whatsapp integration end -->
+
 
   <!-- communication with your customers start -->
   <section class="section-bg-right1">
@@ -409,8 +534,8 @@ import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
                   <Image
                     loading="eager"
                     class="w-full h-full lg:basis-7/12"
-                    src={Easily_send_bulk}
-                    alt="slider image 1"
+                    src={single_message}
+                    alt="single_message"
                   />
                 </div>
               </div>
@@ -423,8 +548,8 @@ import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
                   <Image
                     loading="eager"
                     class="lg:basis-7/12 w-full h-full"
-                    src={Easily_send_bulk2}
-                    alt="slider image 2"
+                    src={bulk_message}
+                    alt="bulk_message"
                   />
                 </div>
               </div>
@@ -549,8 +674,8 @@ import whatsapp_templates from "../../public/Images/whatsapp_templates.svg";
                   <Image
                     loading="eager"
                     class="lg:basis-7/12 w-full h-full"
-                    src={Templates_from_WATI1}
-                    alt="slider image 1"
+                    src={w_templates}
+                    alt="w_templates"
                   />
                 </div>
               </div>
