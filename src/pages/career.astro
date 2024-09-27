@@ -871,7 +871,7 @@ import close from "../../public/Images/popup_close_btn.svg";
                 src={harsh_sanchaniya}
                 alt="Harsh Sanchaniya"
               />
-              <div class="text-[#31393C] mt-3 md:mt-0">
+              <div class="text-[#31393C] mt-3 md:mt-0 ">
                 <p class="text-xs md:text-sm lg:text-base pr-5">
                   "I have been working at Sanskar Technolab as a ERPNext Consultant, and the management is very supportive and truly
                   cares about their employees' well-being. The company culture
@@ -1685,7 +1685,7 @@ import close from "../../public/Images/popup_close_btn.svg";
     // Create and append the first sub-container in the left content
     const subContainer1 = document.createElement("div");
     subContainer1.classList.add("font-semibold", "mb-2", "md:mb-3", "lg:mb-1");
-    subContainer1.textContent = jobOpening.job_title || "";
+    subContainer1.textContent = jobOpening.designation || "";
     leftContent.appendChild(subContainer1);
 
     // Create and append the second sub-container in the left content
@@ -1860,7 +1860,7 @@ import close from "../../public/Images/popup_close_btn.svg";
           jobTitleParagraph.className =
             "text-lg md:text-xl lg:text-2xl !leading-[36px] md:!leading-[40px] lg:!leading-[44px] font-semibold";
           // jobTitleParagraph.textContent = 'ERPNext Developer';
-          jobTitleParagraph.textContent = jobDetail.job_title;
+          jobTitleParagraph.textContent = jobDetail.designation;
 
           // jobTitleParagraph.textContent = jobDetail.name
 
