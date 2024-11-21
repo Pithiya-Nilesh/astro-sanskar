@@ -230,34 +230,34 @@ const queryTypeValue = pageValue ? "Demo" : "General";
    }
 
   // Add event listener to email input for real-time validation
-  var nameInput = document.querySelector('input[id="c_name"]');
-  nameInput.addEventListener("blur", validateNameInput); // Changed event to "blur"
+  // var nameInput = document.querySelector('input[id="c_name"]');
+  // nameInput.addEventListener("blur", validateNameInput); 
 
-  function validateNameInput() {
+  // function validateNameInput() {
      
-     const nameValue = nameInput.value.trim();
+  //    const nameValue = nameInput.value.trim();
      
-     const errorMessageElement = nameInput.nextElementSibling;
+  //    const errorMessageElement = nameInput.nextElementSibling;
      
 
-     if (nameValue === "") {
-       hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-       nameInput.style.borderColor = ""; // Reset border color
-       return;
-     }
+  //    if (nameValue === "") {
+  //      hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+  //      nameInput.style.borderColor = ""; // Reset border color
+  //      return;
+  //    }
 
-     if (!validateName(nameValue)) {
-       blinkBorder(nameInput);
-       displayErrorMessage(
-           errorMessageElement,
-           "Please enter a valid name.",
-           nameInput
-         );
-     } else {
-       hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-       nameInput.style.borderColor = ""; // Reset border color
-     }
-   }
+  //    if (!validateName(nameValue)) {
+  //      blinkBorder(nameInput);
+  //      displayErrorMessage(
+  //          errorMessageElement,
+  //          "Please enter a valid name.",
+  //          nameInput
+  //        );
+  //    } else {
+  //      hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+  //      nameInput.style.borderColor = ""; // Reset border color
+  //    }
+  //  }
 
 
   const apiKey = import.meta.env.PUBLIC_ApiKey as string;
@@ -314,9 +314,9 @@ const queryTypeValue = pageValue ? "Demo" : "General";
     resetBorderColorOnFocus(messageInput);
     resetBorderColorOnFocus(phoneInput);
 
-    if (nameValue === "") {
-      blinkBorder(firstNameInput);
-    }
+    // if (nameValue === "") {
+    //   blinkBorder(firstNameInput);
+    // }
 
     if (emailValue === "" || !validateEmail(emailValue)) {
       displayErrorMessage(
@@ -335,7 +335,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
     //   return;
     // }
 
-    if (nameValue === "" || emailValue === "" || messageValue === "") {
+    if (emailValue === "" || messageValue === "") {
       return;
     }
 
@@ -358,7 +358,7 @@ const queryTypeValue = pageValue ? "Demo" : "General";
     getUserIPAddress().then((ipAddress) => {
       let { browserName, device } = detectBrowser();
 
-      if(validateEmail(emailValue) && validateName(nameValue)){
+      if(validateEmail(emailValue)){
       fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
         method: "POST",
         headers: {
