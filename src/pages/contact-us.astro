@@ -549,35 +549,35 @@ import contact_map from "../../public/Images/contact_map.svg";
 
     
 
-    var nameInput = document.querySelector('input[name="full_name"]');
-    nameInput.addEventListener("blur", validateNameInput);
+    // var nameInput = document.querySelector('input[name="full_name"]');
+    // nameInput.addEventListener("blur", validateNameInput);
 
 
-    function validateNameInput() {
+    // function validateNameInput() {
      
-      const nameValue = nameInput.value.trim();
+    //   const nameValue = nameInput.value.trim();
       
-      const errorMessageElement = nameInput.nextElementSibling;
+    //   const errorMessageElement = nameInput.nextElementSibling;
       
 
-      if (nameValue === "") {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is empty
-        nameInput.style.borderColor = ""; // Reset border color
-        return;
-      }
+    //   if (nameValue === "") {
+    //     hideErrorMessage(errorMessageElement); // Hide error message if email is empty
+    //     nameInput.style.borderColor = ""; // Reset border color
+    //     return;
+    //   }
 
-      if (!validateName(nameValue)) {
-        blinkBorder(nameInput);
-        displayErrorMessage(
-            errorMessageElement,
-            "Please enter a valid name.",
-            nameInput
-          );
-      } else {
-        hideErrorMessage(errorMessageElement); // Hide error message if email is valid
-        nameInput.style.borderColor = ""; // Reset border color
-      }
-    }
+    //   if (!validateName(nameValue)) {
+    //     blinkBorder(nameInput);
+    //     displayErrorMessage(
+    //         errorMessageElement,
+    //         "Please enter a valid name.",
+    //         nameInput
+    //       );
+    //   } else {
+    //     hideErrorMessage(errorMessageElement); // Hide error message if email is valid
+    //     nameInput.style.borderColor = ""; // Reset border color
+    //   }
+    // }
 
 
 
@@ -647,9 +647,9 @@ import contact_map from "../../public/Images/contact_map.svg";
       resetBorderColorOnFocus(messageInput);
       resetBorderColorOnFocus(phoneInput);
 
-      if (namevalue === "") {
-        blinkBorder(nameInput);
-      }
+      // if (namevalue === "") {
+      //   blinkBorder(nameInput);
+      // }
       
 
       if (emailValue === "" || !validateEmail(emailValue)) {
@@ -670,7 +670,7 @@ import contact_map from "../../public/Images/contact_map.svg";
         blinkBorder(messageInput);
       }
 
-      if (namevalue === "" || emailValue === "" || messageValue === "") {
+      if (emailValue === "" || messageValue === "") {
         return;
       }
       const fileInput = document.getElementById("fileInput");
@@ -687,7 +687,7 @@ import contact_map from "../../public/Images/contact_map.svg";
 
     
     if (!file) {
-      if(validateEmail(emailValue) && validateName(namevalue)){
+      if(validateEmail(emailValue)){
       // alert('Please select a file to upload.');
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
@@ -755,7 +755,7 @@ import contact_map from "../../public/Images/contact_map.svg";
       }
      }
       else {
-        if(validateEmail(emailValue) && validateName(namevalue)){
+        if(validateEmail(emailValue)){
         const xhr = new XMLHttpRequest();
         const url = "https://sanskar.frappe.cloud/api/method/upload_file"; // Replace with your API endpoint URL
 

@@ -3527,37 +3527,37 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       });
 
       // Select all name input fields and add event listener for validation
-      var nameInputs = document.querySelectorAll('input[name="name"], input[name="hirename"]');
-      nameInputs.forEach(function (input) {
-        input.addEventListener("blur", validateNameInput);
-      });
+      // var nameInputs = document.querySelectorAll('input[name="name"], input[name="hirename"]');
+      // nameInputs.forEach(function (input) {
+      //   input.addEventListener("blur", validateNameInput);
+      // });
     }
 
     // Validate name input function
-    function validateNameInput(event) {
-      var nameInput = event.target;
+    // function validateNameInput(event) {
+    //   var nameInput = event.target;
 
-      var nameValue = nameInput.value.trim();
-      var errorMessageElement = nameInput.nextElementSibling;
+    //   var nameValue = nameInput.value.trim();
+    //   var errorMessageElement = nameInput.nextElementSibling;
 
-      if (nameValue === "") {
-        hideErrorMessage(errorMessageElement);
-        nameInput.style.borderColor = "";
-        return;
-      }
+    //   if (nameValue === "") {
+    //     hideErrorMessage(errorMessageElement);
+    //     nameInput.style.borderColor = "";
+    //     return;
+    //   }
 
-      if (!validateName(nameValue)) {
-        blinkBorder(nameInput);
-        displayErrorMessage(
-          errorMessageElement,
-          "Please enter a valid name.",
-          nameInput
-        );
-      } else {
-        hideErrorMessage(errorMessageElement);
-        nameInput.style.borderColor = "";
-      }
-    }
+    //   if (!validateName(nameValue)) {
+    //     blinkBorder(nameInput);
+    //     displayErrorMessage(
+    //       errorMessageElement,
+    //       "Please enter a valid name.",
+    //       nameInput
+    //     );
+    //   } else {
+    //     hideErrorMessage(errorMessageElement);
+    //     nameInput.style.borderColor = "";
+    //   }
+    // }
 
     // Validate email input function
     function validateEmailInput(event) {
@@ -3741,9 +3741,9 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       resetBorderColorOnFocus(messageInput);
       resetBorderColorOnFocus(phoneInput);
 
-      if (nameValue === "") {
-        blinkBorder(nameInput);
-      }
+      // if (nameValue === "") {
+      //   blinkBorder(nameInput);
+      // }
 
       if (emailValue === "") {
         blinkBorder(emailInput);
@@ -3753,7 +3753,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         blinkBorder(messageInput);
       }
 
-      if (nameValue === "" || emailValue === "" || messageValue === "") {
+      if (emailValue === "" || messageValue === "") {
         return;
       }
 
@@ -3788,7 +3788,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
-      if(validateEmail(emailValue) && validateName(nameValue)){
+      if(validateEmail(emailValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
           headers: {
@@ -3862,9 +3862,9 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       resetBorderColorOnFocus(messageInput);
       resetBorderColorOnFocus(phoneInput);
 
-      if (nameValue === "") {
-        blinkBorder(nameInput);
-      }
+      // if (nameValue === "") {
+      //   blinkBorder(nameInput);
+      // }
 
       if (emailValue === "") {
         blinkBorder(emailInput);
@@ -3874,7 +3874,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
         blinkBorder(messageInput);
       }
 
-      if (nameValue === "" || emailValue === "" || messageValue === "") {
+      if (emailValue === "" || messageValue === "") {
         return;
       }
 
@@ -3901,7 +3901,7 @@ canonical_href="https://sanskartechnolab.com/hire-frappe-developer"
       getUserIPAddress().then((ipAddress) => {
         let { browserName, device } = detectBrowser();
      
-        if(validateEmail(emailValue) && validateName(nameValue)){
+        if(validateEmail(emailValue)){
         fetch("https://sanskar.frappe.cloud/api/resource/Enquiry", {
           method: "POST",
           headers: {
